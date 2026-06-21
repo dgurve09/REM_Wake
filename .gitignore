@@ -1,0 +1,39 @@
+# Local operating instructions
+codex_rules.txt
+AGENTS.md
+.agents/
+.codex/
+
+# Python and notebooks
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# Credentials and machine-specific settings
+.env
+.env.*
+*.local
+
+# Raw data and large generated artifacts
+data/raw/
+data/interim/
+models/
+checkpoints/
+*.edf
+*.bdf
+*.fif
+*.npy
+*.npz
+*.pt
+*.pth
+*.ckpt
+
+# Temporary files
+*.tmp
+*.temp
+~$*
+
