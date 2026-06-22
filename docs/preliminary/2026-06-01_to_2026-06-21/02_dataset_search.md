@@ -6,6 +6,8 @@
 **Record consolidated:** 2026-06-21  
 **Purpose:** Identify datasets capable of answering the primary research question and document why each dataset is selected, deferred, or rejected
 
+**Metadata correction recorded 2026-06-22:** The OpenNeuro API identifies BOAS version 1.1.1 as the latest snapshot. Its README reports 108 individuals, while `participants.tsv` contains 100 unique `pid` values. See `docs/data/boas_dataset_manifest.md`.
+
 ## 1. Dataset Question
 
 The primary question is not ordinary sleep-stage classification. The required dataset must support event-specific comparison of REM-to-Wake detection between clinical PSG and a real wearable EEG device.
@@ -63,7 +65,7 @@ No dataset should be called “wearable validation” if it contains only channe
 
 | Dataset | Nights/records and cohort | Real wearable EEG | Simultaneous PSG pair | Human labels | Access | Best role |
 |---|---|---|---|---|---|---|
-| BOAS | 128 nights, 108 unique participants, general population | Yes, two forehead EEG channels plus IMU/PPG | Yes | Multi-scorer PSG consensus | OpenNeuro | Primary dataset |
+| BOAS | 128 nights; README reports 108 individuals, participant table contains 100 unique `pid` values | Yes, two forehead EEG channels plus IMU/PPG | Yes | Multi-scorer PSG consensus | OpenNeuro | Primary dataset |
 | Dreem Open Datasets | DOD-H: 25 healthy; DOD-O: 55 OSA | Released sleep signals, but not a paired PSG-versus-wearable benchmark equivalent to BOAS | No suitable paired-device comparison identified | Five scorers | Open Zenodo release | Multi-scorer staging and uncertainty benchmark |
 | Sleep-EDF Expanded | 197 PSG recordings from two older studies | No | No | Technician-scored R&K hypnograms | Open PhysioNet | Simple external PSG staging check |
 | MASS | 200 complete PSG nights, five subsets, ages 18-76 | No | No | Subset-dependent expert annotations | PSG access requires project and ethics documentation | External PSG benchmark if access justified |
@@ -82,7 +84,7 @@ The official BOAS documentation describes 128 nights of simultaneous recordings 
 - a Micromed Brain Quick Plus Evolution PSG system; and
 - a Bitbrain wearable EEG headband.
 
-The released data represent 108 unique participants. The `pid` field identifies the person because some individuals contributed more than one night.
+The official README reports 108 unique individuals. However, `participants.tsv` in snapshot 1.1.1 contains 100 unique `pid` values. The `pid` field remains the explicit grouping variable because some individuals contributed more than one night; the count discrepancy must be resolved or reported before evaluation.
 
 The wearable headband includes:
 
@@ -128,7 +130,7 @@ The human PSG labels need to be aligned to the simultaneously recorded headband 
 
 **Selected as the primary dataset, subject to the event-count and alignment feasibility gate.**
 
-Official record: https://doi.org/10.18112/openneuro.ds005555.v1.2.1
+Official record: https://doi.org/10.18112/openneuro.ds005555.v1.1.1
 
 ## 5.2 Dreem Open Datasets: DOD-H and DOD-O
 
@@ -334,7 +336,7 @@ CAP scoring paper: https://doi.org/10.1016/S1389-9457(01)00149-6
 
 ### Primary
 
-**BOAS version 1.2.1**, because it uniquely provides the required simultaneous PSG and real wearable headband signals with human consensus stages.
+**BOAS version 1.1.1**, because it uniquely provides the required simultaneous PSG and real wearable headband signals with human consensus stages.
 
 ### First external comparison
 
@@ -412,4 +414,3 @@ For every acquired dataset, record:
 ## 10. Dataset Search Conclusion
 
 BOAS is the correct primary dataset, but its suitability is conditional rather than proven. The decisive next activity is not model training; it is a metadata, alignment, signal-quality, and event-count audit grouped by unique participant. Public PSG-only datasets can support secondary comparisons, but none identified here can substitute for BOAS in the paired wearable experiment.
-

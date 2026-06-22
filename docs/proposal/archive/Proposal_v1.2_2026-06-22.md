@@ -2,9 +2,8 @@
 
 ## Wearable EEG REM-to-Wake Transition Detection Under Label and Device Uncertainty
 
-**Version:** 1.3  
+**Version:** 1.2  
 **Planning date:** 2026-06-21  
-**Last revised:** 2026-06-22  
 **Project window:** 2026-06-01 to 2026-11-29  
 **Status:** Initial research plan; expected to change as evidence is generated
 
@@ -14,7 +13,7 @@ Wearable EEG, sleep science, event detection, machine learning, temporal modelin
 
 ## 2. Executive Summary
 
-This project will investigate whether REM-to-Wake transitions can be detected reliably from reduced-channel wearable EEG. The primary dataset will be the Bitbrain Open Access Sleep (BOAS) dataset, which contains 128 nights of simultaneous clinical PSG and wearable headband recordings. Human consensus sleep stages are available at 30-second resolution. The official README reports 108 individuals, while the verified version 1.1.1 participant table contains 100 unique `pid` values; this discrepancy must be resolved or reported before participant-level evaluation.
+This project will investigate whether REM-to-Wake transitions can be detected reliably from reduced-channel wearable EEG. The primary dataset will be the Bitbrain Open Access Sleep (BOAS) dataset, which contains 128 nights of simultaneous clinical PSG and wearable headband recordings from 108 unique participants. Human consensus sleep stages are available at 30-second resolution.
 
 This is a transition-boundary detection project, not a general sleep-stage classification project. Existing sleep stages serve as source annotations from which new REM-to-Wake and exploratory Wake-to-REM event labels will be derived. Conventional sleep staging is included only as a benchmark: a transition-specific method must be compared with the simpler alternative of predicting stages and then deriving transitions.
 
@@ -131,15 +130,13 @@ Negative or inconclusive results will still answer the technological uncertainti
 The BOAS dataset contains:
 
 - 128 nights of simultaneous PSG and Bitbrain wearable headband recordings;
-- participant identity recorded by `pid`; the version 1.1.1 table contains 100 unique values although the README reports 108 individuals;
+- 108 unique participants identified by `pid`;
 - PSG EEG, EOG, EMG, respiratory, and other physiological channels when available;
 - two wearable forehead EEG channels approximately located at AF7 and AF8;
 - wearable IMU and PPG signals when available;
 - 30-second human consensus sleep-stage labels derived from multiple expert scorers.
 
-All participant-level splits will use the versioned `pid` field, not the recording identifier, because some participants contributed multiple nights. The discrepancy between the README participant count and the participant table will be documented before splits are frozen.
-
-The verified metadata inventory, storage estimate, and pilot-record selection are recorded in `docs/data/boas_dataset_manifest.md`.
+All participant-level splits will use `pid`, not the recording identifier, because some participants contributed multiple nights.
 
 ### Transition labels
 
@@ -474,7 +471,7 @@ After technical feasibility is established, a separate study could investigate c
 
 ## 23. References
 
-1. Lopez-Larraz E, Sierra-Torralba M, Clemente S, et al. *Bitbrain Open Access Sleep Dataset*. OpenNeuro, version 1.1.1. https://doi.org/10.18112/openneuro.ds005555.v1.1.1
+1. Lopez-Larraz E, Sierra-Torralba M, Clemente S, et al. *Bitbrain Open Access Sleep Dataset*. OpenNeuro, version 1.2.1. https://doi.org/10.18112/openneuro.ds005555.v1.2.1
 2. Esparza-Iaizzo M, Sierra-Torralba M, Klinzing JG, Minguez J, Montesano L, Lopez-Larraz E. Automatic sleep scoring for real-time monitoring and stimulation in individuals with and without sleep apnea. *Computers in Biology and Medicine*. 2026;205:111560. https://doi.org/10.1016/j.compbiomed.2026.111560
 3. Weinhold SL, Seeck-Hirschner M, Nowak A, Goder R, Baier PC. Wake-REM sleep transitions for measuring REM sleep disturbance: comparison between narcolepsy, idiopathic hypersomnia and healthy controls. 2011. https://doi.org/10.1111/j.1479-8425.2011.00503.x
 4. Chen X, Jin X, Zhang J, et al. Validation of a wearable forehead sleep recorder against polysomnography in sleep staging and desaturation events in a clinical sample. *Journal of Clinical Sleep Medicine*. 2023;19. https://doi.org/10.5664/jcsm.10416

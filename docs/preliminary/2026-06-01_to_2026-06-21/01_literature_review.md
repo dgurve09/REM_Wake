@@ -11,6 +11,8 @@
 
 This document consolidates preliminary literature work associated with the June 1-21 planning period. It is not a claim that a formal systematic review or meta-analysis was completed. Search methods and limitations are recorded so the review can be repeated and expanded.
 
+**Metadata correction recorded 2026-06-22:** The OpenNeuro API identifies BOAS version 1.1.1 as the latest snapshot. Its README reports 108 individuals, while `participants.tsv` contains 100 unique `pid` values. The operational split unit remains the versioned `pid` field; see `docs/data/boas_dataset_manifest.md`.
+
 The evidence supports a narrower project than the original concept. Wearable EEG sleep staging, temporal sleep-stage modeling, and sleep-staging domain adaptation are established research areas. The potentially useful research gap is direct REM-to-Wake event detection from simultaneously recorded wearable EEG, evaluated against a strong stage-first baseline while explicitly handling event rarity and 30-second label uncertainty.
 
 ## 2. Questions Addressed
@@ -118,7 +120,7 @@ Several direct validation studies are especially relevant:
 - Arnal et al. studied 25 simultaneous Dreem headband and PSG recordings. Automatic headband staging achieved mean accuracy of 83.5% and F1 of 83.8%, compared with average expert values of 86.4% and 86.3% [13].
 - Mikkelsen et al. collected 80 full-night simultaneous PSG and dry-contact ear-EEG recordings from 20 healthy participants. Ear-EEG automatic scoring achieved average Cohen kappa of 0.73 [14].
 - Chen et al. evaluated a single-channel forehead EEG recorder in 197 participants, most with obstructive sleep apnea. Reported sensitivities were 79.7% for Wake and 82.7% for REM, with substantial kappa agreement [15].
-- The BOAS dataset contains 128 nights from 108 unique participants with simultaneous clinical PSG and a two-channel forehead EEG headband. Its consensus stage labels are derived from multiple scorers [16].
+- The BOAS dataset contains 128 simultaneous clinical PSG and two-channel forehead-headband recordings. Its README reports 108 individuals, while the version 1.1.1 participant table contains 100 unique `pid` values. Its consensus stage labels are derived from multiple scorers [16].
 
 The final 2026 BOAS-related modeling paper reported that a single frontal channel could support reliable sleep scoring, additional sensors yielded limited improvement in that study, real-time scoring could approach offline scoring, and performance decreased in sleep-disordered participants [17].
 
@@ -208,7 +210,7 @@ Wake-to-REM events only if the feasibility audit finds adequate independent exam
 
 ### 5.5 Required split unit
 
-BOAS `pid`, because 128 nights come from 108 unique participants. Recording-level random splitting could place different nights from one person in training and testing.
+BOAS `pid`, because repeated recordings share this identifier. Recording-level random splitting could place different nights from one person in training and testing. The README-versus-table participant-count discrepancy must be reported when the split is defined.
 
 ## 6. Clinical Interpretation Limits
 
@@ -253,11 +255,10 @@ The project is scientifically reasonable only if it is framed as a transition-sp
 13. Arnal PJ, Thorey V, Debellemaniere E, et al. The Dreem Headband compared to polysomnography for electroencephalographic signal acquisition and sleep staging. *Sleep*. 2020;43:zsaa097. https://doi.org/10.1093/sleep/zsaa097
 14. Mikkelsen KB, Tabar YR, Kappel SL, et al. Accurate whole-night sleep monitoring with dry-contact ear-EEG. *Scientific Reports*. 2019;9:16824. https://doi.org/10.1038/s41598-019-53115-3
 15. Chen X, Jin X, Zhang J, et al. Validation of a wearable forehead sleep recorder against polysomnography in sleep staging and desaturation events in a clinical sample. *Journal of Clinical Sleep Medicine*. 2023;19:711-718. https://doi.org/10.5664/jcsm.10416
-16. Lopez-Larraz E, Sierra-Torralba M, Clemente S, et al. Bitbrain Open Access Sleep Dataset. OpenNeuro, version 1.2.1. https://doi.org/10.18112/openneuro.ds005555.v1.2.1
+16. Lopez-Larraz E, Sierra-Torralba M, Clemente S, et al. Bitbrain Open Access Sleep Dataset. OpenNeuro, version 1.1.1. https://doi.org/10.18112/openneuro.ds005555.v1.1.1
 17. Esparza-Iaizzo M, Sierra-Torralba M, Klinzing JG, Minguez J, Montesano L, Lopez-Larraz E. Automatic sleep scoring for real-time monitoring and stimulation in individuals with and without sleep apnea. *Computers in Biology and Medicine*. 2026;205:111560. https://doi.org/10.1016/j.compbiomed.2026.111560
 18. Phan H, Andreotti F, Cooray N, Chen OY, De Vos M. SeqSleepNet: end-to-end hierarchical recurrent neural network for sequence-to-sequence automatic sleep staging. *IEEE Transactions on Neural Systems and Rehabilitation Engineering*. 2019;27:400-410. https://doi.org/10.1109/TNSRE.2019.2896659
 19. Phan H, Mikkelsen KB, Chen OY, Koch P, Mertins A, De Vos M. SleepTransformer: automatic sleep staging with interpretability and uncertainty quantification. *IEEE Transactions on Biomedical Engineering*. 2022;69:2456-2467. https://doi.org/10.1109/TBME.2022.3147187
 20. Phan H, Mikkelsen KB. Automatic sleep staging of EEG signals: recent development, challenges, and future directions. *Physiological Measurement*. 2022;43. https://doi.org/10.1088/1361-6579/ac6049
 21. Alvarez-Estevez D, Rijsman RM. Inter-database validation of a deep learning approach for automatic sleep scoring. *PLoS ONE*. 2021;16:e0256111. https://doi.org/10.1371/journal.pone.0256111
 22. Heremans ERM, Phan H, Borzee P, Buyse B, Testelmans D, De Vos M. From unsupervised to semi-supervised adversarial domain adaptation in electroencephalography-based sleep staging. *Journal of Neural Engineering*. 2022;19. https://doi.org/10.1088/1741-2552/ac6ca8
-

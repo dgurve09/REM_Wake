@@ -8,6 +8,8 @@
 **Planned project end:** 2026-11-29  
 **Planning status:** Preliminary phase completed; experimental work not yet started
 
+**Metadata correction recorded 2026-06-22:** The OpenNeuro API identifies BOAS version 1.1.1 as the latest snapshot. Its README reports 108 individuals, while `participants.tsv` contains 100 unique `pid` values. See `docs/data/boas_dataset_manifest.md`.
+
 ## 1. Purpose of This Record
 
 This document records the planning decisions produced by the preliminary literature review, dataset search, and technological knowledge assessment. It translates the current proposal into an executable sequence of experiments and decision gates.
@@ -78,7 +80,7 @@ The longer-term application direction includes REM-to-Wake phenomena such as awa
 
 ## 6. Planning Assumptions
 
-1. BOAS version 1.2.1 remains accessible and contains the files described in its official README.
+1. BOAS version 1.1.1 remains accessible and contains the files described in its official README.
 2. Human PSG consensus labels can be aligned with the simultaneous headband signal.
 3. The project is performed by one researcher at up to 20 planned hours per week.
 4. Actual hours, not the 520-hour planning ceiling, control any later accounting.
