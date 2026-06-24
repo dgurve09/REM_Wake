@@ -46,7 +46,7 @@ The OpenNeuro API reported three snapshots: `1.0.0`, `1.1.0`, and `1.1.1`. The m
 | Headband EDF size | 13,440,299,008 bytes |
 | Combined EDF size per recording | 106,977,024 to 395,656,448 bytes |
 
-Raw data will be stored outside Git. A permanent local data path has not yet been assigned. The full OpenNeuro file listing and git-annex SHA-256 keys will be captured when the pilot data are acquired.
+Raw data are stored outside Git. The limited `sub-53` pilot acquisition was completed on 2026-06-24 using `scripts/download_boas_sub53_pilot.py`, with the default storage location set to `<repo-parent>/REM_W_data/boas_ds005555_v1.1.1`. The full dataset has not been downloaded.
 
 ## 4. Recording Structure
 
@@ -141,10 +141,35 @@ The pilot should retrieve the two EDF files, their channel and JSON sidecars, bo
 
 **Proceed to a limited `sub-53` pilot acquisition.** The metadata support paired PSG-headband analysis and confirm that human consensus labels are available. Full acquisition remains blocked until EDF readability, timing alignment, label mapping, and data-integrity checks pass.
 
-## 11. Official Sources
+## 11. Pilot Acquisition and Header Inspection Update
+
+**Update date:** 2026-06-24
+
+The limited `sub-53` pilot files were acquired outside Git and inspected with the existing `SMRI` Python environment. The pilot acquisition included 16 files and totalled 235,678,065 bytes locally.
+
+The two EDF files matched the official git-annex byte sizes and SHA-256 hashes:
+
+| Acquisition | Bytes | SHA-256 |
+|---|---:|---|
+| headband | 92,199,424 | `f7c2756bb5d1563d38fd1859f8c057b3d657d5a4485135c360b4b9e88f7822f0` |
+| PSG | 143,421,184 | `f17ea0541b6f94f8decef502c2b660ae756a630553dc23d2016f4be840de9705` |
+
+Header-level inspection confirmed that both EDF files are readable and share:
+
+- 256 Hz sampling;
+- 5,122,048 samples;
+- 20,008-second duration;
+- recorded start time `2023-03-24 01:28:56 UTC`.
+
+The PSG event file contains `stage_hum` and `stage_ai`; the headband event file contains `stage_ai` only. This means human-derived transition labels must be derived from the PSG event table and mapped onto the headband timeline.
+
+For `sub-53`, direct adjacent PSG `stage_hum` epochs contain four REM-to-Wake and two Wake-to-REM candidates. Event tables cover 19,980 seconds, leaving a 28-second unstaged tail relative to EDF duration.
+
+Detailed output is stored in `experiments/2026-06-24_boas_sub53_pilot/`.
+
+## 12. Official Sources
 
 - OpenNeuro snapshot: https://openneuro.org/datasets/ds005555/versions/1.1.1
 - Dataset DOI: https://doi.org/10.18112/openneuro.ds005555.v1.1.1
 - Official metadata mirror: https://github.com/OpenNeuroDatasets/ds005555/tree/1.1.1
 - OpenNeuro API documentation: https://github.com/OpenNeuroOrg/openneuro/blob/master/docs/api.md
-

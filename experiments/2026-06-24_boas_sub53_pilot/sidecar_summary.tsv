@@ -1,0 +1,3 @@
+file	EEGChannelCount	EEGReference	Manufacturer	ManufacturersModelName	RecordingDuration	SamplingFrequency	TaskName
+sub-53_task-Sleep_acq-headband_eeg.json	2	M1 (left mastoid)	Bitbrain Technologies	IKON Sleep	20008	256	Sleep
+sub-53_task-Sleep_acq-psg_eeg.json	11	M1 (left mastoid)	Micromed	SD plus	20008	256	Sleep

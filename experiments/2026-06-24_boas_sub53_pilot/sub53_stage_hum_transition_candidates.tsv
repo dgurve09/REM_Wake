@@ -1,0 +1,7 @@
+recording	source_label	transition	from_stage_code	from_stage	to_stage_code	to_stage	from_epoch_onset_sec	boundary_onset_sec	to_epoch_onset_sec	epoch_duration_sec	uncertainty_start_sec	uncertainty_end_sec
+sub-53	stage_hum	REM_to_Wake	4	REM	0	Wake	1590.0	1620.0	1620.0	30.0	1605.0	1635.0
+sub-53	stage_hum	Wake_to_REM	0	Wake	4	REM	1620.0	1650.0	1650.0	30.0	1635.0	1665.0
+sub-53	stage_hum	REM_to_Wake	4	REM	0	Wake	18510.0	18540.0	18540.0	30.0	18525.0	18555.0
+sub-53	stage_hum	REM_to_Wake	4	REM	0	Wake	18810.0	18840.0	18840.0	30.0	18825.0	18855.0
+sub-53	stage_hum	Wake_to_REM	0	Wake	4	REM	18840.0	18870.0	18870.0	30.0	18855.0	18885.0
+sub-53	stage_hum	REM_to_Wake	4	REM	0	Wake	19050.0	19080.0	19080.0	30.0	19065.0	19095.0
