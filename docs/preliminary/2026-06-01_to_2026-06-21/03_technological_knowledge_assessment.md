@@ -15,12 +15,7 @@ This assessment uses the literature and dataset evidence recorded in:
 - `02_dataset_search.md`
 - `Proposal.md`
 
-The assessment applies the current Canada Revenue Agency description of SR&ED eligibility as a planning framework, not as a guarantee of tax eligibility or professional tax advice. CRA states that eligible work must both:
-
-1. seek scientific or technological advancement; and
-2. use systematic investigation or search through experiment or analysis.
-
-Routine implementation, quality control, ordinary data collection, training, and acquisition of existing know-how do not become eligible merely because they are difficult or documented [1].
+This assessment separates established technical capability from unresolved research uncertainty. Routine implementation, quality control, ordinary data collection, training, and acquisition of existing know-how do not become research findings merely because they are difficult or documented.
 
 ## 2. System Boundary
 
@@ -51,7 +46,7 @@ A temporal wearable sleep-stage model whose predicted stages are converted to RE
 
 This is established enough that it cannot be the central advancement. Simultaneous PSG studies have shown useful staging agreement for forehead headbands and ear-EEG. Systematic and meta-analytic evidence now covers dozens of wearable systems and validation studies [2-6].
 
-The BOAS-related 2026 paper further reports reliable single-frontal-channel staging and comparable real-time versus offline scoring under the studied conditions [7].
+The BOAS-related 2026 paper further reports reliable single-frontal-channel staging and comparable real-time versus offline scoring under the studied conditions [6].
 
 **Available know-how:** A practitioner can select standard preprocessing, train a classifier, and calculate conventional epoch-level stage metrics.
 
@@ -63,7 +58,7 @@ Sequence-to-sequence recurrent, convolutional, and transformer models are establ
 
 ## 3.3 REM can be detected from reduced EEG
 
-Single-channel REM classification has been published, and modern staging systems already treat REM as a normal output class [12].
+Single-channel REM classification has been published, and modern staging systems already treat REM as a normal output class [11].
 
 **Available know-how:** A REM classifier does not itself constitute a new transition detector.
 
@@ -144,7 +139,7 @@ These outcomes require experiments on the paired data. Merely choosing a differe
 | U3 | Does direct detection add value? | Direct event training improves at least one predeclared event metric at comparable false-alarm burden | Compare stage-first and direct models using identical grouped splits | Paired participant-level metric differences and confidence intervals |
 | U4 | Can knowledge transfer across devices? | Paired PSG pretraining or fine-tuning improves wearable event detection over unadapted transfer | Compare PSG, reduced PSG, wearable-only, zero-shot, and fine-tuned conditions | Device-specific degradation and improvement with uncertainty intervals |
 | U5 | Can label uncertainty be handled usefully? | Interval-aware targets improve calibration or event matching without unstable pseudo-label dependence | Compare hard boundaries, tolerance windows, and uncertainty-aware loss or targets | Sensitivity analysis across label definitions and tolerances |
-| U6 | Are transition measures repeatable? | Repeated nights show measurable within-person consistency beyond threshold artifacts | Analyze eligible repeated-night participants only | Reliability estimates with sample size and uncertainty; no claim if underpowered |
+| U6 | Are transition measures repeatable? | Repeated nights show measurable within-person consistency beyond threshold artifacts | Analyze available repeated-night participants only | Reliability estimates with sample size and uncertainty; no claim if underpowered |
 
 ## 7. Advancement Sought
 
@@ -272,9 +267,9 @@ The derived label table is still an important research artifact. Its knowledge c
 
 **Decision options:** Report interval localization, restrict to epoch-level events, or stop fine-resolution claims.
 
-## 12. SR&ED Work Classification for Planning
+## 12. Research Work Classification for Planning
 
-### Candidate experimental work
+### Core experimental work
 
 - defining alternative transition-label rules and testing whether they yield a stable, valid event target;
 - event feasibility experiments tied to U1;
@@ -283,7 +278,7 @@ The derived label table is still an important research artifact. Its knowledge c
 - boundary-uncertainty experiments tied to U5;
 - documented failure analysis required to resolve those uncertainties.
 
-### Potential support work when directly required
+### Support work when directly required
 
 - programming the label and evaluation pipeline;
 - mathematical/event analysis;
@@ -298,10 +293,10 @@ The derived label table is still an important research artifact. Its knowledge c
 - ordinary model implementation;
 - routine quality assurance;
 - interface development;
-- manuscript and claim preparation;
-- administrative and financial work.
+- manuscript preparation;
+- project administration.
 
-The final treatment of work and expenditures requires professional review. Project documentation should not label every hour as eligible by default.
+Project documentation should distinguish experimental findings from routine support activity.
 
 ## 13. Record Integrity
 
@@ -322,25 +317,24 @@ Each later experiment record should include:
 
 ## 14. Assessment Conclusion
 
-The project has a potentially defensible experimental core, but only after removing generic wearable staging and unsupported clinical claims from the claimed advancement. This is a transition-boundary project: sleep stages are source annotations and a benchmark, not the research output. The strongest research question is whether a reproducibly derived REM-to-Wake target can be detected from paired wearable EEG and yield reliable event-level information beyond stage-first inference under real device shift and coarse labels. The feasibility gate is mandatory because the knowledge gap may be resolved by discovering that the derived event target is too sparse, unstable, or uncertain for the available dataset.
+The project has a potentially defensible experimental core, but only after removing generic wearable staging and unsupported clinical claims from the research objective. This is a transition-boundary project: sleep stages are source annotations and a benchmark, not the research output. The strongest research question is whether a reproducibly derived REM-to-Wake target can be detected from paired wearable EEG and yield reliable event-level information beyond stage-first inference under real device shift and coarse labels. The feasibility gate is mandatory because the knowledge gap may be resolved by discovering that the derived event target is too sparse, unstable, or uncertain for the available dataset.
 
 ## 15. References
 
-1. Canada Revenue Agency. What work is eligible: Scientific Research and Experimental Development tax incentives. Updated 2026-04-01. https://www.canada.ca/en/revenue-agency/services/scientific-research-experimental-development-tax-incentive-program/sred-eligibility.html
-2. de Gans CJ, Burger PC, van den Ende ES, et al. Sleep assessment using EEG-based wearables: a systematic review. *Sleep Medicine Reviews*. 2024;76:101951. https://doi.org/10.1016/j.smrv.2024.101951
-3. Markov K, Elgendi M, Menon C. Evaluating the performance of wearable EEG sleep monitoring devices: a meta-analysis approach. *npj Biomedical Innovations*. 2025. https://doi.org/10.1038/s44385-025-00034-w
-4. Arnal PJ, Thorey V, Debellemaniere E, et al. The Dreem Headband compared to polysomnography for electroencephalographic signal acquisition and sleep staging. *Sleep*. 2020;43:zsaa097. https://doi.org/10.1093/sleep/zsaa097
-5. Mikkelsen KB, Tabar YR, Kappel SL, et al. Accurate whole-night sleep monitoring with dry-contact ear-EEG. *Scientific Reports*. 2019;9:16824. https://doi.org/10.1038/s41598-019-53115-3
-6. Chen X, Jin X, Zhang J, et al. Validation of a wearable forehead sleep recorder against polysomnography in sleep staging and desaturation events in a clinical sample. *Journal of Clinical Sleep Medicine*. 2023;19:711-718. https://doi.org/10.5664/jcsm.10416
-7. Esparza-Iaizzo M, Sierra-Torralba M, Klinzing JG, Minguez J, Montesano L, Lopez-Larraz E. Automatic sleep scoring for real-time monitoring and stimulation in individuals with and without sleep apnea. *Computers in Biology and Medicine*. 2026;205:111560. https://doi.org/10.1016/j.compbiomed.2026.111560
-8. Phan H, Andreotti F, Cooray N, Chen OY, De Vos M. SeqSleepNet. *IEEE Transactions on Neural Systems and Rehabilitation Engineering*. 2019;27:400-410. https://doi.org/10.1109/TNSRE.2019.2896659
-9. Perslev M, Darkner S, Kempfner L, Nikolic M, Jennum P, Igel C. U-Sleep: resilient high-frequency sleep staging. *npj Digital Medicine*. 2021;4:72. https://doi.org/10.1038/s41746-021-00440-5
-10. Phan H, Mikkelsen KB, Chen OY, et al. SleepTransformer. *IEEE Transactions on Biomedical Engineering*. 2022;69:2456-2467. https://doi.org/10.1109/TBME.2022.3147187
-11. Zhao C, Li J, Guo Y. BTCRSleep. *Physiological Measurement*. 2023;44. https://doi.org/10.1088/1361-6579/acdb46
-12. Imtiaz SA, Rodriguez-Villegas E. A low computational cost algorithm for REM sleep detection using single channel EEG. *Annals of Biomedical Engineering*. 2014;42:2344-2359. https://doi.org/10.1007/s10439-014-1085-6
-13. Weinhold SL, Seeck-Hirschner M, Nowak A, Goder R, Baier PC. Wake-REM sleep transitions for measuring REM sleep disturbance. 2011. https://doi.org/10.1111/j.1479-8425.2011.00503.x
-14. Sorensen GL, Knudsen S, Jennum P. Sleep transitions in hypocretin-deficient narcolepsy. *Sleep*. 2013;36:1173-1177. https://doi.org/10.5665/sleep.2880
-15. Bianchi MT, Cash SS, Mietus J, Peng CK, Thomas R. Obstructive sleep apnea alters sleep stage transition dynamics. *PLoS ONE*. 2010;5:e11356. https://doi.org/10.1371/journal.pone.0011356
-16. Alvarez-Estevez D, Rijsman RM. Inter-database validation of a deep learning approach for automatic sleep scoring. *PLoS ONE*. 2021;16:e0256111. https://doi.org/10.1371/journal.pone.0256111
-17. Heremans ERM, Phan H, Borzee P, et al. From unsupervised to semi-supervised adversarial domain adaptation in electroencephalography-based sleep staging. *Journal of Neural Engineering*. 2022;19. https://doi.org/10.1088/1741-2552/ac6ca8
-18. Stephansen JB, Olesen AN, Olsen M, et al. Neural network analysis of sleep stages enables efficient diagnosis of narcolepsy. *Nature Communications*. 2018;9:5229. https://doi.org/10.1038/s41467-018-07229-3
+1. de Gans CJ, Burger PC, van den Ende ES, et al. Sleep assessment using EEG-based wearables: a systematic review. *Sleep Medicine Reviews*. 2024;76:101951. https://doi.org/10.1016/j.smrv.2024.101951
+2. Markov K, Elgendi M, Menon C. Evaluating the performance of wearable EEG sleep monitoring devices: a meta-analysis approach. *npj Biomedical Innovations*. 2025. https://doi.org/10.1038/s44385-025-00034-w
+3. Arnal PJ, Thorey V, Debellemaniere E, et al. The Dreem Headband compared to polysomnography for electroencephalographic signal acquisition and sleep staging. *Sleep*. 2020;43:zsaa097. https://doi.org/10.1093/sleep/zsaa097
+4. Mikkelsen KB, Tabar YR, Kappel SL, et al. Accurate whole-night sleep monitoring with dry-contact ear-EEG. *Scientific Reports*. 2019;9:16824. https://doi.org/10.1038/s41598-019-53115-3
+5. Chen X, Jin X, Zhang J, et al. Validation of a wearable forehead sleep recorder against polysomnography in sleep staging and desaturation events in a clinical sample. *Journal of Clinical Sleep Medicine*. 2023;19:711-718. https://doi.org/10.5664/jcsm.10416
+6. Esparza-Iaizzo M, Sierra-Torralba M, Klinzing JG, Minguez J, Montesano L, Lopez-Larraz E. Automatic sleep scoring for real-time monitoring and stimulation in individuals with and without sleep apnea. *Computers in Biology and Medicine*. 2026;205:111560. https://doi.org/10.1016/j.compbiomed.2026.111560
+7. Phan H, Andreotti F, Cooray N, Chen OY, De Vos M. SeqSleepNet. *IEEE Transactions on Neural Systems and Rehabilitation Engineering*. 2019;27:400-410. https://doi.org/10.1109/TNSRE.2019.2896659
+8. Perslev M, Darkner S, Kempfner L, Nikolic M, Jennum P, Igel C. U-Sleep: resilient high-frequency sleep staging. *npj Digital Medicine*. 2021;4:72. https://doi.org/10.1038/s41746-021-00440-5
+9. Phan H, Mikkelsen KB, Chen OY, et al. SleepTransformer. *IEEE Transactions on Biomedical Engineering*. 2022;69:2456-2467. https://doi.org/10.1109/TBME.2022.3147187
+10. Zhao C, Li J, Guo Y. BTCRSleep. *Physiological Measurement*. 2023;44. https://doi.org/10.1088/1361-6579/acdb46
+11. Imtiaz SA, Rodriguez-Villegas E. A low computational cost algorithm for REM sleep detection using single channel EEG. *Annals of Biomedical Engineering*. 2014;42:2344-2359. https://doi.org/10.1007/s10439-014-1085-6
+12. Weinhold SL, Seeck-Hirschner M, Nowak A, Goder R, Baier PC. Wake-REM sleep transitions for measuring REM sleep disturbance. 2011. https://doi.org/10.1111/j.1479-8425.2011.00503.x
+13. Sorensen GL, Knudsen S, Jennum P. Sleep transitions in hypocretin-deficient narcolepsy. *Sleep*. 2013;36:1173-1177. https://doi.org/10.5665/sleep.2880
+14. Bianchi MT, Cash SS, Mietus J, Peng CK, Thomas R. Obstructive sleep apnea alters sleep stage transition dynamics. *PLoS ONE*. 2010;5:e11356. https://doi.org/10.1371/journal.pone.0011356
+15. Alvarez-Estevez D, Rijsman RM. Inter-database validation of a deep learning approach for automatic sleep scoring. *PLoS ONE*. 2021;16:e0256111. https://doi.org/10.1371/journal.pone.0256111
+16. Heremans ERM, Phan H, Borzee P, et al. From unsupervised to semi-supervised adversarial domain adaptation in electroencephalography-based sleep staging. *Journal of Neural Engineering*. 2022;19. https://doi.org/10.1088/1741-2552/ac6ca8
+17. Stephansen JB, Olesen AN, Olsen M, et al. Neural network analysis of sleep stages enables efficient diagnosis of narcolepsy. *Nature Communications*. 2018;9:5229. https://doi.org/10.1038/s41467-018-07229-3

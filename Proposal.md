@@ -2,7 +2,7 @@
 
 ## Wearable EEG REM-to-Wake Transition Detection Under Label and Device Uncertainty
 
-**Version:** 1.4
+**Version:** 1.5
 **Planning date:** 2026-06-21
 **Last revised:** 2026-06-28
 **Project window:** 2026-06-01 to 2026-11-29
@@ -263,14 +263,14 @@ A GUI is outside the current research scope.
 
 ## 16. Six-Month Work Plan
 
-The planning allocation is up to 20 hours per week. Over 26 weeks this is up to 520 planned hours, not 1,040 hours. Only actual contemporaneously recorded time will be used for any SR&ED accounting.
+The schedule is organized into two-week research blocks. Actual work records should describe what was done, what was learned, and what decision follows from the evidence.
 
 ### Block 1: June 1 to June 14 - Literature review and initial planning
 
 - Review published work on wearable EEG sleep staging, REM/Wake transitions, label reliability, and PSG-to-wearable transfer.
 - Identify what is established in the technological knowledge base and what remains uncertain.
 - Search for public datasets with suitable signals, labels, and access conditions.
-- Draft the initial research scope, hypotheses, work plan, and SR&ED documentation approach.
+- Draft the initial research scope, hypotheses, work plan, and research documentation approach.
 
 **Deliverable:** Initial proposal, literature evidence, and public-dataset candidate list.
 
@@ -282,7 +282,7 @@ The planning allocation is up to 20 hours per week. Over 26 weeks this is up to 
 - From June 22, initialize version control and the organized repository structure.
 - Record the environment and check existing dependencies before installing anything.
 - Verify BOAS access, version, files, license, channels, labels, and metadata.
-- Begin contemporaneous weekly technical and SR&ED records.
+- Begin contemporaneous weekly technical records.
 
 **Deliverable:** Revised proposal, dataset-selection rationale, repository, and initial dataset manifest.
 
@@ -376,10 +376,10 @@ The planning allocation is up to 20 hours per week. Over 26 weeks this is up to 
 
 - Freeze reviewed results without deleting failed runs.
 - Write the technical report and manuscript outline.
-- Complete the SR&ED evidence index using actual logs and hours.
-- Separate eligible experimental work from routine or excluded work.
+- Complete the project artifact index, reproducibility notes, and reviewed result inventory.
+- Separate experimental findings from routine setup, documentation, and project administration.
 
-**Deliverable:** Final technical report, reproducible artifacts, paper outline, and SR&ED evidence index.
+**Deliverable:** Final technical report, reproducible artifacts, paper outline, and project artifact index.
 
 ## 17. Milestones
 
@@ -388,7 +388,7 @@ The planning allocation is up to 20 hours per week. Over 26 weeks this is up to 
 - **M2, August 23:** Stage-first and direct transition baselines compared.
 - **M3, September 20:** PSG-to-wearable transfer and robustness assessed.
 - **M4, November 15:** Temporal analysis completed and streaming decision implemented or documented as no-go.
-- **M5, November 29:** Final results, reproducibility package, and evidence index completed.
+- **M5, November 29:** Final results, reproducibility package, and project artifact index completed.
 
 ## 18. Risks and Decision Rules
 
@@ -416,11 +416,11 @@ Restrict conclusions to technical feasibility and repeatability.
 
 Document the no-go decision and omit the prototype.
 
-## 19. SR&ED Work Framing
+## 19. Research Work Framing
 
-Potentially eligible experimental work will be organized around the stated technological uncertainties, hypotheses, experiments, observations, and conclusions. Eligibility is not guaranteed merely because work is difficult or documented.
+The experimental work will be organized around the stated technological uncertainties, hypotheses, experiments, observations, and conclusions. Documentation should show the research reasoning, not just the existence of activity.
 
-Candidate experimental work includes:
+Core experimental work includes:
 
 - testing whether alternative defensible transition-label definitions produce a stable and usable event target;
 - determining whether the rare-event target is technically learnable from wearable signals;
@@ -433,21 +433,18 @@ Programming, testing, mathematical analysis, and data collection will be treated
 
 Mechanical derivation of `REM -> Wake` rows from an existing hypnogram is data transformation and is not, by itself, the advancement. The potentially knowledge-generating work is the systematic definition, validation, uncertainty analysis, and experimental testing of those derived labels as a new wearable event target.
 
-Routine setup, ordinary data conversion, general training, routine quality control, production engineering, interface polishing, manuscript preparation, and administrative claim preparation will be recorded separately and will not automatically be treated as eligible SR&ED work.
+Routine setup, ordinary data conversion, general training, routine quality control, production engineering, interface polishing, manuscript preparation, and project administration will be recorded separately from experimental findings.
 
-The project will maintain contemporaneous records of:
+The project will maintain research records of:
 
 - the uncertainty and hypothesis addressed;
 - the experiment plan and configuration;
 - data and code versions;
 - results, failures, and limitations;
 - the conclusion and next decision;
-- actual time spent;
 - the relevant experiment identifier and Git commit.
 
-No expenditure or tax-credit amount is estimated in this technical proposal. Financial eligibility and calculation require separate professional review.
-
-## 20. Repository and Evidence Practices
+## 20. Repository and Research Record Practices
 
 - Keep the repository organized according to `PROJECT_RULES.md`.
 - Use simple section-by-section notebooks for exploration.
@@ -455,7 +452,7 @@ No expenditure or tax-credit amount is estimated in this technical proposal. Fin
 - Keep each experiment run immutable and identifiable.
 - Preserve failed and inconclusive runs.
 - Keep large data and model artifacts outside Git while recording their source, version, path, and identifier or checksum.
-- Maintain dated weekly technical and SR&ED notes.
+- Maintain dated weekly technical notes.
 - Review staged changes before every push and use concise professional language.
 
 ## 21. Expected Outcomes
@@ -482,4 +479,3 @@ After technical feasibility is established, a separate study could investigate c
 4. Chen X, Jin X, Zhang J, et al. Validation of a wearable forehead sleep recorder against polysomnography in sleep staging and desaturation events in a clinical sample. *Journal of Clinical Sleep Medicine*. 2023;19. https://doi.org/10.5664/jcsm.10416
 5. Danker-Hopfe H, Anderer P, Zeitlhofer J, et al. Interrater reliability for sleep scoring according to the Rechtschaffen & Kales and the new AASM standard. *Journal of Sleep Research*. 2009;18:74-84. https://doi.org/10.1111/j.1365-2869.2008.00700.x
 6. Rosenberg RS, Van Hout S. The American Academy of Sleep Medicine inter-scorer reliability program: sleep stage scoring. *Journal of Clinical Sleep Medicine*. 2013;9:81-87. https://doi.org/10.5664/jcsm.2350
-7. Canada Revenue Agency. What work is eligible: Scientific Research and Experimental Development tax incentives. Updated 2026-04-01. https://www.canada.ca/en/revenue-agency/services/scientific-research-experimental-development-tax-incentive-program/sred-eligibility.html

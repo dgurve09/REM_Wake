@@ -32,5 +32,4 @@
 - Exclude credentials, participant information, private working material, machine-specific paths, and temporary artifacts.
 - Use concise, professional language in code, documentation, commit messages, and reports.
 - For each meaningful update, record what changed, why it changed, the uncertainty or hypothesis addressed, the work performed, the result, limitations, and the next decision.
-- Maintain dated weekly technical and SR&ED records using actual contemporaneous information.
-
+- Maintain dated weekly technical records using actual contemporaneous information.

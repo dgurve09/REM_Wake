@@ -1,10 +1,8 @@
 # Proposal Archive
 
-This folder contains historical proposal drafts.
-
-Archived drafts are retained to preserve the project record. They may contain superseded dataset-version text, older scope wording, or planning assumptions that were later corrected in the live `Proposal.md`.
-
 Use the repository-root `Proposal.md` as the current proposal.
+
+Historical proposal drafts are preserved by Git history rather than kept as active files in this folder. This keeps the current repository focused on the working research plan and avoids confusion from superseded dataset versions, scope wording, or planning assumptions.
 
 Important supersession note:
 

@@ -64,7 +64,7 @@ flowchart TD
     I --> J["Temporal localization under 30-second label uncertainty"]
     J --> K["Transition-derived measures and streaming go/no-go"]
     K --> L["Conditional prototype and reproducibility QA"]
-    L --> M["Final report, reproducible artifacts, evidence index, manuscript outline"]
+    L --> M["Final report, reproducible artifacts, project artifact index, manuscript outline"]
 ```
 
 ## 4. Phase Table
@@ -83,7 +83,7 @@ flowchart TD
 | 10 | Oct 5-Oct 18 | How should 30-second label uncertainty be handled? | Hard-label versus interval-aware temporal analysis | Label-uncertainty and localization report | Not started |
 | 11 | Oct 19-Nov 1 | Are transition-derived measures stable enough to report? | Event burden, REM stability, repeated-night reliability, streaming decision | Technical measures and streaming go/no-go | Not started |
 | 12 | Nov 2-Nov 15 | Is a streaming demonstration justified and reproducible? | Conditional command-line prototype, latency/memory check, clean rerun, QA | Prototype or no-go plus reproducibility report | Not started |
-| 13 | Nov 16-Nov 29 | What is the final defensible package? | Freeze reviewed results, final report, evidence index, manuscript outline | Final technical report and reproducible project package | Not started |
+| 13 | Nov 16-Nov 29 | What is the final defensible package? | Freeze reviewed results, final report, artifact index, manuscript outline | Final technical report and reproducible project package | Not started |
 
 ## 5. Gate Logic
 

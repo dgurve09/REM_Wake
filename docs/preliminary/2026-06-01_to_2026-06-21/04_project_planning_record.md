@@ -120,7 +120,7 @@ The longer-term application direction includes REM-to-Wake phenomena such as awa
 
 **Output:** Environment record, repository baseline, and first verified push.
 
-**SR&ED note:** Mostly setup and routine support, not the advancement.
+**Planning note:** Mostly setup and routine support, not the core experimental question.
 
 ## D0. BOAS metadata and pilot access
 
@@ -430,7 +430,7 @@ REM_W/
 - `results/current/`: reviewed current tables and figures.
 - `results/archive/`: superseded reviewed outputs, not raw run duplication.
 - `docs/decisions/`: method decisions and rejected alternatives.
-- `docs/sred/weekly/`: dated contemporaneous technical narratives.
+- `docs/weekly/`: dated technical narratives.
 - raw data and large model files: outside Git, referenced by manifest.
 
 ## 12. Experiment Record Template
@@ -505,7 +505,7 @@ Artifact paths:
 | Clinical claims exceed data | High without controls | High | Restrict to technical feasibility |
 | Overengineering | Medium | Medium | Simple baselines first; no framework building |
 | Data or artifacts pushed to Git | Low with controls | High | `.gitignore`, manifest, staged-diff review |
-| SR&ED records reconstructed late | Medium | High | Weekly contemporaneous records from June 22 onward |
+| Research records reconstructed late | Medium | High | Weekly technical records from June 22 onward |
 
 ## 16. Milestones
 
@@ -521,7 +521,7 @@ Artifact paths:
 | Boundary analysis | October 18 | E7 report |
 | Technical measures and streaming decision | November 1 | E10 and go/no-go |
 | Prototype and QA | November 15 | P1 or no-go plus reproducibility report |
-| Final project package | November 29 | Final report, evidence index, and reviewed artifacts |
+| Final project package | November 29 | Final report, artifact index, and reviewed artifacts |
 
 ## 17. Immediate Actions for June 22-28
 
@@ -548,7 +548,7 @@ The preliminary planning phase is complete when:
 - participant grouping and event metrics are fixed in principle;
 - clinical claims are outside the current validation scope;
 - decision gates and stop rules are documented;
-- repository and SR&ED record practices are defined;
+- repository and research-record practices are defined;
 - no experiments or hours are falsely backdated.
 
 These criteria are satisfied by the current preliminary records, subject to final consistency verification.
