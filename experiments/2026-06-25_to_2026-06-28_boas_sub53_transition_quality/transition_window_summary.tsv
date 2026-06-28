@@ -1,0 +1,7 @@
+transition_id	transition	boundary_onset_sec	window_start_sec	window_end_sec	headband_eeg_pass_channels	headband_eeg_total_channels	psg_reference_pass_channels	psg_reference_total_channels	stage_hum_epochs	stage_hum_counts	stage_hum_sequence	psg_disconnection_epochs	pilot_window_decision
+1	REM_to_Wake	1620.0	1500.0	1740.0	2	2	8	8	8	0=1; 2=2; 4=5	N2->N2->REM->REM->Wake->REM->REM->REM	0	pass_basic
+2	Wake_to_REM	1650.0	1530.0	1770.0	2	2	8	8	8	0=1; 2=2; 4=5	N2->REM->REM->Wake->REM->REM->REM->N2	0	pass_basic
+3	REM_to_Wake	18540.0	18420.0	18660.0	2	2	8	8	8	0=1; 2=6; 4=1	N2->N2->N2->REM->Wake->N2->N2->N2	0	pass_basic
+4	REM_to_Wake	18840.0	18720.0	18960.0	2	2	7	8	8	0=1; 2=3; 4=4	N2->N2->N2->REM->Wake->REM->REM->REM	0	psg_reference_issue
+5	Wake_to_REM	18870.0	18750.0	18990.0	2	2	6	8	8	0=1; 2=2; 4=5	N2->N2->REM->Wake->REM->REM->REM->REM	0	psg_reference_issue
+6	REM_to_Wake	19080.0	18960.0	19200.0	2	2	7	8	8	0=3; 2=1; 4=4	REM->REM->REM->REM->Wake->Wake->Wake->N2	0	psg_reference_issue

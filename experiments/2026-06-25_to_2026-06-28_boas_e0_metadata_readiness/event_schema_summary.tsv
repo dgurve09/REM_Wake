@@ -1,0 +1,257 @@
+subject	acquisition	rows	columns	has_stage_hum	has_stage_ai	duration_values	onset_min_sec	onset_max_sec	coverage_end_sec	recording_duration_sec	unlabeled_tail_sec	sampling_frequency_hz	channel_rows	stage_hum_disconnection_epochs	stage_hum_missing	stage_ai_negative_epochs
+sub-1	headband	915	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	27420.0	27450.0	27459.0	9.0	256.0	2			677
+sub-1	psg	915	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	27420.0	27450.0	27459.0	9.0	256.0	11	1	0	0
+sub-2	headband	913	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	27360.0	27390.0	27400.0	10.0	256.0	2			7
+sub-2	psg	913	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	27360.0	27390.0	27400.0	10.0	256.0	11	0	0	0
+sub-3	headband	997	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	29880.0	29910.0	29921.0	11.0	256.0	9			9
+sub-3	psg	997	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	29880.0	29910.0	29921.0	11.0	256.0	8	0	0	0
+sub-4	headband	1070	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	32070.0	32100.0	32108.0	8.0	256.0	9			75
+sub-4	psg	1070	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	32070.0	32100.0	32108.0	8.0	256.0	8	0	0	3
+sub-5	headband	1005	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	30120.0	30150.0	30178.0	28.0	256.0	2			1
+sub-5	psg	1005	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	30120.0	30150.0	30178.0	28.0	256.0	11	0	0	0
+sub-6	headband	998	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	29910.0	29940.0	29961.0	21.0	256.0	9			9
+sub-6	psg	998	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	29910.0	29940.0	29961.0	21.0	256.0	8	0	0	0
+sub-7	headband	935	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	28020.0	28050.0	28078.0	28.0	256.0	2			152
+sub-7	psg	935	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	28020.0	28050.0	28078.0	28.0	256.0	11	0	0	7
+sub-8	headband	409	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	12240.0	12270.0	12290.0	20.0	256.0	9			0
+sub-8	psg	409	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	12240.0	12270.0	12290.0	20.0	256.0	8	0	0	0
+sub-9	headband	1055	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	31620.0	31650.0	31671.0	21.0	256.0	2			1
+sub-9	psg	1055	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	31620.0	31650.0	31671.0	21.0	256.0	11	0	0	0
+sub-10	headband	993	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	29760.0	29790.0	29811.0	21.0	256.0	2			0
+sub-10	psg	993	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	29760.0	29790.0	29811.0	21.0	256.0	11	0	0	0
+sub-11	headband	985	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	29520.0	29550.0	29563.0	13.0	256.0	9			163
+sub-11	psg	985	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	29520.0	29550.0	29563.0	13.0	256.0	8	1	0	0
+sub-12	headband	1013	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	30360.0	30390.0	30404.0	14.0	256.0	2			0
+sub-12	psg	1013	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	30360.0	30390.0	30404.0	14.0	256.0	11	7	0	5
+sub-13	headband	997	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	29880.0	29910.0	29935.0	25.0	256.0	2			544
+sub-13	psg	997	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	29880.0	29910.0	29935.0	25.0	256.0	11	0	0	0
+sub-14	headband	1070	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	32070.0	32100.0	32113.0	13.0	256.0	9			18
+sub-14	psg	1070	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	32070.0	32100.0	32113.0	13.0	256.0	8	2	0	0
+sub-15	headband	1094	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	32790.0	32820.0	32827.0	7.0	256.0	2			1
+sub-15	psg	1094	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	32790.0	32820.0	32827.0	7.0	256.0	11	1	0	0
+sub-16	headband	1028	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	30810.0	30840.0	30855.0	15.0	256.0	2			2
+sub-16	psg	1028	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	30810.0	30840.0	30855.0	15.0	256.0	11	5	0	7
+sub-17	headband	987	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	29580.0	29610.0	29628.0	18.0	256.0	2			3
+sub-17	psg	987	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	29580.0	29610.0	29628.0	18.0	256.0	11	6	0	5
+sub-18	headband	1047	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	31380.0	31410.0	31421.0	11.0	256.0	9			19
+sub-18	psg	1047	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	31380.0	31410.0	31421.0	11.0	256.0	8	0	0	0
+sub-19	headband	1012	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	30330.0	30360.0	30377.0	17.0	256.0	2			69
+sub-19	psg	1012	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	30330.0	30360.0	30377.0	17.0	256.0	11	0	0	0
+sub-20	headband	1048	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	31410.0	31440.0	31455.0	15.0	256.0	9			83
+sub-20	psg	1048	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	31410.0	31440.0	31455.0	15.0	256.0	8	0	0	0
+sub-21	headband	1043	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	31260.0	31290.0	31299.0	9.0	256.0	2			5
+sub-21	psg	1043	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	31260.0	31290.0	31299.0	9.0	256.0	11	0	0	0
+sub-22	headband	1034	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	30990.0	31020.0	31037.0	17.0	256.0	9			6
+sub-22	psg	1034	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	30990.0	31020.0	31037.0	17.0	256.0	8	0	0	0
+sub-23	headband	1119	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	33540.0	33570.0	33598.0	28.0	256.0	9			110
+sub-23	psg	1119	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	33540.0	33570.0	33598.0	28.0	256.0	14	0	0	0
+sub-24	headband	933	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	27960.0	27990.0	28002.0	12.0	256.0	9			56
+sub-24	psg	933	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	27960.0	27990.0	28002.0	12.0	256.0	14	0	0	14
+sub-25	headband	1083	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	32460.0	32490.0	32506.0	16.0	256.0	9			57
+sub-25	psg	1083	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	32460.0	32490.0	32506.0	16.0	256.0	14	0	0	0
+sub-26	headband	972	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	29130.0	29160.0	29183.0	23.0	256.0	9			0
+sub-26	psg	972	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	29130.0	29160.0	29183.0	23.0	256.0	14	0	0	0
+sub-27	headband	952	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	28530.0	28560.0	28561.0	1.0	256.0	2			1
+sub-27	psg	952	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	28530.0	28560.0	28561.0	1.0	256.0	14	0	0	0
+sub-28	headband	859	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	25740.0	25770.0	25774.0	4.0	256.0	2			27
+sub-28	psg	859	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	25740.0	25770.0	25774.0	4.0	256.0	14	0	0	4
+sub-29	headband	1108	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	33210.0	33240.0	33244.0	4.0	256.0	2			151
+sub-29	psg	1108	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	33210.0	33240.0	33244.0	4.0	256.0	14	0	0	0
+sub-30	headband	834	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	24990.0	25020.0	25032.0	12.0	256.0	9			1
+sub-30	psg	834	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	24990.0	25020.0	25032.0	12.0	256.0	14	0	0	0
+sub-31	headband	850	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	25470.0	25500.0	25523.0	23.0	256.0	9			1
+sub-31	psg	850	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	25470.0	25500.0	25523.0	23.0	256.0	14	0	0	0
+sub-32	headband	832	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	24930.0	24960.0	24978.0	18.0	256.0	9			1
+sub-32	psg	832	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	24930.0	24960.0	24978.0	18.0	256.0	14	0	0	0
+sub-33	headband	876	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	26250.0	26280.0	26301.0	21.0	256.0	9			0
+sub-33	psg	876	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	26250.0	26280.0	26301.0	21.0	256.0	14	0	0	0
+sub-34	headband	939	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	28140.0	28170.0	28183.0	13.0	256.0	9			34
+sub-34	psg	939	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	28140.0	28170.0	28183.0	13.0	256.0	11	21	0	16
+sub-35	headband	876	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	26250.0	26280.0	26281.0	1.0	256.0	9			36
+sub-35	psg	876	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	26250.0	26280.0	26281.0	1.0	256.0	14	10	0	10
+sub-36	headband	895	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	26820.0	26850.0	26850.0	0.0	256.0	9			9
+sub-36	psg	895	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	26820.0	26850.0	26850.0	0.0	256.0	14	0	0	0
+sub-37	headband	857	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	25680.0	25710.0	25714.0	4.0	256.0	9			0
+sub-37	psg	857	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	25680.0	25710.0	25714.0	4.0	256.0	14	0	0	0
+sub-38	headband	851	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	25500.0	25530.0	25550.0	20.0	256.0	9			1
+sub-38	psg	851	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	25500.0	25530.0	25550.0	20.0	256.0	14	0	0	0
+sub-39	headband	907	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	27180.0	27210.0	27213.0	3.0	256.0	9			1
+sub-39	psg	907	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	27180.0	27210.0	27213.0	3.0	256.0	14	7	0	6
+sub-40	headband	833	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	24960.0	24990.0	25007.0	17.0	256.0	9			0
+sub-40	psg	833	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	24960.0	24990.0	25007.0	17.0	256.0	14	12	0	10
+sub-41	headband	916	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	27450.0	27480.0	27502.0	22.0	256.0	9			0
+sub-41	psg	916	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	27450.0	27480.0	27502.0	22.0	256.0	14	0	0	0
+sub-42	headband	894	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	26790.0	26820.0	26840.0	20.0	256.0	9			0
+sub-42	psg	894	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	26790.0	26820.0	26840.0	20.0	256.0	14	0	0	26
+sub-43	headband	840	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	25170.0	25200.0	25205.0	5.0	256.0	9			4
+sub-43	psg	840	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	25170.0	25200.0	25205.0	5.0	256.0	14	15	0	14
+sub-44	headband	850	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	25470.0	25500.0	25525.0	25.0	256.0	9			1
+sub-44	psg	850	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	25470.0	25500.0	25525.0	25.0	256.0	11	0	0	0
+sub-45	headband	821	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	24600.0	24630.0	24642.0	12.0	256.0	9			1
+sub-45	psg	821	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	24600.0	24630.0	24642.0	12.0	256.0	11	1	0	17
+sub-46	headband	968	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	29010.0	29040.0	29043.0	3.0	256.0	9			1
+sub-46	psg	968	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	29010.0	29040.0	29043.0	3.0	256.0	11	1	0	0
+sub-47	headband	812	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	24330.0	24360.0	24362.0	2.0	256.0	9			1
+sub-47	psg	812	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	24330.0	24360.0	24362.0	2.0	256.0	14	13	0	13
+sub-48	headband	1048	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	31410.0	31440.0	31467.0	27.0	256.0	9			28
+sub-48	psg	1048	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	31410.0	31440.0	31467.0	27.0	256.0	14	1	0	1
+sub-49	headband	902	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	27030.0	27060.0	27085.0	25.0	256.0	9			30
+sub-49	psg	902	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	27030.0	27060.0	27085.0	25.0	256.0	11	0	0	0
+sub-50	headband	895	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	26820.0	26850.0	26860.0	10.0	256.0	9			6
+sub-50	psg	895	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	26820.0	26850.0	26860.0	10.0	256.0	14	11	0	11
+sub-51	headband	895	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	26820.0	26850.0	26860.0	10.0	256.0	9			0
+sub-51	psg	895	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	26820.0	26850.0	26860.0	10.0	256.0	11	0	0	0
+sub-52	headband	923	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	27660.0	27690.0	27712.0	22.0	256.0	9			0
+sub-52	psg	923	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	27660.0	27690.0	27712.0	22.0	256.0	11	0	0	0
+sub-53	headband	666	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	19950.0	19980.0	20008.0	28.0	256.0	9			56
+sub-53	psg	666	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	19950.0	19980.0	20008.0	28.0	256.0	14	9	0	8
+sub-54	headband	790	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	23670.0	23700.0	23723.0	23.0	256.0	9			1
+sub-54	psg	790	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	23670.0	23700.0	23723.0	23.0	256.0	14	7	0	5
+sub-55	headband	1073	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	32160.0	32190.0	32199.0	9.0	256.0	9			204
+sub-55	psg	1073	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	32160.0	32190.0	32199.0	9.0	256.0	11	0	0	0
+sub-56	headband	958	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	28710.0	28740.0	28747.0	7.0	256.0	9			12
+sub-56	psg	958	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	28710.0	28740.0	28747.0	7.0	256.0	11	0	0	0
+sub-57	headband	1032	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	30930.0	30960.0	30960.0	0.0	256.0	9			451
+sub-57	psg	1032	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	30930.0	30960.0	30960.0	0.0	256.0	11	0	0	0
+sub-58	headband	1005	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	30120.0	30150.0	30162.0	12.0	256.0	9			6
+sub-58	psg	1005	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	30120.0	30150.0	30162.0	12.0	256.0	11	0	0	0
+sub-59	headband	1057	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	31680.0	31710.0	31730.0	20.0	256.0	9			64
+sub-59	psg	1057	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	31680.0	31710.0	31730.0	20.0	256.0	11	22	0	4
+sub-60	headband	922	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	27630.0	27660.0	27685.0	25.0	256.0	9			0
+sub-60	psg	922	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	27630.0	27660.0	27685.0	25.0	256.0	11	51	0	0
+sub-61	headband	948	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	28410.0	28440.0	28467.0	27.0	256.0	9			266
+sub-61	psg	948	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	28410.0	28440.0	28467.0	27.0	256.0	11	0	0	0
+sub-62	headband	983	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	29460.0	29490.0	29494.0	4.0	256.0	9			24
+sub-62	psg	983	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	29460.0	29490.0	29494.0	4.0	256.0	11	0	0	0
+sub-63	headband	888	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	26610.0	26640.0	26661.0	21.0	256.0	9			0
+sub-63	psg	888	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	26610.0	26640.0	26661.0	21.0	256.0	11	4	0	3
+sub-64	headband	886	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	26550.0	26580.0	26582.0	2.0	256.0	9			0
+sub-64	psg	886	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	26550.0	26580.0	26582.0	2.0	256.0	11	6	0	4
+sub-65	headband	897	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	26880.0	26910.0	26930.0	20.0	256.0	9			118
+sub-65	psg	897	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	26880.0	26910.0	26930.0	20.0	256.0	11	0	0	0
+sub-66	headband	1081	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	32400.0	32430.0	32446.0	16.0	256.0	9			34
+sub-66	psg	1081	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	32400.0	32430.0	32446.0	16.0	256.0	11	5	0	4
+sub-67	headband	924	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	27690.0	27720.0	27737.0	17.0	256.0	9			0
+sub-67	psg	924	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	27690.0	27720.0	27737.0	17.0	256.0	11	0	0	0
+sub-68	headband	870	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	26070.0	26100.0	26122.0	22.0	256.0	9			1
+sub-68	psg	870	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	26070.0	26100.0	26122.0	22.0	256.0	11	11	0	7
+sub-69	headband	1003	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	30060.0	30090.0	30116.0	26.0	256.0	9			1
+sub-69	psg	1003	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	30060.0	30090.0	30116.0	26.0	256.0	11	0	0	0
+sub-70	headband	889	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	26640.0	26670.0	26692.0	22.0	256.0	9			0
+sub-70	psg	889	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	26640.0	26670.0	26692.0	22.0	256.0	11	8	0	5
+sub-71	headband	1114	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	33390.0	33420.0	33425.0	5.0	256.0	9			72
+sub-71	psg	1114	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	33390.0	33420.0	33425.0	5.0	256.0	11	0	0	0
+sub-72	headband	966	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	28950.0	28980.0	28985.0	5.0	256.0	9			95
+sub-72	psg	966	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	28950.0	28980.0	28985.0	5.0	256.0	11	0	0	4
+sub-73	headband	865	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	25920.0	25950.0	25956.0	6.0	256.0	9			1
+sub-73	psg	865	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	25920.0	25950.0	25956.0	6.0	256.0	11	28	0	5
+sub-74	headband	969	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	29040.0	29070.0	29075.0	5.0	256.0	9			0
+sub-74	psg	969	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	29040.0	29070.0	29075.0	5.0	256.0	11	0	0	0
+sub-75	headband	863	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	25860.0	25890.0	25914.0	24.0	256.0	9			77
+sub-75	psg	863	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	25860.0	25890.0	25914.0	24.0	256.0	11	0	0	9
+sub-76	headband	1048	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	31410.0	31440.0	31445.0	5.0	256.0	9			137
+sub-76	psg	1048	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	31410.0	31440.0	31445.0	5.0	256.0	11	0	0	0
+sub-77	headband	1078	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	32310.0	32340.0	32351.0	11.0	256.0	9			265
+sub-77	psg	1078	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	32310.0	32340.0	32351.0	11.0	256.0	11	0	0	0
+sub-78	headband	880	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	26370.0	26400.0	26427.0	27.0	256.0	9			5
+sub-78	psg	880	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	26370.0	26400.0	26427.0	27.0	256.0	11	0	0	0
+sub-79	headband	1034	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	30990.0	31020.0	31022.0	2.0	256.0	9			1
+sub-79	psg	1034	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	30990.0	31020.0	31022.0	2.0	256.0	11	0	0	10
+sub-80	headband	820	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	24570.0	24600.0	24626.0	26.0	256.0	9			0
+sub-80	psg	820	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	24570.0	24600.0	24626.0	26.0	256.0	11	0	0	0
+sub-81	headband	905	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	27120.0	27150.0	27171.0	21.0	256.0	9			3
+sub-81	psg	905	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	27120.0	27150.0	27171.0	21.0	256.0	11	0	0	0
+sub-82	headband	888	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	26610.0	26640.0	26663.0	23.0	256.0	9			22
+sub-82	psg	888	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	26610.0	26640.0	26663.0	23.0	256.0	11	0	0	1
+sub-83	headband	911	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	27300.0	27330.0	27339.0	9.0	256.0	9			0
+sub-83	psg	911	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	27300.0	27330.0	27339.0	9.0	256.0	11	12	0	1
+sub-84	headband	1017	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	30480.0	30510.0	30533.0	23.0	256.0	9			72
+sub-84	psg	1017	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	30480.0	30510.0	30533.0	23.0	256.0	11	0	0	0
+sub-85	headband	1081	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	32400.0	32430.0	32444.0	14.0	256.0	9			38
+sub-85	psg	1081	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	32400.0	32430.0	32444.0	14.0	256.0	11	0	0	182
+sub-86	headband	944	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	28290.0	28320.0	28337.0	17.0	256.0	9			1
+sub-86	psg	944	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	28290.0	28320.0	28337.0	17.0	256.0	11	0	0	0
+sub-87	headband	957	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	28680.0	28710.0	28739.0	29.0	256.0	9			1
+sub-87	psg	957	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	28680.0	28710.0	28739.0	29.0	256.0	11	0	0	0
+sub-88	headband	897	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	26880.0	26910.0	26915.0	5.0	256.0	9			136
+sub-88	psg	897	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	26880.0	26910.0	26915.0	5.0	256.0	11	0	0	0
+sub-89	headband	974	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	29190.0	29220.0	29241.0	21.0	256.0	9			3
+sub-89	psg	974	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	29190.0	29220.0	29241.0	21.0	256.0	11	0	0	0
+sub-90	headband	1040	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	31170.0	31200.0	31203.0	3.0	256.0	9			59
+sub-90	psg	1040	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	31170.0	31200.0	31203.0	3.0	256.0	11	8	0	5
+sub-91	headband	1021	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	30600.0	30630.0	30654.0	24.0	256.0	9			0
+sub-91	psg	1021	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	30600.0	30630.0	30654.0	24.0	256.0	11	0	0	0
+sub-92	headband	988	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	29610.0	29640.0	29660.0	20.0	256.0	9			0
+sub-92	psg	988	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	29610.0	29640.0	29660.0	20.0	256.0	11	0	0	1
+sub-93	headband	878	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	26310.0	26340.0	26369.0	29.0	256.0	9			0
+sub-93	psg	878	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	26310.0	26340.0	26369.0	29.0	256.0	11	0	0	0
+sub-94	headband	1005	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	30120.0	30150.0	30159.0	9.0	256.0	9			21
+sub-94	psg	1005	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	30120.0	30150.0	30159.0	9.0	256.0	11	0	0	0
+sub-95	headband	983	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	29460.0	29490.0	29502.0	12.0	256.0	9			14
+sub-95	psg	983	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	29460.0	29490.0	29502.0	12.0	256.0	11	0	0	1
+sub-96	headband	971	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	29100.0	29130.0	29141.0	11.0	256.0	9			48
+sub-96	psg	971	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	29100.0	29130.0	29141.0	11.0	256.0	11	0	0	0
+sub-97	headband	1085	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	32520.0	32550.0	32554.0	4.0	256.0	9			48
+sub-97	psg	1085	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	32520.0	32550.0	32554.0	4.0	256.0	11	0	0	0
+sub-98	headband	901	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	27000.0	27030.0	27032.0	2.0	256.0	9			0
+sub-98	psg	901	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	27000.0	27030.0	27032.0	2.0	256.0	11	0	0	0
+sub-99	headband	1068	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	32010.0	32040.0	32064.0	24.0	256.0	9			28
+sub-99	psg	1068	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	32010.0	32040.0	32064.0	24.0	256.0	11	9	0	8
+sub-100	headband	996	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	29850.0	29880.0	29898.0	18.0	256.0	9			0
+sub-100	psg	996	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	29850.0	29880.0	29898.0	18.0	256.0	11	0	0	0
+sub-101	headband	935	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	28020.0	28050.0	28071.0	21.0	256.0	9			2
+sub-101	psg	935	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	28020.0	28050.0	28071.0	21.0	256.0	11	0	0	0
+sub-102	headband	963	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	28860.0	28890.0	28910.0	20.0	256.0	9			0
+sub-102	psg	963	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	28860.0	28890.0	28910.0	20.0	256.0	11	0	0	1
+sub-103	headband	858	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	25710.0	25740.0	25743.0	3.0	256.0	9			2
+sub-103	psg	858	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	25710.0	25740.0	25743.0	3.0	256.0	16	0	0	4
+sub-104	headband	839	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	25140.0	25170.0	25170.0	0.0	256.0	9			2
+sub-104	psg	839	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	25140.0	25170.0	25170.0	0.0	256.0	16	0	0	1
+sub-105	headband	973	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	29160.0	29190.0	29196.0	6.0	256.0	9			1
+sub-105	psg	973	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	29160.0	29190.0	29196.0	6.0	256.0	16	8	0	15
+sub-106	headband	878	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	26310.0	26340.0	26359.0	19.0	256.0	9			2
+sub-106	psg	878	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	26310.0	26340.0	26359.0	19.0	256.0	16	0	0	0
+sub-107	headband	952	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	28530.0	28560.0	28577.0	17.0	256.0	9			1
+sub-107	psg	952	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	28530.0	28560.0	28577.0	17.0	256.0	16	0	0	0
+sub-108	headband	1001	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	30000.0	30030.0	30033.0	3.0	256.0	9			13
+sub-108	psg	1001	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	30000.0	30030.0	30033.0	3.0	256.0	16	6	0	10
+sub-109	headband	843	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	25260.0	25290.0	25309.0	19.0	256.0	3			2
+sub-109	psg	843	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	25260.0	25290.0	25309.0	19.0	256.0	15	0	0	0
+sub-110	headband	953	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	28560.0	28590.0	28609.0	19.0	256.0	3			16
+sub-110	psg	953	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	28560.0	28590.0	28609.0	19.0	256.0	16	0	0	0
+sub-111	headband	961	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	28800.0	28830.0	28848.0	18.0	256.0	3			3
+sub-111	psg	961	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	28800.0	28830.0	28848.0	18.0	256.0	16	0	0	7
+sub-112	headband	919	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	27540.0	27570.0	27584.0	14.0	256.0	3			2
+sub-112	psg	919	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	27540.0	27570.0	27584.0	14.0	256.0	16	0	0	2
+sub-113	headband	937	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	28080.0	28110.0	28117.0	7.0	256.0	3			1
+sub-113	psg	937	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	28080.0	28110.0	28117.0	7.0	256.0	16	0	0	3
+sub-114	headband	933	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	27960.0	27990.0	28013.0	23.0	256.0	3			1
+sub-114	psg	933	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	27960.0	27990.0	28013.0	23.0	256.0	16	0	0	2
+sub-115	headband	858	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	25710.0	25740.0	25748.0	8.0	256.0	3			1
+sub-115	psg	858	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	25710.0	25740.0	25748.0	8.0	256.0	16	6	0	5
+sub-116	headband	873	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	26160.0	26190.0	26204.0	14.0	256.0	3			2
+sub-116	psg	873	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	26160.0	26190.0	26204.0	14.0	256.0	16	9	0	40
+sub-117	headband	793	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	23760.0	23790.0	23799.0	9.0	256.0	3			5
+sub-117	psg	793	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	23760.0	23790.0	23799.0	9.0	256.0	16	0	0	0
+sub-118	headband	894	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	26790.0	26820.0	26825.0	5.0	256.0	3			1
+sub-118	psg	894	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	26790.0	26820.0	26825.0	5.0	256.0	16	9	0	8
+sub-119	headband	898	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	26910.0	26940.0	26961.0	21.0	256.0	3			0
+sub-119	psg	898	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	26910.0	26940.0	26961.0	21.0	256.0	16	0	0	0
+sub-120	headband	789	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	23640.0	23670.0	23671.0	1.0	256.0	3			1
+sub-120	psg	789	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	23640.0	23670.0	23671.0	1.0	256.0	16	0	0	0
+sub-121	headband	893	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	26760.0	26790.0	26801.0	11.0	256.0	3			11
+sub-121	psg	893	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	26760.0	26790.0	26801.0	11.0	256.0	16	0	0	0
+sub-122	headband	876	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	26250.0	26280.0	26282.0	2.0	256.0	3			1
+sub-122	psg	876	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	26250.0	26280.0	26282.0	2.0	256.0	15	0	0	3
+sub-123	headband	879	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	26340.0	26370.0	26389.0	19.0	256.0	3			1
+sub-123	psg	879	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	26340.0	26370.0	26389.0	19.0	256.0	15	0	0	0
+sub-124	headband	889	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	26640.0	26670.0	26672.0	2.0	256.0	9			0
+sub-124	psg	889	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	26640.0	26670.0	26672.0	2.0	256.0	15	0	0	0
+sub-125	headband	977	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	29280.0	29310.0	29331.0	21.0	256.0	9			1
+sub-125	psg	977	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	29280.0	29310.0	29331.0	21.0	256.0	16	2	0	0
+sub-126	headband	871	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	26100.0	26130.0	26130.0	0.0	256.0	3			21
+sub-126	psg	871	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	26100.0	26130.0	26130.0	0.0	256.0	9	0	0	0
+sub-127	headband	832	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	24930.0	24960.0	24966.0	6.0	256.0	3			1
+sub-127	psg	832	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	24930.0	24960.0	24966.0	6.0	256.0	15	0	0	0
+sub-128	headband	821	onset;duration;begsample;endsample;offset;stage_ai	False	True	30	0.0	24600.0	24630.0	24648.0	18.0	256.0	3			0
+sub-128	psg	821	onset;duration;begsample;endsample;offset;stage_hum;stage_ai	True	True	30	0.0	24600.0	24630.0	24648.0	18.0	256.0	9	1	0	13

@@ -167,7 +167,51 @@ For `sub-53`, direct adjacent PSG `stage_hum` epochs contain four REM-to-Wake an
 
 Detailed output is stored in `experiments/2026-06-24_boas_sub53_pilot/`.
 
-## 12. Official Sources
+## 12. Transition-Window Quality Update
+
+**Work period:** 2026-06-25 to 2026-06-28
+**Finalized:** 2026-06-28
+
+The six `sub-53` REM/Wake candidate windows were inspected using 240-second windows centered on each nominal boundary. All `HB_1` and `HB_2` windows passed the basic quality checks. No PSG disconnection epochs occurred inside the inspected windows.
+
+Four PSG reference-channel windows were flagged for many extreme points:
+
+- `PSG_EOG` near transition IDs 4 and 5;
+- `PSG_EMG` near transition IDs 5 and 6.
+
+The pilot supports proceeding to the scheduled E0 feasibility audit, but the flagged PSG EOG/EMG windows should be visually reviewed before being treated as clean reference examples.
+
+The first transition-label rule document is `docs/labels/transition_label_spec_v0.1.md`. For `sub-53`, the 28-second unlabeled tail after the final scored epoch is excluded from transition-label generation and will be recorded as unlabeled recording time.
+
+Detailed output is stored in `experiments/2026-06-25_to_2026-06-28_boas_sub53_transition_quality/`.
+
+## 13. E0 Metadata Readiness Update
+
+**Work period:** 2026-06-25 to 2026-06-28
+**Finalized:** 2026-06-28
+
+Metadata and event files required for the scheduled E0 audit were acquired outside Git using `scripts/download_boas_e0_metadata.py`. EDF signal files were not downloaded as part of this step.
+
+Readiness summary:
+
+| Item | Value |
+|---|---:|
+| Expected metadata/event files | 1,157 |
+| Missing metadata/event files | 0 |
+| Metadata/event byte size | 7,750,181 |
+| PSG event tables checked | 128 |
+| Headband event tables checked | 128 |
+| PSG event files with `stage_hum` | 128 |
+| Headband event files with `stage_hum` | 0 |
+| Event duration values observed | 30 seconds |
+| Sampling frequencies observed in sidecars | 256 Hz |
+| Unlabeled tail range | 0 to 29 seconds |
+
+Participant grouping remains based on 100 unique `pid` values: 80 occur once, 12 occur twice, and 8 occur three times.
+
+This readiness check does not count REM-to-Wake events or make the feasibility decision. Detailed output is stored in `experiments/2026-06-25_to_2026-06-28_boas_e0_metadata_readiness/`.
+
+## 14. Official Sources
 
 - OpenNeuro snapshot: https://openneuro.org/datasets/ds005555/versions/1.1.1
 - Dataset DOI: https://doi.org/10.18112/openneuro.ds005555.v1.1.1
