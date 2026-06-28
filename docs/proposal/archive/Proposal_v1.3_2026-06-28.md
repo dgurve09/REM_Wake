@@ -2,11 +2,11 @@
 
 ## Wearable EEG REM-to-Wake Transition Detection Under Label and Device Uncertainty
 
-**Version:** 1.4
+**Version:** 1.3
 **Planning date:** 2026-06-21
-**Last revised:** 2026-06-28
+**Last revised:** 2026-06-22
 **Project window:** 2026-06-01 to 2026-11-29
-**Status:** Working research plan; Block 2 setup and E0 readiness completed; expected to change as evidence is generated
+**Status:** Initial research plan; expected to change as evidence is generated
 
 ## 1. Technology Area
 
@@ -18,7 +18,7 @@ This project will investigate whether REM-to-Wake transitions can be detected re
 
 This is a transition-boundary detection project, not a general sleep-stage classification project. Existing sleep stages serve as source annotations from which new REM-to-Wake and exploratory Wake-to-REM event labels will be derived. Conventional sleep staging is included only as a benchmark: a transition-specific method must be compared with the simpler alternative of predicting stages and then deriving transitions.
 
-The project began on June 1, 2026 with preliminary scientific work: literature review, examination of the existing technological knowledge base, research-question refinement, project planning, and public-dataset identification. Experimental implementation began on June 22, 2026 with repository setup, BOAS metadata verification, limited pilot acquisition, and E0 readiness checks. No preprocessing, model training, or model result is attributed to the preliminary period or the Block 2 setup period.
+The project began on June 1, 2026 with preliminary scientific work: literature review, examination of the existing technological knowledge base, research-question refinement, project planning, and public-dataset identification. Experimental implementation is planned to begin on June 22, 2026. No preprocessing, model training, or experimental result is attributed to the preliminary period unless supported by a dated record.
 
 The project will not assume that transition-specific modeling is better than conventional sleep staging. It will compare a stage-first approach, in which predicted sleep stages are converted into transitions, with a model trained directly to detect transition events. The main technological questions concern event rarity, label uncertainty, participant-level generalization, reduced-channel signal quality, and PSG-to-wearable device shift.
 
@@ -139,7 +139,7 @@ The BOAS dataset contains:
 
 All participant-level splits will use the versioned `pid` field, not the recording identifier, because some participants contributed multiple nights. The discrepancy between the README participant count and the participant table will be documented before splits are frozen.
 
-The verified metadata inventory, storage estimate, pilot-record selection, pilot quality check, and E0 metadata readiness summary are recorded in `docs/data/boas_dataset_manifest.md`.
+The verified metadata inventory, storage estimate, and pilot-record selection are recorded in `docs/data/boas_dataset_manifest.md`.
 
 ### Transition labels
 
@@ -148,7 +148,7 @@ The verified metadata inventory, storage estimate, pilot-record selection, pilot
 - **Boundary representation:** the scored epoch boundary plus an explicit uncertainty interval.
 - **Excluded or flagged regions:** disconnections, missing data, severe artifacts, and boundaries without the required signal coverage.
 
-The first transition-label rule is documented in `docs/labels/transition_label_spec_v0.1.md`. The derived event table will include, at minimum, participant ID, recording ID, event direction, preceding and following stage, scored boundary time, uncertainty interval, signal-coverage flags, artifact/disconnection flags, derivation-rule version, and source-dataset version.
+The derived event table will include, at minimum, participant ID, recording ID, event direction, preceding and following stage, scored boundary time, uncertainty interval, signal-coverage flags, artifact/disconnection flags, derivation-rule version, and source-dataset version.
 
 The label-generation code will be deterministic and tested on manually checked examples. Label validation will include event-count checks, manual inspection, sensitivity to alternative defensible rules, and verification that repeated recordings are linked through `pid`. No short window will be assigned an exact physiological transition second unless an independent annotation supports it.
 
@@ -175,8 +175,6 @@ The decision will be one of the following:
 4. **Stop:** document that the dataset cannot answer the proposed question and identify the evidence required for a future study.
 
 This gate prevents months of modeling on an unsupported target.
-
-The E0 audit protocol and metadata data dictionary are recorded in `docs/feasibility/`. The overall project timeline and decision gates are recorded in `docs/planning/overall_project_timeline.md`.
 
 ## 11. Experimental Design
 
