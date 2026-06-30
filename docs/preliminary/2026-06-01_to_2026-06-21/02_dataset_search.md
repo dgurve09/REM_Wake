@@ -96,7 +96,7 @@ The PSG may include six EEG channels, EOG, chin EMG, respiratory channels, and o
 
 ### Labels
 
-Three expert scorers independently annotated the PSG according to the AASM framework. A majority consensus was used, with a fourth scorer resolving three-way disagreements. The human consensus stage appears as `stage_hum` in PSG event files. AI-generated labels are also present but must not replace the human reference.
+Three expert scorers independently annotated the PSG according to the AASM framework. A majority consensus was used, with a fourth scorer resolving three-way disagreements. The human consensus stage appears as `stage_hum` in PSG event files. Automated `stage_ai` labels are also present but must not replace the human reference.
 
 The human PSG labels need to be aligned to the simultaneously recorded headband signal. This alignment must be verified rather than assumed.
 

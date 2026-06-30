@@ -25,6 +25,15 @@
 - Keep raw datasets, generated arrays, model weights, and large temporary artifacts outside Git.
 - Record dataset sources, versions, paths, file counts, and checksums or official manifests.
 
+## Experimental Records
+
+- Before adding a new model or method, record the known baseline, why it may be insufficient, and the hypothesis being tested.
+- For each experiment, retain the configuration, input data version, participant split, metrics, result, failure mode, interpretation, and next decision.
+- Separate routine setup, data acquisition, cleaning, and format conversion from experiments that resolve a stated uncertainty.
+- Treat model tuning as support work unless it is testing a documented technical hypothesis.
+- Prefer simple baselines before complex architectures or adaptation methods.
+- Follow `docs/planning/ml_experiment_record_requirements.md` when creating any model or quantitative baseline experiment.
+
 ## Version Control and Research Records
 
 - Commit and push meaningful work multiple times per week when practical, with at least one verified push during each active calendar week.

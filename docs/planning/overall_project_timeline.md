@@ -133,3 +133,5 @@ Starting on 2026-06-29, begin E0:
 - Do not train or evaluate models before the feasibility gate.
 - Do not use headband `stage_ai` as human ground truth.
 - Do not claim clinical utility from BOAS alone.
+- Before any model experiment, record the known-method baseline, hypothesis, configuration, metric, result, limitation, and next decision.
+- Keep routine data setup separate from experiments that test a stated technical uncertainty.

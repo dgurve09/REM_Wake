@@ -411,8 +411,7 @@ REM_W/
 |   |-- preliminary/
 |   |-- decisions/
 |   |-- reports/
-|   `-- sred/
-|       `-- weekly/
+|   `-- weekly/
 |-- notebooks/
 |-- src/
 |-- experiments/
