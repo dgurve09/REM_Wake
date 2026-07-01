@@ -4,7 +4,7 @@
 **Project window:** 2026-06-01 to 2026-11-29
 **Prepared during:** 2026-06-25 to 2026-06-28
 **Finalized:** 2026-06-28
-**Current status:** Block 2 closeout complete; E0 feasibility audit prepared but not yet run
+**Current status:** Block 3 E0 count-level inventory complete; proceed to deterministic labels and minimal preprocessing, with model training still blocked
 
 ## 1. Project Boundary
 
@@ -69,12 +69,12 @@ flowchart TD
 
 ## 4. Phase Table
 
-| Block | Dates | Main Question | Main Work | Deliverable | Status as of 2026-06-28 |
+| Block | Dates | Main Question | Main Work | Deliverable | Status as of 2026-07-01 |
 |---:|---|---|---|---|---|
 | 1 | Jun 1-Jun 14 | What is known and what is uncertain? | Literature review, initial planning, public-dataset search | Initial proposal, literature evidence, dataset candidate list | Complete |
 | 2 | Jun 15-Jun 28 | Can the project be set up cleanly with a defensible dataset and target? | Scope refinement, BOAS selection, repository setup, environment audit, pilot checks, E0 readiness | Revised proposal, manifest, setup records, pilot reports, E0 readiness package | Complete |
-| 3 | Jun 29-Jul 12 | Are there enough usable REM/Wake events to justify modeling? | Full event inventory, participant grouping, label-quality audit, feasibility decision | E0 feasibility report and proceed/narrow/redesign/stop decision | Not started |
-| 4 | Jul 13-Jul 26 | Can labels and minimal preprocessing be made reproducible? | Transition-event table, uncertainty intervals, alignment validation | Versioned label table and preprocessing artifacts | Not started |
+| 3 | Jun 29-Jul 12 | Are there enough usable REM/Wake events to justify modeling? | Full event inventory, participant grouping, label-quality audit, feasibility decision | E0 feasibility report and proceed/narrow/redesign/stop decision | Count-level inventory and proceed decision complete |
+| 4 | Jul 13-Jul 26 | Can labels and minimal preprocessing be made reproducible? | Transition-event table, uncertainty intervals, alignment validation | Versioned label table and preprocessing artifacts | Next |
 | 5 | Jul 27-Aug 9 | What does a stage-first comparator achieve? | Wearable sleep-stage baseline, transition derivation from predicted stages | Stage-first event metrics | Not started |
 | 6 | Aug 10-Aug 23 | Does direct transition detection add value? | Simple direct baseline, small CNN only if justified, comparison to stage-first | Comparative baseline report | Not started |
 | 7 | Aug 24-Sep 6 | How large is the PSG-to-wearable device-shift problem? | Full PSG, reduced PSG, wearable, zero-shot and fine-tuning tests | Paired transfer results and decision log | Not started |
@@ -114,15 +114,23 @@ Completed before or by 2026-06-28:
 - E0 feasibility audit protocol and metadata data dictionary;
 - all-recording BOAS metadata/event readiness check without EDF download.
 
+Additional evidence completed on 2026-07-01:
+
+- all-recording E0 transition inventory across 128 PSG `stage_hum` event files;
+- 365 direct REM-to-Wake candidates across 112 recordings and 88 unique `pid` values;
+- 111 Wake-to-REM secondary candidates across 57 recordings and 46 unique `pid` values;
+- label-quality audit confirming no missing `stage_hum` values, no non-30-second epochs, and no sidecar duration or sampling-frequency mismatch;
+- E0 proceed decision for deterministic label-table generation and minimal preprocessing, with model training still blocked.
+
 ## 7. Next Work
 
-Starting on 2026-06-29, begin E0:
+After the E0 count-level inventory:
 
-1. derive transition candidates across all BOAS PSG `stage_hum` event files;
-2. count REM-to-Wake and Wake-to-REM events by recording and by `pid`;
-3. summarize missing labels, PSG disconnections, non-30-second epochs, and unlabeled tails;
-4. assess participant-level evaluation feasibility;
-5. write the E0 decision report before any model training.
+1. create a versioned deterministic transition-label table from the E0 candidate inventory;
+2. preserve each boundary's 30-second uncertainty interval;
+3. validate PSG-to-headband timing assumptions beyond sidecar duration agreement;
+4. draft a grouped split policy using `pid`;
+5. begin minimal preprocessing only after label-table and timing checks are reviewed.
 
 ## 8. Rules for the Rest of the Project
 
