@@ -1,0 +1,4 @@
+transition_type	rows	unique_subjects	unique_pid	include_rows	review_rows	sample_alignment_pass	timeline_alignment_pass_subjects	primary_rows
+REM_to_Wake	365	112	88	365	0	365	112	365
+Wake_to_REM	111	57	46	111	0	111	57	0
+ALL	476	112	88	476	0	476	112	365

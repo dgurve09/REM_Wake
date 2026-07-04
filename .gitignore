@@ -1,8 +1,7 @@
 # Local operating instructions
-codex_rules.txt
+*_rules.txt
 AGENTS.md
 .agents/
-.codex/
 
 # Python and notebooks
 __pycache__/
@@ -36,4 +35,3 @@ checkpoints/
 *.tmp
 *.temp
 ~$*
-
