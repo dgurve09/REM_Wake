@@ -4,7 +4,7 @@
 **Project window:** 2026-06-01 to 2026-11-29
 **Prepared during:** 2026-06-25 to 2026-06-28
 **Finalized:** 2026-06-28
-**Current status:** Block 3 E0 count-level inventory complete; proceed to deterministic labels and minimal preprocessing, with model training still blocked
+**Current status:** Block 3 E0 count-level inventory complete; full EDF acquisition and full-dataset signal-alignment validation complete; proceed to deterministic labels and minimal preprocessing, with model training still blocked
 
 ## 1. Project Boundary
 
@@ -69,11 +69,11 @@ flowchart TD
 
 ## 4. Phase Table
 
-| Block | Dates | Main Question | Main Work | Deliverable | Status as of 2026-07-01 |
+| Block | Dates | Main Question | Main Work | Deliverable | Status as of 2026-07-04 |
 |---:|---|---|---|---|---|
 | 1 | Jun 1-Jun 14 | What is known and what is uncertain? | Literature review, initial planning, public-dataset search | Initial proposal, literature evidence, dataset candidate list | Complete |
 | 2 | Jun 15-Jun 28 | Can the project be set up cleanly with a defensible dataset and target? | Scope refinement, BOAS selection, repository setup, environment audit, pilot checks, E0 readiness | Revised proposal, manifest, setup records, pilot reports, E0 readiness package | Complete |
-| 3 | Jun 29-Jul 12 | Are there enough usable REM/Wake events to justify modeling? | Full event inventory, participant grouping, label-quality audit, feasibility decision | E0 feasibility report and proceed/narrow/redesign/stop decision | Count-level inventory and proceed decision complete |
+| 3 | Jun 29-Jul 12 | Are there enough usable REM/Wake events to justify modeling? | Full event inventory, participant grouping, label-quality audit, feasibility decision | E0 feasibility report and proceed/narrow/redesign/stop decision | Count-level inventory, proceed decision, full EDF acquisition, and full signal-alignment validation complete |
 | 4 | Jul 13-Jul 26 | Can labels and minimal preprocessing be made reproducible? | Transition-event table, uncertainty intervals, alignment validation | Versioned label table and preprocessing artifacts | Next |
 | 5 | Jul 27-Aug 9 | What does a stage-first comparator achieve? | Wearable sleep-stage baseline, transition derivation from predicted stages | Stage-first event metrics | Not started |
 | 6 | Aug 10-Aug 23 | Does direct transition detection add value? | Simple direct baseline, small CNN only if justified, comparison to stage-first | Comparative baseline report | Not started |
@@ -122,15 +122,29 @@ Additional evidence completed on 2026-07-01:
 - label-quality audit confirming no missing `stage_hum` values, no non-30-second epochs, and no sidecar duration or sampling-frequency mismatch;
 - E0 proceed decision for deterministic label-table generation and minimal preprocessing, with model training still blocked.
 
+Additional evidence completed on 2026-07-04:
+
+- `sub-53` PSG-to-headband signal-level alignment pilot using the already downloaded paired EDF files;
+- sample-index validation showing all six `sub-53` REM/Wake transition windows use matching PSG/headband extraction indices;
+- pulse-based drift proxy using `HB_PULSE` versus `PSG_PULSE`, with four usable windows and all usable lags within +/-2 seconds;
+- EEG-envelope artifact/physiology proxy showing `HB_1` versus `PSG_F3` peaked within +/-1 second for all six transition windows;
+- decision to treat `sub-53` as sample-aligned for pilot label-table and minimal preprocessing work, without generalizing this result to all BOAS recordings;
+- full BOAS EDF acquisition outside Git: 256 EDF files, 35,913,652,480 bytes, with no partial files and no size mismatches against remote object sizes;
+- full-dataset signal-alignment validation across 128 paired PSG/headband EDF recordings;
+- timeline validation showing all 128 EDF pairs matched on start time, sampling rate, sample count, and duration;
+- transition-window sample-index validation showing all 476 E0 REM/Wake candidate windows used matching PSG/headband sample indices;
+- pulse and EEG-envelope proxy analyses recorded as supporting evidence, not as ground-truth synchronization markers;
+- decision to proceed to versioned deterministic label-table generation and minimal preprocessing, with model training still blocked.
+
 ## 7. Next Work
 
 After the E0 count-level inventory:
 
 1. create a versioned deterministic transition-label table from the E0 candidate inventory;
 2. preserve each boundary's 30-second uncertainty interval;
-3. validate PSG-to-headband timing assumptions beyond sidecar duration agreement;
-4. draft a grouped split policy using `pid`;
-5. begin minimal preprocessing only after label-table and timing checks are reviewed.
+3. draft a grouped split policy using `pid`;
+4. add recording-level and transition-window signal-quality flags for label/preprocessing review;
+5. begin model work only after the label/preprocessing gate is complete.
 
 ## 8. Rules for the Rest of the Project
 
@@ -138,7 +152,7 @@ After the E0 count-level inventory:
 - Preserve failed, negative, and inconclusive results.
 - Keep weekly records contemporaneous.
 - Push meaningful work at least weekly during active work periods.
-- Do not train or evaluate models before the feasibility gate.
+- Do not train or evaluate models before the label/preprocessing gate.
 - Do not use headband `stage_ai` as human ground truth.
 - Do not claim clinical utility from BOAS alone.
 - Before any model experiment, record the known-method baseline, hypothesis, configuration, metric, result, limitation, and next decision.
