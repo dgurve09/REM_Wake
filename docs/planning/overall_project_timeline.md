@@ -4,7 +4,7 @@
 **Project window:** 2026-06-01 to 2026-11-29
 **Prepared during:** 2026-06-25 to 2026-06-28
 **Finalized:** 2026-06-28
-**Current status:** Block 3 E0 count-level inventory, full EDF acquisition, full-dataset signal-alignment validation, and transition-label artifact v0.1 complete; proceed to background-window rules and signal-quality flags, with model training still blocked
+**Current status:** Block 3 E0 feasibility closeout complete, including full EDF acquisition, signal alignment, deterministic labels, background controls, structural flags, split readiness, and raw headband amplitude/continuity assessment; 350 primary events remain across all 88 contributing `pid` groups; model training remains blocked pending revised quality integration, grouped split policy, and the label/preprocessing gate
 
 ## 1. Project Boundary
 
@@ -69,12 +69,12 @@ flowchart TD
 
 ## 4. Phase Table
 
-| Block | Dates | Main Question | Main Work | Deliverable | Status as of 2026-07-04 |
+| Block | Dates | Main Question | Main Work | Deliverable | Status as of 2026-07-09 |
 |---:|---|---|---|---|---|
 | 1 | Jun 1-Jun 14 | What is known and what is uncertain? | Literature review, initial planning, public-dataset search | Initial proposal, literature evidence, dataset candidate list | Complete |
 | 2 | Jun 15-Jun 28 | Can the project be set up cleanly with a defensible dataset and target? | Scope refinement, BOAS selection, repository setup, environment audit, pilot checks, E0 readiness | Revised proposal, manifest, setup records, pilot reports, E0 readiness package | Complete |
-| 3 | Jun 29-Jul 12 | Are there enough usable REM/Wake events to justify modeling? | Full event inventory, participant grouping, label-quality audit, feasibility decision | E0 feasibility report and proceed/narrow/redesign/stop decision | Count-level inventory, proceed decision, full EDF acquisition, full signal-alignment validation, and label artifact v0.1 complete |
-| 4 | Jul 13-Jul 26 | Can labels and minimal preprocessing be made reproducible? | Transition-event table, uncertainty intervals, alignment validation | Versioned label table and preprocessing artifacts | Next |
+| 3 | Jun 29-Jul 12 | Are there enough usable REM/Wake events to justify modeling? | Full event inventory, participant grouping, label-quality audit, feasibility decision | E0 feasibility report and proceed/narrow/redesign/stop decision | Count-level inventory, proceed decision, full EDF acquisition, full signal-alignment validation, label artifact v0.1, background-window rules, quality flags, and split-readiness review complete |
+| 4 | Jul 13-Jul 26 | Can labels and minimal preprocessing be made reproducible? | Transition-event table, uncertainty intervals, alignment validation | Versioned label table and preprocessing artifacts | Started early; grouped split policy and final preprocessing gate still pending |
 | 5 | Jul 27-Aug 9 | What does a stage-first comparator achieve? | Wearable sleep-stage baseline, transition derivation from predicted stages | Stage-first event metrics | Not started |
 | 6 | Aug 10-Aug 23 | Does direct transition detection add value? | Simple direct baseline, small CNN only if justified, comparison to stage-first | Comparative baseline report | Not started |
 | 7 | Aug 24-Sep 6 | How large is the PSG-to-wearable device-shift problem? | Full PSG, reduced PSG, wearable, zero-shot and fine-tuning tests | Paired transfer results and decision log | Not started |
@@ -139,13 +139,34 @@ Additional evidence completed on 2026-07-04:
 - each label preserves nominal boundary time, +/-15 second uncertainty interval, PSG/headband sample indices, label source, and quality flags;
 - participant-level label distribution and grouped split-policy draft added for later leakage-safe splitting by `pid`, without assigning final splits yet.
 
+Additional evidence completed on 2026-07-09:
+
+- background-window specification `v0.1` added to prevent negative-window contamination around REM/Wake boundary uncertainty intervals;
+- 119,967 possible adjacent-epoch background centers checked;
+- 115,275 eligible background centers found after edge, disconnection, REM/Wake-boundary, and uncertainty-overlap exclusions;
+- deterministic background review artifact written with 4,302 rows, without treating it as a final training set;
+- signal-quality flags `v0.1` added for 128 recordings, 476 transition windows, and 4,302 background review windows;
+- current critical quality checks include all reviewed recordings/windows for preprocessing while preserving pulse and EEG-envelope proxy notes;
+- split-readiness review `v0.1` added by `pid`, showing 88 `pid` values with both primary REM-to-Wake labels and background review windows;
+- final train/validation/test split still not assigned.
+
+Additional evidence completed on 2026-07-11:
+
+- predeclared full headband window signal-quality protocol applied to 9,556 `HB_1`/`HB_2` channel-window measurements;
+- 15 transition windows and 20 background review windows met critical constant, near-flat, or flatline exclusion rules;
+- 350 of 365 primary REM-to-Wake events remain after critical screening, with all 88 contributing `pid` groups retained;
+- critical failures identified as participant-concentrated, including 16 windows in `pid 89`, five in `pid 77`, and five in `pid 91`;
+- the 10-MAD review rule found to be nonspecific for raw EEG after flagging 2,663 channel-window measurements across all participant groups;
+- nonspecific 10-MAD flags preserved for sensitivity analysis, while 381 windows with targeted amplitude, jump, or endpoint flags receive review priority;
+- final E0 decision remains `proceed` to Block 4, with model training still blocked.
+
 ## 7. Next Work
 
-After the E0 count-level inventory, full signal-alignment validation, and label artifact v0.1:
+After the E0 closeout and full headband window signal-quality assessment:
 
-1. define background-window rules for non-transition examples without contaminating the uncertainty interval;
-2. add recording-level and transition-window signal-quality flags for label/preprocessing review;
-3. review grouped split policy using `pid` after background-window rules are defined;
+1. incorporate critical amplitude exclusions and review priorities into a revised quality artifact;
+2. define the deterministic grouped split policy by `pid` and report balance;
+3. freeze minimal preprocessing and record the final label/preprocessing gate decision;
 4. begin model work only after the label/preprocessing gate is complete.
 
 ## 8. Rules for the Rest of the Project

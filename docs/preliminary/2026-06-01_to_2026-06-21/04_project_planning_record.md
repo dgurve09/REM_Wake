@@ -83,7 +83,7 @@ The longer-term application direction includes REM-to-Wake phenomena such as awa
 1. BOAS version 1.1.1 remains accessible and contains the files described in its official README.
 2. Human PSG consensus labels can be aligned with the simultaneous headband signal.
 3. The project is performed by one researcher at up to 20 planned hours per week.
-4. Actual hours, not the 520-hour planning ceiling, control any later accounting.
+4. The 520-hour planning ceiling is a capacity assumption, not evidence of completed technical work.
 5. Existing installed packages will be checked before any installation.
 6. Exploration will use simple, section-by-section notebooks.
 7. Stable reusable logic will move to small scripts only when justified.

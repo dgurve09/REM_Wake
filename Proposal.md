@@ -4,9 +4,9 @@
 
 **Version:** 1.5
 **Planning date:** 2026-06-21
-**Last revised:** 2026-06-28
+**Last revised:** 2026-07-11
 **Project window:** 2026-06-01 to 2026-11-29
-**Status:** Working research plan; Block 2 setup and E0 readiness completed; expected to change as evidence is generated
+**Status:** Working research plan; Block 3 E0 feasibility closeout completed, including full EDF acquisition, PSG-to-headband alignment, deterministic labels, background controls, split readiness, and raw headband amplitude/continuity assessment; 350 primary events remain across all 88 contributing `pid` groups; model training remains blocked pending revised quality integration, grouped split policy, and the final label/preprocessing gate
 
 ## 1. Technology Area
 
@@ -141,6 +141,8 @@ All participant-level splits will use the versioned `pid` field, not the recordi
 
 The verified metadata inventory, storage estimate, pilot-record selection, pilot quality check, and E0 metadata readiness summary are recorded in `docs/data/boas_dataset_manifest.md`.
 
+Current evidence and later status updates are tracked in `docs/planning/overall_project_timeline.md` and the dated weekly technical records.
+
 ### Transition labels
 
 - **Primary positive event:** a human-consensus REM epoch followed by a Wake epoch.
@@ -148,11 +150,13 @@ The verified metadata inventory, storage estimate, pilot-record selection, pilot
 - **Boundary representation:** the scored epoch boundary plus an explicit uncertainty interval.
 - **Excluded or flagged regions:** disconnections, missing data, severe artifacts, and boundaries without the required signal coverage.
 
-The first transition-label rule is documented in `docs/labels/transition_label_spec_v0.1.md`. The derived event table will include, at minimum, participant ID, recording ID, event direction, preceding and following stage, scored boundary time, uncertainty interval, signal-coverage flags, artifact/disconnection flags, derivation-rule version, and source-dataset version.
+The first transition-label rule is documented in `docs/labels/transition_label_spec_v0.1.md`, and the first derived transition-label artifact is stored in `labels/transition_labels_v0.1/`. The derived event table includes participant ID, recording ID, event direction, preceding and following stage, scored boundary time, uncertainty interval, signal-coverage flags, artifact/disconnection flags, derivation-rule version, and source-dataset version.
 
 The label-generation code will be deterministic and tested on manually checked examples. Label validation will include event-count checks, manual inspection, sensitivity to alternative defensible rules, and verification that repeated recordings are linked through `pid`. No short window will be assigned an exact physiological transition second unless an independent annotation supports it.
 
 The derived labels are a new project artifact and enable a new first-class prediction target. Their scientific value will be established through systematic analysis, not assumed from the transformation itself.
+
+Background-window rules and signal-quality flag rules are documented in `docs/labels/background_window_spec_v0.1.md` and `docs/labels/signal_quality_flag_spec_v0.1.md`. These artifacts support the label/preprocessing gate and are not model results.
 
 ## 10. Feasibility Gate
 
@@ -475,7 +479,7 @@ After technical feasibility is established, a separate study could investigate c
 
 1. Lopez-Larraz E, Sierra-Torralba M, Clemente S, et al. *Bitbrain Open Access Sleep Dataset*. OpenNeuro, version 1.1.1. https://doi.org/10.18112/openneuro.ds005555.v1.1.1
 2. Esparza-Iaizzo M, Sierra-Torralba M, Klinzing JG, Minguez J, Montesano L, Lopez-Larraz E. Automatic sleep scoring for real-time monitoring and stimulation in individuals with and without sleep apnea. *Computers in Biology and Medicine*. 2026;205:111560. https://doi.org/10.1016/j.compbiomed.2026.111560
-3. Weinhold SL, Seeck-Hirschner M, Nowak A, Goder R, Baier PC. Wake-REM sleep transitions for measuring REM sleep disturbance: comparison between narcolepsy, idiopathic hypersomnia and healthy controls. 2011. https://doi.org/10.1111/j.1479-8425.2011.00503.x
-4. Chen X, Jin X, Zhang J, et al. Validation of a wearable forehead sleep recorder against polysomnography in sleep staging and desaturation events in a clinical sample. *Journal of Clinical Sleep Medicine*. 2023;19. https://doi.org/10.5664/jcsm.10416
+3. Weinhold SL, Seeck-Hirschner M, Nowak A, Goder R, Baier PC. Wake-REM sleep transitions for measuring REM sleep disturbance: comparison between narcolepsy, idiopathic hypersomnia and healthy controls. *Sleep and Biological Rhythms*. 2011;9:172-177. https://doi.org/10.1111/j.1479-8425.2011.00503.x
+4. Chen X, Jin X, Zhang J, et al. Validation of a wearable forehead sleep recorder against polysomnography in sleep staging and desaturation events in a clinical sample. *Journal of Clinical Sleep Medicine*. 2023;19:711-718. https://doi.org/10.5664/jcsm.10416
 5. Danker-Hopfe H, Anderer P, Zeitlhofer J, et al. Interrater reliability for sleep scoring according to the Rechtschaffen & Kales and the new AASM standard. *Journal of Sleep Research*. 2009;18:74-84. https://doi.org/10.1111/j.1365-2869.2008.00700.x
 6. Rosenberg RS, Van Hout S. The American Academy of Sleep Medicine inter-scorer reliability program: sleep stage scoring. *Journal of Clinical Sleep Medicine*. 2013;9:81-87. https://doi.org/10.5664/jcsm.2350

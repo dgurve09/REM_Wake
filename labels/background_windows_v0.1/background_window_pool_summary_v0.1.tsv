@@ -1,0 +1,13 @@
+metric	value
+recordings_checked	128.0
+potential_boundary_centers	119967.0
+eligible_background_centers	115275.0
+strict_same_stage_backgrounds	83688.0
+nontarget_no_remwake_backgrounds	31587.0
+review_candidate_rows_written	4302.0
+rem_wake_exclusion_sec	135.0
+excluded_edge_window_incomplete	754.0
+excluded_psg_disconnection_at_center	384.0
+excluded_psg_disconnection_in_window	294.0
+excluded_rem_wake_boundary_center	476.0
+excluded_too_close_to_rem_wake_uncertainty	2784.0

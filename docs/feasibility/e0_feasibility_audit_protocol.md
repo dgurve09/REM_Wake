@@ -4,7 +4,7 @@
 **Finalized:** 2026-06-28
 **Scheduled audit period:** 2026-06-29 to 2026-07-12
 **Project phase:** Block 3 preparation
-**Status:** Protocol ready; full E0 counting not yet performed
+**Status:** Protocol executed; E0 feasibility closeout completed on 2026-07-11 and recorded in `e0_feasibility_closeout_2026-07-11.md`
 
 ## 1. Purpose
 

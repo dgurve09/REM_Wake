@@ -1,0 +1,12 @@
+window_source	label_class	window_signal_decision	review_priority	windows
+background_review	background_review	exclude	critical_exclusion	20
+background_review	background_review	include	no_review_flag	2702
+background_review	background_review	review	mad_only_review	1291
+background_review	background_review	review	targeted_review	289
+transition	REM_to_Wake	exclude	critical_exclusion	15
+transition	REM_to_Wake	include	no_review_flag	76
+transition	Wake_to_REM	include	no_review_flag	23
+transition	REM_to_Wake	review	mad_only_review	201
+transition	REM_to_Wake	review	targeted_review	73
+transition	Wake_to_REM	review	mad_only_review	69
+transition	Wake_to_REM	review	targeted_review	19

@@ -240,7 +240,7 @@ The project is scientifically reasonable only if it is framed as a transition-sp
 
 ## 9. References
 
-1. Weinhold SL, Seeck-Hirschner M, Nowak A, Goder R, Baier PC. Wake-REM sleep transitions for measuring REM sleep disturbance: comparison between narcolepsy, idiopathic hypersomnia and healthy controls. 2011. https://doi.org/10.1111/j.1479-8425.2011.00503.x
+1. Weinhold SL, Seeck-Hirschner M, Nowak A, Goder R, Baier PC. Wake-REM sleep transitions for measuring REM sleep disturbance: comparison between narcolepsy, idiopathic hypersomnia and healthy controls. *Sleep and Biological Rhythms*. 2011;9:172-177. https://doi.org/10.1111/j.1479-8425.2011.00503.x
 2. Sorensen GL, Knudsen S, Jennum P. Sleep transitions in hypocretin-deficient narcolepsy. *Sleep*. 2013;36:1173-1177. https://doi.org/10.5665/sleep.2880
 3. Bianchi MT, Cash SS, Mietus J, Peng CK, Thomas R. Obstructive sleep apnea alters sleep stage transition dynamics. *PLoS ONE*. 2010;5:e11356. https://doi.org/10.1371/journal.pone.0011356
 4. Stephansen JB, Olesen AN, Olsen M, et al. Neural network analysis of sleep stages enables efficient diagnosis of narcolepsy. *Nature Communications*. 2018;9:5229. https://doi.org/10.1038/s41467-018-07229-3
@@ -249,9 +249,9 @@ The project is scientifically reasonable only if it is framed as a transition-sp
 7. Danker-Hopfe H, Anderer P, Zeitlhofer J, et al. Interrater reliability for sleep scoring according to the Rechtschaffen and Kales and the new AASM standard. *Journal of Sleep Research*. 2009;18:74-84. https://doi.org/10.1111/j.1365-2869.2008.00700.x
 8. Rosenberg RS, Van Hout S. The American Academy of Sleep Medicine inter-scorer reliability program: sleep stage scoring. *Journal of Clinical Sleep Medicine*. 2013;9:81-87. https://doi.org/10.5664/jcsm.2350
 9. Perslev M, Darkner S, Kempfner L, Nikolic M, Jennum P, Igel C. U-Sleep: resilient high-frequency sleep staging. *npj Digital Medicine*. 2021;4:72. https://doi.org/10.1038/s41746-021-00440-5
-10. Zhao C, Li J, Guo Y. BTCRSleep: a boundary temporal context refinement-based fully convolutional network for sleep staging with single-channel EEG. *Physiological Measurement*. 2023;44. https://doi.org/10.1088/1361-6579/acdb46
+10. Zhao C, Li J, Guo Y. BTCRSleep: a boundary temporal context refinement-based fully convolutional network for sleep staging with single-channel EEG. *Physiological Measurement*. 2023;44:075004. https://doi.org/10.1088/1361-6579/acdb46
 11. de Gans CJ, Burger PC, van den Ende ES, et al. Sleep assessment using EEG-based wearables: a systematic review. *Sleep Medicine Reviews*. 2024;76:101951. https://doi.org/10.1016/j.smrv.2024.101951
-12. Markov K, Elgendi M, Menon C. Evaluating the performance of wearable EEG sleep monitoring devices: a meta-analysis approach. *npj Biomedical Innovations*. 2025. https://doi.org/10.1038/s44385-025-00034-w
+12. Markov K, Elgendi M, Menon C. Evaluating the performance of wearable EEG sleep monitoring devices: a meta-analysis approach. *npj Biomedical Innovations*. 2025;2:33. https://doi.org/10.1038/s44385-025-00034-w
 13. Arnal PJ, Thorey V, Debellemaniere E, et al. The Dreem Headband compared to polysomnography for electroencephalographic signal acquisition and sleep staging. *Sleep*. 2020;43:zsaa097. https://doi.org/10.1093/sleep/zsaa097
 14. Mikkelsen KB, Tabar YR, Kappel SL, et al. Accurate whole-night sleep monitoring with dry-contact ear-EEG. *Scientific Reports*. 2019;9:16824. https://doi.org/10.1038/s41598-019-53115-3
 15. Chen X, Jin X, Zhang J, et al. Validation of a wearable forehead sleep recorder against polysomnography in sleep staging and desaturation events in a clinical sample. *Journal of Clinical Sleep Medicine*. 2023;19:711-718. https://doi.org/10.5664/jcsm.10416

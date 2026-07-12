@@ -300,7 +300,7 @@ Project documentation should distinguish experimental findings from routine supp
 
 ## 13. Record Integrity
 
-For the June 1-21 period, this assessment documents literature review, dataset search, definition of the knowledge base, uncertainty refinement, and planning. It does not claim that preprocessing or model experiments occurred before June 22. Actual hours must come from the researcher's contemporaneous records and must not be invented from this document.
+For the June 1-21 period, this assessment documents literature review, dataset search, definition of the knowledge base, uncertainty refinement, and planning. It does not state that preprocessing or model experiments occurred before June 22. Later records should describe the technical work that was actually completed at the time it was completed.
 
 Each later experiment record should include:
 
@@ -322,7 +322,7 @@ The project has a potentially defensible experimental core, but only after remov
 ## 15. References
 
 1. de Gans CJ, Burger PC, van den Ende ES, et al. Sleep assessment using EEG-based wearables: a systematic review. *Sleep Medicine Reviews*. 2024;76:101951. https://doi.org/10.1016/j.smrv.2024.101951
-2. Markov K, Elgendi M, Menon C. Evaluating the performance of wearable EEG sleep monitoring devices: a meta-analysis approach. *npj Biomedical Innovations*. 2025. https://doi.org/10.1038/s44385-025-00034-w
+2. Markov K, Elgendi M, Menon C. Evaluating the performance of wearable EEG sleep monitoring devices: a meta-analysis approach. *npj Biomedical Innovations*. 2025;2:33. https://doi.org/10.1038/s44385-025-00034-w
 3. Arnal PJ, Thorey V, Debellemaniere E, et al. The Dreem Headband compared to polysomnography for electroencephalographic signal acquisition and sleep staging. *Sleep*. 2020;43:zsaa097. https://doi.org/10.1093/sleep/zsaa097
 4. Mikkelsen KB, Tabar YR, Kappel SL, et al. Accurate whole-night sleep monitoring with dry-contact ear-EEG. *Scientific Reports*. 2019;9:16824. https://doi.org/10.1038/s41598-019-53115-3
 5. Chen X, Jin X, Zhang J, et al. Validation of a wearable forehead sleep recorder against polysomnography in sleep staging and desaturation events in a clinical sample. *Journal of Clinical Sleep Medicine*. 2023;19:711-718. https://doi.org/10.5664/jcsm.10416
@@ -330,9 +330,9 @@ The project has a potentially defensible experimental core, but only after remov
 7. Phan H, Andreotti F, Cooray N, Chen OY, De Vos M. SeqSleepNet. *IEEE Transactions on Neural Systems and Rehabilitation Engineering*. 2019;27:400-410. https://doi.org/10.1109/TNSRE.2019.2896659
 8. Perslev M, Darkner S, Kempfner L, Nikolic M, Jennum P, Igel C. U-Sleep: resilient high-frequency sleep staging. *npj Digital Medicine*. 2021;4:72. https://doi.org/10.1038/s41746-021-00440-5
 9. Phan H, Mikkelsen KB, Chen OY, et al. SleepTransformer. *IEEE Transactions on Biomedical Engineering*. 2022;69:2456-2467. https://doi.org/10.1109/TBME.2022.3147187
-10. Zhao C, Li J, Guo Y. BTCRSleep. *Physiological Measurement*. 2023;44. https://doi.org/10.1088/1361-6579/acdb46
+10. Zhao C, Li J, Guo Y. BTCRSleep: a boundary temporal context refinement-based fully convolutional network for sleep staging with single-channel EEG. *Physiological Measurement*. 2023;44:075004. https://doi.org/10.1088/1361-6579/acdb46
 11. Imtiaz SA, Rodriguez-Villegas E. A low computational cost algorithm for REM sleep detection using single channel EEG. *Annals of Biomedical Engineering*. 2014;42:2344-2359. https://doi.org/10.1007/s10439-014-1085-6
-12. Weinhold SL, Seeck-Hirschner M, Nowak A, Goder R, Baier PC. Wake-REM sleep transitions for measuring REM sleep disturbance. 2011. https://doi.org/10.1111/j.1479-8425.2011.00503.x
+12. Weinhold SL, Seeck-Hirschner M, Nowak A, Goder R, Baier PC. Wake-REM sleep transitions for measuring REM sleep disturbance: comparison between narcolepsy, idiopathic hypersomnia and healthy controls. *Sleep and Biological Rhythms*. 2011;9:172-177. https://doi.org/10.1111/j.1479-8425.2011.00503.x
 13. Sorensen GL, Knudsen S, Jennum P. Sleep transitions in hypocretin-deficient narcolepsy. *Sleep*. 2013;36:1173-1177. https://doi.org/10.5665/sleep.2880
 14. Bianchi MT, Cash SS, Mietus J, Peng CK, Thomas R. Obstructive sleep apnea alters sleep stage transition dynamics. *PLoS ONE*. 2010;5:e11356. https://doi.org/10.1371/journal.pone.0011356
 15. Alvarez-Estevez D, Rijsman RM. Inter-database validation of a deep learning approach for automatic sleep scoring. *PLoS ONE*. 2021;16:e0256111. https://doi.org/10.1371/journal.pone.0256111

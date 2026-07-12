@@ -1,0 +1,11 @@
+metric	value
+pid_values_with_any_window	100
+pid_values_with_primary_rem_to_wake	88
+pid_values_with_background_review_windows	100
+pid_values_with_positive_and_background	88
+pid_values_background_only	12
+pid_values_with_repeated_recordings	20
+primary_rem_to_wake_labels	365
+secondary_wake_to_rem_labels	111
+background_review_windows	4302
+quality_review_windows	0

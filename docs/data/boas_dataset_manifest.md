@@ -3,7 +3,7 @@
 **Audit date:** 2026-06-22  
 **Audit scope:** Metadata only  
 **Raw signal data acquired:** No  
-**Status:** Suitable for a limited paired-recording pilot, subject to the checks listed below
+**Status:** Initial metadata audit retained; full EDF acquisition and signal validation were completed on 2026-07-04, followed by full reviewed-window signal-quality assessment on 2026-07-11
 
 ## 1. Dataset Identity
 
@@ -46,7 +46,7 @@ The OpenNeuro API reported three snapshots: `1.0.0`, `1.1.0`, and `1.1.1`. The m
 | Headband EDF size | 13,440,299,008 bytes |
 | Combined EDF size per recording | 106,977,024 to 395,656,448 bytes |
 
-Raw data are stored outside Git. The limited `sub-53` pilot acquisition was completed on 2026-06-24 using `scripts/download_boas_sub53_pilot.py`, with the default storage location set to `<repo-parent>/REM_W_data/boas_ds005555_v1.1.1`. The full dataset has not been downloaded.
+Raw data are stored outside Git. The limited `sub-53` pilot acquisition was completed on 2026-06-24 using `scripts/download_boas_sub53_pilot.py`, with the default storage location set to `<repo-parent>/REM_W_data/boas_ds005555_v1.1.1`. The complete 256-file EDF set was acquired and verified on 2026-07-04; see Section 14.
 
 ## 4. Recording Structure
 
@@ -68,7 +68,7 @@ sub-XX/
     `-- sub-XX_task-Sleep_acq-psg_events.tsv
 ```
 
-All 128 paired sidecars report 256 Hz sampling. Within each recording, the PSG and headband sidecars report equal recording durations. Durations range from 12,290 to 33,598 seconds (3.41 to 9.33 hours). Signal-level clock alignment remains unverified until EDF data are inspected.
+All 128 paired sidecars report 256 Hz sampling. Within each recording, the PSG and headband sidecars report equal recording durations. Durations range from 12,290 to 33,598 seconds (3.41 to 9.33 hours). Signal-level clock alignment was unverified at the metadata-audit stage and was subsequently tested across the full EDF set on 2026-07-04; see Section 14.
 
 ## 5. Channel Coverage
 
@@ -211,7 +211,20 @@ Participant grouping remains based on 100 unique `pid` values: 80 occur once, 12
 
 This readiness check does not count REM-to-Wake events or make the feasibility decision. Detailed output is stored in `experiments/2026-06-25_to_2026-06-28_boas_e0_metadata_readiness/`.
 
-## 14. Official Sources
+## 14. Full EDF and Signal-Quality Update
+
+**Update period:** 2026-07-04 to 2026-07-11
+
+- All 256 expected EDF files were acquired outside Git, totalling 35,913,652,480 bytes, with no partial or remote-size mismatches.
+- All 128 PSG/headband pairs matched start time, sampling frequency, sample count, and duration.
+- All 476 REM/Wake transition windows used matching PSG/headband sample indices.
+- Full `HB_1` and `HB_2` amplitude/continuity screening measured 9,556 channel-window combinations.
+- Critical screening excluded 15 primary transition windows and 20 background review windows.
+- The primary candidate set retains 350 REM-to-Wake windows across all 88 originally contributing `pid` groups.
+
+Detailed evidence is stored in `experiments/2026-07-04_boas_full_signal_alignment/`, `experiments/2026-07-11_boas_headband_window_quality/`, and `docs/feasibility/e0_feasibility_closeout_2026-07-11.md`.
+
+## 15. Official Sources
 
 - OpenNeuro snapshot: https://openneuro.org/datasets/ds005555/versions/1.1.1
 - Dataset DOI: https://doi.org/10.18112/openneuro.ds005555.v1.1.1
