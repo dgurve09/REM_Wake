@@ -1,0 +1,15 @@
+window_source	label_class	quality_decision	window_check_decision	windows
+background_review	nontarget_window_no_remwake_nearby	include	pass	1372
+background_review	nontarget_window_no_remwake_nearby	include_mad_sensitivity	pass	649
+background_review	nontarget_window_no_remwake_nearby	review_targeted	pass	157
+background_review	strict_same_stage_window	include	pass	397
+background_review	strict_same_stage_window	include_mad_sensitivity	pass	145
+background_review	strict_same_stage_window	review_targeted	pass	41
+transition	REM_to_Wake	include	pass	53
+transition	REM_to_Wake	include_mad_sensitivity	fail	1
+transition	REM_to_Wake	include_mad_sensitivity	pass	127
+transition	REM_to_Wake	review_targeted	fail	1
+transition	REM_to_Wake	review_targeted	pass	47
+transition	Wake_to_REM	include	pass	16
+transition	Wake_to_REM	include_mad_sensitivity	pass	46
+transition	Wake_to_REM	review_targeted	pass	13

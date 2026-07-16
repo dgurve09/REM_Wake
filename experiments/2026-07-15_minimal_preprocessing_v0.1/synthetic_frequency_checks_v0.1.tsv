@@ -1,0 +1,4 @@
+preprocessing_version	frequency_hz	expected_behavior	rms_gain	criterion	check_decision
+v0.1	0.05	attenuate	2.856335208535518e-06	<=0.10	pass
+v0.1	10.0	retain	1.0003096562174678	>=0.90	pass
+v0.1	50.0	attenuate	0.02993146581460353	<=0.10	pass

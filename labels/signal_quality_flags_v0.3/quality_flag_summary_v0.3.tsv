@@ -1,0 +1,12 @@
+quality_version	artifact	preprocessing_decision	rows	unique_subjects	unique_pid	new_critical_exclusions_v0.3
+v0.3	background_review	exclude_critical	20	4	4	0
+v0.3	background_review	include	2702	128	100	0
+v0.3	background_review	include_mad_sensitivity	1291	127	100	0
+v0.3	background_review	review_targeted	289	56	47	0
+v0.3	primary_rem_to_wake	exclude_critical	17	12	12	2
+v0.3	primary_rem_to_wake	include	76	43	35	0
+v0.3	primary_rem_to_wake	include_mad_sensitivity	200	81	65	0
+v0.3	primary_rem_to_wake	review_targeted	72	42	37	0
+v0.3	secondary_wake_to_rem	include	23	19	16	0
+v0.3	secondary_wake_to_rem	include_mad_sensitivity	69	42	36	0
+v0.3	secondary_wake_to_rem	review_targeted	19	14	14	0

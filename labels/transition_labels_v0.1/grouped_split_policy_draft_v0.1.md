@@ -2,7 +2,7 @@
 
 **Created:** 2026-07-04
 **Applies to:** `transition_labels_v0.1.tsv`
-**Status:** Draft policy; no train/validation/test split assigned yet
+**Status:** Historical draft; superseded for current evaluation by `splits/grouped_pid_split_v0.1/` on 2026-07-15
 **Model training performed:** No
 
 ## 1. Purpose

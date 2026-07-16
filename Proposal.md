@@ -4,9 +4,9 @@
 
 **Version:** 1.5
 **Planning date:** 2026-06-21
-**Last revised:** 2026-07-11
+**Last revised:** 2026-07-15
 **Project window:** 2026-06-01 to 2026-11-29
-**Status:** Working research plan; Block 3 E0 feasibility closeout completed, including full EDF acquisition, PSG-to-headband alignment, deterministic labels, background controls, split readiness, and raw headband amplitude/continuity assessment; 350 primary events remain across all 88 contributing `pid` groups; model training remains blocked pending revised quality integration, grouped split policy, and the final label/preprocessing gate
+**Status:** Working research plan; Block 3 E0 closeout complete; Block 4 coverage-aware signal-quality artifact v0.3, deterministic 64/16/20 participant split v0.1, and train-only minimal preprocessing validation v0.2 completed; 348 primary events remain across all 88 contributing `pid` groups; model training remains blocked pending targeted-review policy and the final label/preprocessing gate
 
 ## 1. Technology Area
 

@@ -4,7 +4,7 @@
 **Project window:** 2026-06-01 to 2026-11-29
 **Prepared during:** 2026-06-25 to 2026-06-28
 **Finalized:** 2026-06-28
-**Current status:** Block 3 E0 feasibility closeout complete, including full EDF acquisition, signal alignment, deterministic labels, background controls, structural flags, split readiness, and raw headband amplitude/continuity assessment; 350 primary events remain across all 88 contributing `pid` groups; model training remains blocked pending revised quality integration, grouped split policy, and the label/preprocessing gate
+**Current status:** Block 3 E0 feasibility closeout complete; Block 4 coverage-aware quality v0.3, deterministic 64/16/20 participant split v0.1, and train-only minimal preprocessing v0.2 complete; 348 primary events remain across all 88 contributing `pid` groups; model training remains blocked pending targeted-review policy and the label/preprocessing gate
 
 ## 1. Project Boundary
 
@@ -69,12 +69,12 @@ flowchart TD
 
 ## 4. Phase Table
 
-| Block | Dates | Main Question | Main Work | Deliverable | Status as of 2026-07-09 |
+| Block | Dates | Main Question | Main Work | Deliverable | Status as of 2026-07-15 |
 |---:|---|---|---|---|---|
 | 1 | Jun 1-Jun 14 | What is known and what is uncertain? | Literature review, initial planning, public-dataset search | Initial proposal, literature evidence, dataset candidate list | Complete |
 | 2 | Jun 15-Jun 28 | Can the project be set up cleanly with a defensible dataset and target? | Scope refinement, BOAS selection, repository setup, environment audit, pilot checks, E0 readiness | Revised proposal, manifest, setup records, pilot reports, E0 readiness package | Complete |
 | 3 | Jun 29-Jul 12 | Are there enough usable REM/Wake events to justify modeling? | Full event inventory, participant grouping, label-quality audit, feasibility decision | E0 feasibility report and proceed/narrow/redesign/stop decision | Count-level inventory, proceed decision, full EDF acquisition, full signal-alignment validation, label artifact v0.1, background-window rules, quality flags, and split-readiness review complete |
-| 4 | Jul 13-Jul 26 | Can labels and minimal preprocessing be made reproducible? | Transition-event table, uncertainty intervals, alignment validation | Versioned label table and preprocessing artifacts | Started early; grouped split policy and final preprocessing gate still pending |
+| 4 | Jul 13-Jul 26 | Can labels and minimal preprocessing be made reproducible? | Transition-event table, uncertainty intervals, alignment validation | Versioned label table and preprocessing artifacts | In progress; quality v0.3, grouped split v0.1, and preprocessing v0.2 complete; targeted-review policy and gate decision pending |
 | 5 | Jul 27-Aug 9 | What does a stage-first comparator achieve? | Wearable sleep-stage baseline, transition derivation from predicted stages | Stage-first event metrics | Not started |
 | 6 | Aug 10-Aug 23 | Does direct transition detection add value? | Simple direct baseline, small CNN only if justified, comparison to stage-first | Comparative baseline report | Not started |
 | 7 | Aug 24-Sep 6 | How large is the PSG-to-wearable device-shift problem? | Full PSG, reduced PSG, wearable, zero-shot and fine-tuning tests | Paired transfer results and decision log | Not started |
@@ -160,13 +160,28 @@ Additional evidence completed on 2026-07-11:
 - nonspecific 10-MAD flags preserved for sensitivity analysis, while 381 windows with targeted amplitude, jump, or endpoint flags receive review priority;
 - final E0 decision remains `proceed` to Block 4, with model training still blocked.
 
+Additional evidence completed on 2026-07-15:
+
+- integrated structural and full headband amplitude evidence into signal-quality artifact v0.2;
+- retained four explicit outcomes: clean include, 10-MAD sensitivity include, targeted review, and critical exclusion;
+- confirmed 350 primary REM-to-Wake windows remain across 88 `pid` groups after 15 critical exclusions;
+- predeclared deterministic grouped split rules using participant metadata and pre-model label/quality counts only;
+- evaluated 50,000 assignments using seed `20260715` and froze a 64/16/20 `pid` train/validation/test split;
+- obtained 229/51/70 retained primary events and 56/14/18 primary-positive `pid` values in train/validation/test;
+- verified that no repeated participant crosses partitions and locked the test partition before preprocessing or model work.
+- preprocessing v0.1 passed 82/82 recording and 3/3 synthetic checks but failed two of 3,065 retained train windows because 240-second coverage was incomplete;
+- identified the insufficient earlier rule: equal PSG/headband lengths did not guarantee the required absolute window length;
+- added quality v0.3 with an exact 61,440-sample rule, identifying eight incomplete primary windows, including two new critical exclusions;
+- retained 348 primary REM-to-Wake events across all 88 contributing `pid` groups and kept the frozen participant assignment unchanged;
+- preprocessing v0.2 passed 82/82 train recordings, 3,063/3,063 retained train windows, and 3/3 synthetic checks without reading validation/test signals.
+
 ## 7. Next Work
 
-After the E0 closeout and full headband window signal-quality assessment:
+After coverage-aware quality integration, grouped split assignment, and train-only preprocessing validation:
 
-1. incorporate critical amplitude exclusions and review priorities into a revised quality artifact;
-2. define the deterministic grouped split policy by `pid` and report balance;
-3. freeze minimal preprocessing and record the final label/preprocessing gate decision;
+1. decide the primary and sensitivity treatment of targeted-review windows;
+2. freeze label, quality, split, and preprocessing versions;
+3. record the final label/preprocessing gate decision;
 4. begin model work only after the label/preprocessing gate is complete.
 
 ## 8. Rules for the Rest of the Project
