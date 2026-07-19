@@ -2,11 +2,11 @@
 
 ## Wearable EEG REM-to-Wake Transition Detection Under Label and Device Uncertainty
 
-**Version:** 1.5
+**Version:** 1.6
 **Planning date:** 2026-06-21
-**Last revised:** 2026-07-15
+**Last revised:** 2026-07-18
 **Project window:** 2026-06-01 to 2026-11-29
-**Status:** Working research plan; Block 3 E0 closeout complete; Block 4 coverage-aware signal-quality artifact v0.3, deterministic 64/16/20 participant split v0.1, and train-only minimal preprocessing validation v0.2 completed; 348 primary events remain across all 88 contributing `pid` groups; model training remains blocked pending targeted-review policy and the final label/preprocessing gate
+**Status:** Working research plan; Block 3 E0 closeout and the Block 4 label/preprocessing gate are complete; the conservative primary tier contains 276 REM-to-Wake events across 72 `pid` groups and the expanded quality-sensitivity tier contains 348 across 88 groups; model training has not started and the stage-first baseline remains scheduled for Block 5 beginning 2026-07-27
 
 ## 1. Technology Area
 

@@ -4,7 +4,7 @@
 **Project window:** 2026-06-01 to 2026-11-29
 **Prepared during:** 2026-06-25 to 2026-06-28
 **Finalized:** 2026-06-28
-**Current status:** Block 3 E0 feasibility closeout complete; Block 4 coverage-aware quality v0.3, deterministic 64/16/20 participant split v0.1, and train-only minimal preprocessing v0.2 complete; 348 primary events remain across all 88 contributing `pid` groups; model training remains blocked pending targeted-review policy and the label/preprocessing gate
+**Current status:** Block 3 E0 feasibility and Block 4 label/preprocessing gates complete; conservative primary membership contains 276 REM-to-Wake events across 72 `pid` groups and expanded quality-sensitivity membership contains 348 across 88 groups; model training has not started and Block 5 remains scheduled for 2026-07-27
 
 ## 1. Project Boundary
 
@@ -69,12 +69,12 @@ flowchart TD
 
 ## 4. Phase Table
 
-| Block | Dates | Main Question | Main Work | Deliverable | Status as of 2026-07-15 |
+| Block | Dates | Main Question | Main Work | Deliverable | Status as of 2026-07-18 |
 |---:|---|---|---|---|---|
 | 1 | Jun 1-Jun 14 | What is known and what is uncertain? | Literature review, initial planning, public-dataset search | Initial proposal, literature evidence, dataset candidate list | Complete |
 | 2 | Jun 15-Jun 28 | Can the project be set up cleanly with a defensible dataset and target? | Scope refinement, BOAS selection, repository setup, environment audit, pilot checks, E0 readiness | Revised proposal, manifest, setup records, pilot reports, E0 readiness package | Complete |
 | 3 | Jun 29-Jul 12 | Are there enough usable REM/Wake events to justify modeling? | Full event inventory, participant grouping, label-quality audit, feasibility decision | E0 feasibility report and proceed/narrow/redesign/stop decision | Count-level inventory, proceed decision, full EDF acquisition, full signal-alignment validation, label artifact v0.1, background-window rules, quality flags, and split-readiness review complete |
-| 4 | Jul 13-Jul 26 | Can labels and minimal preprocessing be made reproducible? | Transition-event table, uncertainty intervals, alignment validation | Versioned label table and preprocessing artifacts | In progress; quality v0.3, grouped split v0.1, and preprocessing v0.2 complete; targeted-review policy and gate decision pending |
+| 4 | Jul 13-Jul 26 | Can labels and minimal preprocessing be made reproducible? | Transition-event table, uncertainty intervals, alignment validation | Versioned label table and preprocessing artifacts | Complete; membership v0.1 separates conservative primary and expanded quality-sensitivity tiers; gate passed 2026-07-18 |
 | 5 | Jul 27-Aug 9 | What does a stage-first comparator achieve? | Wearable sleep-stage baseline, transition derivation from predicted stages | Stage-first event metrics | Not started |
 | 6 | Aug 10-Aug 23 | Does direct transition detection add value? | Simple direct baseline, small CNN only if justified, comparison to stage-first | Comparative baseline report | Not started |
 | 7 | Aug 24-Sep 6 | How large is the PSG-to-wearable device-shift problem? | Full PSG, reduced PSG, wearable, zero-shot and fine-tuning tests | Paired transfer results and decision log | Not started |
@@ -90,7 +90,7 @@ flowchart TD
 | Gate | Target Date | Decision | Required Evidence |
 |---|---|---|---|
 | E0 feasibility gate | 2026-07-12 | Proceed, narrow, redesign, or stop | Event counts by recording and `pid`, label-quality flags, unlabeled-tail summary, participant spread |
-| Label/preprocessing gate | 2026-07-26 | Freeze label spec or revise | Tested label generation, alignment checks, quality flags |
+| Label/preprocessing gate | 2026-07-26 | Passed 2026-07-18; freeze v0.1/v0.3 inputs | Tested label generation, alignment checks, quality flags, participant split, preprocessing checks, analysis membership |
 | Baseline gate | 2026-08-23 | Continue direct detector, narrow, or revise | Stage-first versus direct event-level comparison |
 | Transfer/robustness gate | 2026-09-20 | Add adaptation or keep simpler model | PSG-to-wearable transfer result and robustness evidence |
 | External-data gate | 2026-10-04 | External test or documented no-go | Compatibility audit and clear label/channel mapping |
@@ -175,14 +175,26 @@ Additional evidence completed on 2026-07-15:
 - retained 348 primary REM-to-Wake events across all 88 contributing `pid` groups and kept the frozen participant assignment unchanged;
 - preprocessing v0.2 passed 82/82 train recordings, 3,063/3,063 retained train windows, and 3/3 synthetic checks without reading validation/test signals.
 
+Additional evidence completed on 2026-07-18:
+
+- predeclared deterministic treatment of targeted-review flags without opening raw signal files;
+- rejected unrestricted primary inclusion because unresolved artifact indicators would be ignored, and rejected total removal because targeted thresholds are not validated failure labels;
+- froze quality analysis membership v0.1 with clean and 10-MAD-only rows in the primary tier, targeted rows in an expanded sensitivity tier, and critical rows excluded from both;
+- preserved all 476 transition and 4,302 background review rows with complete partition assignment and zero participant leakage;
+- obtained 276 primary-tier REM-to-Wake events across 72 `pid` groups and 348 expanded-tier events across 88 groups;
+- identified 16 `pid` groups represented only by targeted-review primary events, distributed 9/4/3 across train/validation/test;
+- passed the label/preprocessing gate with transition labels v0.1, background rules v0.1, quality v0.3, membership v0.1, split v0.1, and preprocessing v0.2 frozen;
+- retained the primary validation limitation of 37 events across 10 positive groups for later uncertainty reporting;
+- completed a cross-artifact integrity audit with 71/71 checks passed, exact linkage of 3,063 noncritical train windows and 82 train recordings, zero validation/test preprocessing rows, and an LF-normalized SHA-256 manifest covering 19 frozen files.
+
 ## 7. Next Work
 
-After coverage-aware quality integration, grouped split assignment, and train-only preprocessing validation:
+After the completed label/preprocessing gate:
 
-1. decide the primary and sensitivity treatment of targeted-review windows;
-2. freeze label, quality, split, and preprocessing versions;
-3. record the final label/preprocessing gate decision;
-4. begin model work only after the label/preprocessing gate is complete.
+1. keep model fitting paused until Block 5 begins on 2026-07-27;
+2. predeclare the stage-first comparator, event matching, metrics, and validation threshold rule;
+3. define training-only negative sampling from the frozen background eligibility pool;
+4. keep test data locked until protocol and validation decisions are complete.
 
 ## 8. Rules for the Rest of the Project
 

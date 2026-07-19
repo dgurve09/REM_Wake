@@ -1,0 +1,13 @@
+membership_version	artifact	partition	analysis_set	rows	unique_subjects	unique_pid
+v0.1	primary_rem_to_wake	train	primary_analysis	180	57	47
+v0.1	primary_rem_to_wake	train	expanded_quality_analysis	227	70	56
+v0.1	primary_rem_to_wake	train	targeted_review_stratum	47	30	26
+v0.1	primary_rem_to_wake	train	critical_exclusion_stratum	8	8	8
+v0.1	primary_rem_to_wake	validation	primary_analysis	37	13	10
+v0.1	primary_rem_to_wake	validation	expanded_quality_analysis	51	17	14
+v0.1	primary_rem_to_wake	validation	targeted_review_stratum	14	5	5
+v0.1	primary_rem_to_wake	validation	critical_exclusion_stratum	6	2	2
+v0.1	primary_rem_to_wake	test	primary_analysis	59	20	15
+v0.1	primary_rem_to_wake	test	expanded_quality_analysis	70	23	18
+v0.1	primary_rem_to_wake	test	targeted_review_stratum	11	7	6
+v0.1	primary_rem_to_wake	test	critical_exclusion_stratum	3	2	2

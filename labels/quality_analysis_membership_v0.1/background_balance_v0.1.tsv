@@ -1,0 +1,13 @@
+membership_version	artifact	partition	analysis_set	rows	unique_subjects	unique_pid
+v0.1	background_review	train	primary_analysis	2563	82	64
+v0.1	background_review	train	expanded_quality_analysis	2761	82	64
+v0.1	background_review	train	targeted_review_stratum	198	33	27
+v0.1	background_review	train	critical_exclusion_stratum	6	2	2
+v0.1	background_review	validation	primary_analysis	620	20	16
+v0.1	background_review	validation	expanded_quality_analysis	651	20	16
+v0.1	background_review	validation	targeted_review_stratum	31	9	9
+v0.1	background_review	validation	critical_exclusion_stratum	11	1	1
+v0.1	background_review	test	primary_analysis	810	26	20
+v0.1	background_review	test	expanded_quality_analysis	870	26	20
+v0.1	background_review	test	targeted_review_stratum	60	14	11
+v0.1	background_review	test	critical_exclusion_stratum	3	1	1
