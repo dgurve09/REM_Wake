@@ -1,0 +1,3 @@
+comparator	model_version	train_epochs	input_features	classes	maximum_iterations_used	convergence_warning_count	fit_decision
+SF-B	v0.1	76316	10	0;1;2;3;4	316	0	pass
+SF-C	v0.1	75872	50	0;1;2;3;4	500	1	convergence_warning_retained

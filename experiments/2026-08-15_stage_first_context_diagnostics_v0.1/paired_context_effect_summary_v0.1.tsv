@@ -1,0 +1,4 @@
+analysis_version	partition	participants	stage_macro_f1_improved	stage_macro_f1_unchanged	stage_macro_f1_reduced	median_stage_macro_f1_delta	event_f1_improved	event_f1_unchanged	event_f1_reduced	median_event_f1_delta	false_alarm_rate_improved	false_alarm_rate_unchanged	false_alarm_rate_increased	median_false_alarms_per_hour_delta
+v0.1	train	64	62	0	2	0.05897780477389633	26	32	6	0.0	38	0	26	-0.30476941848513606
+v0.1	validation	16	16	0	0	0.05502438721925243	4	11	1	0.0	9	0	7	-0.08405901774081409
+v0.1	test	20	20	0	0	0.055494632956967244	10	10	0	0.005494505494505503	11	0	9	-0.1298826330219489

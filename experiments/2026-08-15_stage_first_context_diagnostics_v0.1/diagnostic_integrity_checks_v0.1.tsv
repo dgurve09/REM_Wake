@@ -1,0 +1,9 @@
+analysis_version	check	observed	expected	passed
+v0.1	train_stage_paired_participants	64.0	64.0	True
+v0.1	train_event_paired_participants	64.0	64.0	True
+v0.1	validation_stage_paired_participants	16.0	16.0	True
+v0.1	validation_event_paired_participants	16.0	16.0	True
+v0.1	test_stage_paired_participants	20.0	20.0	True
+v0.1	test_event_paired_participants	20.0	20.0	True
+v0.1	timing_offsets_within_frozen_tolerance	30.0	45.0	True
+v0.1	hashed_input_files	11.0	11.0	True

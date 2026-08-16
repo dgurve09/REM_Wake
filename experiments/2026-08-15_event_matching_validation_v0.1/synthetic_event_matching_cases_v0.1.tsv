@@ -1,0 +1,11 @@
+validation_version	case	tolerance_sec	reference_times_sec	prediction_times_sec	ignored_times_sec	expected_tp	expected_fp	expected_fn	expected_ignored	actual_tp	actual_fp	actual_fn	actual_ignored	passed
+v0.1	exact_match	15	60	60	none	1	0	0	0	1	0	0	0	True
+v0.1	uncertainty_edge	15	60	75	none	1	0	0	0	1	0	0	0	True
+v0.1	outside_tolerance	15	60	90	none	0	1	1	0	0	1	1	0	True
+v0.1	duplicate_prediction	15	60	60;70	none	1	1	0	0	1	1	0	0	True
+v0.1	one_ignored_duplicate	15	none	120;130	120	0	1	0	1	0	1	0	1	True
+v0.1	eligible_precedes_ignore	15	120	120	120	1	0	0	0	1	0	0	0	True
+v0.1	no_prediction	15	60	none	none	0	0	1	0	0	0	1	0	True
+v0.1	no_reference	15	none	60	none	0	1	0	0	0	1	0	0	True
+v0.1	minimum_error_tiebreak	30	0;30	29	none	1	0	1	0	1	0	1	0	True
+v0.1	cross_recording_isolation	15	sub-1:60	sub-2:60	none	0	1	1	0	0	1	1	0	True

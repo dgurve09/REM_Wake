@@ -4,7 +4,7 @@
 **Project window:** 2026-06-01 to 2026-11-29
 **Prepared during:** 2026-06-25 to 2026-06-28
 **Finalized:** 2026-06-28
-**Current status:** Block 3 E0 feasibility and Block 4 label/preprocessing gates complete; conservative primary membership contains 276 REM-to-Wake events across 72 `pid` groups and expanded quality-sensitivity membership contains 348 across 88 groups; model training has not started and Block 5 remains scheduled for 2026-07-27
+**Current status:** Blocks 3 and 4 are complete; Block 5 was completed as catch-up work on 2026-08-15 after an inactive 2026-07-20 to 2026-08-14 interval; the stage-first results show that useful epoch staging does not translate into adequate REM-to-Wake event precision; Block 6 direct transition work is next
 
 ## 1. Project Boundary
 
@@ -69,14 +69,14 @@ flowchart TD
 
 ## 4. Phase Table
 
-| Block | Dates | Main Question | Main Work | Deliverable | Status as of 2026-07-18 |
+| Block | Dates | Main Question | Main Work | Deliverable | Status as of 2026-08-15 |
 |---:|---|---|---|---|---|
 | 1 | Jun 1-Jun 14 | What is known and what is uncertain? | Literature review, initial planning, public-dataset search | Initial proposal, literature evidence, dataset candidate list | Complete |
 | 2 | Jun 15-Jun 28 | Can the project be set up cleanly with a defensible dataset and target? | Scope refinement, BOAS selection, repository setup, environment audit, pilot checks, E0 readiness | Revised proposal, manifest, setup records, pilot reports, E0 readiness package | Complete |
 | 3 | Jun 29-Jul 12 | Are there enough usable REM/Wake events to justify modeling? | Full event inventory, participant grouping, label-quality audit, feasibility decision | E0 feasibility report and proceed/narrow/redesign/stop decision | Count-level inventory, proceed decision, full EDF acquisition, full signal-alignment validation, label artifact v0.1, background-window rules, quality flags, and split-readiness review complete |
 | 4 | Jul 13-Jul 26 | Can labels and minimal preprocessing be made reproducible? | Transition-event table, uncertainty intervals, alignment validation | Versioned label table and preprocessing artifacts | Complete; membership v0.1 separates conservative primary and expanded quality-sensitivity tiers; gate passed 2026-07-18 |
-| 5 | Jul 27-Aug 9 | What does a stage-first comparator achieve? | Wearable sleep-stage baseline, transition derivation from predicted stages | Stage-first event metrics | Not started |
-| 6 | Aug 10-Aug 23 | Does direct transition detection add value? | Simple direct baseline, small CNN only if justified, comparison to stage-first | Comparative baseline report | Not started |
+| 5 | Jul 27-Aug 9 | What does a stage-first comparator achieve? | Wearable sleep-stage baseline, transition derivation from predicted stages | Stage-first event metrics | Completed as catch-up work on Aug 15; fixed `stage_ai`, epoch-only logistic, and five-epoch-context logistic comparators evaluated under frozen event matching |
+| 6 | Aug 10-Aug 23 | Does direct transition detection add value? | Simple direct baseline, small CNN only if justified, comparison to stage-first | Comparative baseline report | Scheduled interval active; direct baseline protocol and experiment not started |
 | 7 | Aug 24-Sep 6 | How large is the PSG-to-wearable device-shift problem? | Full PSG, reduced PSG, wearable, zero-shot and fine-tuning tests | Paired transfer results and decision log | Not started |
 | 8 | Sep 7-Sep 20 | Is the approach robust to signal/channel variability? | Missing-channel tests, degradation tests, ablations, justified adaptation if needed | Robustness and ablation report | Not started |
 | 9 | Sep 21-Oct 4 | Is external PSG comparison scientifically valid? | Audit one external PSG dataset and test reduced-channel generalization if appropriate | External generalization report or no-go | Not started |
@@ -187,14 +187,38 @@ Additional evidence completed on 2026-07-18:
 - retained the primary validation limitation of 37 events across 10 positive groups for later uncertainty reporting;
 - completed a cross-artifact integrity audit with 71/71 checks passed, exact linkage of 3,063 noncritical train windows and 82 train recordings, zero validation/test preprocessing rows, and an LF-normalized SHA-256 manifest covering 19 frozen files.
 
+Additional evidence completed on 2026-08-15:
+
+- recorded that no project work is attributed to the inactive 2026-07-20 to 2026-08-14 interval and completed the overdue Block 5 work on its actual date;
+- froze a stage-first protocol before inspecting model results, including three comparators, participant-grouped partitions, primary and expanded quality membership, +/-15-second and +/-45-second tolerances, and participant-cluster bootstrap intervals;
+- validated the one-to-one event matcher on 10 synthetic cases covering tolerance edges, duplicate predictions, ignore zones, tie-breaking, empty inputs, and recording isolation;
+- evaluated fixed BOAS headband `stage_ai` as a provenance-limited descriptive comparator, obtaining test stage macro F1 0.7248 and primary event F1 0.3731 at +/-15 seconds;
+- fitted transparent epoch-only and five-epoch-context logistic baselines using two-channel Welch log-bandpower features and train-only scaling;
+- preserved the SF-C convergence warning at the frozen 500-iteration limit instead of silently changing the configuration;
+- wrote the validation decision before opening test signals, confirmed zero cached test features, and then performed one frozen test evaluation;
+- obtained SF-C test stage macro F1 0.4979 but primary event F1 0.0766, precision 0.0438, recall 0.3051, and 1.9692 false alarms/hour at +/-15 seconds;
+- confirmed that context improved both validation and test metrics over the epoch-only ablation, while neither transparent stage-derived detector approached a usable event alarm rate;
+- passed output-integrity checks for participant isolation, phase separation, exact metric recomputation, event accounting, and SHA-256 verification of 130 external model/feature artifacts;
+- completed an exploratory failure analysis using frozen tables only, with 18 input files recorded by SHA-256 and no raw-signal, external-feature, or model access;
+- found that SF-C correctly retained the preceding REM endpoint at only 22 of 59 primary test references, compared with 46 of 59 correct following Wake endpoints;
+- found that all 20 test participants produced false positives and that 306 of 393 false positives occurred at human REM-to-other or other-to-Wake pairs;
+- measured a 2.1784-fold excess in SF-C test all-stage transition rate, 799 predicted versus 156 human REM bouts, and median REM-bout durations of 60 versus 600 seconds, supporting sequence fragmentation as the stage-first failure mechanism;
+- completed a participant-paired context diagnostic using 11 hashed frozen input tables and no raw-signal, external-feature, or model access;
+- preserved and corrected an initial participant balanced-accuracy warning caused by participant-dependent missing-stage denominators before interpreting the diagnostic;
+- found SF-C stage macro F1 improved for all 20 test participants, while event F1 improved for 10 and remained unchanged for 10;
+- obtained an exploratory paired-bootstrap SF-C minus SF-B test event-F1 difference of +0.0431 with a 95% interval of +0.0199 to +0.0676, while the false-alarm-rate difference interval crossed zero;
+- found that six of seven additional SF-C test matches admitted at +/-45 seconds were one epoch early and that 59.20% of predicted REM bouts lasted only 30 or 60 seconds, compared with 14.10% of human bouts;
+- observed a descriptive test-recording Spearman association of 0.5118 between predicted REM bouts/hour and false alarms/hour, recorded as exploratory and noncausal.
+
 ## 7. Next Work
 
-After the completed label/preprocessing gate:
+After the completed stage-first baseline:
 
-1. keep model fitting paused until Block 5 begins on 2026-07-27;
-2. predeclare the stage-first comparator, event matching, metrics, and validation threshold rule;
-3. define training-only negative sampling from the frozen background eligibility pool;
-4. keep test data locked until protocol and validation decisions are complete.
+1. predeclare the Block 6 direct REM-to-Wake detection hypothesis, inputs, negative-window sampling, validation threshold, and event metrics before fitting;
+2. implement the simplest direct feature baseline using the frozen split, preprocessing, labels, and quality memberships;
+3. compare its validation and frozen test event metrics directly with SF-A and the primary SF-C comparator;
+4. add a small CNN only if the direct feature baseline identifies a specific representational insufficiency that the CNN can test;
+5. keep the SF-C convergence warning and poor event precision visible when interpreting later comparisons.
 
 ## 8. Rules for the Rest of the Project
 

@@ -1,0 +1,13 @@
+analysis_version	check	observed	expected	passed
+v0.1	SF-B_train_reference_mechanism_count	180	180	True
+v0.1	SF-B_train_predicted_event_count	1703	1703	True
+v0.1	SF-B_validation_reference_mechanism_count	37	37	True
+v0.1	SF-B_validation_predicted_event_count	355	355	True
+v0.1	SF-C_train_reference_mechanism_count	180	180	True
+v0.1	SF-C_train_predicted_event_count	1556	1556	True
+v0.1	SF-C_validation_reference_mechanism_count	37	37	True
+v0.1	SF-C_validation_predicted_event_count	358	358	True
+v0.1	SF-B_test_reference_mechanism_count	59	59	True
+v0.1	SF-B_test_predicted_event_count	420	420	True
+v0.1	SF-C_test_reference_mechanism_count	59	59	True
+v0.1	SF-C_test_predicted_event_count	414	414	True

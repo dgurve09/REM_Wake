@@ -1,0 +1,6 @@
+case	subject	pid	match_type	reference_time_sec	prediction_time_sec	absolute_error_sec
+exact_match	sub-1	1	eligible	60.0	60.0	0.0
+uncertainty_edge	sub-1	1	eligible	60.0	75.0	15.0
+duplicate_prediction	sub-1	1	eligible	60.0	60.0	0.0
+one_ignored_duplicate	sub-1	1	ignored_quality	120.0	120.0	0.0
+eligible_precedes_ignore	sub-1	1	eligible	120.0	120.0	0.0
