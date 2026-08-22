@@ -1,0 +1,2 @@
+analysis_version	product_higher_f1_than_both_heads	product_lower_far_than_both_heads	single_head_dominating_product	rem_only_has_more_rem_to_other_fp	wake_only_has_more_other_to_wake_fp	decision
+v0.1	True	True		True	True	both_endpoint_contribution_supported

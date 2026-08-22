@@ -1,0 +1,12 @@
+check	status	detail
+candidate_partition_is_validation	pass	rows=19123
+saved_product_recomputed	pass	two endpoint scores multiplied
+threshold_grid_complete	pass	rows=297
+selected_threshold_rule	pass	comparators=3, failures=0
+selected_metrics_recomputed	pass	comparators=3, failures=0
+product_control_reproduced	pass	checked=8, failures=0
+mechanism_decision_recomputed	pass	decision=both_endpoint_contribution_supported, category_accounting=True
+input_artifact_hashes	pass	verified=26, failures=0
+no_test_score_model_train_score_or_raw_input	pass	input_rows=26; shared membership filtered to validation
+output_file_set	pass	files_before_validation_record=9
+no_model_or_array_output	pass	forbidden_files=0

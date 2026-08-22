@@ -237,6 +237,10 @@ Additional evidence completed on 2026-08-22:
 - found the DE-D two-part advantage over DE-B held across 22 adjacent thresholds from 0.67 through 0.88;
 - found all 16 leave-one-participant-out calibration folds independently selected threshold 0.74, reproducing validation F1 0.1604 and 0.9915 false alarms per hour on aggregated held-out participants;
 - passed 13/13 threshold-robustness checks after preserving and correcting an initial validator failure caused by bitwise float comparison after TSV serialization.
+- predeclared a post-result endpoint-contribution diagnostic using saved validation probabilities only, with no model fit or current-test access;
+- found REM-only F1 0.0613 with 1.3554 false alarms per hour and Wake-only F1 0.0609 with 4.7629 false alarms per hour, compared with product F1 0.1604 and 0.9915 false alarms per hour;
+- observed the expected partial-endpoint pattern: 73 REM-to-other false alarms for REM-only versus 35 for the product and 464 other-to-Wake false alarms for Wake-only versus 75 for the product;
+- passed 7/7 in-run and 11/11 independent endpoint-contribution checks across 26 hashed inputs, while retaining the result as validation-only mechanism evidence.
 
 ## 7. Next Work
 

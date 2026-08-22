@@ -1,0 +1,4 @@
+comparator	analysis_version	partition	membership	tolerance_sec	threshold	recordings	pid	reference_events	predicted_events	true_positive	false_positive	false_negative	ignored_predictions	supported_hours	precision	recall	f1	false_alarms_per_hour	median_absolute_error_sec	maximum_absolute_error_sec
+DE-D-rem-only	v0.1	validation	primary	15.0	0.89	20	16	37	229	8	216	29	5	159.35833333333332	0.03571428571428571	0.21621621621621623	0.06130268199233716	1.355435862573864	0.0	0.0
+DE-D-wake-only	v0.1	validation	primary	15.0	0.85	20	16	37	790	25	759	12	6	159.35833333333332	0.03188775510204082	0.6756756756756757	0.06090133982947625	4.762851017099828	0.0	0.0
+DE-D-product	v0.1	validation	primary	15.0	0.74	20	16	37	181	17	158	20	6	159.35833333333332	0.09714285714285714	0.4594594594594595	0.16037735849056603	0.9914762328086598	0.0	0.0

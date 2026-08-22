@@ -1,0 +1,8 @@
+check	passed	detail
+validation_scores_only	True	rows=19123
+three_fixed_comparators	True	comparators=3
+complete_threshold_grid	True	rows=297
+product_control_reproduced	True	saved DE-D threshold and metrics reproduced
+event_accounting	True	reference_events=TP+FN
+false_positive_category_accounting	True	category totals equal selected false positives
+no_test_model_train_or_raw_input	True	input_rows=26

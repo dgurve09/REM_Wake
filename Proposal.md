@@ -2,7 +2,7 @@
 
 ## Wearable EEG REM-to-Wake Transition Detection Under Label and Device Uncertainty
 
-**Version:** 1.9
+**Version:** 1.10
 **Planning date:** 2026-06-21
 **Last revised:** 2026-08-22
 **Project window:** 2026-06-01 to 2026-11-29
@@ -327,7 +327,7 @@ The schedule is organized into two-week research blocks. Actual work records sho
 
 **Deliverable:** Comparative baseline report with failure analysis.
 
-**Status update, 2026-08-22:** Completed. DE-B obtained primary test event F1 0.1497 and 1.2571 false alarms per hour, improving directionally over SF-C while retaining low precision 0.0909. The paired participant bootstrap supported the directional difference within this fixed comparison. A validation-only follow-up factorized the event into REM-before and Wake-after logistic heads. DE-D improved validation F1 from 0.1127 to 0.1604 and reduced false alarms from 1.4496 to 0.9915 per hour, but it was not applied to the current test partition. Its two-part advantage persisted across thresholds 0.67-0.88, and every leave-one-participant-out calibration fold selected 0.74. A CNN remains deferred because the simpler structural change is promising and the current test result must not be used for iterative model selection.
+**Status update, 2026-08-22:** Completed. DE-B obtained primary test event F1 0.1497 and 1.2571 false alarms per hour, improving directionally over SF-C while retaining low precision 0.0909. The paired participant bootstrap supported the directional difference within this fixed comparison. A validation-only follow-up factorized the event into REM-before and Wake-after logistic heads. DE-D improved validation F1 from 0.1127 to 0.1604 and reduced false alarms from 1.4496 to 0.9915 per hour, but it was not applied to the current test partition. Its two-part advantage persisted across thresholds 0.67-0.88, and every leave-one-participant-out calibration fold selected 0.74. A fixed endpoint ablation found that the product score had higher validation F1 and fewer false alarms than either REM-only or Wake-only scoring, supporting the two-endpoint mechanism on the used validation partition. A CNN remains deferred because the simpler structural change is promising and the current test result must not be used for iterative model selection.
 
 ### Block 7: August 24 to September 6 - Paired PSG-to-wearable transfer
 

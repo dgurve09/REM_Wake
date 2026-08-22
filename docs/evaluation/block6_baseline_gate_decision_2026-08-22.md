@@ -68,3 +68,9 @@ This strengthens the decision to defer a CNN because a simpler explicit event st
 A further validation-only analysis used saved DE-D probabilities without loading models or features. The two-part improvement over DE-B held across 22 adjacent thresholds from 0.67 through 0.88. In leave-one-participant-out calibration, every fold selected threshold 0.74 using the other 15 participants. The aggregated held-out metrics remained F1 0.1604 and 0.9915 false alarms per hour.
 
 This reduces concern that the validation improvement is an artifact of a single narrow threshold or one calibration participant. It still does not supply new-cohort confirmation.
+
+### Endpoint contribution
+
+A predeclared post-result ablation then evaluated the saved endpoint scores separately. REM-only obtained validation F1 0.0613 and 1.3554 false alarms per hour; Wake-only obtained F1 0.0609 and 4.7629 false alarms per hour. The unchanged product reproduced F1 0.1604 and 0.9915 false alarms per hour, exceeding both heads on both measures.
+
+REM-only produced 73 REM-to-other false alarms versus 35 for the product, while Wake-only produced 464 other-to-Wake false alarms versus 75 for the product. This is consistent with both endpoint constraints contributing to the observed validation gain. Because each score used a threshold selected on the same validation partition, the result remains a mechanism diagnostic rather than independent performance evidence.
