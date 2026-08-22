@@ -2,11 +2,11 @@
 
 ## Wearable EEG REM-to-Wake Transition Detection Under Label and Device Uncertainty
 
-**Version:** 1.6
+**Version:** 1.9
 **Planning date:** 2026-06-21
-**Last revised:** 2026-07-18
+**Last revised:** 2026-08-22
 **Project window:** 2026-06-01 to 2026-11-29
-**Status:** Working research plan; Block 3 E0 closeout and the Block 4 label/preprocessing gate are complete; the conservative primary tier contains 276 REM-to-Wake events across 72 `pid` groups and the expanded quality-sensitivity tier contains 348 across 88 groups; model training has not started and the stage-first baseline remains scheduled for Block 5 beginning 2026-07-27
+**Status:** Working research plan; Blocks 3-6 are complete; the conservative primary tier contains 276 REM-to-Wake events across 72 `pid` groups and the expanded quality-sensitivity tier contains 348 across 88 groups; the transparent stage-first and simple direct baselines have been compared; direct DE-B improved on transparent SF-C but retained precision 0.0909 and 1.2571 false alarms per hour; Block 7 begins 2026-08-24
 
 ## 1. Technology Area
 
@@ -317,6 +317,8 @@ The schedule is organized into two-week research blocks. Actual work records sho
 
 **Deliverable:** Stage-first baseline and event-level metrics.
 
+**Status update, 2026-08-15:** Completed as catch-up work on its actual date. SF-C obtained primary test event F1 0.0766 and 1.9692 false alarms per hour. Failure analysis identified stage-sequence fragmentation; the fixed SF-A output remained descriptive because its training provenance is not established locally.
+
 ### Block 6: August 10 to August 23 - Direct transition baselines
 
 - Train the simple feature baseline.
@@ -324,6 +326,8 @@ The schedule is organized into two-week research blocks. Actual work records sho
 - Compare direct detection with the stage-first approach.
 
 **Deliverable:** Comparative baseline report with failure analysis.
+
+**Status update, 2026-08-22:** Completed. DE-B obtained primary test event F1 0.1497 and 1.2571 false alarms per hour, improving directionally over SF-C while retaining low precision 0.0909. The paired participant bootstrap supported the directional difference within this fixed comparison. A validation-only follow-up factorized the event into REM-before and Wake-after logistic heads. DE-D improved validation F1 from 0.1127 to 0.1604 and reduced false alarms from 1.4496 to 0.9915 per hour, but it was not applied to the current test partition. Its two-part advantage persisted across thresholds 0.67-0.88, and every leave-one-participant-out calibration fold selected 0.74. A CNN remains deferred because the simpler structural change is promising and the current test result must not be used for iterative model selection.
 
 ### Block 7: August 24 to September 6 - Paired PSG-to-wearable transfer
 
@@ -389,7 +393,7 @@ The schedule is organized into two-week research blocks. Actual work records sho
 
 - **M0, July 12:** Feasibility decision completed.
 - **M1, July 26:** Reproducible labels and preprocessing completed.
-- **M2, August 23:** Stage-first and direct transition baselines compared.
+- **M2, August 23:** Completed 2026-08-22; stage-first and direct transition baselines compared, with low direct-event precision retained as the main limitation.
 - **M3, September 20:** PSG-to-wearable transfer and robustness assessed.
 - **M4, November 15:** Temporal analysis completed and streaming decision implemented or documented as no-go.
 - **M5, November 29:** Final results, reproducibility package, and project artifact index completed.

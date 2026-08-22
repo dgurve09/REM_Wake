@@ -1,0 +1,3 @@
+comparator	model_version	head	target_definition	train_rows	train_positive	train_negative	input_features	maximum_iterations_used	convergence_warning_count	fit_decision
+DE-D	v0.1	rem_before	human stage at t-30 seconds is REM	2743	646	2097	80	99	0	retain_frozen_fit
+DE-D	v0.1	wake_after	human stage at t is Wake	2743	726	2017	80	107	0	retain_frozen_fit

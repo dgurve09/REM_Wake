@@ -1,0 +1,251 @@
+comparator	model_version	partition	subject	pid	event_time_sec	probability	threshold	run_candidates	human_stage_from	human_stage_from_label	human_stage_to	human_stage_to_label	human_stage_pair_category	nearest_remwake_transition_id	nearest_remwake_type	signed_seconds_to_nearest_remwake	absolute_seconds_to_nearest_remwake	remwake_distance_bin	inside_background_exclusion_zone
+DE-B	v0.1	test	sub-106	74	10110.0	0.9842676800324324	0.96	1	0	Wake	0	Wake	human_other_to_Wake	401	Wake_to_REM	9390.0	9390.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-106	74	18660.0	0.9884211636393374	0.96	1	0	Wake	0	Wake	human_other_to_Wake	401	Wake_to_REM	840.0	840.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-106	74	24630.0	0.9713940433309924	0.96	1	2	N2	1	N1	human_other_transition	402	REM_to_Wake	270.0	270.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-106	74	24960.0	0.9773226986420545	0.96	1	0	Wake	0	Wake	human_other_to_Wake	402	REM_to_Wake	-60.0	60.0	60_to_135_sec	True
+DE-B	v0.1	test	sub-106	74	25980.0	0.9879571978557368	0.96	1	0	Wake	0	Wake	human_other_to_Wake	402	REM_to_Wake	-1080.0	1080.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-123	102	13500.0	0.985595298686982	0.96	1	2	N2	0	Wake	human_other_to_Wake	455	REM_to_Wake	2130.0	2130.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-123	102	18810.0	0.9869733191004204	0.96	1	2	N2	2	N2	human_no_stage_change	456	REM_to_Wake	1170.0	1170.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-127	107	12810.0	0.9812043575418437	0.96	1	4	REM	4	REM	human_REM_to_other	475	REM_to_Wake	11850.0	11850.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-127	107	14070.0	0.9672351268433788	0.96	1	2	N2	2	N2	human_no_stage_change	475	REM_to_Wake	10590.0	10590.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-18	12	1170.0	0.9843730158309926	0.96	1	0	Wake	0	Wake	human_other_to_Wake	88	REM_to_Wake	5490.0	5490.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-18	12	4440.0	0.9995368823586898	0.96	1	3	N3	0	Wake	human_other_to_Wake	88	REM_to_Wake	2220.0	2220.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-18	12	6690.0	0.9996983623329936	0.96	2	0	Wake	0	Wake	human_other_to_Wake	88	REM_to_Wake	-30.0	30.0	30_to_45_sec	True
+DE-B	v0.1	test	sub-18	12	7590.0	0.9995565825788564	0.96	1	2	N2	0	Wake	human_other_to_Wake	88	REM_to_Wake	-930.0	930.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-18	12	7800.0	0.9797022858410188	0.96	1	2	N2	0	Wake	human_other_to_Wake	88	REM_to_Wake	-1140.0	1140.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-18	12	10920.0	0.9811679964087432	0.96	1	4	REM	4	REM	human_REM_to_other	89	REM_to_Wake	30.0	30.0	30_to_45_sec	True
+DE-B	v0.1	test	sub-18	12	11760.0	0.9726938716859906	0.96	1	4	REM	4	REM	human_REM_to_other	91	REM_to_Wake	480.0	480.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-18	12	12300.0	0.9931395018868476	0.96	1	1	N1	0	Wake	human_other_to_Wake	91	REM_to_Wake	-60.0	60.0	60_to_135_sec	True
+DE-B	v0.1	test	sub-18	12	12450.0	0.9852043348367578	0.96	1	0	Wake	0	Wake	human_other_to_Wake	91	REM_to_Wake	-210.0	210.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-18	12	18330.0	0.999285277626548	0.96	1	2	N2	0	Wake	human_other_to_Wake	92	REM_to_Wake	-990.0	990.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-18	12	21150.0	0.9686281729278354	0.96	2	0	Wake	0	Wake	human_other_to_Wake	93	REM_to_Wake	870.0	870.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-18	12	21450.0	0.9605293559923944	0.96	1	2	N2	2	N2	human_no_stage_change	93	REM_to_Wake	570.0	570.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-18	12	22170.0	0.9873035058902144	0.96	1	1	N1	0	Wake	human_other_to_Wake	93	REM_to_Wake	-150.0	150.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-18	12	22920.0	0.987146020010632	0.96	1	0	Wake	0	Wake	human_other_to_Wake	94	REM_to_Wake	-30.0	30.0	30_to_45_sec	True
+DE-B	v0.1	test	sub-18	12	23340.0	0.9997563917250836	0.96	1	0	Wake	0	Wake	human_other_to_Wake	95	REM_to_Wake	-30.0	30.0	30_to_45_sec	True
+DE-B	v0.1	test	sub-18	12	24150.0	0.997226498163804	0.96	1	0	Wake	0	Wake	human_other_to_Wake	95	REM_to_Wake	-840.0	840.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-18	12	25320.0	0.9953286286954393	0.96	1	2	N2	2	N2	human_no_stage_change	96	REM_to_Wake	1380.0	1380.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-18	12	27450.0	0.9869147730245222	0.96	1	4	REM	4	REM	human_REM_to_other	97	Wake_to_REM	-720.0	720.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-18	12	28860.0	0.9980613585668394	0.96	1	2	N2	0	Wake	human_other_to_Wake	98	REM_to_Wake	-600.0	600.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-18	12	29730.0	0.988603114265856	0.96	1	2	N2	0	Wake	human_other_to_Wake	98	REM_to_Wake	-1470.0	1470.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-18	12	30540.0	0.9873286868647656	0.96	1	1	N1	0	Wake	human_other_to_Wake	98	REM_to_Wake	-2280.0	2280.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-18	12	30840.0	0.9962870401262884	0.96	1	2	N2	2	N2	human_no_stage_change	98	REM_to_Wake	-2580.0	2580.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-18	12	30990.0	0.9999999937263137	0.96	11	2	N2	2	N2	human_no_stage_change	98	REM_to_Wake	-2730.0	2730.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-32	83	3510.0	0.9618097314828792	0.96	1	0	Wake	0	Wake	human_other_to_Wake	128	REM_to_Wake	5550.0	5550.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-32	83	19140.0	0.9939433505627752	0.96	1	2	N2	2	N2	human_no_stage_change	132	REM_to_Wake	1470.0	1470.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-32	83	22320.0	0.9921537230051444	0.96	1	4	REM	4	REM	human_REM_to_other	132	REM_to_Wake	-1710.0	1710.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-34	22	11190.0	0.9910491316452544	0.96	1	4	REM	1	N1	human_REM_to_other		none_in_recording			no_remwake_reference_in_recording	False
+DE-B	v0.1	test	sub-34	22	18840.0	0.9818939146931492	0.96	1	0	Wake	0	Wake	human_other_to_Wake		none_in_recording			no_remwake_reference_in_recording	False
+DE-B	v0.1	test	sub-34	22	19110.0	0.9858733791032492	0.96	1	0	Wake	0	Wake	human_other_to_Wake		none_in_recording			no_remwake_reference_in_recording	False
+DE-B	v0.1	test	sub-34	22	21450.0	0.999422678654934	0.96	1	0	Wake	0	Wake	human_other_to_Wake		none_in_recording			no_remwake_reference_in_recording	False
+DE-B	v0.1	test	sub-34	22	26940.0	0.9642252242703608	0.96	1	2	N2	0	Wake	human_other_to_Wake		none_in_recording			no_remwake_reference_in_recording	False
+DE-B	v0.1	test	sub-35	83	1380.0	0.9840163107889645	0.96	1	0	Wake	0	Wake	human_other_to_Wake		none_in_recording			no_remwake_reference_in_recording	False
+DE-B	v0.1	test	sub-35	83	1770.0	0.9944926913862936	0.96	1	0	Wake	0	Wake	human_other_to_Wake		none_in_recording			no_remwake_reference_in_recording	False
+DE-B	v0.1	test	sub-35	83	6210.0	0.972007668565442	0.96	1	2	N2	2	N2	human_no_stage_change		none_in_recording			no_remwake_reference_in_recording	False
+DE-B	v0.1	test	sub-35	83	9750.0	0.9930936935425448	0.96	2	2	N2	0	Wake	human_other_to_Wake		none_in_recording			no_remwake_reference_in_recording	False
+DE-B	v0.1	test	sub-35	83	12960.0	0.9901888883081044	0.96	1	2	N2	2	N2	human_no_stage_change		none_in_recording			no_remwake_reference_in_recording	False
+DE-B	v0.1	test	sub-35	83	14160.0	0.9929951129057968	0.96	2	2	N2	2	N2	human_no_stage_change		none_in_recording			no_remwake_reference_in_recording	False
+DE-B	v0.1	test	sub-35	83	14250.0	0.9747545529469072	0.96	1	1	N1	0	Wake	human_other_to_Wake		none_in_recording			no_remwake_reference_in_recording	False
+DE-B	v0.1	test	sub-35	83	14640.0	0.9738251985126474	0.96	2	0	Wake	0	Wake	human_other_to_Wake		none_in_recording			no_remwake_reference_in_recording	False
+DE-B	v0.1	test	sub-35	83	14790.0	0.9937667733396645	0.96	1	0	Wake	0	Wake	human_other_to_Wake		none_in_recording			no_remwake_reference_in_recording	False
+DE-B	v0.1	test	sub-35	83	17640.0	0.9669987991367376	0.96	1	0	Wake	0	Wake	human_other_to_Wake		none_in_recording			no_remwake_reference_in_recording	False
+DE-B	v0.1	test	sub-35	83	20130.0	0.9913144049056613	0.96	1	4	REM	4	REM	human_REM_to_other		none_in_recording			no_remwake_reference_in_recording	False
+DE-B	v0.1	test	sub-35	83	20430.0	0.9697584520392988	0.96	1	4	REM	4	REM	human_REM_to_other		none_in_recording			no_remwake_reference_in_recording	False
+DE-B	v0.1	test	sub-35	83	20580.0	0.9805254794979764	0.96	1	4	REM	4	REM	human_REM_to_other		none_in_recording			no_remwake_reference_in_recording	False
+DE-B	v0.1	test	sub-35	83	22020.0	0.9810905586958492	0.96	1	4	REM	1	N1	human_REM_to_other		none_in_recording			no_remwake_reference_in_recording	False
+DE-B	v0.1	test	sub-35	83	23550.0	0.9954255486600596	0.96	1	2	N2	0	Wake	human_other_to_Wake		none_in_recording			no_remwake_reference_in_recording	False
+DE-B	v0.1	test	sub-35	83	25410.0	0.999999999517888	0.96	26	2	N2	2	N2	human_no_stage_change		none_in_recording			no_remwake_reference_in_recording	False
+DE-B	v0.1	test	sub-37	86	1590.0	0.9718142241568468	0.96	1	2	N2	1	N1	human_other_transition	149	REM_to_Wake	9570.0	9570.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-37	86	2700.0	0.965304685836452	0.96	1	2	N2	0	Wake	human_other_to_Wake	149	REM_to_Wake	8460.0	8460.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-37	86	5790.0	0.9985974117405512	0.96	1	4	REM	4	REM	human_REM_to_other	149	REM_to_Wake	5370.0	5370.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-37	86	6030.0	0.9959694566146858	0.96	1	4	REM	4	REM	human_REM_to_other	149	REM_to_Wake	5130.0	5130.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-37	86	8010.0	0.9999126849685834	0.96	1	2	N2	2	N2	human_no_stage_change	149	REM_to_Wake	3150.0	3150.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-37	86	9900.0	0.99969789900361	0.96	1	2	N2	0	Wake	human_other_to_Wake	149	REM_to_Wake	1260.0	1260.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-37	86	11010.0	0.9642748527073136	0.96	1	4	REM	4	REM	human_REM_to_other	149	REM_to_Wake	150.0	150.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-37	86	15480.0	0.999962309753037	0.96	2	0	Wake	0	Wake	human_other_to_Wake	150	REM_to_Wake	-30.0	30.0	30_to_45_sec	True
+DE-B	v0.1	test	sub-37	86	23490.0	0.9945057767270564	0.96	1	4	REM	4	REM	human_REM_to_other	152	REM_to_Wake	360.0	360.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-37	86	23820.0	0.9898339366967168	0.96	1	4	REM	4	REM	human_REM_to_other	152	REM_to_Wake	30.0	30.0	30_to_45_sec	True
+DE-B	v0.1	test	sub-37	86	24180.0	0.9669891972921782	0.96	1	1	N1	0	Wake	human_other_to_Wake	152	REM_to_Wake	-330.0	330.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-40	86	4920.0	0.9920331019680269	0.96	1	0	Wake	0	Wake	human_other_to_Wake	155	REM_to_Wake	11130.0	11130.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-40	86	16080.0	0.9999245098963524	0.96	2	0	Wake	0	Wake	human_other_to_Wake	155	REM_to_Wake	-30.0	30.0	30_to_45_sec	True
+DE-B	v0.1	test	sub-40	86	17700.0	0.9673306207363308	0.96	1	2	N2	2	N2	human_no_stage_change	155	REM_to_Wake	-1650.0	1650.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-40	86	22470.0	0.9905059973926597	0.96	1	4	REM	4	REM	human_REM_to_other	156	REM_to_Wake	210.0	210.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-40	86	24840.0	0.9708483617873144	0.96	1	2	N2	0	Wake	human_other_to_Wake	156	REM_to_Wake	-2160.0	2160.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-41	83	21540.0	0.9972676482961808	0.96	1	4	REM	4	REM	human_REM_to_other	160	REM_to_Wake	30.0	30.0	30_to_45_sec	True
+DE-B	v0.1	test	sub-44	23	24600.0	0.9978067196785038	0.96	1	4	REM	4	REM	human_REM_to_other	172	REM_to_Wake	-540.0	540.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-44	23	24780.0	0.9999999894332516	0.96	22	4	REM	4	REM	human_REM_to_other	173	REM_to_Wake	690.0	690.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-46	26	750.0	0.9917314238564644	0.96	2	0	Wake	0	Wake	human_other_to_Wake	175	REM_to_Wake	8730.0	8730.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-46	26	7890.0	0.9639134891761364	0.96	1	0	Wake	0	Wake	human_other_to_Wake	175	REM_to_Wake	1590.0	1590.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-46	26	12960.0	0.9992036141305328	0.96	1	2	N2	0	Wake	human_other_to_Wake	176	Wake_to_REM	-3450.0	3450.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-46	26	13740.0	0.975390367970688	0.96	1	0	Wake	0	Wake	human_other_to_Wake	176	Wake_to_REM	-4230.0	4230.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-46	26	19320.0	0.9997541701905388	0.96	1	0	Wake	0	Wake	human_other_to_Wake	177	REM_to_Wake	1050.0	1050.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-46	26	21810.0	0.9719244227934508	0.96	1	2	N2	0	Wake	human_other_to_Wake	177	REM_to_Wake	-1440.0	1440.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-48	28	4320.0	0.9708220339064152	0.96	1	0	Wake	0	Wake	human_other_to_Wake	181	REM_to_Wake	23130.0	23130.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-48	28	5160.0	0.986729597342258	0.96	1	0	Wake	0	Wake	human_other_to_Wake	181	REM_to_Wake	22290.0	22290.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-48	28	9870.0	0.9692413226484085	0.96	1	0	Wake	0	Wake	human_other_to_Wake	181	REM_to_Wake	17580.0	17580.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-48	28	10380.0	0.9722846210046252	0.96	1	0	Wake	0	Wake	human_other_to_Wake	181	REM_to_Wake	17070.0	17070.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-48	28	13950.0	0.9957427391510169	0.96	1	3	N3	2	N2	human_other_transition	181	REM_to_Wake	13500.0	13500.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-48	28	20160.0	0.9603551257018972	0.96	1	3	N3	3	N3	human_no_stage_change	181	REM_to_Wake	7290.0	7290.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-48	28	21150.0	0.9949831394179238	0.96	1	4	REM	4	REM	human_REM_to_other	181	REM_to_Wake	6300.0	6300.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-48	28	21330.0	0.969991465901982	0.96	1	2	N2	2	N2	human_no_stage_change	181	REM_to_Wake	6120.0	6120.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-48	28	22350.0	0.994782375460054	0.96	1	2	N2	0	Wake	human_other_to_Wake	181	REM_to_Wake	5100.0	5100.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-48	28	22620.0	0.9732482529016802	0.96	1	0	Wake	0	Wake	human_other_to_Wake	181	REM_to_Wake	4830.0	4830.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-48	28	22980.0	0.9700730904729832	0.96	1	2	N2	2	N2	human_no_stage_change	181	REM_to_Wake	4470.0	4470.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-48	28	24420.0	0.9739903600480084	0.96	1	0	Wake	0	Wake	human_other_to_Wake	181	REM_to_Wake	3030.0	3030.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-48	28	25860.0	0.9991332418871116	0.96	1	2	N2	1	N1	human_other_transition	181	REM_to_Wake	1590.0	1590.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-48	28	26430.0	0.9839704203676336	0.96	1	4	REM	4	REM	human_REM_to_other	181	REM_to_Wake	1020.0	1020.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-48	28	26850.0	0.983554028318806	0.96	1	4	REM	4	REM	human_REM_to_other	181	REM_to_Wake	600.0	600.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-48	28	27030.0	0.9878018088441192	0.96	1	4	REM	4	REM	human_REM_to_other	181	REM_to_Wake	420.0	420.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-48	28	27480.0	0.9998480585307256	0.96	1	0	Wake	0	Wake	human_other_to_Wake	181	REM_to_Wake	-30.0	30.0	30_to_45_sec	True
+DE-B	v0.1	test	sub-48	28	27690.0	0.9949208416342714	0.96	2	0	Wake	0	Wake	human_other_to_Wake	181	REM_to_Wake	-240.0	240.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-48	28	30900.0	0.9999999747406468	0.96	15	2	N2	0	Wake	human_other_to_Wake	181	REM_to_Wake	-3450.0	3450.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-50	88	150.0	0.9997727604209804	0.96	1	0	Wake	0	Wake	human_other_to_Wake	184	Wake_to_REM	15300.0	15300.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-50	88	570.0	0.9965522284975308	0.96	1	0	Wake	0	Wake	human_other_to_Wake	184	Wake_to_REM	14880.0	14880.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-50	88	5910.0	0.9961419271608178	0.96	1	0	Wake	0	Wake	human_other_to_Wake	184	Wake_to_REM	9540.0	9540.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-50	88	15900.0	0.9870158278609712	0.96	1	4	REM	4	REM	human_REM_to_other	184	Wake_to_REM	-450.0	450.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-50	88	16740.0	0.997133508506542	0.96	1	4	REM	4	REM	human_REM_to_other	184	Wake_to_REM	-1290.0	1290.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-50	88	23130.0	0.9817613679948376	0.96	1	4	REM	4	REM	human_REM_to_other	185	REM_to_Wake	360.0	360.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-51	30	4140.0	0.9810950020639752	0.96	1	0	Wake	0	Wake	human_other_to_Wake	186	REM_to_Wake	6060.0	6060.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-51	30	10230.0	0.9789055735657964	0.96	1	0	Wake	1	N1	human_other_transition	186	REM_to_Wake	-30.0	30.0	30_to_45_sec	True
+DE-B	v0.1	test	sub-51	30	21660.0	0.9905165180579348	0.96	1	2	N2	1	N1	human_other_transition	189	REM_to_Wake	1890.0	1890.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-51	30	22050.0	0.993108049397201	0.96	2	2	N2	0	Wake	human_other_to_Wake	189	REM_to_Wake	1500.0	1500.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-51	30	23850.0	0.9963757537944032	0.96	2	0	Wake	0	Wake	human_other_to_Wake	191	REM_to_Wake	-30.0	30.0	30_to_45_sec	True
+DE-B	v0.1	test	sub-53	88	2820.0	0.993511164447129	0.96	1	2	N2	2	N2	human_no_stage_change	198	Wake_to_REM	-1170.0	1170.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-53	88	3090.0	0.9646968803320046	0.96	1	0	Wake	0	Wake	human_other_to_Wake	198	Wake_to_REM	-1440.0	1440.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-53	88	8970.0	0.9999920294241904	0.96	2	2	N2	0	Wake	human_other_to_Wake	198	Wake_to_REM	-7320.0	7320.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-53	88	9630.0	0.9805475689166118	0.96	1	4	REM	4	REM	human_REM_to_other	198	Wake_to_REM	-7980.0	7980.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-53	88	9840.0	0.9968875206017566	0.96	4	4	REM	4	REM	human_REM_to_other	198	Wake_to_REM	-8190.0	8190.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-53	88	10320.0	0.9868057172488144	0.96	2	2	N2	2	N2	human_no_stage_change	199	REM_to_Wake	8220.0	8220.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-53	88	10410.0	0.9982123524435232	0.96	2	2	N2	2	N2	human_no_stage_change	199	REM_to_Wake	8130.0	8130.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-53	88	10620.0	0.9998799169082612	0.96	2	2	N2	2	N2	human_no_stage_change	199	REM_to_Wake	7920.0	7920.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-53	88	11160.0	0.972234809612253	0.96	1	0	Wake	0	Wake	human_other_to_Wake	199	REM_to_Wake	7380.0	7380.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-53	88	11250.0	0.999961003360012	0.96	1	0	Wake	0	Wake	human_other_to_Wake	199	REM_to_Wake	7290.0	7290.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-53	88	11700.0	0.9734977683583448	0.96	1	2	N2	2	N2	human_no_stage_change	199	REM_to_Wake	6840.0	6840.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-53	88	13860.0	0.9906588616617809	0.96	1	0	Wake	0	Wake	human_other_to_Wake	199	REM_to_Wake	4680.0	4680.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-53	88	15180.0	0.970685233765255	0.96	1	0	Wake	0	Wake	human_other_to_Wake	199	REM_to_Wake	3360.0	3360.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-53	88	17220.0	0.964492891253154	0.96	1	0	Wake	0	Wake	human_other_to_Wake	199	REM_to_Wake	1320.0	1320.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-53	88	19380.0	0.9603287259870792	0.96	1	2	N2	0	Wake	human_other_to_Wake	202	REM_to_Wake	-300.0	300.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-54	88	4800.0	0.9996707044314244	0.96	1	0	Wake	0	Wake	human_other_to_Wake	203	REM_to_Wake	5730.0	5730.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-54	88	11160.0	0.9946925408671256	0.96	1	0	Wake	0	Wake	human_other_to_Wake	203	REM_to_Wake	-630.0	630.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-54	88	20100.0	0.9937322674616268	0.96	1	4	REM	4	REM	human_REM_to_other	206	REM_to_Wake	390.0	390.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-54	88	21360.0	0.9977574881852276	0.96	1	2	N2	2	N2	human_no_stage_change	206	REM_to_Wake	-870.0	870.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-54	88	22440.0	0.9957124423848004	0.96	1	0	Wake	0	Wake	human_other_to_Wake	206	REM_to_Wake	-1950.0	1950.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-55	77	1680.0	0.996647847407252	0.96	1	0	Wake	0	Wake	human_other_to_Wake	207	REM_to_Wake	13710.0	13710.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-55	77	2790.0	0.9970719913095218	0.96	1	0	Wake	0	Wake	human_other_to_Wake	207	REM_to_Wake	12600.0	12600.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-55	77	14160.0	0.9916213687899528	0.96	1	4	REM	4	REM	human_REM_to_other	207	REM_to_Wake	1230.0	1230.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-55	77	26220.0	0.9999996395736916	0.96	196	2	N2	2	N2	human_no_stage_change	209	REM_to_Wake	1950.0	1950.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	1170.0	0.9923836744436462	0.96	1	0	Wake	0	Wake	human_other_to_Wake	220	REM_to_Wake	13320.0	13320.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	2940.0	0.99644957760879	0.96	2	0	Wake	0	Wake	human_other_to_Wake	220	REM_to_Wake	11550.0	11550.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	4230.0	0.999534405419778	0.96	1	0	Wake	0	Wake	human_other_to_Wake	220	REM_to_Wake	10260.0	10260.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	5940.0	0.9973559566112606	0.96	1	2	N2	0	Wake	human_other_to_Wake	220	REM_to_Wake	8550.0	8550.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	7560.0	0.9999994504722434	0.96	3	2	N2	0	Wake	human_other_to_Wake	220	REM_to_Wake	6930.0	6930.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	7710.0	0.964948915477972	0.96	1	0	Wake	2	N2	human_other_transition	220	REM_to_Wake	6780.0	6780.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	7830.0	0.9820074358427996	0.96	1	2	N2	2	N2	human_no_stage_change	220	REM_to_Wake	6660.0	6660.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	7920.0	0.9940002102721912	0.96	7	2	N2	2	N2	human_no_stage_change	220	REM_to_Wake	6570.0	6570.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	8250.0	0.9783231210230128	0.96	1	4	REM	4	REM	human_REM_to_other	220	REM_to_Wake	6240.0	6240.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	8370.0	0.969213986164356	0.96	1	4	REM	4	REM	human_REM_to_other	220	REM_to_Wake	6120.0	6120.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	9180.0	0.9863151737226844	0.96	1	4	REM	4	REM	human_REM_to_other	220	REM_to_Wake	5310.0	5310.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	9270.0	0.999999999994314	0.96	2	4	REM	4	REM	human_REM_to_other	220	REM_to_Wake	5220.0	5220.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	9390.0	0.999999997467326	0.96	3	4	REM	4	REM	human_REM_to_other	220	REM_to_Wake	5100.0	5100.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	9960.0	0.9617950702264284	0.96	1	2	N2	2	N2	human_no_stage_change	220	REM_to_Wake	4530.0	4530.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	10260.0	0.9715722595773092	0.96	1	2	N2	2	N2	human_no_stage_change	220	REM_to_Wake	4230.0	4230.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	10350.0	0.9693853465794262	0.96	1	2	N2	2	N2	human_no_stage_change	220	REM_to_Wake	4140.0	4140.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	10560.0	0.9696453929768653	0.96	2	3	N3	3	N3	human_no_stage_change	220	REM_to_Wake	3930.0	3930.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	10650.0	0.9866502160665532	0.96	1	3	N3	3	N3	human_no_stage_change	220	REM_to_Wake	3840.0	3840.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	10740.0	0.967639264820382	0.96	1	3	N3	0	Wake	human_other_to_Wake	220	REM_to_Wake	3750.0	3750.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	12960.0	0.9976789029444788	0.96	1	3	N3	2	N2	human_other_transition	220	REM_to_Wake	1530.0	1530.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	13410.0	0.9983249866318172	0.96	3	2	N2	0	Wake	human_other_to_Wake	220	REM_to_Wake	1080.0	1080.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	13620.0	0.9606183596174712	0.96	1	2	N2	2	N2	human_no_stage_change	220	REM_to_Wake	870.0	870.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	13860.0	0.9863233433271088	0.96	3	2	N2	2	N2	human_no_stage_change	220	REM_to_Wake	630.0	630.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	13920.0	0.971487512814895	0.96	1	2	N2	4	REM	human_other_transition	220	REM_to_Wake	570.0	570.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	14250.0	0.9953081447217544	0.96	3	4	REM	4	REM	human_REM_to_other	220	REM_to_Wake	240.0	240.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	15300.0	0.9994613153553632	0.96	1	4	REM	4	REM	human_REM_to_other	221	Wake_to_REM	-780.0	780.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	15420.0	0.9999981634727356	0.96	1	4	REM	4	REM	human_REM_to_other	221	Wake_to_REM	-900.0	900.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	15600.0	0.9999999991684942	0.96	1	4	REM	1	N1	human_REM_to_other	221	Wake_to_REM	-1080.0	1080.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	16020.0	0.9999966179523702	0.96	3	2	N2	2	N2	human_no_stage_change	221	Wake_to_REM	-1500.0	1500.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	16500.0	0.9996755916510696	0.96	1	2	N2	2	N2	human_no_stage_change	221	Wake_to_REM	-1980.0	1980.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	16620.0	0.999999990304148	0.96	1	2	N2	2	N2	human_no_stage_change	221	Wake_to_REM	-2100.0	2100.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	16980.0	0.9645683124272508	0.96	1	2	N2	2	N2	human_no_stage_change	221	Wake_to_REM	-2460.0	2460.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	17100.0	0.9967683015967208	0.96	1	2	N2	2	N2	human_no_stage_change	221	Wake_to_REM	-2580.0	2580.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	17190.0	0.9999999989818056	0.96	3	2	N2	2	N2	human_no_stage_change	221	Wake_to_REM	-2670.0	2670.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	17760.0	0.9869030927351669	0.96	1	2	N2	2	N2	human_no_stage_change	221	Wake_to_REM	-3240.0	3240.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	17880.0	0.9857244015710598	0.96	1	2	N2	2	N2	human_no_stage_change	221	Wake_to_REM	-3360.0	3360.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	17970.0	0.9994473561889824	0.96	6	2	N2	2	N2	human_no_stage_change	221	Wake_to_REM	-3450.0	3450.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	18330.0	0.9967673893792394	0.96	7	2	N2	2	N2	human_no_stage_change	221	Wake_to_REM	-3810.0	3810.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	18420.0	0.9917950065399512	0.96	2	2	N2	2	N2	human_no_stage_change	222	REM_to_Wake	3720.0	3720.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	18480.0	0.9960962413100654	0.96	1	2	N2	2	N2	human_no_stage_change	222	REM_to_Wake	3660.0	3660.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	18600.0	0.9995172847442108	0.96	2	2	N2	2	N2	human_no_stage_change	222	REM_to_Wake	3540.0	3540.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	18660.0	0.9998651188376854	0.96	3	2	N2	2	N2	human_no_stage_change	222	REM_to_Wake	3480.0	3480.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	18990.0	0.9999998457150476	0.96	8	2	N2	2	N2	human_no_stage_change	222	REM_to_Wake	3150.0	3150.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	19140.0	0.9999999744312832	0.96	6	2	N2	2	N2	human_no_stage_change	222	REM_to_Wake	3000.0	3000.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	19320.0	0.992526412106301	0.96	1	2	N2	2	N2	human_no_stage_change	222	REM_to_Wake	2820.0	2820.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	19440.0	0.9906461936824574	0.96	3	2	N2	2	N2	human_no_stage_change	222	REM_to_Wake	2700.0	2700.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	19800.0	0.9998545869082578	0.96	13	2	N2	2	N2	human_no_stage_change	222	REM_to_Wake	2340.0	2340.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	20010.0	0.9936515466726098	0.96	1	2	N2	2	N2	human_no_stage_change	222	REM_to_Wake	2130.0	2130.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	20130.0	0.9999996161903296	0.96	1	1	N1	0	Wake	human_other_to_Wake	222	REM_to_Wake	2010.0	2010.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	21180.0	0.971388508795906	0.96	1	4	REM	4	REM	human_REM_to_other	222	REM_to_Wake	960.0	960.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	21270.0	0.9720998982981228	0.96	1	4	REM	4	REM	human_REM_to_other	222	REM_to_Wake	870.0	870.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	22080.0	0.9863801686318002	0.96	1	4	REM	4	REM	human_REM_to_other	222	REM_to_Wake	60.0	60.0	60_to_135_sec	True
+DE-B	v0.1	test	sub-57	77	22770.0	0.9677744044646196	0.96	1	2	N2	2	N2	human_no_stage_change	222	REM_to_Wake	-630.0	630.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	23700.0	0.9679396447597882	0.96	1	2	N2	0	Wake	human_other_to_Wake	222	REM_to_Wake	-1560.0	1560.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	23850.0	0.9664454544526582	0.96	1	2	N2	2	N2	human_no_stage_change	222	REM_to_Wake	-1710.0	1710.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	23910.0	0.9773892936235302	0.96	1	2	N2	2	N2	human_no_stage_change	222	REM_to_Wake	-1770.0	1770.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	24240.0	0.991552897992856	0.96	1	2	N2	2	N2	human_no_stage_change	222	REM_to_Wake	-2100.0	2100.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	24330.0	0.99751326721526	0.96	2	2	N2	2	N2	human_no_stage_change	222	REM_to_Wake	-2190.0	2190.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	24420.0	0.9635299629618298	0.96	1	2	N2	2	N2	human_no_stage_change	222	REM_to_Wake	-2280.0	2280.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	24510.0	0.9656631599373456	0.96	1	2	N2	2	N2	human_no_stage_change	222	REM_to_Wake	-2370.0	2370.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	24600.0	0.9879632448821308	0.96	2	2	N2	2	N2	human_no_stage_change	222	REM_to_Wake	-2460.0	2460.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	24690.0	0.9999995087619372	0.96	3	2	N2	2	N2	human_no_stage_change	222	REM_to_Wake	-2550.0	2550.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	26700.0	0.9995463323868276	0.96	1	0	Wake	1	N1	human_other_transition	223	REM_to_Wake	2640.0	2640.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	26910.0	0.9744666026779518	0.96	1	2	N2	2	N2	human_no_stage_change	223	REM_to_Wake	2430.0	2430.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	27180.0	0.9951913600337702	0.96	2	2	N2	2	N2	human_no_stage_change	223	REM_to_Wake	2160.0	2160.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	27270.0	0.9606798774969084	0.96	1	2	N2	2	N2	human_no_stage_change	223	REM_to_Wake	2070.0	2070.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	27420.0	0.9927181607887644	0.96	1	2	N2	2	N2	human_no_stage_change	223	REM_to_Wake	1920.0	1920.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	27510.0	0.999998243659815	0.96	3	2	N2	2	N2	human_no_stage_change	223	REM_to_Wake	1830.0	1830.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	28230.0	0.9953307329344152	0.96	1	2	N2	0	Wake	human_other_to_Wake	223	REM_to_Wake	1110.0	1110.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	28530.0	0.999991513348972	0.96	1	2	N2	0	Wake	human_other_to_Wake	223	REM_to_Wake	810.0	810.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	29250.0	0.9615715434214748	0.96	1	4	REM	4	REM	human_REM_to_other	223	REM_to_Wake	90.0	90.0	60_to_135_sec	True
+DE-B	v0.1	test	sub-57	77	29970.0	0.9985201713144002	0.96	2	4	REM	4	REM	human_REM_to_other	225	REM_to_Wake	60.0	60.0	60_to_135_sec	True
+DE-B	v0.1	test	sub-57	77	30630.0	0.9630875385622076	0.96	1	2	N2	2	N2	human_no_stage_change	225	REM_to_Wake	-600.0	600.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-57	77	30720.0	0.9999999996543874	0.96	1	2	N2	2	N2	human_no_stage_change	225	REM_to_Wake	-690.0	690.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-76	41	20580.0	0.997668778912825	0.96	1	0	Wake	0	Wake	human_other_to_Wake	285	REM_to_Wake	7890.0	7890.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-76	41	26640.0	0.997614730483774	0.96	1	0	Wake	0	Wake	human_other_to_Wake	285	REM_to_Wake	1830.0	1830.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-76	41	27000.0	0.9680567171163192	0.96	1	0	Wake	0	Wake	human_other_to_Wake	285	REM_to_Wake	1470.0	1470.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-76	41	27750.0	0.9781733924581186	0.96	1	1	N1	0	Wake	human_other_to_Wake	285	REM_to_Wake	720.0	720.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-76	41	27810.0	0.9976657762375926	0.96	1	0	Wake	0	Wake	human_other_to_Wake	285	REM_to_Wake	660.0	660.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-85	52	8070.0	0.9739724134099348	0.96	1	3	N3	3	N3	human_no_stage_change	311	REM_to_Wake	6690.0	6690.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-85	52	12960.0	0.9649822122589572	0.96	1	2	N2	2	N2	human_no_stage_change	311	REM_to_Wake	1800.0	1800.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-85	52	28050.0	0.998802552364163	0.96	1	2	N2	0	Wake	human_other_to_Wake	315	REM_to_Wake	-1980.0	1980.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-85	52	31560.0	0.9999999997306076	0.96	26	0	Wake	0	Wake	human_other_to_Wake	315	REM_to_Wake	-5490.0	5490.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-89	56	2160.0	0.9634305306869853	0.96	1	0	Wake	0	Wake	human_other_to_Wake		none_in_recording			no_remwake_reference_in_recording	False
+DE-B	v0.1	test	sub-89	56	2310.0	0.9998552342587712	0.96	2	0	Wake	0	Wake	human_other_to_Wake		none_in_recording			no_remwake_reference_in_recording	False
+DE-B	v0.1	test	sub-89	56	2610.0	0.9979704227706416	0.96	1	0	Wake	0	Wake	human_other_to_Wake		none_in_recording			no_remwake_reference_in_recording	False
+DE-B	v0.1	test	sub-89	56	3300.0	0.9996083856075552	0.96	2	0	Wake	0	Wake	human_other_to_Wake		none_in_recording			no_remwake_reference_in_recording	False
+DE-B	v0.1	test	sub-89	56	4260.0	0.9999913628780392	0.96	2	0	Wake	0	Wake	human_other_to_Wake		none_in_recording			no_remwake_reference_in_recording	False
+DE-B	v0.1	test	sub-89	56	7050.0	0.9797024192503472	0.96	1	2	N2	2	N2	human_no_stage_change		none_in_recording			no_remwake_reference_in_recording	False
+DE-B	v0.1	test	sub-89	56	7980.0	0.9999968391638864	0.96	1	4	REM	4	REM	human_REM_to_other		none_in_recording			no_remwake_reference_in_recording	False
+DE-B	v0.1	test	sub-89	56	12270.0	0.9877131240202156	0.96	1	4	REM	4	REM	human_REM_to_other		none_in_recording			no_remwake_reference_in_recording	False
+DE-B	v0.1	test	sub-89	56	12840.0	0.985640710670286	0.96	1	4	REM	4	REM	human_REM_to_other		none_in_recording			no_remwake_reference_in_recording	False
+DE-B	v0.1	test	sub-89	56	13620.0	0.9949840529897456	0.96	1	2	N2	2	N2	human_no_stage_change		none_in_recording			no_remwake_reference_in_recording	False
+DE-B	v0.1	test	sub-89	56	18750.0	0.9999034428920694	0.96	1	4	REM	4	REM	human_REM_to_other		none_in_recording			no_remwake_reference_in_recording	False
+DE-B	v0.1	test	sub-89	56	19110.0	0.992658512316336	0.96	1	4	REM	4	REM	human_REM_to_other		none_in_recording			no_remwake_reference_in_recording	False
+DE-B	v0.1	test	sub-89	56	22680.0	0.9970920071679846	0.96	1	2	N2	0	Wake	human_other_to_Wake		none_in_recording			no_remwake_reference_in_recording	False
+DE-B	v0.1	test	sub-89	56	23010.0	0.9964542878321953	0.96	1	2	N2	2	N2	human_no_stage_change		none_in_recording			no_remwake_reference_in_recording	False
+DE-B	v0.1	test	sub-89	56	23400.0	0.9988575177121212	0.96	1	4	REM	4	REM	human_REM_to_other		none_in_recording			no_remwake_reference_in_recording	False
+DE-B	v0.1	test	sub-89	56	23670.0	0.969585281577887	0.96	1	4	REM	1	N1	human_REM_to_other		none_in_recording			no_remwake_reference_in_recording	False
+DE-B	v0.1	test	sub-89	56	24150.0	0.9637504072563866	0.96	1	4	REM	4	REM	human_REM_to_other		none_in_recording			no_remwake_reference_in_recording	False
+DE-B	v0.1	test	sub-89	56	24390.0	0.992049926451348	0.96	1	4	REM	4	REM	human_REM_to_other		none_in_recording			no_remwake_reference_in_recording	False
+DE-B	v0.1	test	sub-89	56	24990.0	0.9963217537084816	0.96	1	4	REM	2	N2	human_REM_to_other		none_in_recording			no_remwake_reference_in_recording	False
+DE-B	v0.1	test	sub-89	56	25200.0	0.9930097532256484	0.96	1	2	N2	2	N2	human_no_stage_change		none_in_recording			no_remwake_reference_in_recording	False
+DE-B	v0.1	test	sub-9	90	3240.0	0.9729523072487664	0.96	1	0	Wake	0	Wake	human_other_to_Wake	35	REM_to_Wake	17670.0	17670.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-9	90	4650.0	0.9999950453281258	0.96	1	0	Wake	0	Wake	human_other_to_Wake	35	REM_to_Wake	16260.0	16260.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-9	90	5520.0	0.9860378629035408	0.96	1	1	N1	0	Wake	human_other_to_Wake	35	REM_to_Wake	15390.0	15390.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-9	90	9840.0	0.9718720663254116	0.96	1	1	N1	0	Wake	human_other_to_Wake	35	REM_to_Wake	11070.0	11070.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-9	90	20760.0	0.978050062878286	0.96	1	4	REM	4	REM	human_REM_to_other	35	REM_to_Wake	150.0	150.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-9	90	20940.0	0.9999383911991104	0.96	1	0	Wake	0	Wake	human_other_to_Wake	35	REM_to_Wake	-30.0	30.0	30_to_45_sec	True
+DE-B	v0.1	test	sub-90	57	5550.0	0.9947600486195995	0.96	1	0	Wake	0	Wake	human_other_to_Wake	318	REM_to_Wake	9780.0	9780.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-90	57	6210.0	0.997721467778812	0.96	1	2	N2	0	Wake	human_other_to_Wake	318	REM_to_Wake	9120.0	9120.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-90	57	8370.0	0.9974611626890064	0.96	1	2	N2	0	Wake	human_other_to_Wake	318	REM_to_Wake	6960.0	6960.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-90	57	9000.0	0.9963148625111036	0.96	1	2	N2	2	N2	human_no_stage_change	318	REM_to_Wake	6330.0	6330.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-90	57	27720.0	0.9945873395475554	0.96	1	4	REM	4	REM	human_REM_to_other	324	REM_to_Wake	330.0	330.0	beyond_135_sec	False
+DE-B	v0.1	test	sub-90	57	29580.0	0.9999999878146216	0.96	51	2	N2	2	N2	human_no_stage_change	324	REM_to_Wake	-1530.0	1530.0	beyond_135_sec	False

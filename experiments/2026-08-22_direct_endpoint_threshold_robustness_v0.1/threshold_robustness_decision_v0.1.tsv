@@ -1,0 +1,2 @@
+selected_interval_contains_at_least_five_thresholds	lopo_f1	lopo_false_alarms_per_hour	lopo_beats_de_b_on_both_metrics	threshold_robustness_supported
+True	0.16037735849056603	0.9914762328086598	True	True

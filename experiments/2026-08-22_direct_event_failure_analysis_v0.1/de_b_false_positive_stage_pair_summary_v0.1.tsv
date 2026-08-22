@@ -1,0 +1,6 @@
+human_stage_pair_category	supported_candidates	false_positive_alarms	supported_share	false_positive_share	false_positive_share_enrichment
+human_other_to_Wake	4466	108.0	0.18713597318248482	0.432	2.3084818629646215
+human_no_stage_change	14130	76.0	0.5920804525455688	0.304	0.5134437367303609
+human_REM_to_other	3737	56.0	0.15658914728682172	0.224	1.4304950495049504
+human_other_transition	1460	10.0	0.061177456526293736	0.04	0.6538356164383562
+human_REM_to_Wake	72	0.0	0.003016970458830924	0.0	0.0

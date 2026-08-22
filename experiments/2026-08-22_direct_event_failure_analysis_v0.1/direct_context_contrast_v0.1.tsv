@@ -1,0 +1,2 @@
+comparison	true_positive_difference	false_positive_difference	false_negative_difference	event_f1_difference	false_alarms_per_hour_difference
+DE-B_minus_DE-A	12	55	-12	0.0523223216488372	0.28680109044148305

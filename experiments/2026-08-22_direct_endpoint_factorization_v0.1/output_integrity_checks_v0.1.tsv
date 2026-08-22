@@ -1,0 +1,20 @@
+check	status	detail
+two_scores_per_labeled_row	pass	score_rows=6800, samples=3400
+endpoint_conjunction_reconstructs_label	pass	rows=3400
+labeled_partition_counts	pass	{'train': 2743, 'validation': 657}
+endpoint_metric_recomputation	pass	configurations=4, failures=0
+threshold_grid	pass	rows=99
+selected_threshold	pass	threshold=0.74
+endpoint_model_hashes	pass	two fitted heads verified
+validation_only_candidate_scores	pass	partitions=['validation'], recordings=20
+factorized_probability_product	pass	candidate_rows=19123
+validation_support_accounting	pass	support_rows=20, score_rows=19123
+external_artifact_hashes	pass	verified=105, failures=0
+feature_hashes_match_stage_first	pass	matched=102, mismatches=0
+repository_input_hashes	pass	verified=8, failures=0
+no_model_or_array_files_in_repo	pass	forbidden_files=0
+validation_alarm_recomputation	pass	saved=181, recomputed=181
+validation_event_metric_recomputation	pass	configurations=4, failures=0
+validation_decision_recomputation	pass	success=True
+false_positive_category_accounting	pass	DE-D=158, DE-B=231
+bootstrap_configuration	pass	rows=16

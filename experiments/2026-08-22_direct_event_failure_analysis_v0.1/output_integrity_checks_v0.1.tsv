@@ -1,0 +1,10 @@
+check	status	detail
+input_artifact_hashes	pass	verified=33, failures=0
+no_raw_or_model_input	pass	forbidden_roles=0
+false_positive_row_count	pass	rows=250, expected=250
+stage_pair_accounting	pass	false_positive_sum=250
+distance_bin_accounting	pass	false_positive_sum=250
+participant_accounting	pass	participants=20, false_positive_sum=250
+supported_candidate_accounting	pass	categorized=23865, expected=23865
+timing_match_accounting	pass	matches=33, additional=8
+direct_context_contrast	pass	DE-B minus DE-A recomputed

@@ -1,0 +1,7 @@
+check	status	detail
+paired_participant_rows	pass	participants=16
+paired_metric_recomputation	pass	numeric_columns=28
+paired_bootstrap_recomputation	pass	resamples=2000, seed=20260822
+participant_direction_recomputation	pass	metrics=4
+input_artifact_hashes	pass	verified=2, failures=0
+validation_only_inputs	pass	DE-B_validation_participant_metrics,DE-D_validation_participant_metrics

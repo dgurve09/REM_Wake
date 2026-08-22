@@ -1,0 +1,81 @@
+comparator	model_version	partition	membership	threshold_mode	subject	pid	tolerance_sec	reference_events	predicted_events	ignored_reference_events	true_positive	false_positive	false_negative	ignored_predictions	supported_hours	precision	recall	f1	false_alarms_per_hour
+DE-D-LOPO	v0.1	validation	primary	leave_one_pid_out_calibration	sub-1	89	15.0	0	4	5	0	4	0	0	7.5	0.0		0.0	0.5333333333333333
+DE-D-LOPO	v0.1	validation	primary	leave_one_pid_out_calibration	sub-105	73	15.0	3	9	0	3	6	0	0	7.866666666666666	0.3333333333333333	1.0	0.5	0.7627118644067797
+DE-D-LOPO	v0.1	validation	primary	leave_one_pid_out_calibration	sub-112	97	15.0	3	6	0	1	5	2	0	7.6	0.16666666666666666	0.3333333333333333	0.2222222222222222	0.6578947368421053
+DE-D-LOPO	v0.1	validation	primary	leave_one_pid_out_calibration	sub-113	97	15.0	2	5	0	1	4	1	0	7.75	0.2	0.5	0.2857142857142857	0.5161290322580645
+DE-D-LOPO	v0.1	validation	primary	leave_one_pid_out_calibration	sub-114	97	15.0	1	9	0	1	8	0	0	7.716666666666667	0.1111111111111111	1.0	0.2	1.036717062634989
+DE-D-LOPO	v0.1	validation	primary	leave_one_pid_out_calibration	sub-124	15	15.0	4	4	0	2	2	2	0	7.35	0.5	0.5	0.5	0.272108843537415
+DE-D-LOPO	v0.1	validation	primary	leave_one_pid_out_calibration	sub-126	106	15.0	1	8	5	0	6	1	2	7.2	0.0	0.0	0.0	0.8333333333333333
+DE-D-LOPO	v0.1	validation	primary	leave_one_pid_out_calibration	sub-2	89	15.0	7	13	0	2	11	5	0	7.55	0.15384615384615385	0.2857142857142857	0.2	1.456953642384106
+DE-D-LOPO	v0.1	validation	primary	leave_one_pid_out_calibration	sub-23	15	15.0	1	5	1	0	5	1	0	9.266666666666667	0.0	0.0	0.0	0.539568345323741
+DE-D-LOPO	v0.1	validation	primary	leave_one_pid_out_calibration	sub-25	17	15.0	3	15	0	0	15	3	0	8.966666666666667	0.0	0.0	0.0	1.6728624535315986
+DE-D-LOPO	v0.1	validation	primary	leave_one_pid_out_calibration	sub-4	2	15.0	2	14	0	1	13	1	0	8.858333333333333	0.07142857142857142	0.5	0.125	1.4675446848541864
+DE-D-LOPO	v0.1	validation	primary	leave_one_pid_out_calibration	sub-5	3	15.0	4	3	0	2	1	2	0	8.316666666666666	0.6666666666666666	0.5	0.5714285714285714	0.12024048096192386
+DE-D-LOPO	v0.1	validation	primary	leave_one_pid_out_calibration	sub-6	4	15.0	1	11	0	1	10	0	0	8.258333333333333	0.09090909090909091	1.0	0.16666666666666666	1.2108980827447025
+DE-D-LOPO	v0.1	validation	primary	leave_one_pid_out_calibration	sub-7	5	15.0	0	15	3	0	13	0	2	7.733333333333333	0.0		0.0	1.6810344827586208
+DE-D-LOPO	v0.1	validation	primary	leave_one_pid_out_calibration	sub-72	37	15.0	0	10	2	0	10	0	0	7.991666666666666	0.0		0.0	1.251303441084463
+DE-D-LOPO	v0.1	validation	primary	leave_one_pid_out_calibration	sub-75	40	15.0	0	20	2	0	19	0	1	7.133333333333334	0.0		0.0	2.663551401869159
+DE-D-LOPO	v0.1	validation	primary	leave_one_pid_out_calibration	sub-79	44	15.0	0	2	0	0	2	0	0	8.558333333333334	0.0		0.0	0.23369036027263876
+DE-D-LOPO	v0.1	validation	primary	leave_one_pid_out_calibration	sub-82	48	15.0	0	7	2	0	6	0	1	7.341666666666667	0.0		0.0	0.8172531214528944
+DE-D-LOPO	v0.1	validation	primary	leave_one_pid_out_calibration	sub-88	55	15.0	0	7	0	0	7	0	0	7.416666666666667	0.0		0.0	0.9438202247191011
+DE-D-LOPO	v0.1	validation	primary	leave_one_pid_out_calibration	sub-97	64	15.0	5	14	0	3	11	2	0	8.983333333333333	0.21428571428571427	0.6	0.3157894736842105	1.2244897959183674
+DE-D-LOPO	v0.1	validation	primary	leave_one_pid_out_calibration	sub-1	89	45.0	0	4	5	0	4	0	0	7.5	0.0		0.0	0.5333333333333333
+DE-D-LOPO	v0.1	validation	primary	leave_one_pid_out_calibration	sub-105	73	45.0	3	9	0	3	6	0	0	7.866666666666666	0.3333333333333333	1.0	0.5	0.7627118644067797
+DE-D-LOPO	v0.1	validation	primary	leave_one_pid_out_calibration	sub-112	97	45.0	3	6	0	2	4	1	0	7.6	0.3333333333333333	0.6666666666666666	0.4444444444444444	0.5263157894736842
+DE-D-LOPO	v0.1	validation	primary	leave_one_pid_out_calibration	sub-113	97	45.0	2	5	0	1	4	1	0	7.75	0.2	0.5	0.2857142857142857	0.5161290322580645
+DE-D-LOPO	v0.1	validation	primary	leave_one_pid_out_calibration	sub-114	97	45.0	1	9	0	1	8	0	0	7.716666666666667	0.1111111111111111	1.0	0.2	1.036717062634989
+DE-D-LOPO	v0.1	validation	primary	leave_one_pid_out_calibration	sub-124	15	45.0	4	4	0	2	2	2	0	7.35	0.5	0.5	0.5	0.272108843537415
+DE-D-LOPO	v0.1	validation	primary	leave_one_pid_out_calibration	sub-126	106	45.0	1	8	5	1	4	0	3	7.2	0.2	1.0	0.3333333333333333	0.5555555555555556
+DE-D-LOPO	v0.1	validation	primary	leave_one_pid_out_calibration	sub-2	89	45.0	7	13	0	2	11	5	0	7.55	0.15384615384615385	0.2857142857142857	0.2	1.456953642384106
+DE-D-LOPO	v0.1	validation	primary	leave_one_pid_out_calibration	sub-23	15	45.0	1	5	1	0	5	1	0	9.266666666666667	0.0	0.0	0.0	0.539568345323741
+DE-D-LOPO	v0.1	validation	primary	leave_one_pid_out_calibration	sub-25	17	45.0	3	15	0	2	13	1	0	8.966666666666667	0.13333333333333333	0.6666666666666666	0.2222222222222222	1.449814126394052
+DE-D-LOPO	v0.1	validation	primary	leave_one_pid_out_calibration	sub-4	2	45.0	2	14	0	1	13	1	0	8.858333333333333	0.07142857142857142	0.5	0.125	1.4675446848541864
+DE-D-LOPO	v0.1	validation	primary	leave_one_pid_out_calibration	sub-5	3	45.0	4	3	0	2	1	2	0	8.316666666666666	0.6666666666666666	0.5	0.5714285714285714	0.12024048096192386
+DE-D-LOPO	v0.1	validation	primary	leave_one_pid_out_calibration	sub-6	4	45.0	1	11	0	1	10	0	0	8.258333333333333	0.09090909090909091	1.0	0.16666666666666666	1.2108980827447025
+DE-D-LOPO	v0.1	validation	primary	leave_one_pid_out_calibration	sub-7	5	45.0	0	15	3	0	13	0	2	7.733333333333333	0.0		0.0	1.6810344827586208
+DE-D-LOPO	v0.1	validation	primary	leave_one_pid_out_calibration	sub-72	37	45.0	0	10	2	0	10	0	0	7.991666666666666	0.0		0.0	1.251303441084463
+DE-D-LOPO	v0.1	validation	primary	leave_one_pid_out_calibration	sub-75	40	45.0	0	20	2	0	18	0	2	7.133333333333334	0.0		0.0	2.5233644859813085
+DE-D-LOPO	v0.1	validation	primary	leave_one_pid_out_calibration	sub-79	44	45.0	0	2	0	0	2	0	0	8.558333333333334	0.0		0.0	0.23369036027263876
+DE-D-LOPO	v0.1	validation	primary	leave_one_pid_out_calibration	sub-82	48	45.0	0	7	2	0	6	0	1	7.341666666666667	0.0		0.0	0.8172531214528944
+DE-D-LOPO	v0.1	validation	primary	leave_one_pid_out_calibration	sub-88	55	45.0	0	7	0	0	7	0	0	7.416666666666667	0.0		0.0	0.9438202247191011
+DE-D-LOPO	v0.1	validation	primary	leave_one_pid_out_calibration	sub-97	64	45.0	5	14	0	4	10	1	0	8.983333333333333	0.2857142857142857	0.8	0.42105263157894735	1.1131725417439704
+DE-D-LOPO	v0.1	validation	expanded	leave_one_pid_out_calibration	sub-1	89	15.0	0	4	5	0	4	0	0	7.5	0.0		0.0	0.5333333333333333
+DE-D-LOPO	v0.1	validation	expanded	leave_one_pid_out_calibration	sub-105	73	15.0	3	9	0	3	6	0	0	7.866666666666666	0.3333333333333333	1.0	0.5	0.7627118644067797
+DE-D-LOPO	v0.1	validation	expanded	leave_one_pid_out_calibration	sub-112	97	15.0	3	6	0	1	5	2	0	7.6	0.16666666666666666	0.3333333333333333	0.2222222222222222	0.6578947368421053
+DE-D-LOPO	v0.1	validation	expanded	leave_one_pid_out_calibration	sub-113	97	15.0	2	5	0	1	4	1	0	7.75	0.2	0.5	0.2857142857142857	0.5161290322580645
+DE-D-LOPO	v0.1	validation	expanded	leave_one_pid_out_calibration	sub-114	97	15.0	1	9	0	1	8	0	0	7.716666666666667	0.1111111111111111	1.0	0.2	1.036717062634989
+DE-D-LOPO	v0.1	validation	expanded	leave_one_pid_out_calibration	sub-124	15	15.0	4	4	0	2	2	2	0	7.35	0.5	0.5	0.5	0.272108843537415
+DE-D-LOPO	v0.1	validation	expanded	leave_one_pid_out_calibration	sub-126	106	15.0	6	8	0	2	6	4	0	7.2	0.25	0.3333333333333333	0.2857142857142857	0.8333333333333333
+DE-D-LOPO	v0.1	validation	expanded	leave_one_pid_out_calibration	sub-2	89	15.0	7	13	0	2	11	5	0	7.55	0.15384615384615385	0.2857142857142857	0.2	1.456953642384106
+DE-D-LOPO	v0.1	validation	expanded	leave_one_pid_out_calibration	sub-23	15	15.0	1	5	1	0	5	1	0	9.266666666666667	0.0	0.0	0.0	0.539568345323741
+DE-D-LOPO	v0.1	validation	expanded	leave_one_pid_out_calibration	sub-25	17	15.0	3	15	0	0	15	3	0	8.966666666666667	0.0	0.0	0.0	1.6728624535315986
+DE-D-LOPO	v0.1	validation	expanded	leave_one_pid_out_calibration	sub-4	2	15.0	2	14	0	1	13	1	0	8.858333333333333	0.07142857142857142	0.5	0.125	1.4675446848541864
+DE-D-LOPO	v0.1	validation	expanded	leave_one_pid_out_calibration	sub-5	3	15.0	4	3	0	2	1	2	0	8.316666666666666	0.6666666666666666	0.5	0.5714285714285714	0.12024048096192386
+DE-D-LOPO	v0.1	validation	expanded	leave_one_pid_out_calibration	sub-6	4	15.0	1	11	0	1	10	0	0	8.258333333333333	0.09090909090909091	1.0	0.16666666666666666	1.2108980827447025
+DE-D-LOPO	v0.1	validation	expanded	leave_one_pid_out_calibration	sub-7	5	15.0	3	15	0	2	13	1	0	7.733333333333333	0.13333333333333333	0.6666666666666666	0.2222222222222222	1.6810344827586208
+DE-D-LOPO	v0.1	validation	expanded	leave_one_pid_out_calibration	sub-72	37	15.0	2	10	0	0	10	2	0	7.991666666666666	0.0	0.0	0.0	1.251303441084463
+DE-D-LOPO	v0.1	validation	expanded	leave_one_pid_out_calibration	sub-75	40	15.0	2	20	0	1	19	1	0	7.133333333333334	0.05	0.5	0.09090909090909091	2.663551401869159
+DE-D-LOPO	v0.1	validation	expanded	leave_one_pid_out_calibration	sub-79	44	15.0	0	2	0	0	2	0	0	8.558333333333334	0.0		0.0	0.23369036027263876
+DE-D-LOPO	v0.1	validation	expanded	leave_one_pid_out_calibration	sub-82	48	15.0	2	7	0	1	6	1	0	7.341666666666667	0.14285714285714285	0.5	0.2222222222222222	0.8172531214528944
+DE-D-LOPO	v0.1	validation	expanded	leave_one_pid_out_calibration	sub-88	55	15.0	0	7	0	0	7	0	0	7.416666666666667	0.0		0.0	0.9438202247191011
+DE-D-LOPO	v0.1	validation	expanded	leave_one_pid_out_calibration	sub-97	64	15.0	5	14	0	3	11	2	0	8.983333333333333	0.21428571428571427	0.6	0.3157894736842105	1.2244897959183674
+DE-D-LOPO	v0.1	validation	expanded	leave_one_pid_out_calibration	sub-1	89	45.0	0	4	5	0	4	0	0	7.5	0.0		0.0	0.5333333333333333
+DE-D-LOPO	v0.1	validation	expanded	leave_one_pid_out_calibration	sub-105	73	45.0	3	9	0	3	6	0	0	7.866666666666666	0.3333333333333333	1.0	0.5	0.7627118644067797
+DE-D-LOPO	v0.1	validation	expanded	leave_one_pid_out_calibration	sub-112	97	45.0	3	6	0	2	4	1	0	7.6	0.3333333333333333	0.6666666666666666	0.4444444444444444	0.5263157894736842
+DE-D-LOPO	v0.1	validation	expanded	leave_one_pid_out_calibration	sub-113	97	45.0	2	5	0	1	4	1	0	7.75	0.2	0.5	0.2857142857142857	0.5161290322580645
+DE-D-LOPO	v0.1	validation	expanded	leave_one_pid_out_calibration	sub-114	97	45.0	1	9	0	1	8	0	0	7.716666666666667	0.1111111111111111	1.0	0.2	1.036717062634989
+DE-D-LOPO	v0.1	validation	expanded	leave_one_pid_out_calibration	sub-124	15	45.0	4	4	0	2	2	2	0	7.35	0.5	0.5	0.5	0.272108843537415
+DE-D-LOPO	v0.1	validation	expanded	leave_one_pid_out_calibration	sub-126	106	45.0	6	8	0	4	4	2	0	7.2	0.5	0.6666666666666666	0.5714285714285714	0.5555555555555556
+DE-D-LOPO	v0.1	validation	expanded	leave_one_pid_out_calibration	sub-2	89	45.0	7	13	0	2	11	5	0	7.55	0.15384615384615385	0.2857142857142857	0.2	1.456953642384106
+DE-D-LOPO	v0.1	validation	expanded	leave_one_pid_out_calibration	sub-23	15	45.0	1	5	1	0	5	1	0	9.266666666666667	0.0	0.0	0.0	0.539568345323741
+DE-D-LOPO	v0.1	validation	expanded	leave_one_pid_out_calibration	sub-25	17	45.0	3	15	0	2	13	1	0	8.966666666666667	0.13333333333333333	0.6666666666666666	0.2222222222222222	1.449814126394052
+DE-D-LOPO	v0.1	validation	expanded	leave_one_pid_out_calibration	sub-4	2	45.0	2	14	0	1	13	1	0	8.858333333333333	0.07142857142857142	0.5	0.125	1.4675446848541864
+DE-D-LOPO	v0.1	validation	expanded	leave_one_pid_out_calibration	sub-5	3	45.0	4	3	0	2	1	2	0	8.316666666666666	0.6666666666666666	0.5	0.5714285714285714	0.12024048096192386
+DE-D-LOPO	v0.1	validation	expanded	leave_one_pid_out_calibration	sub-6	4	45.0	1	11	0	1	10	0	0	8.258333333333333	0.09090909090909091	1.0	0.16666666666666666	1.2108980827447025
+DE-D-LOPO	v0.1	validation	expanded	leave_one_pid_out_calibration	sub-7	5	45.0	3	15	0	2	13	1	0	7.733333333333333	0.13333333333333333	0.6666666666666666	0.2222222222222222	1.6810344827586208
+DE-D-LOPO	v0.1	validation	expanded	leave_one_pid_out_calibration	sub-72	37	45.0	2	10	0	0	10	2	0	7.991666666666666	0.0	0.0	0.0	1.251303441084463
+DE-D-LOPO	v0.1	validation	expanded	leave_one_pid_out_calibration	sub-75	40	45.0	2	20	0	2	18	0	0	7.133333333333334	0.1	1.0	0.18181818181818182	2.5233644859813085
+DE-D-LOPO	v0.1	validation	expanded	leave_one_pid_out_calibration	sub-79	44	45.0	0	2	0	0	2	0	0	8.558333333333334	0.0		0.0	0.23369036027263876
+DE-D-LOPO	v0.1	validation	expanded	leave_one_pid_out_calibration	sub-82	48	45.0	2	7	0	1	6	1	0	7.341666666666667	0.14285714285714285	0.5	0.2222222222222222	0.8172531214528944
+DE-D-LOPO	v0.1	validation	expanded	leave_one_pid_out_calibration	sub-88	55	45.0	0	7	0	0	7	0	0	7.416666666666667	0.0		0.0	0.9438202247191011
+DE-D-LOPO	v0.1	validation	expanded	leave_one_pid_out_calibration	sub-97	64	45.0	5	14	0	4	10	1	0	8.983333333333333	0.2857142857142857	0.8	0.42105263157894735	1.1131725417439704

@@ -1,0 +1,17 @@
+comparator	model_version	partition	membership	tolerance_sec	threshold_mode	metric	resamples	seed	lower_95	median	upper_95
+DE-D-LOPO	v0.1	validation	primary	15.0	leave_one_pid_out_calibration	precision	2000	20260822	0.048187951807228915	0.09743589743589744	0.15244578277063556
+DE-D-LOPO	v0.1	validation	primary	15.0	leave_one_pid_out_calibration	recall	2000	20260822	0.31427170868347337	0.4583333333333333	0.625
+DE-D-LOPO	v0.1	validation	primary	15.0	leave_one_pid_out_calibration	f1	2000	20260822	0.0855588434026888	0.1606784279977051	0.23646970697272857
+DE-D-LOPO	v0.1	validation	primary	15.0	leave_one_pid_out_calibration	false_alarms_per_hour	2000	20260822	0.7549249025283338	0.9863073256420705	1.2802257829192007
+DE-D-LOPO	v0.1	validation	primary	45.0	leave_one_pid_out_calibration	precision	2000	20260822	0.07142857142857142	0.12750100040016005	0.18656965174129353
+DE-D-LOPO	v0.1	validation	primary	45.0	leave_one_pid_out_calibration	recall	2000	20260822	0.45714285714285713	0.5945945945945946	0.7727272727272727
+DE-D-LOPO	v0.1	validation	primary	45.0	leave_one_pid_out_calibration	f1	2000	20260822	0.12738301240749605	0.20920502092050208	0.28846153846153844
+DE-D-LOPO	v0.1	validation	primary	45.0	leave_one_pid_out_calibration	false_alarms_per_hour	2000	20260822	0.7242199052900247	0.9430314406751159	1.220586386238708
+DE-D-LOPO	v0.1	validation	expanded	15.0	leave_one_pid_out_calibration	precision	2000	20260822	0.08249604876947393	0.12751677852348994	0.17742312330419052
+DE-D-LOPO	v0.1	validation	expanded	15.0	leave_one_pid_out_calibration	recall	2000	20260822	0.3392781476997579	0.45161290322580644	0.5714285714285714
+DE-D-LOPO	v0.1	validation	expanded	15.0	leave_one_pid_out_calibration	f1	2000	20260822	0.13384514435695538	0.19855548602419693	0.26247326203208543
+DE-D-LOPO	v0.1	validation	expanded	15.0	leave_one_pid_out_calibration	false_alarms_per_hour	2000	20260822	0.7549249025283338	0.9863073256420705	1.2802257829192007
+DE-D-LOPO	v0.1	validation	expanded	45.0	leave_one_pid_out_calibration	precision	2000	20260822	0.11650228591976165	0.16489361702127658	0.22543678560563257
+DE-D-LOPO	v0.1	validation	expanded	45.0	leave_one_pid_out_calibration	recall	2000	20260822	0.46477615694164987	0.5892857142857143	0.7209302325581395
+DE-D-LOPO	v0.1	validation	expanded	45.0	leave_one_pid_out_calibration	f1	2000	20260822	0.18930041152263374	0.2570281124497992	0.3333333333333333
+DE-D-LOPO	v0.1	validation	expanded	45.0	leave_one_pid_out_calibration	false_alarms_per_hour	2000	20260822	0.7242199052900247	0.9430314406751159	1.220586386238708

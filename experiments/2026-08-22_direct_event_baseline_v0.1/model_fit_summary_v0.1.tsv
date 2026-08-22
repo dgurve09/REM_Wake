@@ -1,0 +1,3 @@
+comparator	model_version	model_role	train_rows	train_positive	train_negative	input_features	maximum_iterations_used	convergence_warning_count	fit_decision
+DE-A	v0.1	direct_boundary_pair_ablation	2743	180	2563	20	53	0	retain_frozen_fit
+DE-B	v0.1	direct_eight_epoch_context_primary	2743	180	2563	80	106	0	retain_frozen_fit

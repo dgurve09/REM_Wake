@@ -1,0 +1,23 @@
+check	status	detail
+selected_models_complete	pass	selected_rows=2
+DE-A_threshold_grid	pass	threshold_rows=99
+DE-A_selected_threshold	pass	threshold=0.97
+DE-A_model_hash	pass	sha256=ebbd066d27da04f7ef683656d652f7e9887d2937da6b50c5191adbf2d340cdd4
+DE-B_threshold_grid	pass	threshold_rows=99
+DE-B_selected_threshold	pass	threshold=0.96
+DE-B_model_hash	pass	sha256=3667991d53536bafc06ad0de7163eb9f2489460c2f1b66b8cbb48b560084e92d
+construction_schema	pass	comparator,partition,label,source_tier,requested_rows,retained_rows,dropped_rows
+construction_accounting	pass	requested=6800, retained=6800, dropped=0
+fit_convergence_record	pass	fit_rows=2, convergence_warnings=0
+external_manifest_hashes	pass	verified=132, failures=0
+reused_feature_hashes_match_stage_first	pass	matched=128, mismatches=0
+no_model_or_array_files_in_git_tree	pass	forbidden_files=0
+train_validation_phase_excludes_test	pass	score_partitions=['train', 'validation']
+test_phase_contains_test_only	pass	score_partitions=['test']
+score_partition_assignment	pass	recordings=128
+train_validation_support_accounting	pass	support_rows=204, score_rows=190128
+test_support_accounting	pass	support_rows=52, score_rows=47982
+train_validation_alarm_recomputation	pass	saved=1878, recomputed=1878
+train_validation_event_metric_recomputation	pass	configurations=16, failures=0
+test_alarm_recomputation	pass	saved=493, recomputed=493
+test_event_metric_recomputation	pass	configurations=8, failures=0

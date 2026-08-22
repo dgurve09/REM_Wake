@@ -1,0 +1,3 @@
+comparator	role	threshold	true_positive	false_positive	false_negative	precision	recall	f1	false_alarms_per_hour
+DE-B	frozen_binary_direct_baseline	0.96	16	231	21	0.0647773279352226	0.4324324324324324	0.1126760563380281	1.4495633530303824
+DE-D	factorized_endpoint_validation_only	0.74	17	158	20	0.09714285714285714	0.4594594594594595	0.16037735849056603	0.9914762328086598

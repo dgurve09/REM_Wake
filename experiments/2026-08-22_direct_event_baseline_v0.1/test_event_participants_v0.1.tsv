@@ -1,0 +1,161 @@
+comparator	model_version	model_role	partition	membership	tolerance_sec	threshold	pid	recordings	reference_events	predicted_events	true_positive	false_positive	false_negative	ignored_predictions	supported_hours	precision	recall	f1	false_alarms_per_hour
+DE-A	v0.1	direct_boundary_pair_ablation	test	primary	15.0	0.97	12	1	9	17	5	12	4	0	8.716666666666667	0.29411764705882354	0.5555555555555556	0.38461538461538464	1.3766730401529637
+DE-A	v0.1	direct_boundary_pair_ablation	test	primary	15.0	0.97	18	1	2	1	0	1	2	0	8.091666666666667	0.0	0.0	0.0	0.12358393408856848
+DE-A	v0.1	direct_boundary_pair_ablation	test	primary	15.0	0.97	22	1	0	15	0	15	0	0	7.583333333333333	0.0		0.0	1.978021978021978
+DE-A	v0.1	direct_boundary_pair_ablation	test	primary	15.0	0.97	23	1	1	2	0	2	1	0	7.075	0.0	0.0	0.0	0.2826855123674912
+DE-A	v0.1	direct_boundary_pair_ablation	test	primary	15.0	0.97	26	1	4	2	0	2	4	0	8.041666666666666	0.0	0.0	0.0	0.24870466321243526
+DE-A	v0.1	direct_boundary_pair_ablation	test	primary	15.0	0.97	28	1	0	17	0	16	0	1	8.708333333333334	0.0		0.0	1.8373205741626792
+DE-A	v0.1	direct_boundary_pair_ablation	test	primary	15.0	0.97	30	1	4	1	0	1	4	0	7.45	0.0	0.0	0.0	0.1342281879194631
+DE-A	v0.1	direct_boundary_pair_ablation	test	primary	15.0	0.97	41	1	0	3	0	3	0	0	8.725	0.0		0.0	0.34383954154727797
+DE-A	v0.1	direct_boundary_pair_ablation	test	primary	15.0	0.97	52	1	5	7	1	6	4	0	9.0	0.14285714285714285	0.2	0.16666666666666666	0.6666666666666666
+DE-A	v0.1	direct_boundary_pair_ablation	test	primary	15.0	0.97	56	1	0	14	0	14	0	0	8.108333333333333	0.0		0.0	1.7266187050359714
+DE-A	v0.1	direct_boundary_pair_ablation	test	primary	15.0	0.97	57	1	5	5	1	4	4	0	8.583333333333334	0.2	0.2	0.2	0.4660194174757281
+DE-A	v0.1	direct_boundary_pair_ablation	test	primary	15.0	0.97	69	1	3	2	0	2	3	0	8.016666666666667	0.0	0.0	0.0	0.24948024948024947
+DE-A	v0.1	direct_boundary_pair_ablation	test	primary	15.0	0.97	74	1	1	7	0	7	1	0	7.308333333333334	0.0	0.0	0.0	0.9578107183580388
+DE-A	v0.1	direct_boundary_pair_ablation	test	primary	15.0	0.97	77	2	2	49	1	45	1	3	17.525	0.021739130434782608	0.5	0.041666666666666664	2.5677603423680457
+DE-A	v0.1	direct_boundary_pair_ablation	test	primary	15.0	0.97	83	3	8	8	2	6	6	0	21.75	0.25	0.25	0.25	0.27586206896551724
+DE-A	v0.1	direct_boundary_pair_ablation	test	primary	15.0	0.97	86	2	4	6	1	5	3	0	13.95	0.16666666666666666	0.25	0.2	0.35842293906810035
+DE-A	v0.1	direct_boundary_pair_ablation	test	primary	15.0	0.97	88	3	8	46	1	45	7	0	19.316666666666666	0.021739130434782608	0.125	0.037037037037037035	2.3295944779982745
+DE-A	v0.1	direct_boundary_pair_ablation	test	primary	15.0	0.97	90	1	0	4	0	4	0	0	8.783333333333333	0.0		0.0	0.4554079696394687
+DE-A	v0.1	direct_boundary_pair_ablation	test	primary	15.0	0.97	102	1	2	4	1	3	1	0	7.316666666666666	0.25	0.5	0.3333333333333333	0.4100227790432802
+DE-A	v0.1	direct_boundary_pair_ablation	test	primary	15.0	0.97	107	1	1	2	0	2	1	0	6.925	0.0	0.0	0.0	0.2888086642599278
+DE-A	v0.1	direct_boundary_pair_ablation	test	primary	45.0	0.97	12	1	9	17	7	10	2	0	8.716666666666667	0.4117647058823529	0.7777777777777778	0.5384615384615384	1.147227533460803
+DE-A	v0.1	direct_boundary_pair_ablation	test	primary	45.0	0.97	18	1	2	1	0	1	2	0	8.091666666666667	0.0	0.0	0.0	0.12358393408856848
+DE-A	v0.1	direct_boundary_pair_ablation	test	primary	45.0	0.97	22	1	0	15	0	15	0	0	7.583333333333333	0.0		0.0	1.978021978021978
+DE-A	v0.1	direct_boundary_pair_ablation	test	primary	45.0	0.97	23	1	1	2	0	1	1	1	7.075	0.0	0.0	0.0	0.1413427561837456
+DE-A	v0.1	direct_boundary_pair_ablation	test	primary	45.0	0.97	26	1	4	2	0	2	4	0	8.041666666666666	0.0	0.0	0.0	0.24870466321243526
+DE-A	v0.1	direct_boundary_pair_ablation	test	primary	45.0	0.97	28	1	0	17	0	16	0	1	8.708333333333334	0.0		0.0	1.8373205741626792
+DE-A	v0.1	direct_boundary_pair_ablation	test	primary	45.0	0.97	30	1	4	1	0	1	4	0	7.45	0.0	0.0	0.0	0.1342281879194631
+DE-A	v0.1	direct_boundary_pair_ablation	test	primary	45.0	0.97	41	1	0	3	0	3	0	0	8.725	0.0		0.0	0.34383954154727797
+DE-A	v0.1	direct_boundary_pair_ablation	test	primary	45.0	0.97	52	1	5	7	1	6	4	0	9.0	0.14285714285714285	0.2	0.16666666666666666	0.6666666666666666
+DE-A	v0.1	direct_boundary_pair_ablation	test	primary	45.0	0.97	56	1	0	14	0	14	0	0	8.108333333333333	0.0		0.0	1.7266187050359714
+DE-A	v0.1	direct_boundary_pair_ablation	test	primary	45.0	0.97	57	1	5	5	1	4	4	0	8.583333333333334	0.2	0.2	0.2	0.4660194174757281
+DE-A	v0.1	direct_boundary_pair_ablation	test	primary	45.0	0.97	69	1	3	2	0	2	3	0	8.016666666666667	0.0	0.0	0.0	0.24948024948024947
+DE-A	v0.1	direct_boundary_pair_ablation	test	primary	45.0	0.97	74	1	1	7	0	7	1	0	7.308333333333334	0.0	0.0	0.0	0.9578107183580388
+DE-A	v0.1	direct_boundary_pair_ablation	test	primary	45.0	0.97	77	2	2	49	1	45	1	3	17.525	0.021739130434782608	0.5	0.041666666666666664	2.5677603423680457
+DE-A	v0.1	direct_boundary_pair_ablation	test	primary	45.0	0.97	83	3	8	8	2	6	6	0	21.75	0.25	0.25	0.25	0.27586206896551724
+DE-A	v0.1	direct_boundary_pair_ablation	test	primary	45.0	0.97	86	2	4	6	1	4	3	1	13.95	0.2	0.25	0.2222222222222222	0.28673835125448033
+DE-A	v0.1	direct_boundary_pair_ablation	test	primary	45.0	0.97	88	3	8	46	1	45	7	0	19.316666666666666	0.021739130434782608	0.125	0.037037037037037035	2.3295944779982745
+DE-A	v0.1	direct_boundary_pair_ablation	test	primary	45.0	0.97	90	1	0	4	0	3	0	1	8.783333333333333	0.0		0.0	0.3415559772296015
+DE-A	v0.1	direct_boundary_pair_ablation	test	primary	45.0	0.97	102	1	2	4	1	3	1	0	7.316666666666666	0.25	0.5	0.3333333333333333	0.4100227790432802
+DE-A	v0.1	direct_boundary_pair_ablation	test	primary	45.0	0.97	107	1	1	2	0	2	1	0	6.925	0.0	0.0	0.0	0.2888086642599278
+DE-A	v0.1	direct_boundary_pair_ablation	test	expanded	15.0	0.97	12	1	9	17	5	12	4	0	8.716666666666667	0.29411764705882354	0.5555555555555556	0.38461538461538464	1.3766730401529637
+DE-A	v0.1	direct_boundary_pair_ablation	test	expanded	15.0	0.97	18	1	2	1	0	1	2	0	8.091666666666667	0.0	0.0	0.0	0.12358393408856848
+DE-A	v0.1	direct_boundary_pair_ablation	test	expanded	15.0	0.97	22	1	0	15	0	15	0	0	7.583333333333333	0.0		0.0	1.978021978021978
+DE-A	v0.1	direct_boundary_pair_ablation	test	expanded	15.0	0.97	23	1	1	2	0	2	1	0	7.075	0.0	0.0	0.0	0.2826855123674912
+DE-A	v0.1	direct_boundary_pair_ablation	test	expanded	15.0	0.97	26	1	4	2	0	2	4	0	8.041666666666666	0.0	0.0	0.0	0.24870466321243526
+DE-A	v0.1	direct_boundary_pair_ablation	test	expanded	15.0	0.97	28	1	1	17	1	16	0	0	8.708333333333334	0.058823529411764705	1.0	0.1111111111111111	1.8373205741626792
+DE-A	v0.1	direct_boundary_pair_ablation	test	expanded	15.0	0.97	30	1	5	1	0	1	5	0	7.45	0.0	0.0	0.0	0.1342281879194631
+DE-A	v0.1	direct_boundary_pair_ablation	test	expanded	15.0	0.97	41	1	2	3	0	3	2	0	8.725	0.0	0.0	0.0	0.34383954154727797
+DE-A	v0.1	direct_boundary_pair_ablation	test	expanded	15.0	0.97	52	1	5	7	1	6	4	0	9.0	0.14285714285714285	0.2	0.16666666666666666	0.6666666666666666
+DE-A	v0.1	direct_boundary_pair_ablation	test	expanded	15.0	0.97	56	1	0	14	0	14	0	0	8.108333333333333	0.0		0.0	1.7266187050359714
+DE-A	v0.1	direct_boundary_pair_ablation	test	expanded	15.0	0.97	57	1	5	5	1	4	4	0	8.583333333333334	0.2	0.2	0.2	0.4660194174757281
+DE-A	v0.1	direct_boundary_pair_ablation	test	expanded	15.0	0.97	69	1	3	2	0	2	3	0	8.016666666666667	0.0	0.0	0.0	0.24948024948024947
+DE-A	v0.1	direct_boundary_pair_ablation	test	expanded	15.0	0.97	74	1	1	7	0	7	1	0	7.308333333333334	0.0	0.0	0.0	0.9578107183580388
+DE-A	v0.1	direct_boundary_pair_ablation	test	expanded	15.0	0.97	77	2	6	49	4	45	2	0	17.525	0.08163265306122448	0.6666666666666666	0.14545454545454545	2.5677603423680457
+DE-A	v0.1	direct_boundary_pair_ablation	test	expanded	15.0	0.97	83	3	8	8	2	6	6	0	21.75	0.25	0.25	0.25	0.27586206896551724
+DE-A	v0.1	direct_boundary_pair_ablation	test	expanded	15.0	0.97	86	2	6	6	1	5	5	0	13.95	0.16666666666666666	0.16666666666666666	0.16666666666666666	0.35842293906810035
+DE-A	v0.1	direct_boundary_pair_ablation	test	expanded	15.0	0.97	88	3	8	46	1	45	7	0	19.316666666666666	0.021739130434782608	0.125	0.037037037037037035	2.3295944779982745
+DE-A	v0.1	direct_boundary_pair_ablation	test	expanded	15.0	0.97	90	1	1	4	0	4	1	0	8.783333333333333	0.0	0.0	0.0	0.4554079696394687
+DE-A	v0.1	direct_boundary_pair_ablation	test	expanded	15.0	0.97	102	1	2	4	1	3	1	0	7.316666666666666	0.25	0.5	0.3333333333333333	0.4100227790432802
+DE-A	v0.1	direct_boundary_pair_ablation	test	expanded	15.0	0.97	107	1	1	2	0	2	1	0	6.925	0.0	0.0	0.0	0.2888086642599278
+DE-A	v0.1	direct_boundary_pair_ablation	test	expanded	45.0	0.97	12	1	9	17	7	10	2	0	8.716666666666667	0.4117647058823529	0.7777777777777778	0.5384615384615384	1.147227533460803
+DE-A	v0.1	direct_boundary_pair_ablation	test	expanded	45.0	0.97	18	1	2	1	0	1	2	0	8.091666666666667	0.0	0.0	0.0	0.12358393408856848
+DE-A	v0.1	direct_boundary_pair_ablation	test	expanded	45.0	0.97	22	1	0	15	0	15	0	0	7.583333333333333	0.0		0.0	1.978021978021978
+DE-A	v0.1	direct_boundary_pair_ablation	test	expanded	45.0	0.97	23	1	1	2	0	1	1	1	7.075	0.0	0.0	0.0	0.1413427561837456
+DE-A	v0.1	direct_boundary_pair_ablation	test	expanded	45.0	0.97	26	1	4	2	0	2	4	0	8.041666666666666	0.0	0.0	0.0	0.24870466321243526
+DE-A	v0.1	direct_boundary_pair_ablation	test	expanded	45.0	0.97	28	1	1	17	1	16	0	0	8.708333333333334	0.058823529411764705	1.0	0.1111111111111111	1.8373205741626792
+DE-A	v0.1	direct_boundary_pair_ablation	test	expanded	45.0	0.97	30	1	5	1	0	1	5	0	7.45	0.0	0.0	0.0	0.1342281879194631
+DE-A	v0.1	direct_boundary_pair_ablation	test	expanded	45.0	0.97	41	1	2	3	0	3	2	0	8.725	0.0	0.0	0.0	0.34383954154727797
+DE-A	v0.1	direct_boundary_pair_ablation	test	expanded	45.0	0.97	52	1	5	7	1	6	4	0	9.0	0.14285714285714285	0.2	0.16666666666666666	0.6666666666666666
+DE-A	v0.1	direct_boundary_pair_ablation	test	expanded	45.0	0.97	56	1	0	14	0	14	0	0	8.108333333333333	0.0		0.0	1.7266187050359714
+DE-A	v0.1	direct_boundary_pair_ablation	test	expanded	45.0	0.97	57	1	5	5	1	4	4	0	8.583333333333334	0.2	0.2	0.2	0.4660194174757281
+DE-A	v0.1	direct_boundary_pair_ablation	test	expanded	45.0	0.97	69	1	3	2	0	2	3	0	8.016666666666667	0.0	0.0	0.0	0.24948024948024947
+DE-A	v0.1	direct_boundary_pair_ablation	test	expanded	45.0	0.97	74	1	1	7	0	7	1	0	7.308333333333334	0.0	0.0	0.0	0.9578107183580388
+DE-A	v0.1	direct_boundary_pair_ablation	test	expanded	45.0	0.97	77	2	6	49	4	45	2	0	17.525	0.08163265306122448	0.6666666666666666	0.14545454545454545	2.5677603423680457
+DE-A	v0.1	direct_boundary_pair_ablation	test	expanded	45.0	0.97	83	3	8	8	2	6	6	0	21.75	0.25	0.25	0.25	0.27586206896551724
+DE-A	v0.1	direct_boundary_pair_ablation	test	expanded	45.0	0.97	86	2	6	6	2	4	4	0	13.95	0.3333333333333333	0.3333333333333333	0.3333333333333333	0.28673835125448033
+DE-A	v0.1	direct_boundary_pair_ablation	test	expanded	45.0	0.97	88	3	8	46	1	45	7	0	19.316666666666666	0.021739130434782608	0.125	0.037037037037037035	2.3295944779982745
+DE-A	v0.1	direct_boundary_pair_ablation	test	expanded	45.0	0.97	90	1	1	4	1	3	0	0	8.783333333333333	0.25	1.0	0.4	0.3415559772296015
+DE-A	v0.1	direct_boundary_pair_ablation	test	expanded	45.0	0.97	102	1	2	4	1	3	1	0	7.316666666666666	0.25	0.5	0.3333333333333333	0.4100227790432802
+DE-A	v0.1	direct_boundary_pair_ablation	test	expanded	45.0	0.97	107	1	1	2	0	2	1	0	6.925	0.0	0.0	0.0	0.2888086642599278
+DE-B	v0.1	direct_eight_epoch_context_primary	test	primary	15.0	0.96	12	1	9	28	5	23	4	0	8.666666666666666	0.17857142857142858	0.5555555555555556	0.2702702702702703	2.653846153846154
+DE-B	v0.1	direct_eight_epoch_context_primary	test	primary	15.0	0.96	18	1	2	0	0	0	2	0	8.041666666666666		0.0	0.0	0.0
+DE-B	v0.1	direct_eight_epoch_context_primary	test	primary	15.0	0.96	22	1	0	5	0	5	0	0	7.183333333333334	0.0		0.0	0.6960556844547564
+DE-B	v0.1	direct_eight_epoch_context_primary	test	primary	15.0	0.96	23	1	1	2	0	2	1	0	7.025	0.0	0.0	0.0	0.2846975088967971
+DE-B	v0.1	direct_eight_epoch_context_primary	test	primary	15.0	0.96	26	1	4	8	2	6	2	0	7.941666666666666	0.25	0.5	0.3333333333333333	0.7555089192025184
+DE-B	v0.1	direct_eight_epoch_context_primary	test	primary	15.0	0.96	28	1	0	19	0	19	0	0	8.608333333333333	0.0		0.0	2.2071636011616653
+DE-B	v0.1	direct_eight_epoch_context_primary	test	primary	15.0	0.96	30	1	4	6	1	5	3	0	7.4	0.16666666666666666	0.25	0.2	0.6756756756756757
+DE-B	v0.1	direct_eight_epoch_context_primary	test	primary	15.0	0.96	41	1	0	6	0	5	0	1	8.675	0.0		0.0	0.5763688760806917
+DE-B	v0.1	direct_eight_epoch_context_primary	test	primary	15.0	0.96	52	1	5	9	5	4	0	0	8.95	0.5555555555555556	1.0	0.7142857142857143	0.446927374301676
+DE-B	v0.1	direct_eight_epoch_context_primary	test	primary	15.0	0.96	56	1	0	20	0	20	0	0	8.058333333333334	0.0		0.0	2.481902792140641
+DE-B	v0.1	direct_eight_epoch_context_primary	test	primary	15.0	0.96	57	1	5	9	3	6	2	0	8.483333333333333	0.3333333333333333	0.6	0.42857142857142855	0.7072691552062869
+DE-B	v0.1	direct_eight_epoch_context_primary	test	primary	15.0	0.96	69	1	3	0	0	0	3	0	7.966666666666667		0.0	0.0	0.0
+DE-B	v0.1	direct_eight_epoch_context_primary	test	primary	15.0	0.96	74	1	1	5	0	5	1	0	7.258333333333334	0.0	0.0	0.0	0.6888633754305395
+DE-B	v0.1	direct_eight_epoch_context_primary	test	primary	15.0	0.96	77	2	2	84	2	78	0	4	17.424999999999997	0.025	1.0	0.04878048780487805	4.47632711621234
+DE-B	v0.1	direct_eight_epoch_context_primary	test	primary	15.0	0.96	83	3	8	24	4	20	4	0	21.55	0.16666666666666666	0.5	0.25	0.9280742459396751
+DE-B	v0.1	direct_eight_epoch_context_primary	test	primary	15.0	0.96	86	2	4	17	0	16	4	1	13.75	0.0	0.0	0.0	1.1636363636363636
+DE-B	v0.1	direct_eight_epoch_context_primary	test	primary	15.0	0.96	88	3	8	27	1	26	7	0	19.016666666666666	0.037037037037037035	0.125	0.05714285714285714	1.367221735319895
+DE-B	v0.1	direct_eight_epoch_context_primary	test	primary	15.0	0.96	90	1	0	6	0	6	0	0	8.733333333333333	0.0		0.0	0.6870229007633588
+DE-B	v0.1	direct_eight_epoch_context_primary	test	primary	15.0	0.96	102	1	2	4	2	2	0	0	7.266666666666667	0.5	1.0	0.6666666666666666	0.27522935779816515
+DE-B	v0.1	direct_eight_epoch_context_primary	test	primary	15.0	0.96	107	1	1	2	0	2	1	0	6.875	0.0	0.0	0.0	0.2909090909090909
+DE-B	v0.1	direct_eight_epoch_context_primary	test	primary	45.0	0.96	12	1	9	28	9	19	0	0	8.666666666666666	0.32142857142857145	1.0	0.4864864864864865	2.1923076923076925
+DE-B	v0.1	direct_eight_epoch_context_primary	test	primary	45.0	0.96	18	1	2	0	0	0	2	0	8.041666666666666		0.0	0.0	0.0
+DE-B	v0.1	direct_eight_epoch_context_primary	test	primary	45.0	0.96	22	1	0	5	0	5	0	0	7.183333333333334	0.0		0.0	0.6960556844547564
+DE-B	v0.1	direct_eight_epoch_context_primary	test	primary	45.0	0.96	23	1	1	2	0	2	1	0	7.025	0.0	0.0	0.0	0.2846975088967971
+DE-B	v0.1	direct_eight_epoch_context_primary	test	primary	45.0	0.96	26	1	4	8	2	6	2	0	7.941666666666666	0.25	0.5	0.3333333333333333	0.7555089192025184
+DE-B	v0.1	direct_eight_epoch_context_primary	test	primary	45.0	0.96	28	1	0	19	0	18	0	1	8.608333333333333	0.0		0.0	2.090997095837367
+DE-B	v0.1	direct_eight_epoch_context_primary	test	primary	45.0	0.96	30	1	4	6	2	3	2	1	7.4	0.4	0.5	0.4444444444444444	0.4054054054054054
+DE-B	v0.1	direct_eight_epoch_context_primary	test	primary	45.0	0.96	41	1	0	6	0	5	0	1	8.675	0.0		0.0	0.5763688760806917
+DE-B	v0.1	direct_eight_epoch_context_primary	test	primary	45.0	0.96	52	1	5	9	5	4	0	0	8.95	0.5555555555555556	1.0	0.7142857142857143	0.446927374301676
+DE-B	v0.1	direct_eight_epoch_context_primary	test	primary	45.0	0.96	56	1	0	20	0	20	0	0	8.058333333333334	0.0		0.0	2.481902792140641
+DE-B	v0.1	direct_eight_epoch_context_primary	test	primary	45.0	0.96	57	1	5	9	3	6	2	0	8.483333333333333	0.3333333333333333	0.6	0.42857142857142855	0.7072691552062869
+DE-B	v0.1	direct_eight_epoch_context_primary	test	primary	45.0	0.96	69	1	3	0	0	0	3	0	7.966666666666667		0.0	0.0	0.0
+DE-B	v0.1	direct_eight_epoch_context_primary	test	primary	45.0	0.96	74	1	1	5	0	5	1	0	7.258333333333334	0.0	0.0	0.0	0.6888633754305395
+DE-B	v0.1	direct_eight_epoch_context_primary	test	primary	45.0	0.96	77	2	2	84	2	78	0	4	17.424999999999997	0.025	1.0	0.04878048780487805	4.47632711621234
+DE-B	v0.1	direct_eight_epoch_context_primary	test	primary	45.0	0.96	83	3	8	24	5	19	3	0	21.55	0.20833333333333334	0.625	0.3125	0.8816705336426914
+DE-B	v0.1	direct_eight_epoch_context_primary	test	primary	45.0	0.96	86	2	4	17	2	13	2	2	13.75	0.13333333333333333	0.5	0.21052631578947367	0.9454545454545454
+DE-B	v0.1	direct_eight_epoch_context_primary	test	primary	45.0	0.96	88	3	8	27	1	26	7	0	19.016666666666666	0.037037037037037035	0.125	0.05714285714285714	1.367221735319895
+DE-B	v0.1	direct_eight_epoch_context_primary	test	primary	45.0	0.96	90	1	0	6	0	5	0	1	8.733333333333333	0.0		0.0	0.5725190839694657
+DE-B	v0.1	direct_eight_epoch_context_primary	test	primary	45.0	0.96	102	1	2	4	2	2	0	0	7.266666666666667	0.5	1.0	0.6666666666666666	0.27522935779816515
+DE-B	v0.1	direct_eight_epoch_context_primary	test	primary	45.0	0.96	107	1	1	2	0	2	1	0	6.875	0.0	0.0	0.0	0.2909090909090909
+DE-B	v0.1	direct_eight_epoch_context_primary	test	expanded	15.0	0.96	12	1	9	28	5	23	4	0	8.666666666666666	0.17857142857142858	0.5555555555555556	0.2702702702702703	2.653846153846154
+DE-B	v0.1	direct_eight_epoch_context_primary	test	expanded	15.0	0.96	18	1	2	0	0	0	2	0	8.041666666666666		0.0	0.0	0.0
+DE-B	v0.1	direct_eight_epoch_context_primary	test	expanded	15.0	0.96	22	1	0	5	0	5	0	0	7.183333333333334	0.0		0.0	0.6960556844547564
+DE-B	v0.1	direct_eight_epoch_context_primary	test	expanded	15.0	0.96	23	1	1	2	0	2	1	0	7.025	0.0	0.0	0.0	0.2846975088967971
+DE-B	v0.1	direct_eight_epoch_context_primary	test	expanded	15.0	0.96	26	1	4	8	2	6	2	0	7.941666666666666	0.25	0.5	0.3333333333333333	0.7555089192025184
+DE-B	v0.1	direct_eight_epoch_context_primary	test	expanded	15.0	0.96	28	1	1	19	0	19	1	0	8.608333333333333	0.0	0.0	0.0	2.2071636011616653
+DE-B	v0.1	direct_eight_epoch_context_primary	test	expanded	15.0	0.96	30	1	5	6	1	5	4	0	7.4	0.16666666666666666	0.2	0.18181818181818182	0.6756756756756757
+DE-B	v0.1	direct_eight_epoch_context_primary	test	expanded	15.0	0.96	41	1	2	6	1	5	1	0	8.675	0.16666666666666666	0.5	0.25	0.5763688760806917
+DE-B	v0.1	direct_eight_epoch_context_primary	test	expanded	15.0	0.96	52	1	5	9	5	4	0	0	8.95	0.5555555555555556	1.0	0.7142857142857143	0.446927374301676
+DE-B	v0.1	direct_eight_epoch_context_primary	test	expanded	15.0	0.96	56	1	0	20	0	20	0	0	8.058333333333334	0.0		0.0	2.481902792140641
+DE-B	v0.1	direct_eight_epoch_context_primary	test	expanded	15.0	0.96	57	1	5	9	3	6	2	0	8.483333333333333	0.3333333333333333	0.6	0.42857142857142855	0.7072691552062869
+DE-B	v0.1	direct_eight_epoch_context_primary	test	expanded	15.0	0.96	69	1	3	0	0	0	3	0	7.966666666666667		0.0	0.0	0.0
+DE-B	v0.1	direct_eight_epoch_context_primary	test	expanded	15.0	0.96	74	1	1	5	0	5	1	0	7.258333333333334	0.0	0.0	0.0	0.6888633754305395
+DE-B	v0.1	direct_eight_epoch_context_primary	test	expanded	15.0	0.96	77	2	6	84	6	78	0	0	17.424999999999997	0.07142857142857142	1.0	0.13333333333333333	4.47632711621234
+DE-B	v0.1	direct_eight_epoch_context_primary	test	expanded	15.0	0.96	83	3	8	24	4	20	4	0	21.55	0.16666666666666666	0.5	0.25	0.9280742459396751
+DE-B	v0.1	direct_eight_epoch_context_primary	test	expanded	15.0	0.96	86	2	6	17	1	16	5	0	13.75	0.058823529411764705	0.16666666666666666	0.08695652173913043	1.1636363636363636
+DE-B	v0.1	direct_eight_epoch_context_primary	test	expanded	15.0	0.96	88	3	8	27	1	26	7	0	19.016666666666666	0.037037037037037035	0.125	0.05714285714285714	1.367221735319895
+DE-B	v0.1	direct_eight_epoch_context_primary	test	expanded	15.0	0.96	90	1	1	6	0	6	1	0	8.733333333333333	0.0	0.0	0.0	0.6870229007633588
+DE-B	v0.1	direct_eight_epoch_context_primary	test	expanded	15.0	0.96	102	1	2	4	2	2	0	0	7.266666666666667	0.5	1.0	0.6666666666666666	0.27522935779816515
+DE-B	v0.1	direct_eight_epoch_context_primary	test	expanded	15.0	0.96	107	1	1	2	0	2	1	0	6.875	0.0	0.0	0.0	0.2909090909090909
+DE-B	v0.1	direct_eight_epoch_context_primary	test	expanded	45.0	0.96	12	1	9	28	9	19	0	0	8.666666666666666	0.32142857142857145	1.0	0.4864864864864865	2.1923076923076925
+DE-B	v0.1	direct_eight_epoch_context_primary	test	expanded	45.0	0.96	18	1	2	0	0	0	2	0	8.041666666666666		0.0	0.0	0.0
+DE-B	v0.1	direct_eight_epoch_context_primary	test	expanded	45.0	0.96	22	1	0	5	0	5	0	0	7.183333333333334	0.0		0.0	0.6960556844547564
+DE-B	v0.1	direct_eight_epoch_context_primary	test	expanded	45.0	0.96	23	1	1	2	0	2	1	0	7.025	0.0	0.0	0.0	0.2846975088967971
+DE-B	v0.1	direct_eight_epoch_context_primary	test	expanded	45.0	0.96	26	1	4	8	2	6	2	0	7.941666666666666	0.25	0.5	0.3333333333333333	0.7555089192025184
+DE-B	v0.1	direct_eight_epoch_context_primary	test	expanded	45.0	0.96	28	1	1	19	1	18	0	0	8.608333333333333	0.05263157894736842	1.0	0.1	2.090997095837367
+DE-B	v0.1	direct_eight_epoch_context_primary	test	expanded	45.0	0.96	30	1	5	6	3	3	2	0	7.4	0.5	0.6	0.5454545454545454	0.4054054054054054
+DE-B	v0.1	direct_eight_epoch_context_primary	test	expanded	45.0	0.96	41	1	2	6	1	5	1	0	8.675	0.16666666666666666	0.5	0.25	0.5763688760806917
+DE-B	v0.1	direct_eight_epoch_context_primary	test	expanded	45.0	0.96	52	1	5	9	5	4	0	0	8.95	0.5555555555555556	1.0	0.7142857142857143	0.446927374301676
+DE-B	v0.1	direct_eight_epoch_context_primary	test	expanded	45.0	0.96	56	1	0	20	0	20	0	0	8.058333333333334	0.0		0.0	2.481902792140641
+DE-B	v0.1	direct_eight_epoch_context_primary	test	expanded	45.0	0.96	57	1	5	9	3	6	2	0	8.483333333333333	0.3333333333333333	0.6	0.42857142857142855	0.7072691552062869
+DE-B	v0.1	direct_eight_epoch_context_primary	test	expanded	45.0	0.96	69	1	3	0	0	0	3	0	7.966666666666667		0.0	0.0	0.0
+DE-B	v0.1	direct_eight_epoch_context_primary	test	expanded	45.0	0.96	74	1	1	5	0	5	1	0	7.258333333333334	0.0	0.0	0.0	0.6888633754305395
+DE-B	v0.1	direct_eight_epoch_context_primary	test	expanded	45.0	0.96	77	2	6	84	6	78	0	0	17.424999999999997	0.07142857142857142	1.0	0.13333333333333333	4.47632711621234
+DE-B	v0.1	direct_eight_epoch_context_primary	test	expanded	45.0	0.96	83	3	8	24	5	19	3	0	21.55	0.20833333333333334	0.625	0.3125	0.8816705336426914
+DE-B	v0.1	direct_eight_epoch_context_primary	test	expanded	45.0	0.96	86	2	6	17	4	13	2	0	13.75	0.23529411764705882	0.6666666666666666	0.34782608695652173	0.9454545454545454
+DE-B	v0.1	direct_eight_epoch_context_primary	test	expanded	45.0	0.96	88	3	8	27	1	26	7	0	19.016666666666666	0.037037037037037035	0.125	0.05714285714285714	1.367221735319895
+DE-B	v0.1	direct_eight_epoch_context_primary	test	expanded	45.0	0.96	90	1	1	6	1	5	0	0	8.733333333333333	0.16666666666666666	1.0	0.2857142857142857	0.5725190839694657
+DE-B	v0.1	direct_eight_epoch_context_primary	test	expanded	45.0	0.96	102	1	2	4	2	2	0	0	7.266666666666667	0.5	1.0	0.6666666666666666	0.27522935779816515
+DE-B	v0.1	direct_eight_epoch_context_primary	test	expanded	45.0	0.96	107	1	1	2	0	2	1	0	6.875	0.0	0.0	0.0	0.2909090909090909

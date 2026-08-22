@@ -1,0 +1,13 @@
+comparator	partition	label	source_tier	requested_rows	retained_rows	dropped_rows
+DE-A	train	0	nontarget_window_no_remwake_nearby	2021	2021	0
+DE-A	train	0	strict_same_stage_window	542	542	0
+DE-A	train	1	REM_to_Wake	180	180	0
+DE-A	validation	0	nontarget_window_no_remwake_nearby	488	488	0
+DE-A	validation	0	strict_same_stage_window	132	132	0
+DE-A	validation	1	REM_to_Wake	37	37	0
+DE-B	train	0	nontarget_window_no_remwake_nearby	2021	2021	0
+DE-B	train	0	strict_same_stage_window	542	542	0
+DE-B	train	1	REM_to_Wake	180	180	0
+DE-B	validation	0	nontarget_window_no_remwake_nearby	488	488	0
+DE-B	validation	0	strict_same_stage_window	132	132	0
+DE-B	validation	1	REM_to_Wake	37	37	0

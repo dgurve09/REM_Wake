@@ -1,0 +1,6 @@
+remwake_distance_bin	false_positive_alarms	false_positive_share
+exact_boundary	0	0.0
+30_to_45_sec	12	0.048
+60_to_135_sec	5	0.02
+beyond_135_sec	192	0.768
+no_remwake_reference_in_recording	41	0.164

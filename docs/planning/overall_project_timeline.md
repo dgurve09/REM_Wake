@@ -4,7 +4,7 @@
 **Project window:** 2026-06-01 to 2026-11-29
 **Prepared during:** 2026-06-25 to 2026-06-28
 **Finalized:** 2026-06-28
-**Current status:** Blocks 3 and 4 are complete; Block 5 was completed as catch-up work on 2026-08-15 after an inactive 2026-07-20 to 2026-08-14 interval; the stage-first results show that useful epoch staging does not translate into adequate REM-to-Wake event precision; Block 6 direct transition work is next
+**Current status:** Blocks 3-6 are complete; Block 5 was completed as catch-up work on 2026-08-15 after an inactive 2026-07-20 to 2026-08-14 interval; Block 6 closed on 2026-08-22 with direct DE-B improving on transparent stage-first SF-C while retaining low precision; validation-only endpoint factorization DE-D subsequently improved both validation F1 and false alarms but remains unevaluated on a new locked cohort; Block 7 begins 2026-08-24
 
 ## 1. Project Boundary
 
@@ -25,12 +25,12 @@ gantt
     Scope refinement, dataset selection, setup       :done, b2, 2026-06-15, 2026-06-28
 
     section Feasibility and Labels
-    Event inventory and feasibility gate             :b3, 2026-06-29, 2026-07-12
-    Minimal preprocessing and deterministic labels   :b4, 2026-07-13, 2026-07-26
+    Event inventory and feasibility gate             :done, b3, 2026-06-29, 2026-07-12
+    Minimal preprocessing and deterministic labels   :done, b4, 2026-07-13, 2026-07-26
 
     section Baselines
-    Stage-first baseline                             :b5, 2026-07-27, 2026-08-09
-    Direct transition baselines                      :b6, 2026-08-10, 2026-08-23
+    Stage-first baseline                             :done, b5, 2026-07-27, 2026-08-09
+    Direct transition baselines                      :done, b6, 2026-08-10, 2026-08-23
 
     section Transfer and Robustness
     Paired PSG-to-wearable transfer                  :b7, 2026-08-24, 2026-09-06
@@ -69,14 +69,14 @@ flowchart TD
 
 ## 4. Phase Table
 
-| Block | Dates | Main Question | Main Work | Deliverable | Status as of 2026-08-15 |
+| Block | Dates | Main Question | Main Work | Deliverable | Status as of 2026-08-22 |
 |---:|---|---|---|---|---|
 | 1 | Jun 1-Jun 14 | What is known and what is uncertain? | Literature review, initial planning, public-dataset search | Initial proposal, literature evidence, dataset candidate list | Complete |
 | 2 | Jun 15-Jun 28 | Can the project be set up cleanly with a defensible dataset and target? | Scope refinement, BOAS selection, repository setup, environment audit, pilot checks, E0 readiness | Revised proposal, manifest, setup records, pilot reports, E0 readiness package | Complete |
 | 3 | Jun 29-Jul 12 | Are there enough usable REM/Wake events to justify modeling? | Full event inventory, participant grouping, label-quality audit, feasibility decision | E0 feasibility report and proceed/narrow/redesign/stop decision | Count-level inventory, proceed decision, full EDF acquisition, full signal-alignment validation, label artifact v0.1, background-window rules, quality flags, and split-readiness review complete |
 | 4 | Jul 13-Jul 26 | Can labels and minimal preprocessing be made reproducible? | Transition-event table, uncertainty intervals, alignment validation | Versioned label table and preprocessing artifacts | Complete; membership v0.1 separates conservative primary and expanded quality-sensitivity tiers; gate passed 2026-07-18 |
 | 5 | Jul 27-Aug 9 | What does a stage-first comparator achieve? | Wearable sleep-stage baseline, transition derivation from predicted stages | Stage-first event metrics | Completed as catch-up work on Aug 15; fixed `stage_ai`, epoch-only logistic, and five-epoch-context logistic comparators evaluated under frozen event matching |
-| 6 | Aug 10-Aug 23 | Does direct transition detection add value? | Simple direct baseline, small CNN only if justified, comparison to stage-first | Comparative baseline report | Scheduled interval active; direct baseline protocol and experiment not started |
+| 6 | Aug 10-Aug 23 | Does direct transition detection add value? | Simple direct baseline, small CNN only if justified, comparison to stage-first | Comparative baseline report | Complete Aug 22; DE-B improved test event F1 and false alarms/hour versus SF-C but retained precision 0.0909; validation-only DE-D improved F1 to 0.1604 and false alarms to 0.9915/hour versus DE-B validation; CNN deferred and DE-D test evaluation withheld |
 | 7 | Aug 24-Sep 6 | How large is the PSG-to-wearable device-shift problem? | Full PSG, reduced PSG, wearable, zero-shot and fine-tuning tests | Paired transfer results and decision log | Not started |
 | 8 | Sep 7-Sep 20 | Is the approach robust to signal/channel variability? | Missing-channel tests, degradation tests, ablations, justified adaptation if needed | Robustness and ablation report | Not started |
 | 9 | Sep 21-Oct 4 | Is external PSG comparison scientifically valid? | Audit one external PSG dataset and test reduced-channel generalization if appropriate | External generalization report or no-go | Not started |
@@ -91,7 +91,7 @@ flowchart TD
 |---|---|---|---|
 | E0 feasibility gate | 2026-07-12 | Proceed, narrow, redesign, or stop | Event counts by recording and `pid`, label-quality flags, unlabeled-tail summary, participant spread |
 | Label/preprocessing gate | 2026-07-26 | Passed 2026-07-18; freeze v0.1/v0.3 inputs | Tested label generation, alignment checks, quality flags, participant split, preprocessing checks, analysis membership |
-| Baseline gate | 2026-08-23 | Continue direct detector, narrow, or revise | Stage-first versus direct event-level comparison |
+| Baseline gate | 2026-08-23 | Passed 2026-08-22: continue direct-event research with limitations; retain simple baseline and defer CNN | Stage-first versus direct event-level comparison, paired participant uncertainty, residual failure analysis |
 | Transfer/robustness gate | 2026-09-20 | Add adaptation or keep simpler model | PSG-to-wearable transfer result and robustness evidence |
 | External-data gate | 2026-10-04 | External test or documented no-go | Compatibility audit and clear label/channel mapping |
 | Streaming gate | 2026-11-01 | Prototype or no-go | Offline evidence, threshold sensitivity, repeated-night reliability if possible |
@@ -210,15 +210,43 @@ Additional evidence completed on 2026-08-15:
 - found that six of seven additional SF-C test matches admitted at +/-45 seconds were one epoch early and that 59.20% of predicted REM bouts lasted only 30 or 60 seconds, compared with 14.10% of human bouts;
 - observed a descriptive test-recording Spearman association of 0.5118 between predicted REM bouts/hour and false alarms/hour, recorded as exploratory and noncausal.
 
+Additional evidence completed on 2026-08-22:
+
+- predeclared a direct-event protocol before fitting, including two logistic baselines, all primary reviewed background rows, full-night candidate scoring, contiguous-run alarm consolidation, 99 fixed validation thresholds, and a hash-locked test phase;
+- fitted DE-A with two boundary epochs and DE-B with eight epochs using 180 train REM-to-Wake events and 2,563 train backgrounds, with zero context drops and zero convergence warnings;
+- retained the negative validation context result: DE-B increased recall but had event F1 0.1127 versus 0.1152 for DE-A and increased false alarms from 0.8909 to 1.4496 per hour;
+- froze DE-A threshold 0.97 and DE-B threshold 0.96 before direct-model test-feature access, then retained the one-time fixed test evaluation without refitting;
+- obtained DE-B test event precision 0.0909, recall 0.4237, F1 0.1497, and 1.2571 false alarms per hour, compared with SF-C F1 0.0766 and 1.9692 false alarms per hour;
+- obtained a paired participant-bootstrap DE-B minus SF-C event-F1 difference of +0.0731 with a 95% interval of +0.0110 to +0.1659 and a false-alarm-rate difference of -0.7121 per hour with a 95% interval of -1.2709 to -0.2044;
+- retained SF-A as a provenance-limited descriptive comparator with substantially higher F1 0.3731 and lower false alarms 0.2609 per hour, preventing a claim that the new direct baseline is the best available headband result;
+- passed 22/22 direct-output integrity checks covering phase isolation, threshold selection, model and feature hashes, alarm recomputation, support accounting, and exact event-metric recomputation;
+- completed a post-result exploratory failure analysis without raw EDF or model access and passed 9/9 diagnostic integrity checks;
+- found 65.6% of DE-B false positives at partial target endpoints: 108 human other-to-Wake and 56 human REM-to-other pairs;
+- found only 6.8% of false positives within 135 seconds of a REM/Wake boundary, arguing against the excluded boundary zone as the dominant error source;
+- found false positives in 18 of 20 test participants, with the top four contributing 58.8%, and eight additional +/-45-second matches consisting of two early and six late one-epoch displacements;
+- closed the baseline gate by continuing the direct-event research direction while deferring a CNN until a new protocol can isolate a representation-specific uncertainty and avoid revising the frozen test result.
+- audited partial-endpoint coverage before an improvement experiment and found 466 REM-to-other plus 546 other-to-Wake primary train backgrounds, each spanning all 64 train `pid` groups, rejecting simple absence of hard negatives as the explanation;
+- predeclared a sequential validation-only DE-D experiment with separate REM-before and Wake-after logistic heads, the same 80 context features, a fixed product conjunction, and no current-test access;
+- fitted both endpoint heads on the same 2,743 train rows without convergence warnings and selected threshold 0.74 using the unchanged 99-threshold validation rule;
+- obtained DE-D validation precision 0.0971, recall 0.4595, F1 0.1604, and 0.9915 false alarms per hour, versus DE-B validation F1 0.1127 and 1.4496 false alarms per hour, meeting the predeclared two-part improvement rule;
+- reduced validation partial-endpoint false positives from 151 for DE-B to 110 for DE-D and passed 19/19 factorization integrity checks with no test artifact or row;
+- found through a post-result paired analysis that false positives decreased for 11 of 16 validation participants and increased for four;
+- obtained a paired validation participant-bootstrap DE-D minus DE-B F1 interval of +0.0038 to +0.1008 and false-alarm-rate interval of -0.8835 to -0.1423 per hour, with 6/6 analysis integrity checks passed;
+- retained DE-D only as a candidate for a future new locked or external evaluation and left the frozen DE-B test result unchanged.
+- predeclared threshold perturbation and leave-one-participant-out calibration analyses using saved validation scores only, without model, feature, train-row, or test access;
+- found the DE-D two-part advantage over DE-B held across 22 adjacent thresholds from 0.67 through 0.88;
+- found all 16 leave-one-participant-out calibration folds independently selected threshold 0.74, reproducing validation F1 0.1604 and 0.9915 false alarms per hour on aggregated held-out participants;
+- passed 13/13 threshold-robustness checks after preserving and correcting an initial validator failure caused by bitwise float comparison after TSV serialization.
+
 ## 7. Next Work
 
-After the completed stage-first baseline:
+After the completed direct baseline:
 
-1. predeclare the Block 6 direct REM-to-Wake detection hypothesis, inputs, negative-window sampling, validation threshold, and event metrics before fitting;
-2. implement the simplest direct feature baseline using the frozen split, preprocessing, labels, and quality memberships;
-3. compare its validation and frozen test event metrics directly with SF-A and the primary SF-C comparator;
-4. add a small CNN only if the direct feature baseline identifies a specific representational insufficiency that the CNN can test;
-5. keep the SF-C convergence warning and poor event precision visible when interpreting later comparisons.
+1. begin Block 7 no earlier than 2026-08-24 and predeclare the paired PSG-to-wearable device-shift comparisons before fitting;
+2. define full-PSG, reduced-PSG, and wearable inputs under one participant grouping and one event evaluator;
+3. establish zero-shot/no-adaptation transfer before considering fine-tuning;
+4. retain the frozen SF-C and DE-B results as lower-complexity references, including their convergence and false-alarm limitations;
+5. do not reuse the current test result for iterative direct-model selection; require a new lock or external cohort for later confirmatory direct-model claims.
 
 ## 8. Rules for the Rest of the Project
 

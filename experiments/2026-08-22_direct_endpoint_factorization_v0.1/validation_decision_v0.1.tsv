@@ -1,0 +1,2 @@
+comparison	event_f1_difference	false_alarms_per_hour_difference	f1_improved	false_alarm_rate_reduced	prespecified_success_rule_met
+DE-D_vs_DE-B_validation	0.04770130215253793	-0.4580871202217226	True	True	True

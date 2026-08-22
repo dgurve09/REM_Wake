@@ -1,0 +1,3 @@
+comparison	metric	point_difference	resamples	seed	lower_95	median	upper_95
+DE-D_minus_DE-B_validation	event_f1_difference	0.04770130215253786	2000	20260822	0.003787402421783752	0.044336088521781065	0.10080794411765344
+DE-D_minus_DE-B_validation	false_alarms_per_hour_difference	-0.4580871202217226	2000	20260822	-0.8835134769022305	-0.4459690572022803	-0.14227785408558297

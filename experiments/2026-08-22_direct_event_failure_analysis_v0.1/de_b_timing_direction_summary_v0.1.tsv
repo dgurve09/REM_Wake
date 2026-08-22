@@ -1,0 +1,4 @@
+outside_primary_tolerance	timing_direction	matches
+False	exact	25
+True	early	2
+True	late	6

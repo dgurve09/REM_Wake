@@ -1,0 +1,14 @@
+check	status	detail
+annotated_threshold_curve	pass	rows=99
+threshold_interval_recomputation	pass	intervals=1
+selected_threshold_interval	pass	[{'interval_id': 0, 'threshold_start': 0.67, 'threshold_end': 0.88, 'threshold_count': 22, 'threshold_span': 0.2099999999999999, 'contains_selected_threshold': True}]
+participant_threshold_grid	pass	rows=1584
+lopo_threshold_selection	pass	folds=16, unique_thresholds=1
+lopo_calibration_excludes_one_pid	pass	calibration_pid=[np.float64(15.0)]
+lopo_alarm_recomputation	pass	saved=181, recomputed=181
+lopo_event_metric_recomputation	pass	configurations=4, failures=0
+paired_bootstrap_recomputation	pass	rows=2
+robustness_decision_recomputation	pass	supported=True
+input_artifact_hashes	pass	verified=8, failures=0
+no_test_model_feature_or_train_input	pass	forbidden_roles=0
+no_model_or_array_files_in_repo	pass	forbidden_files=0

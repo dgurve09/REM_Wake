@@ -1,0 +1,2 @@
+interval_id	threshold_start	threshold_end	threshold_count	threshold_span	contains_selected_threshold
+0	0.67	0.88	22	0.20999999999999996	True
