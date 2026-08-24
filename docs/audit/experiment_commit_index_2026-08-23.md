@@ -30,7 +30,10 @@ This index records the first Git commit containing each historical experiment fo
 | `2026-08-22_direct_event_baseline_v0.1` | `ab76720` | 2026-08-22 |
 | `2026-08-22_direct_event_failure_analysis_v0.1` | `ab76720` | 2026-08-22 |
 | `2026-08-22_direct_endpoint_contribution_analysis_v0.1` | `d936ea4` | 2026-08-22 |
+| `2026-08-23_boas_alignment_drift_audit_v0.1` | `63a8008` | 2026-08-23 |
+| `2026-08-23_boas_full_edf_integrity_audit_v0.1` | `63a8008` | 2026-08-23 |
+| `2026-08-23_reference_doi_audit_v0.1` | `63a8008` | 2026-08-23 |
 
-The three 2026-08-23 audit experiment folders are local and uncommitted at the time of this index. Their first-commit field must be added after the eventual verified commit rather than predicted in advance.
+The three 2026-08-23 audit experiment folders first appear in commit `63a8008`.
 
 The empty local folder `2026-07-18_post_gate_stage_first_label_readiness_v0.1` has no files and no Git history, so it is not an experiment artifact and is intentionally omitted.
