@@ -1,0 +1,11 @@
+metric	value
+source_rows	532.0
+available_pulse_windows	505.0
+usable_pulse_windows	383.0
+subjects_with_pulse_available	101.0
+subjects_with_any_usable_window	96.0
+subjects_with_at_least_3_usable_windows	82.0
+subjects_with_abs_projected_change_over_2_sec	3.0
+median_slope_sec_per_hour	0.019700214514035728
+median_projected_lag_change_sec	0.12499999999999989
+percentile_95_abs_projected_change_sec	1.4781026785714286

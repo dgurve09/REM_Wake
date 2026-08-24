@@ -10,6 +10,8 @@ import numpy as np
 import pandas as pd
 from sklearn.metrics import balanced_accuracy_score, cohen_kappa_score, f1_score
 
+from reviewed_output import verify_or_create_tsv
+
 
 VERSION = "v0.1"
 COMPARATORS = ["SF-B", "SF-C"]
@@ -164,7 +166,7 @@ def main() -> None:
     validate_event_accounting(rows)
     validate_external_artifacts(rows)
     result = pd.DataFrame(rows)
-    result.to_csv(experiment_dir() / "output_integrity_checks_v0.1.tsv", sep="\t", index=False)
+    verify_or_create_tsv(result, experiment_dir() / "output_integrity_checks_v0.1.tsv")
     print(result.to_string(index=False))
     if not result["passed"].all():
         raise SystemExit("At least one stage-first output-integrity check failed")

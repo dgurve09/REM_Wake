@@ -87,3 +87,9 @@ Exploratory notebooks should remain simple and sectioned:
 8. next decision.
 
 When a notebook produces a reviewed result, export the key table or figure into the dated experiment folder and summarize the decision in Markdown.
+
+## 7. Protocol and Commit Chronology
+
+For result-producing work, commit the protocol before executing the run. Record that protocol commit as the experiment base, then record the result-producing commit separately. A protocol and result introduced in the same commit may still document the stated work sequence, but Git alone cannot independently establish that order.
+
+Validation scripts must compare reviewed outputs read-only. If a rerun changes an output, preserve the existing folder and create a new versioned experiment rather than overwriting the reviewed result.

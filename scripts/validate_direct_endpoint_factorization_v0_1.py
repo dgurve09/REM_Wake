@@ -6,6 +6,7 @@ import numpy as np
 import pandas as pd
 from sklearn.metrics import average_precision_score, roc_auc_score
 
+from reviewed_output import verify_or_create_tsv
 from run_direct_endpoint_factorization_v0_1 import (
     COMPARATOR,
     HEADS,
@@ -343,7 +344,7 @@ def main() -> None:
     validate_manifests()
     validate_event_outputs(selected, scores, support)
     result = pd.DataFrame(checks)
-    result.to_csv(output_dir() / "output_integrity_checks_v0.1.tsv", sep="\t", index=False)
+    verify_or_create_tsv(result, output_dir() / "output_integrity_checks_v0.1.tsv")
     print(result.to_string(index=False))
     print(f"Passed {int((result['status'] == 'pass').sum())}/{len(result)} checks")
 

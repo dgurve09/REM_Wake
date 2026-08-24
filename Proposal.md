@@ -2,11 +2,11 @@
 
 ## Wearable EEG REM-to-Wake Transition Detection Under Label and Device Uncertainty
 
-**Version:** 1.10
+**Version:** 1.11
 **Planning date:** 2026-06-21
-**Last revised:** 2026-08-22
+**Last revised:** 2026-08-23
 **Project window:** 2026-06-01 to 2026-11-29
-**Status:** Working research plan; Blocks 3-6 are complete; the conservative primary tier contains 276 REM-to-Wake events across 72 `pid` groups and the expanded quality-sensitivity tier contains 348 across 88 groups; the transparent stage-first and simple direct baselines have been compared; direct DE-B improved on transparent SF-C but retained precision 0.0909 and 1.2571 false alarms per hour; Block 7 begins 2026-08-24
+**Status:** Working research plan; Blocks 3-6 are complete; the conservative primary tier contains 276 REM-to-Wake events across 72 `pid` groups and the expanded quality-sensitivity tier contains 348 across 88 groups; the transparent stage-first and simple direct baselines have been compared; direct DE-B improved on transparent SF-C but retained precision 0.0909 and 1.2571 false alarms per hour; full EDF identity and across-night alignment-drift audits were completed on 2026-08-23; Block 7 begins 2026-08-24
 
 ## 1. Technology Area
 
@@ -87,7 +87,7 @@ After quality control, REM-to-Wake events will be sufficiently numerous and suff
 
 ### H2. Direct detection
 
-A transition-specific wearable EEG model will improve at least one clinically relevant event metric, such as event recall at a controlled false-alarm rate, compared with the stage-first baseline.
+A transition-specific wearable EEG model will improve at least one operationally relevant event metric, such as event recall at a controlled false-alarm rate, compared with the stage-first baseline.
 
 ### H3. Paired transfer
 
@@ -190,7 +190,8 @@ The E0 audit protocol and metadata data dictionary are recorded in `docs/feasibi
 - Keep every recording from one participant in only one train, validation, or test group within a split.
 - Fix and version the split definitions before comparing models.
 - Use grouped cross-validation or repeated grouped holdout, depending on the number and distribution of positive events.
-- Keep the final test partition untouched until the analysis plan and model-selection procedure are fixed.
+- The frozen project test partition was opened for the stage-first comparison and reused for one fixed direct-model comparison after each block's configuration was frozen. It is no longer an independent confirmatory cohort and must not be used for further model selection.
+- Use any Block 7 access to the existing test partition only as one predeclared paired descriptive comparison; require a new lock or external cohort for later confirmatory performance claims.
 
 ### 11.2 Baselines
 
@@ -334,8 +335,12 @@ The schedule is organized into two-week research blocks. Actual work records sho
 - Measure full PSG, reduced PSG, and wearable performance.
 - Test zero-shot transfer, direct wearable training, and simple fine-tuning.
 - Quantify the device-shift problem before adding adaptation complexity.
+- Freeze and commit the complete Block 7 protocol before fitting.
+- Treat the existing test partition as a paired descriptive comparison only; isolate selection to train/validation and require a new lock or external cohort for confirmation.
 
 **Deliverable:** Paired transfer results and decision log.
+
+**Entry condition, 2026-08-23:** `docs/evaluation/block7_entry_conditions_v0.1.md` records the current-test reuse boundary, required zero-shot ordering, selection isolation, and confirmation requirement.
 
 ### Block 8: September 7 to September 20 - Robustness and justified adaptation
 
@@ -459,7 +464,7 @@ The project will maintain research records of:
 - Move stable reusable logic into small scripts only when duplication justifies it.
 - Keep each experiment run immutable and identifiable.
 - Preserve failed and inconclusive runs.
-- Keep large data and model artifacts outside Git while recording their source, version, path, and identifier or checksum.
+- Keep raw data, model weights, binary feature arrays, and full-night score artifacts outside Git while recording their source, version, path, and identifier or checksum. Compact reviewed result tables may be retained when required for exact metric recomputation.
 - Maintain dated weekly technical notes.
 - Review staged changes before every push and use concise professional language.
 

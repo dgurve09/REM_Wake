@@ -28,4 +28,4 @@ This test partition was previously used for the planned stage-first comparator. 
 
 ## Artifact Boundary
 
-Fitted models and continuous candidate scores remain outside Git. Git retains the protocol, fit and threshold records, event outputs, comparison, and SHA-256 manifest.
+Fitted models and full-night continuous candidate-score artifacts remain outside Git. Git retains the protocol, fit and threshold records, event outputs, comparison, SHA-256 manifest, and a compact train/validation labeled-row score table required for exact reconstruction of the fitted-row metrics. No continuous test-score table is retained in Git.

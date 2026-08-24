@@ -224,6 +224,14 @@ This readiness check does not count REM-to-Wake events or make the feasibility d
 
 Detailed evidence is stored in `experiments/2026-07-04_boas_full_signal_alignment/`, `experiments/2026-07-11_boas_headband_window_quality/`, and `docs/feasibility/e0_feasibility_closeout_2026-07-11.md`.
 
+### Full-integrity and drift audit update, 2026-08-23
+
+- All 256 local EDF files were verified against the official `SHA256E` git-annex keys for OpenNeuro tag `1.1.1`. All official and local sizes and SHA-256 values matched, covering 35,913,652,480 bytes.
+- A retrospective across-night audit used the five saved pulse-lag windows per recording. Of 82 recordings with at least three usable windows, 79 stayed within a 2-second projected-change screen. `sub-32`, `sub-39`, and `sub-50` were retained for review.
+- The drift screen is a signal-proxy analysis, not a direct clock measurement or an automatic exclusion rule. The primary timeline and sample-index checks remain unchanged.
+
+Detailed evidence is stored in `experiments/2026-08-23_boas_full_edf_integrity_audit_v0.1/` and `experiments/2026-08-23_boas_alignment_drift_audit_v0.1/`.
+
 ## 15. Official Sources
 
 - OpenNeuro snapshot: https://openneuro.org/datasets/ds005555/versions/1.1.1

@@ -36,4 +36,4 @@ DE-B produced 151 validation false positives at REM-to-other or other-to-Wake bo
 
 This experiment does not alter the frozen Block 6 test result. Even if validation improves, DE-D remains a candidate for a new locked or external evaluation; it must not be applied to the current test partition for iterative selection.
 
-Fitted endpoint models and continuous validation scores remain outside Git. Their hashes are recorded in `external_artifact_manifest_v0.1.tsv`.
+Fitted endpoint models and the full-night validation candidate-score artifact remain outside Git. Their hashes are recorded in `external_artifact_manifest_v0.1.tsv`. Git retains a compact train/validation labeled-row endpoint-score table for exact endpoint and fit-row recomputation.

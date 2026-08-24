@@ -5,6 +5,8 @@ from __future__ import annotations
 import numpy as np
 import pandas as pd
 
+from reviewed_output import verify_or_create_tsv
+
 from analyze_direct_endpoint_threshold_robustness_v0_1 import (
     SELECTED_THRESHOLD,
     apply_lopo_thresholds,
@@ -250,7 +252,7 @@ def main() -> None:
     validate_decision(intervals, metrics)
     validate_inputs()
     result = pd.DataFrame(checks)
-    result.to_csv(output_dir() / "output_integrity_checks_v0.1.tsv", sep="\t", index=False)
+    verify_or_create_tsv(result, output_dir() / "output_integrity_checks_v0.1.tsv")
     print(result.to_string(index=False))
     print(f"Passed {int((result['status'] == 'pass').sum())}/{len(result)} checks")
 

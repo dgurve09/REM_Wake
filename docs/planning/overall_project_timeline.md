@@ -4,7 +4,7 @@
 **Project window:** 2026-06-01 to 2026-11-29
 **Prepared during:** 2026-06-25 to 2026-06-28
 **Finalized:** 2026-06-28
-**Current status:** Blocks 3-6 are complete; Block 5 was completed as catch-up work on 2026-08-15 after an inactive 2026-07-20 to 2026-08-14 interval; Block 6 closed on 2026-08-22 with direct DE-B improving on transparent stage-first SF-C while retaining low precision; validation-only endpoint factorization DE-D subsequently improved both validation F1 and false alarms but remains unevaluated on a new locked cohort; Block 7 begins 2026-08-24
+**Current status:** Blocks 3-6 are complete; Block 5 was completed as catch-up work on 2026-08-15 after an inactive 2026-07-20 to 2026-08-14 interval; Block 6 closed on 2026-08-22 with direct DE-B improving on transparent stage-first SF-C while retaining low precision; validation-only endpoint factorization DE-D subsequently improved both validation F1 and false alarms but remains unevaluated on a new locked cohort; the end-to-end, full-EDF identity, and across-night drift audits were completed on 2026-08-23; Block 7 begins 2026-08-24
 
 ## 1. Project Boundary
 
@@ -69,7 +69,7 @@ flowchart TD
 
 ## 4. Phase Table
 
-| Block | Dates | Main Question | Main Work | Deliverable | Status as of 2026-08-22 |
+| Block | Dates | Main Question | Main Work | Deliverable | Status as of 2026-08-23 |
 |---:|---|---|---|---|---|
 | 1 | Jun 1-Jun 14 | What is known and what is uncertain? | Literature review, initial planning, public-dataset search | Initial proposal, literature evidence, dataset candidate list | Complete |
 | 2 | Jun 15-Jun 28 | Can the project be set up cleanly with a defensible dataset and target? | Scope refinement, BOAS selection, repository setup, environment audit, pilot checks, E0 readiness | Revised proposal, manifest, setup records, pilot reports, E0 readiness package | Complete |
@@ -77,7 +77,7 @@ flowchart TD
 | 4 | Jul 13-Jul 26 | Can labels and minimal preprocessing be made reproducible? | Transition-event table, uncertainty intervals, alignment validation | Versioned label table and preprocessing artifacts | Complete; membership v0.1 separates conservative primary and expanded quality-sensitivity tiers; gate passed 2026-07-18 |
 | 5 | Jul 27-Aug 9 | What does a stage-first comparator achieve? | Wearable sleep-stage baseline, transition derivation from predicted stages | Stage-first event metrics | Completed as catch-up work on Aug 15; fixed `stage_ai`, epoch-only logistic, and five-epoch-context logistic comparators evaluated under frozen event matching |
 | 6 | Aug 10-Aug 23 | Does direct transition detection add value? | Simple direct baseline, small CNN only if justified, comparison to stage-first | Comparative baseline report | Complete Aug 22; DE-B improved test event F1 and false alarms/hour versus SF-C but retained precision 0.0909; validation-only DE-D improved F1 to 0.1604 and false alarms to 0.9915/hour versus DE-B validation; CNN deferred and DE-D test evaluation withheld |
-| 7 | Aug 24-Sep 6 | How large is the PSG-to-wearable device-shift problem? | Full PSG, reduced PSG, wearable, zero-shot and fine-tuning tests | Paired transfer results and decision log | Not started |
+| 7 | Aug 24-Sep 6 | How large is the PSG-to-wearable device-shift problem? | Full PSG, reduced PSG, wearable, zero-shot and fine-tuning tests | Paired transfer results and decision log | Not started; entry conditions frozen Aug 23; existing test is descriptive rather than independently confirmatory |
 | 8 | Sep 7-Sep 20 | Is the approach robust to signal/channel variability? | Missing-channel tests, degradation tests, ablations, justified adaptation if needed | Robustness and ablation report | Not started |
 | 9 | Sep 21-Oct 4 | Is external PSG comparison scientifically valid? | Audit one external PSG dataset and test reduced-channel generalization if appropriate | External generalization report or no-go | Not started |
 | 10 | Oct 5-Oct 18 | How should 30-second label uncertainty be handled? | Hard-label versus interval-aware temporal analysis | Label-uncertainty and localization report | Not started |
@@ -242,19 +242,30 @@ Additional evidence completed on 2026-08-22:
 - observed the expected partial-endpoint pattern: 73 REM-to-other false alarms for REM-only versus 35 for the product and 464 other-to-Wake false alarms for Wake-only versus 75 for the product;
 - passed 7/7 in-run and 11/11 independent endpoint-contribution checks across 26 hashed inputs, while retaining the result as validation-only mechanism evidence.
 
+Additional evidence completed on 2026-08-23:
+
+- completed an end-to-end repository audit without changing any frozen model metric or decision;
+- resolved all 33 unique DOI references in project Markdown to structured metadata with matching identifiers;
+- verified all 256 local EDF files, totaling 35,913,652,480 bytes, against the official OpenNeuro `1.1.1` git-annex sizes and SHA-256 values;
+- explicitly quantified across-night pulse-lag change for 82 recordings with at least three usable windows;
+- found median projected lag change 0.1250 seconds and 95th percentile absolute projected change 1.4781 seconds;
+- retained `sub-32`, `sub-39`, and `sub-50` as review cases after they exceeded the retrospective 2-second projected-change screen, without treating the pulse proxy as direct clock drift;
+- documented that the current test partition is no longer independently confirmatory and froze Block 7 entry conditions before its scheduled start;
+- reconciled the repository artifact policy with the compact labeled-row probability tables retained for exact metric recomputation.
+
 ## 7. Next Work
 
 After the completed direct baseline:
 
-1. begin Block 7 no earlier than 2026-08-24 and predeclare the paired PSG-to-wearable device-shift comparisons before fitting;
+1. begin Block 7 no earlier than 2026-08-24 and commit the paired PSG-to-wearable device-shift protocol before fitting;
 2. define full-PSG, reduced-PSG, and wearable inputs under one participant grouping and one event evaluator;
 3. establish zero-shot/no-adaptation transfer before considering fine-tuning;
 4. retain the frozen SF-C and DE-B results as lower-complexity references, including their convergence and false-alarm limitations;
-5. do not reuse the current test result for iterative direct-model selection; require a new lock or external cohort for later confirmatory direct-model claims.
+5. use the current test partition only for one frozen paired descriptive comparison, never for iterative direct-model selection; require a new lock or external cohort for later confirmatory direct-model claims.
 
 ## 8. Rules for the Rest of the Project
 
-- Keep raw data, model weights, and generated arrays outside Git.
+- Keep raw data, model weights, binary feature arrays, and full-night score artifacts outside Git. Retain compact reviewed tabular outputs only when needed for exact result reconstruction.
 - Preserve failed, negative, and inconclusive results.
 - Keep weekly records contemporaneous.
 - Push meaningful work at least weekly during active work periods.

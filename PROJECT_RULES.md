@@ -22,8 +22,10 @@
 - Store notebooks, reusable code, documentation, manifests, experiments, and reviewed results in clearly named directories.
 - Assign each experiment a dated run identifier and retain its configuration, dataset version, code commit, metrics, outcome, and notes.
 - Never overwrite an experiment result. Archive superseded reviewed outputs and preserve failed runs.
-- Keep raw datasets, generated arrays, model weights, and large temporary artifacts outside Git.
+- Keep raw datasets, binary feature arrays, full-night score artifacts, model weights, and large temporary artifacts outside Git.
+- Compact reviewed tabular predictions or labeled-row scores may be retained when they are necessary for exact metric recomputation. State this explicitly and do not describe them as external-only artifacts.
 - Record dataset sources, versions, paths, file counts, and checksums or official manifests.
+- Treat reviewed experiment folders as immutable. A validator should compare stored outputs without rewriting them; any changed result requires a new versioned experiment folder.
 
 ## Experimental Records
 
@@ -33,12 +35,13 @@
 - Treat model tuning as support work unless it is testing a documented technical hypothesis.
 - Prefer simple baselines before complex architectures or adaptation methods.
 - Follow `docs/planning/ml_experiment_record_requirements.md` when creating any model or quantitative baseline experiment.
+- Commit a result-producing protocol before running the experiment whenever Git chronology is intended to evidence prespecification. Do not rely on a later combined protocol/result commit to establish execution order.
 
 ## Version Control and Research Records
 
 - Commit and push meaningful work multiple times per week when practical, with at least one verified push during each active calendar week.
 - Before pushing, verify the working tree, branch, upstream, staged diff, and remote commit.
-- Exclude credentials, participant information, private working material, machine-specific paths, and temporary artifacts.
+- Exclude credentials, direct or non-public participant information, private working material, machine-specific paths, and temporary artifacts. Public pseudonymous dataset identifiers and metadata may be retained only when required for reproducible grouping or audit and permitted by the dataset license.
 - Use concise, professional language in code, documentation, commit messages, and reports.
 - For each meaningful update, record what changed, why it changed, the uncertainty or hypothesis addressed, the work performed, the result, limitations, and the next decision.
 - Maintain dated weekly technical records using actual contemporaneous information.

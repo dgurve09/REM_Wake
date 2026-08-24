@@ -5,6 +5,8 @@ from __future__ import annotations
 import numpy as np
 import pandas as pd
 
+from reviewed_output import verify_or_create_tsv
+
 from analyze_direct_event_failure_modes_v0_1 import output_dir, sha256
 from run_direct_event_baseline_v0_1 import data_parent, repo_root, score_path
 
@@ -134,7 +136,7 @@ def main() -> None:
     record("direct_context_contrast", bool(exact), "DE-B minus DE-A recomputed")
 
     result = pd.DataFrame(checks)
-    result.to_csv(output_dir() / "output_integrity_checks_v0.1.tsv", sep="\t", index=False)
+    verify_or_create_tsv(result, output_dir() / "output_integrity_checks_v0.1.tsv")
     print(result.to_string(index=False))
     print(f"Passed {int((result['status'] == 'pass').sum())}/{len(result)} checks")
 
