@@ -1,6 +1,7 @@
 # Experiment First-Commit Index
 
 **Prepared:** 2026-08-23
+**Updated:** 2026-08-26
 **Repository base reviewed:** `d936ea4`
 
 This index records the first Git commit containing each historical experiment folder. It improves artifact discovery but must not be misread as the code commit used to execute a run. For several past experiments, protocol, code, and result files first appear together, so Git cannot independently establish their within-session order.
@@ -33,6 +34,7 @@ This index records the first Git commit containing each historical experiment fo
 | `2026-08-23_boas_alignment_drift_audit_v0.1` | `63a8008` | 2026-08-23 |
 | `2026-08-23_boas_full_edf_integrity_audit_v0.1` | `63a8008` | 2026-08-23 |
 | `2026-08-23_reference_doi_audit_v0.1` | `63a8008` | 2026-08-23 |
+| `2026-08-25_block7_channel_compatibility_v0.1` | `71ddc92` | 2026-08-26 |
 
 The three 2026-08-23 audit experiment folders first appear in commit `63a8008`.
 
