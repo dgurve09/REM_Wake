@@ -87,6 +87,8 @@ All 128 paired sidecars report 256 Hz sampling. Within each recording, the PSG a
 
 The primary wearable channels are `HB_1` and `HB_2`, approximately located at AF7 and AF8. When present, the headband also contains three accelerometer channels, three gyroscope channels, and `HB_PULSE` in the same EDF file.
 
+The Block 7 compatibility audit found seven distinct PSG channel configurations and three headband configurations. Six PSG EEG channels (`PSG_F3`, `PSG_F4`, `PSG_C3`, `PSG_C4`, `PSG_O1`, and `PSG_O2`) and both headband EEG channels are present in all 128 recordings. EOG is present throughout but uses one `PSG_EOG` channel in 102 recordings and bilateral `PSG_EOGL/PSG_EOGR` channels in 26. Optional respiratory, pulse, oxygen-saturation, and motion signals have lower coverage. Block 7 therefore uses the common six-channel PSG EEG montage rather than every available clinical sensor.
+
 ## 6. Labels
 
 - Every PSG event file contains `stage_hum`.
@@ -231,6 +233,15 @@ Detailed evidence is stored in `experiments/2026-07-04_boas_full_signal_alignmen
 - The drift screen is a signal-proxy analysis, not a direct clock measurement or an automatic exclusion rule. The primary timeline and sample-index checks remain unchanged.
 
 Detailed evidence is stored in `experiments/2026-08-23_boas_full_edf_integrity_audit_v0.1/` and `experiments/2026-08-23_boas_alignment_drift_audit_v0.1/`.
+
+### Block 7 channel compatibility update, 2026-08-26
+
+- All 128 EDF pairs matched their channel sidecar names and order.
+- All 128 pairs passed the required file, reference, sampling-frequency, duration, and fixed-channel checks.
+- The common `PSG-6`, reduced `PSG-2`, and wearable `HB-2` sets each retain all 128 recordings.
+- The reduced `F3/F4` to `HB_1/HB_2` mapping is a laterality-preserving comparison, not an electrode-equivalent mapping.
+
+Detailed evidence is stored in `experiments/2026-08-25_block7_channel_compatibility_v0.1/`.
 
 ## 15. Official Sources
 

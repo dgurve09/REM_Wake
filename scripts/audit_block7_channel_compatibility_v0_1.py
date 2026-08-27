@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import json
 import os
-import subprocess
 from pathlib import Path
 
 import mne
@@ -19,6 +18,7 @@ DATASET = "ds005555"
 SNAPSHOT = "1.1.1"
 EXPERIMENT_DIR = "2026-08-25_block7_channel_compatibility_v0.1"
 PROTOCOL_COMMIT = "1f6797f"
+RESULT_CODE_COMMIT = "d73a2784395a"
 EXPECTED_RECORDINGS = 128
 EXPECTED_REFERENCE = "M1 (left mastoid)"
 EXPECTED_SFREQ = 256.0
@@ -40,14 +40,6 @@ def data_root() -> Path:
 
 def output_dir() -> Path:
     return repo_root() / "experiments" / EXPERIMENT_DIR
-
-
-def code_commit() -> str:
-    return subprocess.check_output(
-        ["git", "rev-parse", "--short=12", "HEAD"],
-        cwd=repo_root(),
-        text=True,
-    ).strip()
 
 
 def subject_number(subject: str) -> int:
@@ -293,7 +285,6 @@ def verify_or_create_text(path: Path, expected: str) -> None:
 def main() -> None:
     if not data_root().exists():
         raise FileNotFoundError(f"BOAS data root not found: {data_root()}")
-    commit = code_commit()
     eligibility, availability_detail = audit_recordings()
     availability = channel_availability_summary(availability_detail)
     configurations = configuration_summary(eligibility)
@@ -342,9 +333,10 @@ def main() -> None:
     )
     readme = f"""# Block 7 Channel Compatibility Audit v0.1
 
-**Work date:** 2026-08-25
+**Work initiated:** 2026-08-25
+**Audit executed:** 2026-08-26
 **Protocol commit:** `{PROTOCOL_COMMIT}`
-**Code commit:** `{commit}`
+**Code commit:** `{RESULT_CODE_COMMIT}`
 **Dataset:** BOAS OpenNeuro `{DATASET}`, snapshot `{SNAPSHOT}`
 **Model training performed:** No
 

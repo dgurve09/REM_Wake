@@ -2,11 +2,11 @@
 
 ## Wearable EEG REM-to-Wake Transition Detection Under Label and Device Uncertainty
 
-**Version:** 1.11
+**Version:** 1.12
 **Planning date:** 2026-06-21
-**Last revised:** 2026-08-23
+**Last revised:** 2026-08-26
 **Project window:** 2026-06-01 to 2026-11-29
-**Status:** Working research plan; Blocks 3-6 are complete; the conservative primary tier contains 276 REM-to-Wake events across 72 `pid` groups and the expanded quality-sensitivity tier contains 348 across 88 groups; the transparent stage-first and simple direct baselines have been compared; direct DE-B improved on transparent SF-C but retained precision 0.0909 and 1.2571 false alarms per hour; full EDF identity and across-night alignment-drift audits were completed on 2026-08-23; Block 7 begins 2026-08-24
+**Status:** Working research plan; Blocks 3-6 are complete; the conservative primary tier contains 276 REM-to-Wake events across 72 `pid` groups and the expanded quality-sensitivity tier contains 348 across 88 groups; the transparent stage-first and simple direct baselines have been compared; direct DE-B improved on transparent SF-C but retained precision 0.0909 and 1.2571 false alarms per hour; Block 7 is in progress with its transfer protocol predeclared and its complete-cohort channel gate passed for all 128 paired recordings
 
 ## 1. Technology Area
 
@@ -341,6 +341,8 @@ The schedule is organized into two-week research blocks. Actual work records sho
 **Deliverable:** Paired transfer results and decision log.
 
 **Entry condition, 2026-08-23:** `docs/evaluation/block7_entry_conditions_v0.1.md` records the current-test reuse boundary, required zero-shot ordering, selection isolation, and confirmation requirement.
+
+**Status update, 2026-08-26:** The paired-transfer protocol was committed before feature extraction or fitting. A header-and-sidecar compatibility audit passed for all 128 paired recordings. The full common PSG input is the six-channel EEG montage `F3/F4/C3/C4/O1/O2`; the reduced PSG input is `F3/F4`; and the real wearable input is `HB_1/HB_2`. Seven PSG and three headband channel configurations were observed because optional sensors vary. Those optional signals are excluded from the fixed Block 7 comparators rather than used to remove recordings. The `F3/F4` to `HB_1/HB_2` comparison preserves laterality and feature dimension but combines electrode-location and device effects.
 
 ### Block 8: September 7 to September 20 - Robustness and justified adaptation
 

@@ -99,9 +99,9 @@ Validation thresholds are searched from `0.01` to `0.99` in steps of `0.01` and 
 The conditional adaptation comparator is permitted only if both validation conditions hold:
 
 1. relative to `H2-D`, `P2-H2-Z` has event F1 at least `0.03` lower or false alarms at least `0.50` per supported hour higher; and
-2. at least 20% of mapped feature dimensions have an absolute PSG-versus-wearable train median difference greater than `0.50` pooled robust scale units.
+2. at least 20% of mapped feature dimensions have an absolute PSG-versus-wearable train median difference greater than `0.50` pooled robust scale units when measured over all common supported train boundaries, without selecting rows by event or background label.
 
-If the gate opens, `P2-H2-A` performs one fixed, label-free transformation. For each of the 80 mapped context features, compute median and `1.4826 * MAD` from paired PSG and wearable train rows. Transform the wearable feature to the PSG train location and scale, then apply the unchanged `P2-D` model and threshold. A zero MAD uses a scale of one and is reported. Wearable labels, validation outcomes, model coefficients, and test data cannot influence this transformation.
+If the gate opens, `P2-H2-A` performs one fixed, label-free transformation. For each of the 80 mapped context features, compute median and `1.4826 * MAD` from all common supported PSG and wearable train boundaries, not only the labeled training candidates. Transform the wearable feature to the PSG train location and scale, then apply the unchanged `P2-D` model and threshold. A zero MAD uses a scale of one and is reported. Wearable labels, validation outcomes, model coefficients, and test data cannot influence this transformation.
 
 No adversarial adaptation, supervised fine-tuning, feature selection, or second adaptation method is authorized in v0.1. A negative alignment result is retained and closes the adaptation branch for this block.
 

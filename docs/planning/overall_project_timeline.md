@@ -4,7 +4,7 @@
 **Project window:** 2026-06-01 to 2026-11-29
 **Prepared during:** 2026-06-25 to 2026-06-28
 **Finalized:** 2026-06-28
-**Current status:** Blocks 3-6 are complete; Block 5 was completed as catch-up work on 2026-08-15 after an inactive 2026-07-20 to 2026-08-14 interval; Block 6 closed on 2026-08-22 with direct DE-B improving on transparent stage-first SF-C while retaining low precision; validation-only endpoint factorization DE-D subsequently improved both validation F1 and false alarms but remains unevaluated on a new locked cohort; the end-to-end, full-EDF identity, and across-night drift audits were completed on 2026-08-23; Block 7 begins 2026-08-24
+**Current status:** Blocks 3-6 are complete; Block 5 was completed as catch-up work on 2026-08-15 after an inactive 2026-07-20 to 2026-08-14 interval; Block 6 closed on 2026-08-22 with direct DE-B improving on transparent stage-first SF-C while retaining low precision; validation-only endpoint factorization DE-D subsequently improved both validation F1 and false alarms but remains unevaluated on a new locked cohort; Block 7 is in progress with its transfer protocol predeclared and its complete-cohort channel compatibility gate passed on 2026-08-26
 
 ## 1. Project Boundary
 
@@ -69,7 +69,7 @@ flowchart TD
 
 ## 4. Phase Table
 
-| Block | Dates | Main Question | Main Work | Deliverable | Status as of 2026-08-23 |
+| Block | Dates | Main Question | Main Work | Deliverable | Status as of 2026-08-26 |
 |---:|---|---|---|---|---|
 | 1 | Jun 1-Jun 14 | What is known and what is uncertain? | Literature review, initial planning, public-dataset search | Initial proposal, literature evidence, dataset candidate list | Complete |
 | 2 | Jun 15-Jun 28 | Can the project be set up cleanly with a defensible dataset and target? | Scope refinement, BOAS selection, repository setup, environment audit, pilot checks, E0 readiness | Revised proposal, manifest, setup records, pilot reports, E0 readiness package | Complete |
@@ -77,7 +77,7 @@ flowchart TD
 | 4 | Jul 13-Jul 26 | Can labels and minimal preprocessing be made reproducible? | Transition-event table, uncertainty intervals, alignment validation | Versioned label table and preprocessing artifacts | Complete; membership v0.1 separates conservative primary and expanded quality-sensitivity tiers; gate passed 2026-07-18 |
 | 5 | Jul 27-Aug 9 | What does a stage-first comparator achieve? | Wearable sleep-stage baseline, transition derivation from predicted stages | Stage-first event metrics | Completed as catch-up work on Aug 15; fixed `stage_ai`, epoch-only logistic, and five-epoch-context logistic comparators evaluated under frozen event matching |
 | 6 | Aug 10-Aug 23 | Does direct transition detection add value? | Simple direct baseline, small CNN only if justified, comparison to stage-first | Comparative baseline report | Complete Aug 22; DE-B improved test event F1 and false alarms/hour versus SF-C but retained precision 0.0909; validation-only DE-D improved F1 to 0.1604 and false alarms to 0.9915/hour versus DE-B validation; CNN deferred and DE-D test evaluation withheld |
-| 7 | Aug 24-Sep 6 | How large is the PSG-to-wearable device-shift problem? | Full PSG, reduced PSG, wearable, zero-shot and fine-tuning tests | Paired transfer results and decision log | Not started; entry conditions frozen Aug 23; existing test is descriptive rather than independently confirmatory |
+| 7 | Aug 24-Sep 6 | How large is the PSG-to-wearable device-shift problem? | Common six-channel PSG EEG, reduced PSG, wearable, strict zero-shot, and conditionally gated feature alignment | Paired transfer results and decision log | In progress; protocol committed Aug 25; channel compatibility passed 128/128 on Aug 26; no Block 7 feature extraction, fitting, or test access yet |
 | 8 | Sep 7-Sep 20 | Is the approach robust to signal/channel variability? | Missing-channel tests, degradation tests, ablations, justified adaptation if needed | Robustness and ablation report | Not started |
 | 9 | Sep 21-Oct 4 | Is external PSG comparison scientifically valid? | Audit one external PSG dataset and test reduced-channel generalization if appropriate | External generalization report or no-go | Not started |
 | 10 | Oct 5-Oct 18 | How should 30-second label uncertainty be handled? | Hard-label versus interval-aware temporal analysis | Label-uncertainty and localization report | Not started |
@@ -253,13 +253,24 @@ Additional evidence completed on 2026-08-23:
 - documented that the current test partition is no longer independently confirmatory and froze Block 7 entry conditions before its scheduled start;
 - reconciled the repository artifact policy with the compact labeled-row probability tables retained for exact metric recomputation.
 
+Additional evidence completed on 2026-08-25 to 2026-08-26:
+
+- predeclared the Block 7 paired PSG-to-wearable protocol before feature extraction or fitting;
+- fixed the same DE-B logistic context method across a common six-channel PSG EEG reference, reduced `F3/F4` PSG, and real `HB_1/HB_2` wearable EEG;
+- predeclared strict zero-shot ordering, a validation-only gate for one robust feature-alignment method, and one frozen descriptive test opening;
+- audited all 256 EDF headers and channel sidecars across 128 paired recordings;
+- passed 128/128 checks for required files, header/sidecar channel agreement, M1 reference, 256 Hz sampling, equal paired duration, and fixed channel eligibility;
+- identified seven PSG and three headband channel configurations caused by optional sensor variability;
+- retained all 128 recordings by defining full PSG as the complete common six-channel EEG montage rather than mixing optional EOG, respiratory, pulse, oxygen-saturation, or motion inputs; and
+- recorded that `F3/F4` to `HB_1/HB_2` transfer combines electrode-location and device effects rather than isolating hardware alone.
+
 ## 7. Next Work
 
 After the completed direct baseline:
 
-1. begin Block 7 no earlier than 2026-08-24 and commit the paired PSG-to-wearable device-shift protocol before fitting;
-2. define full-PSG, reduced-PSG, and wearable inputs under one participant grouping and one event evaluator;
-3. establish zero-shot/no-adaptation transfer before considering fine-tuning;
+1. validate train-only feature generation for `PSG-6`, `PSG-2`, and `HB-2` under the committed Block 7 protocol;
+2. confirm that overlapping `F3/F4` features are identical between `PSG-6` and `PSG-2` construction;
+3. establish strict zero-shot PSG-to-wearable transfer on validation before applying the predeclared adaptation gate;
 4. retain the frozen SF-C and DE-B results as lower-complexity references, including their convergence and false-alarm limitations;
 5. use the current test partition only for one frozen paired descriptive comparison, never for iterative direct-model selection; require a new lock or external cohort for later confirmatory direct-model claims.
 
