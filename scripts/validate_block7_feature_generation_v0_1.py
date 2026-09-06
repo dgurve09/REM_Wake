@@ -23,10 +23,11 @@ from reviewed_output import verify_or_create_tsv
 VERSION = "v0.1"
 DATASET = "ds005555"
 SNAPSHOT = "1.1.1"
-EXPERIMENT_DIR = "2026-08-31_block7_feature_generation_validation_v0.1"
+EXPERIMENT_DIR = "2026-09-06_block7_feature_generation_validation_v0.1"
 DERIVED_DIR = "block7_feature_generation_validation_v0.1"
 PROTOCOL_COMMIT = "1f6797f"
 FEATURE_PLAN_COMMIT = "71ddc92"
+INITIAL_IMPLEMENTATION_COMMIT = "6c38a64"
 EXPECTED_TRAIN_RECORDINGS = 82
 EXPECTED_TRAIN_PIDS = 64
 INPUT_SFREQ = 256.0
@@ -630,10 +631,11 @@ def write_reviewed_outputs(
     hb_max = recordings["hb_reference_max_abs_diff"].max()
     readme = f"""# Block 7 Feature-Generation Validation v0.1
 
-**Work date:** 2026-08-31
+**Work date:** 2026-09-06
 **Protocol commit:** `{PROTOCOL_COMMIT}`
 **Feature-plan commit:** `{FEATURE_PLAN_COMMIT}`
-**Code commit:** `{result_code_commit}`
+**Initial implementation commit:** `{INITIAL_IMPLEMENTATION_COMMIT}`
+**Execution code commit:** `{result_code_commit}`
 **Dataset:** BOAS OpenNeuro `{DATASET}`, snapshot `{SNAPSHOT}`
 **Partition processed:** Train only
 **Model training performed:** No
