@@ -1,0 +1,16 @@
+check	status	detail
+train_membership_exact	pass	82 recordings and 64 pid groups reconstructed from frozen split
+partitions_train_only	pass	no validation or test partition row in retained outputs
+signal_checks_complete	pass	two train acquisition paths per recording
+scaler_checks_complete	pass	six PSG and two wearable train-only scalers
+synthetic_checks_complete	pass	five predeclared band checks
+recording_table_passed	pass	all per-recording retained checks passed
+manifest_cardinality	pass	three feature artifacts per train recording
+original_gate_table_passed	pass	13/13 result-producing gate checks retained
+external_files_rehashed	pass	246 size and SHA-256 checks
+external_array_schema	pass	expected arrays, ordered names, and 30/10/10 dimensions
+external_onset_stage_parity	pass	onsets and stages agree across three modalities
+external_psg_overlap_parity	pass	maximum absolute difference 0
+external_hb_reproduction	pass	maximum absolute difference 0
+external_context_parity	pass	eight-epoch context centers agree
+recording_manifest_hash_linkage	pass	recording table and external manifest hashes agree
