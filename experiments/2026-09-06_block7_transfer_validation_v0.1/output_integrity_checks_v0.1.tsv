@@ -1,0 +1,24 @@
+check	status	detail
+authorized_assignments	pass	82 train and 20 validation recordings
+external_manifest_rehashed	pass	artifacts=413
+generated_feature_cardinality	pass	{('train', 'HB-2-PSGscale'): 82, ('validation', 'HB-2'): 20, ('validation', 'HB-2-PSGscale'): 20, ('validation', 'PSG-2'): 20, ('validation', 'PSG-6'): 20}
+generated_feature_hashes	pass	162 size and SHA-256 checks
+generated_feature_schemas	pass	162 arrays reopened
+cross_modality_timing_parity	pass	102 authorized recordings
+psg_overlap_recomputed	pass	maximum=0
+generated_manifest_linkage	pass	162 linked paths
+models_reopened	pass	three hashes and 240/80/80 dimensions
+score_partition_scope	pass	train/validation only; four validation comparators
+labeled_probabilities_reproduced	pass	maximum=2.55351295664e-15
+continuous_probabilities_reproduced	pass	maximum=1.11022302463e-16
+window_metrics_recomputed	pass	six train/validation rows
+threshold_curve_recomputed	pass	297 rows
+selected_thresholds_recomputed	pass	P6-D=0.99, P2-D=0.99, H2-D=0.96
+validation_predicted_events_recomputed	pass	rows=655
+validation_event_metrics_recomputed	pass	rows=16
+validation_event_recordings_recomputed	pass	rows=320
+validation_event_participants_recomputed	pass	rows=256
+validation_event_matches_recomputed	pass	rows=376
+paired_bootstrap_recomputed	pass	three paired contrasts and 2,000 resamples
+feature_shift_recomputed	pass	80 dimensions across 75,539 boundaries
+adaptation_gate_recomputed	pass	performance=True, shifted=11/80, distribution=False

@@ -1,0 +1,321 @@
+comparator	model_role	partition	membership	threshold	subject	pid	tolerance_sec	reference_events	predicted_events	ignored_reference_events	true_positive	false_positive	false_negative	ignored_predictions	supported_hours	precision	recall	f1	false_alarms_per_hour
+H2-D	direct_two_channel_wearable	validation	primary	0.96	sub-1	89	15.0	0	9	5	0	9	0	0	7.5	0.0		0.0	1.2
+H2-D	direct_two_channel_wearable	validation	primary	0.96	sub-105	73	15.0	3	12	0	1	11	2	0	7.866666666666666	0.08333333333333333	0.3333333333333333	0.13333333333333333	1.3983050847457628
+H2-D	direct_two_channel_wearable	validation	primary	0.96	sub-112	97	15.0	3	8	0	2	6	1	0	7.6	0.25	0.6666666666666666	0.36363636363636365	0.7894736842105263
+H2-D	direct_two_channel_wearable	validation	primary	0.96	sub-113	97	15.0	2	8	0	1	7	1	0	7.75	0.125	0.5	0.2	0.9032258064516129
+H2-D	direct_two_channel_wearable	validation	primary	0.96	sub-114	97	15.0	1	9	0	1	8	0	0	7.716666666666667	0.1111111111111111	1.0	0.2	1.036717062634989
+H2-D	direct_two_channel_wearable	validation	primary	0.96	sub-124	15	15.0	4	3	0	1	2	3	0	7.35	0.3333333333333333	0.25	0.2857142857142857	0.272108843537415
+H2-D	direct_two_channel_wearable	validation	primary	0.96	sub-126	106	15.0	1	12	5	0	10	1	2	7.2	0.0	0.0	0.0	1.3888888888888888
+H2-D	direct_two_channel_wearable	validation	primary	0.96	sub-2	89	15.0	7	18	0	2	16	5	0	7.55	0.1111111111111111	0.2857142857142857	0.16	2.119205298013245
+H2-D	direct_two_channel_wearable	validation	primary	0.96	sub-23	15	15.0	1	6	1	1	5	0	0	9.266666666666667	0.16666666666666666	1.0	0.2857142857142857	0.539568345323741
+H2-D	direct_two_channel_wearable	validation	primary	0.96	sub-25	17	15.0	3	14	0	0	14	3	0	8.966666666666667	0.0	0.0	0.0	1.5613382899628252
+H2-D	direct_two_channel_wearable	validation	primary	0.96	sub-4	2	15.0	2	13	0	1	12	1	0	8.858333333333333	0.07692307692307693	0.5	0.13333333333333333	1.354656632173095
+H2-D	direct_two_channel_wearable	validation	primary	0.96	sub-5	3	15.0	4	6	0	2	4	2	0	8.316666666666666	0.3333333333333333	0.5	0.4	0.4809619238476954
+H2-D	direct_two_channel_wearable	validation	primary	0.96	sub-6	4	15.0	1	15	0	0	15	1	0	8.258333333333333	0.0	0.0	0.0	1.8163471241170537
+H2-D	direct_two_channel_wearable	validation	primary	0.96	sub-7	5	15.0	0	43	3	0	41	0	2	7.733333333333333	0.0		0.0	5.301724137931035
+H2-D	direct_two_channel_wearable	validation	primary	0.96	sub-72	37	15.0	0	7	2	0	6	0	1	7.991666666666666	0.0		0.0	0.7507820646506779
+H2-D	direct_two_channel_wearable	validation	primary	0.96	sub-75	40	15.0	0	34	2	0	33	0	1	7.133333333333334	0.0		0.0	4.626168224299065
+H2-D	direct_two_channel_wearable	validation	primary	0.96	sub-79	44	15.0	0	1	0	0	1	0	0	8.558333333333334	0.0		0.0	0.11684518013631938
+H2-D	direct_two_channel_wearable	validation	primary	0.96	sub-82	48	15.0	0	10	2	0	8	0	2	7.341666666666667	0.0		0.0	1.0896708286038592
+H2-D	direct_two_channel_wearable	validation	primary	0.96	sub-88	55	15.0	0	10	0	0	10	0	0	7.416666666666667	0.0		0.0	1.348314606741573
+H2-D	direct_two_channel_wearable	validation	primary	0.96	sub-97	64	15.0	5	18	0	4	14	1	0	8.983333333333333	0.2222222222222222	0.8	0.34782608695652173	1.5584415584415585
+H2-D	direct_two_channel_wearable	validation	primary	0.96	sub-1	89	45.0	0	9	5	0	9	0	0	7.5	0.0		0.0	1.2
+H2-D	direct_two_channel_wearable	validation	primary	0.96	sub-105	73	45.0	3	12	0	3	9	0	0	7.866666666666666	0.25	1.0	0.4	1.1440677966101696
+H2-D	direct_two_channel_wearable	validation	primary	0.96	sub-112	97	45.0	3	8	0	2	6	1	0	7.6	0.25	0.6666666666666666	0.36363636363636365	0.7894736842105263
+H2-D	direct_two_channel_wearable	validation	primary	0.96	sub-113	97	45.0	2	8	0	1	7	1	0	7.75	0.125	0.5	0.2	0.9032258064516129
+H2-D	direct_two_channel_wearable	validation	primary	0.96	sub-114	97	45.0	1	9	0	1	8	0	0	7.716666666666667	0.1111111111111111	1.0	0.2	1.036717062634989
+H2-D	direct_two_channel_wearable	validation	primary	0.96	sub-124	15	45.0	4	3	0	1	2	3	0	7.35	0.3333333333333333	0.25	0.2857142857142857	0.272108843537415
+H2-D	direct_two_channel_wearable	validation	primary	0.96	sub-126	106	45.0	1	12	5	1	7	0	4	7.2	0.125	1.0	0.2222222222222222	0.9722222222222222
+H2-D	direct_two_channel_wearable	validation	primary	0.96	sub-2	89	45.0	7	18	0	2	16	5	0	7.55	0.1111111111111111	0.2857142857142857	0.16	2.119205298013245
+H2-D	direct_two_channel_wearable	validation	primary	0.96	sub-23	15	45.0	1	6	1	1	5	0	0	9.266666666666667	0.16666666666666666	1.0	0.2857142857142857	0.539568345323741
+H2-D	direct_two_channel_wearable	validation	primary	0.96	sub-25	17	45.0	3	14	0	1	13	2	0	8.966666666666667	0.07142857142857142	0.3333333333333333	0.11764705882352941	1.449814126394052
+H2-D	direct_two_channel_wearable	validation	primary	0.96	sub-4	2	45.0	2	13	0	1	12	1	0	8.858333333333333	0.07692307692307693	0.5	0.13333333333333333	1.354656632173095
+H2-D	direct_two_channel_wearable	validation	primary	0.96	sub-5	3	45.0	4	6	0	2	4	2	0	8.316666666666666	0.3333333333333333	0.5	0.4	0.4809619238476954
+H2-D	direct_two_channel_wearable	validation	primary	0.96	sub-6	4	45.0	1	15	0	0	15	1	0	8.258333333333333	0.0	0.0	0.0	1.8163471241170537
+H2-D	direct_two_channel_wearable	validation	primary	0.96	sub-7	5	45.0	0	43	3	0	40	0	3	7.733333333333333	0.0		0.0	5.172413793103448
+H2-D	direct_two_channel_wearable	validation	primary	0.96	sub-72	37	45.0	0	7	2	0	6	0	1	7.991666666666666	0.0		0.0	0.7507820646506779
+H2-D	direct_two_channel_wearable	validation	primary	0.96	sub-75	40	45.0	0	34	2	0	32	0	2	7.133333333333334	0.0		0.0	4.485981308411215
+H2-D	direct_two_channel_wearable	validation	primary	0.96	sub-79	44	45.0	0	1	0	0	1	0	0	8.558333333333334	0.0		0.0	0.11684518013631938
+H2-D	direct_two_channel_wearable	validation	primary	0.96	sub-82	48	45.0	0	10	2	0	8	0	2	7.341666666666667	0.0		0.0	1.0896708286038592
+H2-D	direct_two_channel_wearable	validation	primary	0.96	sub-88	55	45.0	0	10	0	0	10	0	0	7.416666666666667	0.0		0.0	1.348314606741573
+H2-D	direct_two_channel_wearable	validation	primary	0.96	sub-97	64	45.0	5	18	0	4	14	1	0	8.983333333333333	0.2222222222222222	0.8	0.34782608695652173	1.5584415584415585
+H2-D	direct_two_channel_wearable	validation	expanded	0.96	sub-1	89	15.0	0	9	5	0	9	0	0	7.5	0.0		0.0	1.2
+H2-D	direct_two_channel_wearable	validation	expanded	0.96	sub-105	73	15.0	3	12	0	1	11	2	0	7.866666666666666	0.08333333333333333	0.3333333333333333	0.13333333333333333	1.3983050847457628
+H2-D	direct_two_channel_wearable	validation	expanded	0.96	sub-112	97	15.0	3	8	0	2	6	1	0	7.6	0.25	0.6666666666666666	0.36363636363636365	0.7894736842105263
+H2-D	direct_two_channel_wearable	validation	expanded	0.96	sub-113	97	15.0	2	8	0	1	7	1	0	7.75	0.125	0.5	0.2	0.9032258064516129
+H2-D	direct_two_channel_wearable	validation	expanded	0.96	sub-114	97	15.0	1	9	0	1	8	0	0	7.716666666666667	0.1111111111111111	1.0	0.2	1.036717062634989
+H2-D	direct_two_channel_wearable	validation	expanded	0.96	sub-124	15	15.0	4	3	0	1	2	3	0	7.35	0.3333333333333333	0.25	0.2857142857142857	0.272108843537415
+H2-D	direct_two_channel_wearable	validation	expanded	0.96	sub-126	106	15.0	6	12	0	2	10	4	0	7.2	0.16666666666666666	0.3333333333333333	0.2222222222222222	1.3888888888888888
+H2-D	direct_two_channel_wearable	validation	expanded	0.96	sub-2	89	15.0	7	18	0	2	16	5	0	7.55	0.1111111111111111	0.2857142857142857	0.16	2.119205298013245
+H2-D	direct_two_channel_wearable	validation	expanded	0.96	sub-23	15	15.0	1	6	1	1	5	0	0	9.266666666666667	0.16666666666666666	1.0	0.2857142857142857	0.539568345323741
+H2-D	direct_two_channel_wearable	validation	expanded	0.96	sub-25	17	15.0	3	14	0	0	14	3	0	8.966666666666667	0.0	0.0	0.0	1.5613382899628252
+H2-D	direct_two_channel_wearable	validation	expanded	0.96	sub-4	2	15.0	2	13	0	1	12	1	0	8.858333333333333	0.07692307692307693	0.5	0.13333333333333333	1.354656632173095
+H2-D	direct_two_channel_wearable	validation	expanded	0.96	sub-5	3	15.0	4	6	0	2	4	2	0	8.316666666666666	0.3333333333333333	0.5	0.4	0.4809619238476954
+H2-D	direct_two_channel_wearable	validation	expanded	0.96	sub-6	4	15.0	1	15	0	0	15	1	0	8.258333333333333	0.0	0.0	0.0	1.8163471241170537
+H2-D	direct_two_channel_wearable	validation	expanded	0.96	sub-7	5	15.0	3	43	0	2	41	1	0	7.733333333333333	0.046511627906976744	0.6666666666666666	0.08695652173913043	5.301724137931035
+H2-D	direct_two_channel_wearable	validation	expanded	0.96	sub-72	37	15.0	2	7	0	1	6	1	0	7.991666666666666	0.14285714285714285	0.5	0.2222222222222222	0.7507820646506779
+H2-D	direct_two_channel_wearable	validation	expanded	0.96	sub-75	40	15.0	2	34	0	1	33	1	0	7.133333333333334	0.029411764705882353	0.5	0.05555555555555555	4.626168224299065
+H2-D	direct_two_channel_wearable	validation	expanded	0.96	sub-79	44	15.0	0	1	0	0	1	0	0	8.558333333333334	0.0		0.0	0.11684518013631938
+H2-D	direct_two_channel_wearable	validation	expanded	0.96	sub-82	48	15.0	2	10	0	2	8	0	0	7.341666666666667	0.2	1.0	0.3333333333333333	1.0896708286038592
+H2-D	direct_two_channel_wearable	validation	expanded	0.96	sub-88	55	15.0	0	10	0	0	10	0	0	7.416666666666667	0.0		0.0	1.348314606741573
+H2-D	direct_two_channel_wearable	validation	expanded	0.96	sub-97	64	15.0	5	18	0	4	14	1	0	8.983333333333333	0.2222222222222222	0.8	0.34782608695652173	1.5584415584415585
+H2-D	direct_two_channel_wearable	validation	expanded	0.96	sub-1	89	45.0	0	9	5	0	9	0	0	7.5	0.0		0.0	1.2
+H2-D	direct_two_channel_wearable	validation	expanded	0.96	sub-105	73	45.0	3	12	0	3	9	0	0	7.866666666666666	0.25	1.0	0.4	1.1440677966101696
+H2-D	direct_two_channel_wearable	validation	expanded	0.96	sub-112	97	45.0	3	8	0	2	6	1	0	7.6	0.25	0.6666666666666666	0.36363636363636365	0.7894736842105263
+H2-D	direct_two_channel_wearable	validation	expanded	0.96	sub-113	97	45.0	2	8	0	1	7	1	0	7.75	0.125	0.5	0.2	0.9032258064516129
+H2-D	direct_two_channel_wearable	validation	expanded	0.96	sub-114	97	45.0	1	9	0	1	8	0	0	7.716666666666667	0.1111111111111111	1.0	0.2	1.036717062634989
+H2-D	direct_two_channel_wearable	validation	expanded	0.96	sub-124	15	45.0	4	3	0	1	2	3	0	7.35	0.3333333333333333	0.25	0.2857142857142857	0.272108843537415
+H2-D	direct_two_channel_wearable	validation	expanded	0.96	sub-126	106	45.0	6	12	0	5	7	1	0	7.2	0.4166666666666667	0.8333333333333334	0.5555555555555556	0.9722222222222222
+H2-D	direct_two_channel_wearable	validation	expanded	0.96	sub-2	89	45.0	7	18	0	2	16	5	0	7.55	0.1111111111111111	0.2857142857142857	0.16	2.119205298013245
+H2-D	direct_two_channel_wearable	validation	expanded	0.96	sub-23	15	45.0	1	6	1	1	5	0	0	9.266666666666667	0.16666666666666666	1.0	0.2857142857142857	0.539568345323741
+H2-D	direct_two_channel_wearable	validation	expanded	0.96	sub-25	17	45.0	3	14	0	1	13	2	0	8.966666666666667	0.07142857142857142	0.3333333333333333	0.11764705882352941	1.449814126394052
+H2-D	direct_two_channel_wearable	validation	expanded	0.96	sub-4	2	45.0	2	13	0	1	12	1	0	8.858333333333333	0.07692307692307693	0.5	0.13333333333333333	1.354656632173095
+H2-D	direct_two_channel_wearable	validation	expanded	0.96	sub-5	3	45.0	4	6	0	2	4	2	0	8.316666666666666	0.3333333333333333	0.5	0.4	0.4809619238476954
+H2-D	direct_two_channel_wearable	validation	expanded	0.96	sub-6	4	45.0	1	15	0	0	15	1	0	8.258333333333333	0.0	0.0	0.0	1.8163471241170537
+H2-D	direct_two_channel_wearable	validation	expanded	0.96	sub-7	5	45.0	3	43	0	3	40	0	0	7.733333333333333	0.06976744186046512	1.0	0.13043478260869565	5.172413793103448
+H2-D	direct_two_channel_wearable	validation	expanded	0.96	sub-72	37	45.0	2	7	0	1	6	1	0	7.991666666666666	0.14285714285714285	0.5	0.2222222222222222	0.7507820646506779
+H2-D	direct_two_channel_wearable	validation	expanded	0.96	sub-75	40	45.0	2	34	0	2	32	0	0	7.133333333333334	0.058823529411764705	1.0	0.1111111111111111	4.485981308411215
+H2-D	direct_two_channel_wearable	validation	expanded	0.96	sub-79	44	45.0	0	1	0	0	1	0	0	8.558333333333334	0.0		0.0	0.11684518013631938
+H2-D	direct_two_channel_wearable	validation	expanded	0.96	sub-82	48	45.0	2	10	0	2	8	0	0	7.341666666666667	0.2	1.0	0.3333333333333333	1.0896708286038592
+H2-D	direct_two_channel_wearable	validation	expanded	0.96	sub-88	55	45.0	0	10	0	0	10	0	0	7.416666666666667	0.0		0.0	1.348314606741573
+H2-D	direct_two_channel_wearable	validation	expanded	0.96	sub-97	64	45.0	5	18	0	4	14	1	0	8.983333333333333	0.2222222222222222	0.8	0.34782608695652173	1.5584415584415585
+P2-D	direct_two_channel_psg	validation	primary	0.99	sub-1	89	15.0	0	4	5	0	4	0	0	7.5	0.0		0.0	0.5333333333333333
+P2-D	direct_two_channel_psg	validation	primary	0.99	sub-105	73	15.0	3	5	0	0	5	3	0	7.866666666666666	0.0	0.0	0.0	0.6355932203389831
+P2-D	direct_two_channel_psg	validation	primary	0.99	sub-112	97	15.0	3	2	0	2	0	1	0	7.6	1.0	0.6666666666666666	0.8	0.0
+P2-D	direct_two_channel_psg	validation	primary	0.99	sub-113	97	15.0	2	1	0	1	0	1	0	7.75	1.0	0.5	0.6666666666666666	0.0
+P2-D	direct_two_channel_psg	validation	primary	0.99	sub-114	97	15.0	1	1	0	0	1	1	0	7.716666666666667	0.0	0.0	0.0	0.12958963282937364
+P2-D	direct_two_channel_psg	validation	primary	0.99	sub-124	15	15.0	4	3	0	1	2	3	0	7.35	0.3333333333333333	0.25	0.2857142857142857	0.272108843537415
+P2-D	direct_two_channel_psg	validation	primary	0.99	sub-126	106	15.0	1	2	5	0	1	1	1	7.2	0.0	0.0	0.0	0.1388888888888889
+P2-D	direct_two_channel_psg	validation	primary	0.99	sub-2	89	15.0	7	7	0	0	7	7	0	7.55	0.0	0.0	0.0	0.9271523178807948
+P2-D	direct_two_channel_psg	validation	primary	0.99	sub-23	15	15.0	1	3	1	1	1	0	1	9.266666666666667	0.5	1.0	0.6666666666666666	0.1079136690647482
+P2-D	direct_two_channel_psg	validation	primary	0.99	sub-25	17	15.0	3	4	0	0	4	3	0	8.966666666666667	0.0	0.0	0.0	0.44609665427509293
+P2-D	direct_two_channel_psg	validation	primary	0.99	sub-4	2	15.0	2	7	0	1	6	1	0	8.858333333333333	0.14285714285714285	0.5	0.2222222222222222	0.6773283160865475
+P2-D	direct_two_channel_psg	validation	primary	0.99	sub-5	3	15.0	4	1	0	1	0	3	0	8.316666666666666	1.0	0.25	0.4	0.0
+P2-D	direct_two_channel_psg	validation	primary	0.99	sub-6	4	15.0	1	2	0	0	2	1	0	8.258333333333333	0.0	0.0	0.0	0.2421796165489405
+P2-D	direct_two_channel_psg	validation	primary	0.99	sub-7	5	15.0	0	6	3	0	5	0	1	7.733333333333333	0.0		0.0	0.646551724137931
+P2-D	direct_two_channel_psg	validation	primary	0.99	sub-72	37	15.0	0	0	2	0	0	0	0	7.991666666666666				0.0
+P2-D	direct_two_channel_psg	validation	primary	0.99	sub-75	40	15.0	0	3	2	0	2	0	1	7.133333333333334	0.0		0.0	0.2803738317757009
+P2-D	direct_two_channel_psg	validation	primary	0.99	sub-79	44	15.0	0	0	0	0	0	0	0	8.558333333333334				0.0
+P2-D	direct_two_channel_psg	validation	primary	0.99	sub-82	48	15.0	0	5	2	0	3	0	2	7.341666666666667	0.0		0.0	0.4086265607264472
+P2-D	direct_two_channel_psg	validation	primary	0.99	sub-88	55	15.0	0	5	0	0	5	0	0	7.416666666666667	0.0		0.0	0.6741573033707865
+P2-D	direct_two_channel_psg	validation	primary	0.99	sub-97	64	15.0	5	14	0	3	11	2	0	8.983333333333333	0.21428571428571427	0.6	0.3157894736842105	1.2244897959183674
+P2-D	direct_two_channel_psg	validation	primary	0.99	sub-1	89	45.0	0	4	5	0	3	0	1	7.5	0.0		0.0	0.4
+P2-D	direct_two_channel_psg	validation	primary	0.99	sub-105	73	45.0	3	5	0	1	4	2	0	7.866666666666666	0.2	0.3333333333333333	0.25	0.5084745762711864
+P2-D	direct_two_channel_psg	validation	primary	0.99	sub-112	97	45.0	3	2	0	2	0	1	0	7.6	1.0	0.6666666666666666	0.8	0.0
+P2-D	direct_two_channel_psg	validation	primary	0.99	sub-113	97	45.0	2	1	0	1	0	1	0	7.75	1.0	0.5	0.6666666666666666	0.0
+P2-D	direct_two_channel_psg	validation	primary	0.99	sub-114	97	45.0	1	1	0	0	1	1	0	7.716666666666667	0.0	0.0	0.0	0.12958963282937364
+P2-D	direct_two_channel_psg	validation	primary	0.99	sub-124	15	45.0	4	3	0	1	2	3	0	7.35	0.3333333333333333	0.25	0.2857142857142857	0.272108843537415
+P2-D	direct_two_channel_psg	validation	primary	0.99	sub-126	106	45.0	1	2	5	0	1	1	1	7.2	0.0	0.0	0.0	0.1388888888888889
+P2-D	direct_two_channel_psg	validation	primary	0.99	sub-2	89	45.0	7	7	0	0	7	7	0	7.55	0.0	0.0	0.0	0.9271523178807948
+P2-D	direct_two_channel_psg	validation	primary	0.99	sub-23	15	45.0	1	3	1	1	1	0	1	9.266666666666667	0.5	1.0	0.6666666666666666	0.1079136690647482
+P2-D	direct_two_channel_psg	validation	primary	0.99	sub-25	17	45.0	3	4	0	0	4	3	0	8.966666666666667	0.0	0.0	0.0	0.44609665427509293
+P2-D	direct_two_channel_psg	validation	primary	0.99	sub-4	2	45.0	2	7	0	1	6	1	0	8.858333333333333	0.14285714285714285	0.5	0.2222222222222222	0.6773283160865475
+P2-D	direct_two_channel_psg	validation	primary	0.99	sub-5	3	45.0	4	1	0	1	0	3	0	8.316666666666666	1.0	0.25	0.4	0.0
+P2-D	direct_two_channel_psg	validation	primary	0.99	sub-6	4	45.0	1	2	0	0	2	1	0	8.258333333333333	0.0	0.0	0.0	0.2421796165489405
+P2-D	direct_two_channel_psg	validation	primary	0.99	sub-7	5	45.0	0	6	3	0	5	0	1	7.733333333333333	0.0		0.0	0.646551724137931
+P2-D	direct_two_channel_psg	validation	primary	0.99	sub-72	37	45.0	0	0	2	0	0	0	0	7.991666666666666				0.0
+P2-D	direct_two_channel_psg	validation	primary	0.99	sub-75	40	45.0	0	3	2	0	1	0	2	7.133333333333334	0.0		0.0	0.14018691588785046
+P2-D	direct_two_channel_psg	validation	primary	0.99	sub-79	44	45.0	0	0	0	0	0	0	0	8.558333333333334				0.0
+P2-D	direct_two_channel_psg	validation	primary	0.99	sub-82	48	45.0	0	5	2	0	3	0	2	7.341666666666667	0.0		0.0	0.4086265607264472
+P2-D	direct_two_channel_psg	validation	primary	0.99	sub-88	55	45.0	0	5	0	0	5	0	0	7.416666666666667	0.0		0.0	0.6741573033707865
+P2-D	direct_two_channel_psg	validation	primary	0.99	sub-97	64	45.0	5	14	0	3	11	2	0	8.983333333333333	0.21428571428571427	0.6	0.3157894736842105	1.2244897959183674
+P2-D	direct_two_channel_psg	validation	expanded	0.99	sub-1	89	15.0	0	4	5	0	4	0	0	7.5	0.0		0.0	0.5333333333333333
+P2-D	direct_two_channel_psg	validation	expanded	0.99	sub-105	73	15.0	3	5	0	0	5	3	0	7.866666666666666	0.0	0.0	0.0	0.6355932203389831
+P2-D	direct_two_channel_psg	validation	expanded	0.99	sub-112	97	15.0	3	2	0	2	0	1	0	7.6	1.0	0.6666666666666666	0.8	0.0
+P2-D	direct_two_channel_psg	validation	expanded	0.99	sub-113	97	15.0	2	1	0	1	0	1	0	7.75	1.0	0.5	0.6666666666666666	0.0
+P2-D	direct_two_channel_psg	validation	expanded	0.99	sub-114	97	15.0	1	1	0	0	1	1	0	7.716666666666667	0.0	0.0	0.0	0.12958963282937364
+P2-D	direct_two_channel_psg	validation	expanded	0.99	sub-124	15	15.0	4	3	0	1	2	3	0	7.35	0.3333333333333333	0.25	0.2857142857142857	0.272108843537415
+P2-D	direct_two_channel_psg	validation	expanded	0.99	sub-126	106	15.0	6	2	0	1	1	5	0	7.2	0.5	0.16666666666666666	0.25	0.1388888888888889
+P2-D	direct_two_channel_psg	validation	expanded	0.99	sub-2	89	15.0	7	7	0	0	7	7	0	7.55	0.0	0.0	0.0	0.9271523178807948
+P2-D	direct_two_channel_psg	validation	expanded	0.99	sub-23	15	15.0	1	3	1	1	1	0	1	9.266666666666667	0.5	1.0	0.6666666666666666	0.1079136690647482
+P2-D	direct_two_channel_psg	validation	expanded	0.99	sub-25	17	15.0	3	4	0	0	4	3	0	8.966666666666667	0.0	0.0	0.0	0.44609665427509293
+P2-D	direct_two_channel_psg	validation	expanded	0.99	sub-4	2	15.0	2	7	0	1	6	1	0	8.858333333333333	0.14285714285714285	0.5	0.2222222222222222	0.6773283160865475
+P2-D	direct_two_channel_psg	validation	expanded	0.99	sub-5	3	15.0	4	1	0	1	0	3	0	8.316666666666666	1.0	0.25	0.4	0.0
+P2-D	direct_two_channel_psg	validation	expanded	0.99	sub-6	4	15.0	1	2	0	0	2	1	0	8.258333333333333	0.0	0.0	0.0	0.2421796165489405
+P2-D	direct_two_channel_psg	validation	expanded	0.99	sub-7	5	15.0	3	6	0	1	5	2	0	7.733333333333333	0.16666666666666666	0.3333333333333333	0.2222222222222222	0.646551724137931
+P2-D	direct_two_channel_psg	validation	expanded	0.99	sub-72	37	15.0	2	0	0	0	0	2	0	7.991666666666666		0.0	0.0	0.0
+P2-D	direct_two_channel_psg	validation	expanded	0.99	sub-75	40	15.0	2	3	0	1	2	1	0	7.133333333333334	0.3333333333333333	0.5	0.4	0.2803738317757009
+P2-D	direct_two_channel_psg	validation	expanded	0.99	sub-79	44	15.0	0	0	0	0	0	0	0	8.558333333333334				0.0
+P2-D	direct_two_channel_psg	validation	expanded	0.99	sub-82	48	15.0	2	5	0	2	3	0	0	7.341666666666667	0.4	1.0	0.5714285714285714	0.4086265607264472
+P2-D	direct_two_channel_psg	validation	expanded	0.99	sub-88	55	15.0	0	5	0	0	5	0	0	7.416666666666667	0.0		0.0	0.6741573033707865
+P2-D	direct_two_channel_psg	validation	expanded	0.99	sub-97	64	15.0	5	14	0	3	11	2	0	8.983333333333333	0.21428571428571427	0.6	0.3157894736842105	1.2244897959183674
+P2-D	direct_two_channel_psg	validation	expanded	0.99	sub-1	89	45.0	0	4	5	0	3	0	1	7.5	0.0		0.0	0.4
+P2-D	direct_two_channel_psg	validation	expanded	0.99	sub-105	73	45.0	3	5	0	1	4	2	0	7.866666666666666	0.2	0.3333333333333333	0.25	0.5084745762711864
+P2-D	direct_two_channel_psg	validation	expanded	0.99	sub-112	97	45.0	3	2	0	2	0	1	0	7.6	1.0	0.6666666666666666	0.8	0.0
+P2-D	direct_two_channel_psg	validation	expanded	0.99	sub-113	97	45.0	2	1	0	1	0	1	0	7.75	1.0	0.5	0.6666666666666666	0.0
+P2-D	direct_two_channel_psg	validation	expanded	0.99	sub-114	97	45.0	1	1	0	0	1	1	0	7.716666666666667	0.0	0.0	0.0	0.12958963282937364
+P2-D	direct_two_channel_psg	validation	expanded	0.99	sub-124	15	45.0	4	3	0	1	2	3	0	7.35	0.3333333333333333	0.25	0.2857142857142857	0.272108843537415
+P2-D	direct_two_channel_psg	validation	expanded	0.99	sub-126	106	45.0	6	2	0	1	1	5	0	7.2	0.5	0.16666666666666666	0.25	0.1388888888888889
+P2-D	direct_two_channel_psg	validation	expanded	0.99	sub-2	89	45.0	7	7	0	0	7	7	0	7.55	0.0	0.0	0.0	0.9271523178807948
+P2-D	direct_two_channel_psg	validation	expanded	0.99	sub-23	15	45.0	1	3	1	1	1	0	1	9.266666666666667	0.5	1.0	0.6666666666666666	0.1079136690647482
+P2-D	direct_two_channel_psg	validation	expanded	0.99	sub-25	17	45.0	3	4	0	0	4	3	0	8.966666666666667	0.0	0.0	0.0	0.44609665427509293
+P2-D	direct_two_channel_psg	validation	expanded	0.99	sub-4	2	45.0	2	7	0	1	6	1	0	8.858333333333333	0.14285714285714285	0.5	0.2222222222222222	0.6773283160865475
+P2-D	direct_two_channel_psg	validation	expanded	0.99	sub-5	3	45.0	4	1	0	1	0	3	0	8.316666666666666	1.0	0.25	0.4	0.0
+P2-D	direct_two_channel_psg	validation	expanded	0.99	sub-6	4	45.0	1	2	0	0	2	1	0	8.258333333333333	0.0	0.0	0.0	0.2421796165489405
+P2-D	direct_two_channel_psg	validation	expanded	0.99	sub-7	5	45.0	3	6	0	1	5	2	0	7.733333333333333	0.16666666666666666	0.3333333333333333	0.2222222222222222	0.646551724137931
+P2-D	direct_two_channel_psg	validation	expanded	0.99	sub-72	37	45.0	2	0	0	0	0	2	0	7.991666666666666		0.0	0.0	0.0
+P2-D	direct_two_channel_psg	validation	expanded	0.99	sub-75	40	45.0	2	3	0	2	1	0	0	7.133333333333334	0.6666666666666666	1.0	0.8	0.14018691588785046
+P2-D	direct_two_channel_psg	validation	expanded	0.99	sub-79	44	45.0	0	0	0	0	0	0	0	8.558333333333334				0.0
+P2-D	direct_two_channel_psg	validation	expanded	0.99	sub-82	48	45.0	2	5	0	2	3	0	0	7.341666666666667	0.4	1.0	0.5714285714285714	0.4086265607264472
+P2-D	direct_two_channel_psg	validation	expanded	0.99	sub-88	55	45.0	0	5	0	0	5	0	0	7.416666666666667	0.0		0.0	0.6741573033707865
+P2-D	direct_two_channel_psg	validation	expanded	0.99	sub-97	64	45.0	5	14	0	3	11	2	0	8.983333333333333	0.21428571428571427	0.6	0.3157894736842105	1.2244897959183674
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	primary	0.99	sub-1	89	15.0	0	4	5	0	4	0	0	7.5	0.0		0.0	0.5333333333333333
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	primary	0.99	sub-105	73	15.0	3	2	0	0	2	3	0	7.866666666666666	0.0	0.0	0.0	0.2542372881355932
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	primary	0.99	sub-112	97	15.0	3	2	0	2	0	1	0	7.6	1.0	0.6666666666666666	0.8	0.0
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	primary	0.99	sub-113	97	15.0	2	3	0	1	2	1	0	7.75	0.3333333333333333	0.5	0.4	0.25806451612903225
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	primary	0.99	sub-114	97	15.0	1	2	0	0	2	1	0	7.716666666666667	0.0	0.0	0.0	0.25917926565874727
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	primary	0.99	sub-124	15	15.0	4	0	0	0	0	4	0	7.35		0.0	0.0	0.0
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	primary	0.99	sub-126	106	15.0	1	5	5	0	3	1	2	7.2	0.0	0.0	0.0	0.41666666666666663
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	primary	0.99	sub-2	89	15.0	7	5	0	0	5	7	0	7.55	0.0	0.0	0.0	0.6622516556291391
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	primary	0.99	sub-23	15	15.0	1	3	1	0	3	1	0	9.266666666666667	0.0	0.0	0.0	0.3237410071942446
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	primary	0.99	sub-25	17	15.0	3	7	0	0	7	3	0	8.966666666666667	0.0	0.0	0.0	0.7806691449814126
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	primary	0.99	sub-4	2	15.0	2	5	0	0	5	2	0	8.858333333333333	0.0	0.0	0.0	0.5644402634054563
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	primary	0.99	sub-5	3	15.0	4	1	0	1	0	3	0	8.316666666666666	1.0	0.25	0.4	0.0
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	primary	0.99	sub-6	4	15.0	1	3	0	0	3	1	0	8.258333333333333	0.0	0.0	0.0	0.36326942482341074
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	primary	0.99	sub-7	5	15.0	0	36	3	0	35	0	1	7.733333333333333	0.0		0.0	4.525862068965517
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	primary	0.99	sub-72	37	15.0	0	1	2	0	1	0	0	7.991666666666666	0.0		0.0	0.1251303441084463
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	primary	0.99	sub-75	40	15.0	0	16	2	0	15	0	1	7.133333333333334	0.0		0.0	2.102803738317757
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	primary	0.99	sub-79	44	15.0	0	0	0	0	0	0	0	8.558333333333334				0.0
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	primary	0.99	sub-82	48	15.0	0	8	2	0	7	0	1	7.341666666666667	0.0		0.0	0.9534619750283768
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	primary	0.99	sub-88	55	15.0	0	6	0	0	6	0	0	7.416666666666667	0.0		0.0	0.8089887640449438
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	primary	0.99	sub-97	64	15.0	5	5	0	1	4	4	0	8.983333333333333	0.2	0.2	0.2	0.44526901669758817
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	primary	0.99	sub-1	89	45.0	0	4	5	0	4	0	0	7.5	0.0		0.0	0.5333333333333333
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	primary	0.99	sub-105	73	45.0	3	2	0	1	1	2	0	7.866666666666666	0.5	0.3333333333333333	0.4	0.1271186440677966
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	primary	0.99	sub-112	97	45.0	3	2	0	2	0	1	0	7.6	1.0	0.6666666666666666	0.8	0.0
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	primary	0.99	sub-113	97	45.0	2	3	0	1	2	1	0	7.75	0.3333333333333333	0.5	0.4	0.25806451612903225
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	primary	0.99	sub-114	97	45.0	1	2	0	0	2	1	0	7.716666666666667	0.0	0.0	0.0	0.25917926565874727
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	primary	0.99	sub-124	15	45.0	4	0	0	0	0	4	0	7.35		0.0	0.0	0.0
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	primary	0.99	sub-126	106	45.0	1	5	5	1	1	0	3	7.2	0.5	1.0	0.6666666666666666	0.1388888888888889
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	primary	0.99	sub-2	89	45.0	7	5	0	0	5	7	0	7.55	0.0	0.0	0.0	0.6622516556291391
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	primary	0.99	sub-23	15	45.0	1	3	1	0	3	1	0	9.266666666666667	0.0	0.0	0.0	0.3237410071942446
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	primary	0.99	sub-25	17	45.0	3	7	0	1	6	2	0	8.966666666666667	0.14285714285714285	0.3333333333333333	0.2	0.6691449814126395
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	primary	0.99	sub-4	2	45.0	2	5	0	0	5	2	0	8.858333333333333	0.0	0.0	0.0	0.5644402634054563
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	primary	0.99	sub-5	3	45.0	4	1	0	1	0	3	0	8.316666666666666	1.0	0.25	0.4	0.0
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	primary	0.99	sub-6	4	45.0	1	3	0	0	3	1	0	8.258333333333333	0.0	0.0	0.0	0.36326942482341074
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	primary	0.99	sub-7	5	45.0	0	36	3	0	35	0	1	7.733333333333333	0.0		0.0	4.525862068965517
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	primary	0.99	sub-72	37	45.0	0	1	2	0	1	0	0	7.991666666666666	0.0		0.0	0.1251303441084463
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	primary	0.99	sub-75	40	45.0	0	16	2	0	14	0	2	7.133333333333334	0.0		0.0	1.9626168224299065
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	primary	0.99	sub-79	44	45.0	0	0	0	0	0	0	0	8.558333333333334				0.0
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	primary	0.99	sub-82	48	45.0	0	8	2	0	7	0	1	7.341666666666667	0.0		0.0	0.9534619750283768
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	primary	0.99	sub-88	55	45.0	0	6	0	0	6	0	0	7.416666666666667	0.0		0.0	0.8089887640449438
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	primary	0.99	sub-97	64	45.0	5	5	0	1	4	4	0	8.983333333333333	0.2	0.2	0.2	0.44526901669758817
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	expanded	0.99	sub-1	89	15.0	0	4	5	0	4	0	0	7.5	0.0		0.0	0.5333333333333333
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	expanded	0.99	sub-105	73	15.0	3	2	0	0	2	3	0	7.866666666666666	0.0	0.0	0.0	0.2542372881355932
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	expanded	0.99	sub-112	97	15.0	3	2	0	2	0	1	0	7.6	1.0	0.6666666666666666	0.8	0.0
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	expanded	0.99	sub-113	97	15.0	2	3	0	1	2	1	0	7.75	0.3333333333333333	0.5	0.4	0.25806451612903225
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	expanded	0.99	sub-114	97	15.0	1	2	0	0	2	1	0	7.716666666666667	0.0	0.0	0.0	0.25917926565874727
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	expanded	0.99	sub-124	15	15.0	4	0	0	0	0	4	0	7.35		0.0	0.0	0.0
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	expanded	0.99	sub-126	106	15.0	6	5	0	2	3	4	0	7.2	0.4	0.3333333333333333	0.36363636363636365	0.41666666666666663
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	expanded	0.99	sub-2	89	15.0	7	5	0	0	5	7	0	7.55	0.0	0.0	0.0	0.6622516556291391
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	expanded	0.99	sub-23	15	15.0	1	3	1	0	3	1	0	9.266666666666667	0.0	0.0	0.0	0.3237410071942446
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	expanded	0.99	sub-25	17	15.0	3	7	0	0	7	3	0	8.966666666666667	0.0	0.0	0.0	0.7806691449814126
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	expanded	0.99	sub-4	2	15.0	2	5	0	0	5	2	0	8.858333333333333	0.0	0.0	0.0	0.5644402634054563
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	expanded	0.99	sub-5	3	15.0	4	1	0	1	0	3	0	8.316666666666666	1.0	0.25	0.4	0.0
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	expanded	0.99	sub-6	4	15.0	1	3	0	0	3	1	0	8.258333333333333	0.0	0.0	0.0	0.36326942482341074
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	expanded	0.99	sub-7	5	15.0	3	36	0	1	35	2	0	7.733333333333333	0.027777777777777776	0.3333333333333333	0.05128205128205128	4.525862068965517
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	expanded	0.99	sub-72	37	15.0	2	1	0	0	1	2	0	7.991666666666666	0.0	0.0	0.0	0.1251303441084463
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	expanded	0.99	sub-75	40	15.0	2	16	0	1	15	1	0	7.133333333333334	0.0625	0.5	0.1111111111111111	2.102803738317757
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	expanded	0.99	sub-79	44	15.0	0	0	0	0	0	0	0	8.558333333333334				0.0
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	expanded	0.99	sub-82	48	15.0	2	8	0	1	7	1	0	7.341666666666667	0.125	0.5	0.2	0.9534619750283768
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	expanded	0.99	sub-88	55	15.0	0	6	0	0	6	0	0	7.416666666666667	0.0		0.0	0.8089887640449438
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	expanded	0.99	sub-97	64	15.0	5	5	0	1	4	4	0	8.983333333333333	0.2	0.2	0.2	0.44526901669758817
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	expanded	0.99	sub-1	89	45.0	0	4	5	0	4	0	0	7.5	0.0		0.0	0.5333333333333333
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	expanded	0.99	sub-105	73	45.0	3	2	0	1	1	2	0	7.866666666666666	0.5	0.3333333333333333	0.4	0.1271186440677966
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	expanded	0.99	sub-112	97	45.0	3	2	0	2	0	1	0	7.6	1.0	0.6666666666666666	0.8	0.0
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	expanded	0.99	sub-113	97	45.0	2	3	0	1	2	1	0	7.75	0.3333333333333333	0.5	0.4	0.25806451612903225
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	expanded	0.99	sub-114	97	45.0	1	2	0	0	2	1	0	7.716666666666667	0.0	0.0	0.0	0.25917926565874727
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	expanded	0.99	sub-124	15	45.0	4	0	0	0	0	4	0	7.35		0.0	0.0	0.0
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	expanded	0.99	sub-126	106	45.0	6	5	0	4	1	2	0	7.2	0.8	0.6666666666666666	0.7272727272727273	0.1388888888888889
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	expanded	0.99	sub-2	89	45.0	7	5	0	0	5	7	0	7.55	0.0	0.0	0.0	0.6622516556291391
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	expanded	0.99	sub-23	15	45.0	1	3	1	0	3	1	0	9.266666666666667	0.0	0.0	0.0	0.3237410071942446
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	expanded	0.99	sub-25	17	45.0	3	7	0	1	6	2	0	8.966666666666667	0.14285714285714285	0.3333333333333333	0.2	0.6691449814126395
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	expanded	0.99	sub-4	2	45.0	2	5	0	0	5	2	0	8.858333333333333	0.0	0.0	0.0	0.5644402634054563
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	expanded	0.99	sub-5	3	45.0	4	1	0	1	0	3	0	8.316666666666666	1.0	0.25	0.4	0.0
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	expanded	0.99	sub-6	4	45.0	1	3	0	0	3	1	0	8.258333333333333	0.0	0.0	0.0	0.36326942482341074
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	expanded	0.99	sub-7	5	45.0	3	36	0	1	35	2	0	7.733333333333333	0.027777777777777776	0.3333333333333333	0.05128205128205128	4.525862068965517
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	expanded	0.99	sub-72	37	45.0	2	1	0	0	1	2	0	7.991666666666666	0.0	0.0	0.0	0.1251303441084463
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	expanded	0.99	sub-75	40	45.0	2	16	0	2	14	0	0	7.133333333333334	0.125	1.0	0.2222222222222222	1.9626168224299065
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	expanded	0.99	sub-79	44	45.0	0	0	0	0	0	0	0	8.558333333333334				0.0
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	expanded	0.99	sub-82	48	45.0	2	8	0	1	7	1	0	7.341666666666667	0.125	0.5	0.2	0.9534619750283768
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	expanded	0.99	sub-88	55	45.0	0	6	0	0	6	0	0	7.416666666666667	0.0		0.0	0.8089887640449438
+P2-H2-Z	strict_psg_to_wearable_zero_shot	validation	expanded	0.99	sub-97	64	45.0	5	5	0	1	4	4	0	8.983333333333333	0.2	0.2	0.2	0.44526901669758817
+P6-D	direct_six_channel_psg	validation	primary	0.99	sub-1	89	15.0	0	23	5	0	20	0	3	7.5	0.0		0.0	2.6666666666666665
+P6-D	direct_six_channel_psg	validation	primary	0.99	sub-105	73	15.0	3	21	0	2	19	1	0	7.866666666666666	0.09523809523809523	0.6666666666666666	0.16666666666666666	2.415254237288136
+P6-D	direct_six_channel_psg	validation	primary	0.99	sub-112	97	15.0	3	2	0	1	1	2	0	7.6	0.5	0.3333333333333333	0.4	0.13157894736842105
+P6-D	direct_six_channel_psg	validation	primary	0.99	sub-113	97	15.0	2	2	0	2	0	0	0	7.75	1.0	1.0	1.0	0.0
+P6-D	direct_six_channel_psg	validation	primary	0.99	sub-114	97	15.0	1	0	0	0	0	1	0	7.716666666666667		0.0	0.0	0.0
+P6-D	direct_six_channel_psg	validation	primary	0.99	sub-124	15	15.0	4	5	0	2	3	2	0	7.35	0.4	0.5	0.4444444444444444	0.40816326530612246
+P6-D	direct_six_channel_psg	validation	primary	0.99	sub-126	106	15.0	1	4	5	0	1	1	3	7.2	0.0	0.0	0.0	0.1388888888888889
+P6-D	direct_six_channel_psg	validation	primary	0.99	sub-2	89	15.0	7	7	0	3	4	4	0	7.55	0.42857142857142855	0.42857142857142855	0.42857142857142855	0.5298013245033113
+P6-D	direct_six_channel_psg	validation	primary	0.99	sub-23	15	15.0	1	11	1	1	9	0	1	9.266666666666667	0.1	1.0	0.18181818181818182	0.9712230215827338
+P6-D	direct_six_channel_psg	validation	primary	0.99	sub-25	17	15.0	3	21	0	0	21	3	0	8.966666666666667	0.0	0.0	0.0	2.3420074349442377
+P6-D	direct_six_channel_psg	validation	primary	0.99	sub-4	2	15.0	2	50	0	2	48	0	0	8.858333333333333	0.04	1.0	0.07692307692307693	5.41862652869238
+P6-D	direct_six_channel_psg	validation	primary	0.99	sub-5	3	15.0	4	10	0	2	8	2	0	8.316666666666666	0.2	0.5	0.2857142857142857	0.9619238476953909
+P6-D	direct_six_channel_psg	validation	primary	0.99	sub-6	4	15.0	1	11	0	1	10	0	0	8.258333333333333	0.09090909090909091	1.0	0.16666666666666666	1.2108980827447025
+P6-D	direct_six_channel_psg	validation	primary	0.99	sub-7	5	15.0	0	24	3	0	21	0	3	7.733333333333333	0.0		0.0	2.7155172413793105
+P6-D	direct_six_channel_psg	validation	primary	0.99	sub-72	37	15.0	0	1	2	0	0	0	1	7.991666666666666				0.0
+P6-D	direct_six_channel_psg	validation	primary	0.99	sub-75	40	15.0	0	3	2	0	2	0	1	7.133333333333334	0.0		0.0	0.2803738317757009
+P6-D	direct_six_channel_psg	validation	primary	0.99	sub-79	44	15.0	0	1	0	0	1	0	0	8.558333333333334	0.0		0.0	0.11684518013631938
+P6-D	direct_six_channel_psg	validation	primary	0.99	sub-82	48	15.0	0	3	2	0	1	0	2	7.341666666666667	0.0		0.0	0.1362088535754824
+P6-D	direct_six_channel_psg	validation	primary	0.99	sub-88	55	15.0	0	3	0	0	3	0	0	7.416666666666667	0.0		0.0	0.4044943820224719
+P6-D	direct_six_channel_psg	validation	primary	0.99	sub-97	64	15.0	5	8	0	3	5	2	0	8.983333333333333	0.375	0.6	0.46153846153846156	0.5565862708719852
+P6-D	direct_six_channel_psg	validation	primary	0.99	sub-1	89	45.0	0	23	5	0	19	0	4	7.5	0.0		0.0	2.533333333333333
+P6-D	direct_six_channel_psg	validation	primary	0.99	sub-105	73	45.0	3	21	0	3	18	0	0	7.866666666666666	0.14285714285714285	1.0	0.25	2.288135593220339
+P6-D	direct_six_channel_psg	validation	primary	0.99	sub-112	97	45.0	3	2	0	2	0	1	0	7.6	1.0	0.6666666666666666	0.8	0.0
+P6-D	direct_six_channel_psg	validation	primary	0.99	sub-113	97	45.0	2	2	0	2	0	0	0	7.75	1.0	1.0	1.0	0.0
+P6-D	direct_six_channel_psg	validation	primary	0.99	sub-114	97	45.0	1	0	0	0	0	1	0	7.716666666666667		0.0	0.0	0.0
+P6-D	direct_six_channel_psg	validation	primary	0.99	sub-124	15	45.0	4	5	0	2	3	2	0	7.35	0.4	0.5	0.4444444444444444	0.40816326530612246
+P6-D	direct_six_channel_psg	validation	primary	0.99	sub-126	106	45.0	1	4	5	0	1	1	3	7.2	0.0	0.0	0.0	0.1388888888888889
+P6-D	direct_six_channel_psg	validation	primary	0.99	sub-2	89	45.0	7	7	0	3	4	4	0	7.55	0.42857142857142855	0.42857142857142855	0.42857142857142855	0.5298013245033113
+P6-D	direct_six_channel_psg	validation	primary	0.99	sub-23	15	45.0	1	11	1	1	9	0	1	9.266666666666667	0.1	1.0	0.18181818181818182	0.9712230215827338
+P6-D	direct_six_channel_psg	validation	primary	0.99	sub-25	17	45.0	3	21	0	1	20	2	0	8.966666666666667	0.047619047619047616	0.3333333333333333	0.08333333333333333	2.2304832713754648
+P6-D	direct_six_channel_psg	validation	primary	0.99	sub-4	2	45.0	2	50	0	2	48	0	0	8.858333333333333	0.04	1.0	0.07692307692307693	5.41862652869238
+P6-D	direct_six_channel_psg	validation	primary	0.99	sub-5	3	45.0	4	10	0	3	7	1	0	8.316666666666666	0.3	0.75	0.42857142857142855	0.841683366733467
+P6-D	direct_six_channel_psg	validation	primary	0.99	sub-6	4	45.0	1	11	0	1	10	0	0	8.258333333333333	0.09090909090909091	1.0	0.16666666666666666	1.2108980827447025
+P6-D	direct_six_channel_psg	validation	primary	0.99	sub-7	5	45.0	0	24	3	0	21	0	3	7.733333333333333	0.0		0.0	2.7155172413793105
+P6-D	direct_six_channel_psg	validation	primary	0.99	sub-72	37	45.0	0	1	2	0	0	0	1	7.991666666666666				0.0
+P6-D	direct_six_channel_psg	validation	primary	0.99	sub-75	40	45.0	0	3	2	0	1	0	2	7.133333333333334	0.0		0.0	0.14018691588785046
+P6-D	direct_six_channel_psg	validation	primary	0.99	sub-79	44	45.0	0	1	0	0	1	0	0	8.558333333333334	0.0		0.0	0.11684518013631938
+P6-D	direct_six_channel_psg	validation	primary	0.99	sub-82	48	45.0	0	3	2	0	1	0	2	7.341666666666667	0.0		0.0	0.1362088535754824
+P6-D	direct_six_channel_psg	validation	primary	0.99	sub-88	55	45.0	0	3	0	0	3	0	0	7.416666666666667	0.0		0.0	0.4044943820224719
+P6-D	direct_six_channel_psg	validation	primary	0.99	sub-97	64	45.0	5	8	0	3	5	2	0	8.983333333333333	0.375	0.6	0.46153846153846156	0.5565862708719852
+P6-D	direct_six_channel_psg	validation	expanded	0.99	sub-1	89	15.0	0	23	5	0	20	0	3	7.5	0.0		0.0	2.6666666666666665
+P6-D	direct_six_channel_psg	validation	expanded	0.99	sub-105	73	15.0	3	21	0	2	19	1	0	7.866666666666666	0.09523809523809523	0.6666666666666666	0.16666666666666666	2.415254237288136
+P6-D	direct_six_channel_psg	validation	expanded	0.99	sub-112	97	15.0	3	2	0	1	1	2	0	7.6	0.5	0.3333333333333333	0.4	0.13157894736842105
+P6-D	direct_six_channel_psg	validation	expanded	0.99	sub-113	97	15.0	2	2	0	2	0	0	0	7.75	1.0	1.0	1.0	0.0
+P6-D	direct_six_channel_psg	validation	expanded	0.99	sub-114	97	15.0	1	0	0	0	0	1	0	7.716666666666667		0.0	0.0	0.0
+P6-D	direct_six_channel_psg	validation	expanded	0.99	sub-124	15	15.0	4	5	0	2	3	2	0	7.35	0.4	0.5	0.4444444444444444	0.40816326530612246
+P6-D	direct_six_channel_psg	validation	expanded	0.99	sub-126	106	15.0	6	4	0	3	1	3	0	7.2	0.75	0.5	0.6	0.1388888888888889
+P6-D	direct_six_channel_psg	validation	expanded	0.99	sub-2	89	15.0	7	7	0	3	4	4	0	7.55	0.42857142857142855	0.42857142857142855	0.42857142857142855	0.5298013245033113
+P6-D	direct_six_channel_psg	validation	expanded	0.99	sub-23	15	15.0	1	11	1	1	9	0	1	9.266666666666667	0.1	1.0	0.18181818181818182	0.9712230215827338
+P6-D	direct_six_channel_psg	validation	expanded	0.99	sub-25	17	15.0	3	21	0	0	21	3	0	8.966666666666667	0.0	0.0	0.0	2.3420074349442377
+P6-D	direct_six_channel_psg	validation	expanded	0.99	sub-4	2	15.0	2	50	0	2	48	0	0	8.858333333333333	0.04	1.0	0.07692307692307693	5.41862652869238
+P6-D	direct_six_channel_psg	validation	expanded	0.99	sub-5	3	15.0	4	10	0	2	8	2	0	8.316666666666666	0.2	0.5	0.2857142857142857	0.9619238476953909
+P6-D	direct_six_channel_psg	validation	expanded	0.99	sub-6	4	15.0	1	11	0	1	10	0	0	8.258333333333333	0.09090909090909091	1.0	0.16666666666666666	1.2108980827447025
+P6-D	direct_six_channel_psg	validation	expanded	0.99	sub-7	5	15.0	3	24	0	3	21	0	0	7.733333333333333	0.125	1.0	0.2222222222222222	2.7155172413793105
+P6-D	direct_six_channel_psg	validation	expanded	0.99	sub-72	37	15.0	2	1	0	1	0	1	0	7.991666666666666	1.0	0.5	0.6666666666666666	0.0
+P6-D	direct_six_channel_psg	validation	expanded	0.99	sub-75	40	15.0	2	3	0	1	2	1	0	7.133333333333334	0.3333333333333333	0.5	0.4	0.2803738317757009
+P6-D	direct_six_channel_psg	validation	expanded	0.99	sub-79	44	15.0	0	1	0	0	1	0	0	8.558333333333334	0.0		0.0	0.11684518013631938
+P6-D	direct_six_channel_psg	validation	expanded	0.99	sub-82	48	15.0	2	3	0	2	1	0	0	7.341666666666667	0.6666666666666666	1.0	0.8	0.1362088535754824
+P6-D	direct_six_channel_psg	validation	expanded	0.99	sub-88	55	15.0	0	3	0	0	3	0	0	7.416666666666667	0.0		0.0	0.4044943820224719
+P6-D	direct_six_channel_psg	validation	expanded	0.99	sub-97	64	15.0	5	8	0	3	5	2	0	8.983333333333333	0.375	0.6	0.46153846153846156	0.5565862708719852
+P6-D	direct_six_channel_psg	validation	expanded	0.99	sub-1	89	45.0	0	23	5	0	19	0	4	7.5	0.0		0.0	2.533333333333333
+P6-D	direct_six_channel_psg	validation	expanded	0.99	sub-105	73	45.0	3	21	0	3	18	0	0	7.866666666666666	0.14285714285714285	1.0	0.25	2.288135593220339
+P6-D	direct_six_channel_psg	validation	expanded	0.99	sub-112	97	45.0	3	2	0	2	0	1	0	7.6	1.0	0.6666666666666666	0.8	0.0
+P6-D	direct_six_channel_psg	validation	expanded	0.99	sub-113	97	45.0	2	2	0	2	0	0	0	7.75	1.0	1.0	1.0	0.0
+P6-D	direct_six_channel_psg	validation	expanded	0.99	sub-114	97	45.0	1	0	0	0	0	1	0	7.716666666666667		0.0	0.0	0.0
+P6-D	direct_six_channel_psg	validation	expanded	0.99	sub-124	15	45.0	4	5	0	2	3	2	0	7.35	0.4	0.5	0.4444444444444444	0.40816326530612246
+P6-D	direct_six_channel_psg	validation	expanded	0.99	sub-126	106	45.0	6	4	0	3	1	3	0	7.2	0.75	0.5	0.6	0.1388888888888889
+P6-D	direct_six_channel_psg	validation	expanded	0.99	sub-2	89	45.0	7	7	0	3	4	4	0	7.55	0.42857142857142855	0.42857142857142855	0.42857142857142855	0.5298013245033113
+P6-D	direct_six_channel_psg	validation	expanded	0.99	sub-23	15	45.0	1	11	1	1	9	0	1	9.266666666666667	0.1	1.0	0.18181818181818182	0.9712230215827338
+P6-D	direct_six_channel_psg	validation	expanded	0.99	sub-25	17	45.0	3	21	0	1	20	2	0	8.966666666666667	0.047619047619047616	0.3333333333333333	0.08333333333333333	2.2304832713754648
+P6-D	direct_six_channel_psg	validation	expanded	0.99	sub-4	2	45.0	2	50	0	2	48	0	0	8.858333333333333	0.04	1.0	0.07692307692307693	5.41862652869238
+P6-D	direct_six_channel_psg	validation	expanded	0.99	sub-5	3	45.0	4	10	0	3	7	1	0	8.316666666666666	0.3	0.75	0.42857142857142855	0.841683366733467
+P6-D	direct_six_channel_psg	validation	expanded	0.99	sub-6	4	45.0	1	11	0	1	10	0	0	8.258333333333333	0.09090909090909091	1.0	0.16666666666666666	1.2108980827447025
+P6-D	direct_six_channel_psg	validation	expanded	0.99	sub-7	5	45.0	3	24	0	3	21	0	0	7.733333333333333	0.125	1.0	0.2222222222222222	2.7155172413793105
+P6-D	direct_six_channel_psg	validation	expanded	0.99	sub-72	37	45.0	2	1	0	1	0	1	0	7.991666666666666	1.0	0.5	0.6666666666666666	0.0
+P6-D	direct_six_channel_psg	validation	expanded	0.99	sub-75	40	45.0	2	3	0	2	1	0	0	7.133333333333334	0.6666666666666666	1.0	0.8	0.14018691588785046
+P6-D	direct_six_channel_psg	validation	expanded	0.99	sub-79	44	45.0	0	1	0	0	1	0	0	8.558333333333334	0.0		0.0	0.11684518013631938
+P6-D	direct_six_channel_psg	validation	expanded	0.99	sub-82	48	45.0	2	3	0	2	1	0	0	7.341666666666667	0.6666666666666666	1.0	0.8	0.1362088535754824
+P6-D	direct_six_channel_psg	validation	expanded	0.99	sub-88	55	45.0	0	3	0	0	3	0	0	7.416666666666667	0.0		0.0	0.4044943820224719
+P6-D	direct_six_channel_psg	validation	expanded	0.99	sub-97	64	45.0	5	8	0	3	5	2	0	8.983333333333333	0.375	0.6	0.46153846153846156	0.5565862708719852

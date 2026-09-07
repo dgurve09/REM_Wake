@@ -1,0 +1,4 @@
+comparator	model_role	train_rows	train_positive	train_negative	input_features	maximum_iterations_used	convergence_warning_count	model_sha256
+P6-D	direct_six_channel_psg	2743	180	2563	240	116	0	243ab382909b30f8288bc24dc1e22b205fcdcea77c2011c2a3c2a452f7969082
+P2-D	direct_two_channel_psg	2743	180	2563	80	87	0	a3176329a142c4569a36813b08107b11a0acc4634ef47eb7e983b85fc51f7e51
+H2-D	direct_two_channel_wearable	2743	180	2563	80	106	0	d679d1142abc229b109ca912645b52ed16c4d449a87ee43185da28cafc3e3066

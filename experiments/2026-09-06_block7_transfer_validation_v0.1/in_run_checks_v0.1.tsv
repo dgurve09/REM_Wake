@@ -1,0 +1,18 @@
+check	status	detail
+authorized_membership	pass	82 train and 20 validation recordings
+generated_feature_artifacts	pass	82 train zero-shot plus 80 validation arrays
+cross_modality_epoch_parity	pass	all authorized recordings
+cross_modality_context_parity	pass	all authorized recordings
+psg_overlap_parity	pass	maximum=0
+three_direct_models_fitted	pass	P6-D, P2-D, H2-D
+direct_input_dimensions	pass	240/80/80 context features
+no_convergence_warning	pass	total=0
+labeled_construction_equal	pass	same retained candidate count for all direct inputs
+threshold_grid_complete	pass	three complete 99-threshold grids
+direct_thresholds_frozen	pass	one validation threshold per direct model
+validation_support_complete	pass	comparators=4
+zero_shot_threshold_inheritance	pass	zero-shot/alignment use P2-D threshold
+feature_shift_complete	pass	common_boundaries=75539
+adaptation_action_followed	pass	skip_P2-H2-A
+external_hashes_recorded	pass	artifacts=413
+test_partition_closed	pass	no test feature, score, support, or result row

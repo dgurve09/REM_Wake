@@ -1,0 +1,2 @@
+h2_direct_validation_f1	zero_shot_validation_f1	zero_shot_f1_deficit	required_f1_deficit	h2_direct_false_alarms_per_hour	zero_shot_false_alarms_per_hour	zero_shot_far_excess	required_far_excess	performance_condition_open	shifted_dimensions	total_dimensions	shifted_dimension_fraction	required_shifted_fraction	distribution_condition_open	adaptation_gate_open	adaptation_action
+0.11228070175438597	0.0684931506849315	0.043787551069454464	0.03	1.455838519060817	0.6526172671651937	-0.8032212518956232	0.5	True	11	80	0.1375	0.2	False	False	skip_P2-H2-A
