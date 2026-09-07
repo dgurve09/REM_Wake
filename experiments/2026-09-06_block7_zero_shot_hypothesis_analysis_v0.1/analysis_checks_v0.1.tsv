@@ -1,0 +1,8 @@
+check	status	detail
+source_inputs_hashed	pass	three committed source tables
+validation_scope_only	pass	no test row
+participant_pairing	pass	16 pid per comparator
+thresholds_unchanged	pass	{'H2-D': 0.96, 'P2-D': 0.99, 'P2-H2-Z': 0.99}
+comparison_set_complete	pass	three contrasts, two metrics
+source_control_reproduced	pass	H2-D minus zero-shot sign-reverses committed control
+bootstrap_complete	pass	2,000 resamples per contrast
