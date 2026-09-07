@@ -2,11 +2,11 @@
 
 ## Wearable EEG REM-to-Wake Transition Detection Under Label and Device Uncertainty
 
-**Version:** 1.13
+**Version:** 1.14
 **Planning date:** 2026-06-21
 **Last revised:** 2026-09-06
 **Project window:** 2026-06-01 to 2026-11-29
-**Status:** Working research plan; Blocks 3-6 are complete; the conservative primary tier contains 276 REM-to-Wake events across 72 `pid` groups and the expanded quality-sensitivity tier contains 348 across 88 groups; the transparent stage-first and simple direct baselines have been compared; direct DE-B improved on transparent SF-C but retained precision 0.0909 and 1.2571 false alarms per hour; Block 7 is in progress with its transfer protocol predeclared, its complete-cohort channel gate passed for all 128 paired recordings, and its train-only feature gate passed for 82 recordings across 64 `pid` groups; transfer-model results remain pending
+**Status:** Working research plan; Blocks 3-6 are complete; the conservative primary tier contains 276 REM-to-Wake events across 72 `pid` groups and the expanded quality-sensitivity tier contains 348 across 88 groups; the transparent stage-first and simple direct baselines have been compared; direct DE-B improved on transparent SF-C but retained precision 0.0909 and 1.2571 false alarms per hour; Block 7 channel and feature gates passed; its train/validation comparison is frozen with reduced PSG outperforming six-channel PSG and direct wearable on validation, strict zero-shot transfer showing a supported F1 loss relative to direct reduced PSG, and conditional alignment skipped by the predeclared distribution gate; the one-time descriptive test comparison remains pending
 
 ## 1. Technology Area
 
@@ -345,6 +345,8 @@ The schedule is organized into two-week research blocks. Actual work records sho
 **Status update, 2026-08-26:** The paired-transfer protocol was committed before feature extraction or fitting. A header-and-sidecar compatibility audit passed for all 128 paired recordings. The full common PSG input is the six-channel EEG montage `F3/F4/C3/C4/O1/O2`; the reduced PSG input is `F3/F4`; and the real wearable input is `HB_1/HB_2`. Seven PSG and three headband channel configurations were observed because optional sensors vary. Those optional signals are excluded from the fixed Block 7 comparators rather than used to remove recordings. The `F3/F4` to `HB_1/HB_2` comparison preserves laterality and feature dimension but combines electrode-location and device effects.
 
 **Status update, 2026-09-06:** The train-only feature-generation gate passed for all 82 train recordings across 64 `pid` groups. The run passed 164/164 signal-path checks, 5/5 synthetic spectral checks, and 82/82 per-recording feature/context checks. `PSG-6` and `PSG-2` overlapping features had maximum absolute difference zero, and the `HB-2` path reproduced the frozen wearable reference within `4.7662e-7`. All 246 external feature artifacts were recorded by size and SHA-256. A separate read-only validator then rehashed and reopened every artifact and passed 15/15 membership, schema, timing, feature-parity, and hash-linkage checks. No validation/test signal, score, threshold, or model was accessed. This passes the feature-infrastructure gate only; direct, zero-shot, and conditional-alignment transfer results remain pending carryover before Block 8 robustness work.
+
+**Validation update, 2026-09-06:** The fixed train/validation comparison was completed after the feature gate. `P2-D` achieved event F1 0.1887 and 0.3702 false alarms per hour, compared with `P6-D` F1 0.1631 and 1.1107 false alarms per hour and `H2-D` F1 0.1123 and 1.4558 false alarms per hour. The paired `P6-D - P2-D` F1 interval crossed zero, while the false-alarm difference favored `P2-D`; H7.1 is not supported on validation. Strict `P2-H2-Z` transfer achieved F1 0.0685 and 0.6526 false alarms per hour. Its F1 loss versus `P2-D` was 0.1202 with paired 95% interval 0.0336 to 0.2001, but the false-alarm difference interval crossed zero. Relative to `H2-D`, zero-shot transfer had lower F1 and fewer false alarms, a tradeoff rather than uniform degradation. The adaptation performance condition opened, but only 11/80 dimensions exceeded 0.50 pooled robust scale units, below the required 20%; `P2-H2-A` was therefore skipped. The result passed 17/17 in-run and 23/23 independent checks. The one-time descriptive test comparison remains pending under a separate freeze, and no test data has been accessed in Block 7.
 
 ### Block 8: September 7 to September 20 - Robustness and justified adaptation
 

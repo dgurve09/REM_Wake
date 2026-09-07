@@ -4,7 +4,7 @@
 **Project window:** 2026-06-01 to 2026-11-29
 **Prepared during:** 2026-06-25 to 2026-06-28
 **Finalized:** 2026-06-28
-**Current status:** Blocks 3-6 are complete; Block 5 was completed as catch-up work on 2026-08-15 after an inactive 2026-07-20 to 2026-08-14 interval; Block 6 closed on 2026-08-22 with direct DE-B improving on transparent stage-first SF-C while retaining low precision; validation-only endpoint factorization DE-D subsequently improved both validation F1 and false alarms but remains unevaluated on a new locked cohort; Block 7 feature infrastructure passed its complete-cohort channel gate on 2026-08-26 and train-only feature gate on 2026-09-06, while transfer-model fitting and validation remain pending carryover
+**Current status:** Blocks 3-6 are complete; Block 5 was completed as catch-up work on 2026-08-15 after an inactive 2026-07-20 to 2026-08-14 interval; Block 6 closed on 2026-08-22 with direct DE-B improving on transparent stage-first SF-C while retaining low precision; validation-only endpoint factorization DE-D subsequently improved both validation F1 and false alarms but remains unevaluated on a new locked cohort; Block 7 channel, train-feature, and train/validation gates are complete, with reduced PSG strongest on validation, strict zero-shot F1 loss relative to direct reduced PSG, and conditional alignment skipped; the frozen one-time descriptive test comparison remains pending carryover
 
 ## 1. Project Boundary
 
@@ -77,7 +77,7 @@ flowchart TD
 | 4 | Jul 13-Jul 26 | Can labels and minimal preprocessing be made reproducible? | Transition-event table, uncertainty intervals, alignment validation | Versioned label table and preprocessing artifacts | Complete; membership v0.1 separates conservative primary and expanded quality-sensitivity tiers; gate passed 2026-07-18 |
 | 5 | Jul 27-Aug 9 | What does a stage-first comparator achieve? | Wearable sleep-stage baseline, transition derivation from predicted stages | Stage-first event metrics | Completed as catch-up work on Aug 15; fixed `stage_ai`, epoch-only logistic, and five-epoch-context logistic comparators evaluated under frozen event matching |
 | 6 | Aug 10-Aug 23 | Does direct transition detection add value? | Simple direct baseline, small CNN only if justified, comparison to stage-first | Comparative baseline report | Complete Aug 22; DE-B improved test event F1 and false alarms/hour versus SF-C but retained precision 0.0909; validation-only DE-D improved F1 to 0.1604 and false alarms to 0.9915/hour versus DE-B validation; CNN deferred and DE-D test evaluation withheld |
-| 7 | Aug 24-Sep 6 | How large is the PSG-to-wearable device-shift problem? | Common six-channel PSG EEG, reduced PSG, wearable, strict zero-shot, and conditionally gated feature alignment | Paired transfer results and decision log | In progress; channel compatibility passed 128/128 on Aug 26 and the train-only feature gate passed 82/82 on Sep 6; transfer-model fitting and validation are overdue carryover; no Block 7 validation/test signal or model result yet |
+| 7 | Aug 24-Sep 6 | How large is the PSG-to-wearable device-shift problem? | Common six-channel PSG EEG, reduced PSG, wearable, strict zero-shot, and conditionally gated feature alignment | Paired transfer results and decision log | In progress; channel compatibility, train-feature, and validation-model phases passed; `P2-D` was strongest on validation, zero-shot F1 loss versus `P2-D` was supported, and alignment was skipped by the frozen gate; one-time descriptive test remains carryover |
 | 8 | Sep 7-Sep 20 | Is the approach robust to signal/channel variability? | Missing-channel tests, degradation tests, ablations, justified adaptation if needed | Robustness and ablation report | Not started; Block 7 transfer comparison must be completed before this work begins |
 | 9 | Sep 21-Oct 4 | Is external PSG comparison scientifically valid? | Audit one external PSG dataset and test reduced-channel generalization if appropriate | External generalization report or no-go | Not started |
 | 10 | Oct 5-Oct 18 | How should 30-second label uncertainty be handled? | Hard-label versus interval-aware temporal analysis | Label-uncertainty and localization report | Not started |
@@ -274,17 +274,27 @@ Additional evidence completed on 2026-08-31 and 2026-09-06:
 - stored 246 full feature arrays outside Git and retained their relative paths, sizes, and SHA-256 values;
 - independently rehashed and reopened all 246 artifacts and passed 15/15 membership, partition, schema, timing, parity, and hash-linkage checks; and
 - passed the feature-infrastructure gate while retaining transfer fitting and validation as overdue Block 7 carryover.
+- fixed the remaining validation execution definitions before accessing validation features, including common temporal support, zero-shot PSG scaling, pooled-MAD gate arithmetic, and threshold inheritance;
+- generated 82 train zero-shot arrays and 80 validation arrays outside Git, retaining 162 hashes and exact cross-modality timing parity;
+- fitted `P6-D`, `P2-D`, and `H2-D` on the same 180 positive and 2,563 background train candidates without convergence warnings;
+- selected validation thresholds 0.99, 0.99, and 0.96 respectively using the frozen event-level rule;
+- obtained primary validation F1/false alarms per hour of 0.1631/1.1107 for `P6-D`, 0.1887/0.3702 for `P2-D`, and 0.1123/1.4558 for `H2-D`;
+- obtained strict zero-shot `P2-H2-Z` validation F1 0.0685 and 0.6526 false alarms per hour using the unchanged `P2-D` model and threshold;
+- found a paired zero-shot F1 loss of 0.1202 versus direct `P2-D`, with 95% interval 0.0336 to 0.2001, while the false-alarm difference interval crossed zero;
+- opened the adaptation performance condition but closed the distribution condition because 11/80 dimensions exceeded the fixed 0.50 pooled-scale threshold, below the required 20%, and therefore skipped `P2-H2-A`;
+- independently reproduced all model probabilities, 297 threshold rows, 655 alarms, event summaries, paired bootstraps, feature-shift values, and gate arithmetic in 23/23 checks without raw EDF or test access; and
+- retained the one-time frozen descriptive test comparison as unfinished Block 7 carryover.
 
 ## 7. Next Work
 
 Before starting Block 8 robustness work:
 
-1. implement the fixed Block 7 direct and zero-shot train/validation comparisons using the validated feature schema;
-2. establish strict zero-shot PSG-to-wearable transfer on validation before applying the predeclared adaptation gate;
-3. run the one permitted train-only robust alignment only if both gate conditions open, and retain a negative result if it fails;
-4. freeze model hashes, thresholds, feature hashes, comparator roles, and the adaptation decision before any Block 7 test access;
+1. generate the four frozen Block 7 test feature paths and verify timing/schema parity without refitting a scaler or model;
+2. apply the locked `P6-D`, `P2-D`, `H2-D`, and `P2-H2-Z` models and thresholds together in one descriptive test opening;
+3. independently validate test membership, feature/model hashes, probability reproduction, alarm consolidation, event metrics, and paired contrasts;
+4. close Block 7 without changing any method because of the descriptive test result;
 5. retain the frozen SF-C and DE-B results as lower-complexity references, including their convergence and false-alarm limitations; and
-6. use the current test partition only for one frozen paired descriptive comparison, never for iterative direct-model selection; require a new lock or external cohort for later confirmatory direct-model claims.
+6. require a new locked or external cohort for later confirmatory direct-model claims.
 
 ## 8. Rules for the Rest of the Project
 

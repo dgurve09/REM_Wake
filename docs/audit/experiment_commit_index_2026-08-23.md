@@ -36,6 +36,8 @@ This index records the first Git commit containing each historical experiment fo
 | `2026-08-23_reference_doi_audit_v0.1` | `63a8008` | 2026-08-23 |
 | `2026-08-25_block7_channel_compatibility_v0.1` | `71ddc92` | 2026-08-26 |
 | `2026-09-06_block7_feature_generation_validation_v0.1` | `1d914ab` | 2026-09-06 |
+| `2026-09-06_block7_transfer_validation_v0.1` | `15dc9b4` | 2026-09-06 |
+| `2026-09-06_block7_zero_shot_hypothesis_analysis_v0.1` | `69391f2` | 2026-09-06 |
 
 The three 2026-08-23 audit experiment folders first appear in commit `63a8008`.
 
