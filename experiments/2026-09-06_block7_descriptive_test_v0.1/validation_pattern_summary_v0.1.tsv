@@ -1,0 +1,4 @@
+question	comparison	validation_result_frozen_before_test	test_f1_difference	test_f1_lower_95	test_f1_upper_95	test_far_difference	test_far_lower_95	test_far_upper_95
+H7.1_channel_reduction	P6-D_minus_P2-D	validation favored P2-D F1 and FAR	0.06196213425129088	0.0018647114018020936	0.11942540373295764	0.09553739786297927	-0.06514741508058729	0.2509942149418679
+H7.2_source_to_zero_shot	P2-D_minus_P2-H2-Z	validation showed a P2-D F1 advantage; FAR difference inconclusive	0.036190476190476176	-0.04339429012275974	0.1000687825533439	-0.06033940917661851	-0.3359676518107907	0.2141069510356042
+H7.2_zero_shot_to_direct_wearable	P2-H2-Z_minus_H2-D	validation showed lower zero-shot F1 but fewer false alarms	-0.042587064676616895	-0.08697853175892628	0.008485521826073518	-0.8447517284726588	-1.244110699664025	-0.5081497737066528

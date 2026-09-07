@@ -4,7 +4,7 @@ This repository investigates event-specific REM-to-Wake boundary detection from 
 
 ## Current Status
 
-As of 2026-09-06, Blocks 3-6 are complete and Block 7 is in progress.
+As of 2026-09-06, Blocks 3-7 are complete. Block 8 robustness work is scheduled to begin on 2026-09-07.
 
 - BOAS snapshot `1.1.1` is frozen at 128 paired recordings and 100 participant-table `pid` groups.
 - The conservative primary set contains 276 REM-to-Wake events across 72 groups; the expanded quality-sensitivity set contains 348 across 88 groups.
@@ -18,8 +18,12 @@ As of 2026-09-06, Blocks 3-6 are complete and Block 7 is in progress.
 - The Block 7 validation comparison is frozen. Reduced PSG (`P2-D`) produced the strongest validation result, with event F1 0.1887 and 0.3702 false alarms/hour; six-channel PSG reached F1 0.1631 and 1.1107 false alarms/hour; direct wearable reached F1 0.1123 and 1.4558 false alarms/hour.
 - Strict PSG-to-wearable zero-shot transfer reached validation F1 0.0685 and 0.6526 false alarms/hour. Its F1 loss versus direct reduced PSG was 0.1202 with paired 95% interval 0.0336 to 0.2001, while its false-alarm difference remained inconclusive.
 - The conditional alignment was not run: the performance condition opened, but only 11/80 feature dimensions exceeded the fixed distribution-shift threshold, below the required 20%.
+- The frozen descriptive test comparison was executed once on 26 recordings from 20 `pid` groups without refitting. Six-channel PSG produced the highest test F1 at 0.2048, followed by direct wearable at 0.1493, reduced PSG at 0.1429, and strict zero-shot transfer at 0.1067.
+- The validation ordering did not fully reproduce. `P6-D - P2-D` test F1 was +0.0620 with paired 95% interval +0.0019 to +0.1194, reversing the validation point direction. The direct reduced-PSG versus zero-shot F1 difference remained positive at +0.0362 but its interval crossed zero.
+- Zero-shot transfer again had lower F1 but substantially fewer false alarms than direct wearable: the paired test differences were -0.0426 F1 and -0.8448 false alarms/hour, with only the false-alarm interval excluding zero.
+- All 13/13 in-run checks and 13/13 independent output checks passed. The validator rehashed 108 external artifacts and reproduced 95,460 probabilities, event outputs, and paired contrasts twice.
 
-The Block 7 paired-transfer protocol was committed before the channel audit and before feature extraction or fitting. Train/validation modeling is complete and independently validated, but the one-time frozen descriptive test comparison remains pending, so Block 7 is not complete. The current test partition is no longer an independent confirmatory set; its Block 7 role is limited by the written entry conditions below.
+The Block 7 paired-transfer protocol was committed before the channel audit and before feature extraction or fitting. The fixed descriptive test now closes Block 7, but the test partition was already used in earlier blocks and does not provide independent confirmation. Its results cannot be used to revise the frozen models or thresholds. The observed validation-to-test reversal makes participant and channel robustness the next uncertainty rather than justifying immediate adaptation or a more complex classifier.
 
 ## Start Here
 
@@ -36,6 +40,8 @@ The Block 7 paired-transfer protocol was committed before the channel audit and 
 - [Block 7 transfer-validation result](experiments/2026-09-06_block7_transfer_validation_v0.1/README.md)
 - [Block 7 zero-shot hypothesis analysis](experiments/2026-09-06_block7_zero_shot_hypothesis_analysis_v0.1/README.md)
 - [Block 7 validation freeze and test entry](docs/evaluation/block7_validation_freeze_and_test_entry_v0.1.md)
+- [Block 7 descriptive test result](experiments/2026-09-06_block7_descriptive_test_v0.1/README.md)
+- [Block 7 transfer-gate decision](docs/evaluation/block7_transfer_gate_decision_2026-09-06.md)
 - [Current weekly record](docs/weekly/2026-08-31_to_2026-09-06.md)
 - [BOAS dataset manifest](docs/data/boas_dataset_manifest.md)
 - [Label/preprocessing gate](docs/feasibility/label_preprocessing_gate_closeout_2026-07-18.md)

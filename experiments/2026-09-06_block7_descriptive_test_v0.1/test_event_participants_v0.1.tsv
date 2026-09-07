@@ -1,0 +1,641 @@
+analysis_subset	comparator	model_role	partition	membership	tolerance_sec	threshold	pid	recordings	reference_events	predicted_events	true_positive	false_positive	false_negative	ignored_predictions	supported_hours	precision	recall	f1	false_alarms_per_hour
+all_test	H2-D	direct_two_channel_wearable	test	primary	15.0	0.96	12	1	9	28	5	23	4	0	8.666666666666666	0.17857142857142858	0.5555555555555556	0.2702702702702703	2.653846153846154
+all_test	H2-D	direct_two_channel_wearable	test	primary	15.0	0.96	18	1	2	0	0	0	2	0	8.041666666666666		0.0	0.0	0.0
+all_test	H2-D	direct_two_channel_wearable	test	primary	15.0	0.96	22	1	0	5	0	5	0	0	7.183333333333334	0.0		0.0	0.6960556844547564
+all_test	H2-D	direct_two_channel_wearable	test	primary	15.0	0.96	23	1	1	2	0	2	1	0	7.025	0.0	0.0	0.0	0.2846975088967971
+all_test	H2-D	direct_two_channel_wearable	test	primary	15.0	0.96	26	1	4	8	2	6	2	0	7.941666666666666	0.25	0.5	0.3333333333333333	0.7555089192025184
+all_test	H2-D	direct_two_channel_wearable	test	primary	15.0	0.96	28	1	0	19	0	19	0	0	8.608333333333333	0.0		0.0	2.2071636011616653
+all_test	H2-D	direct_two_channel_wearable	test	primary	15.0	0.96	30	1	4	6	1	5	3	0	7.4	0.16666666666666666	0.25	0.2	0.6756756756756757
+all_test	H2-D	direct_two_channel_wearable	test	primary	15.0	0.96	41	1	0	6	0	5	0	1	8.675	0.0		0.0	0.5763688760806917
+all_test	H2-D	direct_two_channel_wearable	test	primary	15.0	0.96	52	1	5	9	5	4	0	0	8.95	0.5555555555555556	1.0	0.7142857142857143	0.446927374301676
+all_test	H2-D	direct_two_channel_wearable	test	primary	15.0	0.96	56	1	0	21	0	21	0	0	8.058333333333334	0.0		0.0	2.605997931747673
+all_test	H2-D	direct_two_channel_wearable	test	primary	15.0	0.96	57	1	5	9	3	6	2	0	8.483333333333333	0.3333333333333333	0.6	0.42857142857142855	0.7072691552062869
+all_test	H2-D	direct_two_channel_wearable	test	primary	15.0	0.96	69	1	3	0	0	0	3	0	7.966666666666667		0.0	0.0	0.0
+all_test	H2-D	direct_two_channel_wearable	test	primary	15.0	0.96	74	1	1	5	0	5	1	0	7.258333333333334	0.0	0.0	0.0	0.6888633754305395
+all_test	H2-D	direct_two_channel_wearable	test	primary	15.0	0.96	77	2	2	84	2	78	0	4	17.424999999999997	0.025	1.0	0.04878048780487805	4.47632711621234
+all_test	H2-D	direct_two_channel_wearable	test	primary	15.0	0.96	83	3	8	24	4	20	4	0	21.55	0.16666666666666666	0.5	0.25	0.9280742459396751
+all_test	H2-D	direct_two_channel_wearable	test	primary	15.0	0.96	86	2	4	17	0	16	4	1	13.75	0.0	0.0	0.0	1.1636363636363636
+all_test	H2-D	direct_two_channel_wearable	test	primary	15.0	0.96	88	3	8	27	1	26	7	0	19.016666666666666	0.037037037037037035	0.125	0.05714285714285714	1.367221735319895
+all_test	H2-D	direct_two_channel_wearable	test	primary	15.0	0.96	90	1	0	6	0	6	0	0	8.733333333333333	0.0		0.0	0.6870229007633588
+all_test	H2-D	direct_two_channel_wearable	test	primary	15.0	0.96	102	1	2	4	2	2	0	0	7.266666666666667	0.5	1.0	0.6666666666666666	0.27522935779816515
+all_test	H2-D	direct_two_channel_wearable	test	primary	15.0	0.96	107	1	1	2	0	2	1	0	6.875	0.0	0.0	0.0	0.2909090909090909
+all_test	H2-D	direct_two_channel_wearable	test	primary	45.0	0.96	12	1	9	28	9	19	0	0	8.666666666666666	0.32142857142857145	1.0	0.4864864864864865	2.1923076923076925
+all_test	H2-D	direct_two_channel_wearable	test	primary	45.0	0.96	18	1	2	0	0	0	2	0	8.041666666666666		0.0	0.0	0.0
+all_test	H2-D	direct_two_channel_wearable	test	primary	45.0	0.96	22	1	0	5	0	5	0	0	7.183333333333334	0.0		0.0	0.6960556844547564
+all_test	H2-D	direct_two_channel_wearable	test	primary	45.0	0.96	23	1	1	2	0	2	1	0	7.025	0.0	0.0	0.0	0.2846975088967971
+all_test	H2-D	direct_two_channel_wearable	test	primary	45.0	0.96	26	1	4	8	2	6	2	0	7.941666666666666	0.25	0.5	0.3333333333333333	0.7555089192025184
+all_test	H2-D	direct_two_channel_wearable	test	primary	45.0	0.96	28	1	0	19	0	18	0	1	8.608333333333333	0.0		0.0	2.090997095837367
+all_test	H2-D	direct_two_channel_wearable	test	primary	45.0	0.96	30	1	4	6	2	3	2	1	7.4	0.4	0.5	0.4444444444444444	0.4054054054054054
+all_test	H2-D	direct_two_channel_wearable	test	primary	45.0	0.96	41	1	0	6	0	5	0	1	8.675	0.0		0.0	0.5763688760806917
+all_test	H2-D	direct_two_channel_wearable	test	primary	45.0	0.96	52	1	5	9	5	4	0	0	8.95	0.5555555555555556	1.0	0.7142857142857143	0.446927374301676
+all_test	H2-D	direct_two_channel_wearable	test	primary	45.0	0.96	56	1	0	21	0	21	0	0	8.058333333333334	0.0		0.0	2.605997931747673
+all_test	H2-D	direct_two_channel_wearable	test	primary	45.0	0.96	57	1	5	9	3	6	2	0	8.483333333333333	0.3333333333333333	0.6	0.42857142857142855	0.7072691552062869
+all_test	H2-D	direct_two_channel_wearable	test	primary	45.0	0.96	69	1	3	0	0	0	3	0	7.966666666666667		0.0	0.0	0.0
+all_test	H2-D	direct_two_channel_wearable	test	primary	45.0	0.96	74	1	1	5	0	5	1	0	7.258333333333334	0.0	0.0	0.0	0.6888633754305395
+all_test	H2-D	direct_two_channel_wearable	test	primary	45.0	0.96	77	2	2	84	2	78	0	4	17.424999999999997	0.025	1.0	0.04878048780487805	4.47632711621234
+all_test	H2-D	direct_two_channel_wearable	test	primary	45.0	0.96	83	3	8	24	5	19	3	0	21.55	0.20833333333333334	0.625	0.3125	0.8816705336426914
+all_test	H2-D	direct_two_channel_wearable	test	primary	45.0	0.96	86	2	4	17	2	13	2	2	13.75	0.13333333333333333	0.5	0.21052631578947367	0.9454545454545454
+all_test	H2-D	direct_two_channel_wearable	test	primary	45.0	0.96	88	3	8	27	1	26	7	0	19.016666666666666	0.037037037037037035	0.125	0.05714285714285714	1.367221735319895
+all_test	H2-D	direct_two_channel_wearable	test	primary	45.0	0.96	90	1	0	6	0	5	0	1	8.733333333333333	0.0		0.0	0.5725190839694657
+all_test	H2-D	direct_two_channel_wearable	test	primary	45.0	0.96	102	1	2	4	2	2	0	0	7.266666666666667	0.5	1.0	0.6666666666666666	0.27522935779816515
+all_test	H2-D	direct_two_channel_wearable	test	primary	45.0	0.96	107	1	1	2	0	2	1	0	6.875	0.0	0.0	0.0	0.2909090909090909
+all_test	H2-D	direct_two_channel_wearable	test	expanded	15.0	0.96	12	1	9	28	5	23	4	0	8.666666666666666	0.17857142857142858	0.5555555555555556	0.2702702702702703	2.653846153846154
+all_test	H2-D	direct_two_channel_wearable	test	expanded	15.0	0.96	18	1	2	0	0	0	2	0	8.041666666666666		0.0	0.0	0.0
+all_test	H2-D	direct_two_channel_wearable	test	expanded	15.0	0.96	22	1	0	5	0	5	0	0	7.183333333333334	0.0		0.0	0.6960556844547564
+all_test	H2-D	direct_two_channel_wearable	test	expanded	15.0	0.96	23	1	1	2	0	2	1	0	7.025	0.0	0.0	0.0	0.2846975088967971
+all_test	H2-D	direct_two_channel_wearable	test	expanded	15.0	0.96	26	1	4	8	2	6	2	0	7.941666666666666	0.25	0.5	0.3333333333333333	0.7555089192025184
+all_test	H2-D	direct_two_channel_wearable	test	expanded	15.0	0.96	28	1	1	19	0	19	1	0	8.608333333333333	0.0	0.0	0.0	2.2071636011616653
+all_test	H2-D	direct_two_channel_wearable	test	expanded	15.0	0.96	30	1	5	6	1	5	4	0	7.4	0.16666666666666666	0.2	0.18181818181818182	0.6756756756756757
+all_test	H2-D	direct_two_channel_wearable	test	expanded	15.0	0.96	41	1	2	6	1	5	1	0	8.675	0.16666666666666666	0.5	0.25	0.5763688760806917
+all_test	H2-D	direct_two_channel_wearable	test	expanded	15.0	0.96	52	1	5	9	5	4	0	0	8.95	0.5555555555555556	1.0	0.7142857142857143	0.446927374301676
+all_test	H2-D	direct_two_channel_wearable	test	expanded	15.0	0.96	56	1	0	21	0	21	0	0	8.058333333333334	0.0		0.0	2.605997931747673
+all_test	H2-D	direct_two_channel_wearable	test	expanded	15.0	0.96	57	1	5	9	3	6	2	0	8.483333333333333	0.3333333333333333	0.6	0.42857142857142855	0.7072691552062869
+all_test	H2-D	direct_two_channel_wearable	test	expanded	15.0	0.96	69	1	3	0	0	0	3	0	7.966666666666667		0.0	0.0	0.0
+all_test	H2-D	direct_two_channel_wearable	test	expanded	15.0	0.96	74	1	1	5	0	5	1	0	7.258333333333334	0.0	0.0	0.0	0.6888633754305395
+all_test	H2-D	direct_two_channel_wearable	test	expanded	15.0	0.96	77	2	6	84	6	78	0	0	17.424999999999997	0.07142857142857142	1.0	0.13333333333333333	4.47632711621234
+all_test	H2-D	direct_two_channel_wearable	test	expanded	15.0	0.96	83	3	8	24	4	20	4	0	21.55	0.16666666666666666	0.5	0.25	0.9280742459396751
+all_test	H2-D	direct_two_channel_wearable	test	expanded	15.0	0.96	86	2	6	17	1	16	5	0	13.75	0.058823529411764705	0.16666666666666666	0.08695652173913043	1.1636363636363636
+all_test	H2-D	direct_two_channel_wearable	test	expanded	15.0	0.96	88	3	8	27	1	26	7	0	19.016666666666666	0.037037037037037035	0.125	0.05714285714285714	1.367221735319895
+all_test	H2-D	direct_two_channel_wearable	test	expanded	15.0	0.96	90	1	1	6	0	6	1	0	8.733333333333333	0.0	0.0	0.0	0.6870229007633588
+all_test	H2-D	direct_two_channel_wearable	test	expanded	15.0	0.96	102	1	2	4	2	2	0	0	7.266666666666667	0.5	1.0	0.6666666666666666	0.27522935779816515
+all_test	H2-D	direct_two_channel_wearable	test	expanded	15.0	0.96	107	1	1	2	0	2	1	0	6.875	0.0	0.0	0.0	0.2909090909090909
+all_test	H2-D	direct_two_channel_wearable	test	expanded	45.0	0.96	12	1	9	28	9	19	0	0	8.666666666666666	0.32142857142857145	1.0	0.4864864864864865	2.1923076923076925
+all_test	H2-D	direct_two_channel_wearable	test	expanded	45.0	0.96	18	1	2	0	0	0	2	0	8.041666666666666		0.0	0.0	0.0
+all_test	H2-D	direct_two_channel_wearable	test	expanded	45.0	0.96	22	1	0	5	0	5	0	0	7.183333333333334	0.0		0.0	0.6960556844547564
+all_test	H2-D	direct_two_channel_wearable	test	expanded	45.0	0.96	23	1	1	2	0	2	1	0	7.025	0.0	0.0	0.0	0.2846975088967971
+all_test	H2-D	direct_two_channel_wearable	test	expanded	45.0	0.96	26	1	4	8	2	6	2	0	7.941666666666666	0.25	0.5	0.3333333333333333	0.7555089192025184
+all_test	H2-D	direct_two_channel_wearable	test	expanded	45.0	0.96	28	1	1	19	1	18	0	0	8.608333333333333	0.05263157894736842	1.0	0.1	2.090997095837367
+all_test	H2-D	direct_two_channel_wearable	test	expanded	45.0	0.96	30	1	5	6	3	3	2	0	7.4	0.5	0.6	0.5454545454545454	0.4054054054054054
+all_test	H2-D	direct_two_channel_wearable	test	expanded	45.0	0.96	41	1	2	6	1	5	1	0	8.675	0.16666666666666666	0.5	0.25	0.5763688760806917
+all_test	H2-D	direct_two_channel_wearable	test	expanded	45.0	0.96	52	1	5	9	5	4	0	0	8.95	0.5555555555555556	1.0	0.7142857142857143	0.446927374301676
+all_test	H2-D	direct_two_channel_wearable	test	expanded	45.0	0.96	56	1	0	21	0	21	0	0	8.058333333333334	0.0		0.0	2.605997931747673
+all_test	H2-D	direct_two_channel_wearable	test	expanded	45.0	0.96	57	1	5	9	3	6	2	0	8.483333333333333	0.3333333333333333	0.6	0.42857142857142855	0.7072691552062869
+all_test	H2-D	direct_two_channel_wearable	test	expanded	45.0	0.96	69	1	3	0	0	0	3	0	7.966666666666667		0.0	0.0	0.0
+all_test	H2-D	direct_two_channel_wearable	test	expanded	45.0	0.96	74	1	1	5	0	5	1	0	7.258333333333334	0.0	0.0	0.0	0.6888633754305395
+all_test	H2-D	direct_two_channel_wearable	test	expanded	45.0	0.96	77	2	6	84	6	78	0	0	17.424999999999997	0.07142857142857142	1.0	0.13333333333333333	4.47632711621234
+all_test	H2-D	direct_two_channel_wearable	test	expanded	45.0	0.96	83	3	8	24	5	19	3	0	21.55	0.20833333333333334	0.625	0.3125	0.8816705336426914
+all_test	H2-D	direct_two_channel_wearable	test	expanded	45.0	0.96	86	2	6	17	4	13	2	0	13.75	0.23529411764705882	0.6666666666666666	0.34782608695652173	0.9454545454545454
+all_test	H2-D	direct_two_channel_wearable	test	expanded	45.0	0.96	88	3	8	27	1	26	7	0	19.016666666666666	0.037037037037037035	0.125	0.05714285714285714	1.367221735319895
+all_test	H2-D	direct_two_channel_wearable	test	expanded	45.0	0.96	90	1	1	6	1	5	0	0	8.733333333333333	0.16666666666666666	1.0	0.2857142857142857	0.5725190839694657
+all_test	H2-D	direct_two_channel_wearable	test	expanded	45.0	0.96	102	1	2	4	2	2	0	0	7.266666666666667	0.5	1.0	0.6666666666666666	0.27522935779816515
+all_test	H2-D	direct_two_channel_wearable	test	expanded	45.0	0.96	107	1	1	2	0	2	1	0	6.875	0.0	0.0	0.0	0.2909090909090909
+all_test	P2-D	direct_two_channel_psg	test	primary	15.0	0.99	12	1	9	5	2	3	7	0	8.666666666666666	0.4	0.2222222222222222	0.2857142857142857	0.3461538461538462
+all_test	P2-D	direct_two_channel_psg	test	primary	15.0	0.99	18	1	2	0	0	0	2	0	8.041666666666666		0.0	0.0	0.0
+all_test	P2-D	direct_two_channel_psg	test	primary	15.0	0.99	22	1	0	3	0	3	0	0	7.183333333333334	0.0		0.0	0.4176334106728538
+all_test	P2-D	direct_two_channel_psg	test	primary	15.0	0.99	23	1	1	4	0	4	1	0	7.025	0.0	0.0	0.0	0.5693950177935942
+all_test	P2-D	direct_two_channel_psg	test	primary	15.0	0.99	26	1	4	1	0	1	4	0	7.941666666666666	0.0	0.0	0.0	0.12591815320041974
+all_test	P2-D	direct_two_channel_psg	test	primary	15.0	0.99	28	1	0	2	0	2	0	0	8.608333333333333	0.0		0.0	0.23233301064859635
+all_test	P2-D	direct_two_channel_psg	test	primary	15.0	0.99	30	1	4	1	0	1	4	0	7.4	0.0	0.0	0.0	0.13513513513513511
+all_test	P2-D	direct_two_channel_psg	test	primary	15.0	0.99	41	1	0	2	0	1	0	1	8.675	0.0		0.0	0.11527377521613832
+all_test	P2-D	direct_two_channel_psg	test	primary	15.0	0.99	52	1	5	20	3	17	2	0	8.95	0.15	0.6	0.24	1.8994413407821231
+all_test	P2-D	direct_two_channel_psg	test	primary	15.0	0.99	56	1	0	2	0	2	0	0	8.058333333333334	0.0		0.0	0.2481902792140641
+all_test	P2-D	direct_two_channel_psg	test	primary	15.0	0.99	57	1	5	7	2	5	3	0	8.483333333333333	0.2857142857142857	0.4	0.3333333333333333	0.5893909626719057
+all_test	P2-D	direct_two_channel_psg	test	primary	15.0	0.99	69	1	3	0	0	0	3	0	7.966666666666667		0.0	0.0	0.0
+all_test	P2-D	direct_two_channel_psg	test	primary	15.0	0.99	74	1	1	0	0	0	1	0	7.258333333333334		0.0	0.0	0.0
+all_test	P2-D	direct_two_channel_psg	test	primary	15.0	0.99	77	2	2	10	1	5	1	4	17.424999999999997	0.16666666666666666	0.5	0.25	0.2869440459110474
+all_test	P2-D	direct_two_channel_psg	test	primary	15.0	0.99	83	3	8	7	1	6	7	0	21.55	0.14285714285714285	0.125	0.13333333333333333	0.27842227378190254
+all_test	P2-D	direct_two_channel_psg	test	primary	15.0	0.99	86	2	4	3	0	2	4	1	13.75	0.0	0.0	0.0	0.14545454545454545
+all_test	P2-D	direct_two_channel_psg	test	primary	15.0	0.99	88	3	8	12	0	12	8	0	19.016666666666666	0.0	0.0	0.0	0.63102541630149
+all_test	P2-D	direct_two_channel_psg	test	primary	15.0	0.99	90	1	0	6	0	6	0	0	8.733333333333333	0.0		0.0	0.6870229007633588
+all_test	P2-D	direct_two_channel_psg	test	primary	15.0	0.99	102	1	2	2	1	1	1	0	7.266666666666667	0.5	0.5	0.5	0.13761467889908258
+all_test	P2-D	direct_two_channel_psg	test	primary	15.0	0.99	107	1	1	0	0	0	1	0	6.875		0.0	0.0	0.0
+all_test	P2-D	direct_two_channel_psg	test	primary	45.0	0.99	12	1	9	5	4	1	5	0	8.666666666666666	0.8	0.4444444444444444	0.5714285714285714	0.11538461538461539
+all_test	P2-D	direct_two_channel_psg	test	primary	45.0	0.99	18	1	2	0	0	0	2	0	8.041666666666666		0.0	0.0	0.0
+all_test	P2-D	direct_two_channel_psg	test	primary	45.0	0.99	22	1	0	3	0	3	0	0	7.183333333333334	0.0		0.0	0.4176334106728538
+all_test	P2-D	direct_two_channel_psg	test	primary	45.0	0.99	23	1	1	4	0	4	1	0	7.025	0.0	0.0	0.0	0.5693950177935942
+all_test	P2-D	direct_two_channel_psg	test	primary	45.0	0.99	26	1	4	1	0	1	4	0	7.941666666666666	0.0	0.0	0.0	0.12591815320041974
+all_test	P2-D	direct_two_channel_psg	test	primary	45.0	0.99	28	1	0	2	0	1	0	1	8.608333333333333	0.0		0.0	0.11616650532429817
+all_test	P2-D	direct_two_channel_psg	test	primary	45.0	0.99	30	1	4	1	0	0	4	1	7.4		0.0	0.0	0.0
+all_test	P2-D	direct_two_channel_psg	test	primary	45.0	0.99	41	1	0	2	0	1	0	1	8.675	0.0		0.0	0.11527377521613832
+all_test	P2-D	direct_two_channel_psg	test	primary	45.0	0.99	52	1	5	20	3	17	2	0	8.95	0.15	0.6	0.24	1.8994413407821231
+all_test	P2-D	direct_two_channel_psg	test	primary	45.0	0.99	56	1	0	2	0	2	0	0	8.058333333333334	0.0		0.0	0.2481902792140641
+all_test	P2-D	direct_two_channel_psg	test	primary	45.0	0.99	57	1	5	7	2	5	3	0	8.483333333333333	0.2857142857142857	0.4	0.3333333333333333	0.5893909626719057
+all_test	P2-D	direct_two_channel_psg	test	primary	45.0	0.99	69	1	3	0	0	0	3	0	7.966666666666667		0.0	0.0	0.0
+all_test	P2-D	direct_two_channel_psg	test	primary	45.0	0.99	74	1	1	0	0	0	1	0	7.258333333333334		0.0	0.0	0.0
+all_test	P2-D	direct_two_channel_psg	test	primary	45.0	0.99	77	2	2	10	2	4	0	4	17.424999999999997	0.3333333333333333	1.0	0.5	0.2295552367288379
+all_test	P2-D	direct_two_channel_psg	test	primary	45.0	0.99	83	3	8	7	1	6	7	0	21.55	0.14285714285714285	0.125	0.13333333333333333	0.27842227378190254
+all_test	P2-D	direct_two_channel_psg	test	primary	45.0	0.99	86	2	4	3	2	0	2	1	13.75	1.0	0.5	0.6666666666666666	0.0
+all_test	P2-D	direct_two_channel_psg	test	primary	45.0	0.99	88	3	8	12	0	12	8	0	19.016666666666666	0.0	0.0	0.0	0.63102541630149
+all_test	P2-D	direct_two_channel_psg	test	primary	45.0	0.99	90	1	0	6	0	5	0	1	8.733333333333333	0.0		0.0	0.5725190839694657
+all_test	P2-D	direct_two_channel_psg	test	primary	45.0	0.99	102	1	2	2	1	1	1	0	7.266666666666667	0.5	0.5	0.5	0.13761467889908258
+all_test	P2-D	direct_two_channel_psg	test	primary	45.0	0.99	107	1	1	0	0	0	1	0	6.875		0.0	0.0	0.0
+all_test	P2-D	direct_two_channel_psg	test	expanded	15.0	0.99	12	1	9	5	2	3	7	0	8.666666666666666	0.4	0.2222222222222222	0.2857142857142857	0.3461538461538462
+all_test	P2-D	direct_two_channel_psg	test	expanded	15.0	0.99	18	1	2	0	0	0	2	0	8.041666666666666		0.0	0.0	0.0
+all_test	P2-D	direct_two_channel_psg	test	expanded	15.0	0.99	22	1	0	3	0	3	0	0	7.183333333333334	0.0		0.0	0.4176334106728538
+all_test	P2-D	direct_two_channel_psg	test	expanded	15.0	0.99	23	1	1	4	0	4	1	0	7.025	0.0	0.0	0.0	0.5693950177935942
+all_test	P2-D	direct_two_channel_psg	test	expanded	15.0	0.99	26	1	4	1	0	1	4	0	7.941666666666666	0.0	0.0	0.0	0.12591815320041974
+all_test	P2-D	direct_two_channel_psg	test	expanded	15.0	0.99	28	1	1	2	0	2	1	0	8.608333333333333	0.0	0.0	0.0	0.23233301064859635
+all_test	P2-D	direct_two_channel_psg	test	expanded	15.0	0.99	30	1	5	1	0	1	5	0	7.4	0.0	0.0	0.0	0.13513513513513511
+all_test	P2-D	direct_two_channel_psg	test	expanded	15.0	0.99	41	1	2	2	1	1	1	0	8.675	0.5	0.5	0.5	0.11527377521613832
+all_test	P2-D	direct_two_channel_psg	test	expanded	15.0	0.99	52	1	5	20	3	17	2	0	8.95	0.15	0.6	0.24	1.8994413407821231
+all_test	P2-D	direct_two_channel_psg	test	expanded	15.0	0.99	56	1	0	2	0	2	0	0	8.058333333333334	0.0		0.0	0.2481902792140641
+all_test	P2-D	direct_two_channel_psg	test	expanded	15.0	0.99	57	1	5	7	2	5	3	0	8.483333333333333	0.2857142857142857	0.4	0.3333333333333333	0.5893909626719057
+all_test	P2-D	direct_two_channel_psg	test	expanded	15.0	0.99	69	1	3	0	0	0	3	0	7.966666666666667		0.0	0.0	0.0
+all_test	P2-D	direct_two_channel_psg	test	expanded	15.0	0.99	74	1	1	0	0	0	1	0	7.258333333333334		0.0	0.0	0.0
+all_test	P2-D	direct_two_channel_psg	test	expanded	15.0	0.99	77	2	6	10	3	5	3	2	17.424999999999997	0.375	0.5	0.42857142857142855	0.2869440459110474
+all_test	P2-D	direct_two_channel_psg	test	expanded	15.0	0.99	83	3	8	7	1	6	7	0	21.55	0.14285714285714285	0.125	0.13333333333333333	0.27842227378190254
+all_test	P2-D	direct_two_channel_psg	test	expanded	15.0	0.99	86	2	6	3	1	2	5	0	13.75	0.3333333333333333	0.16666666666666666	0.2222222222222222	0.14545454545454545
+all_test	P2-D	direct_two_channel_psg	test	expanded	15.0	0.99	88	3	8	12	0	12	8	0	19.016666666666666	0.0	0.0	0.0	0.63102541630149
+all_test	P2-D	direct_two_channel_psg	test	expanded	15.0	0.99	90	1	1	6	0	6	1	0	8.733333333333333	0.0	0.0	0.0	0.6870229007633588
+all_test	P2-D	direct_two_channel_psg	test	expanded	15.0	0.99	102	1	2	2	1	1	1	0	7.266666666666667	0.5	0.5	0.5	0.13761467889908258
+all_test	P2-D	direct_two_channel_psg	test	expanded	15.0	0.99	107	1	1	0	0	0	1	0	6.875		0.0	0.0	0.0
+all_test	P2-D	direct_two_channel_psg	test	expanded	45.0	0.99	12	1	9	5	4	1	5	0	8.666666666666666	0.8	0.4444444444444444	0.5714285714285714	0.11538461538461539
+all_test	P2-D	direct_two_channel_psg	test	expanded	45.0	0.99	18	1	2	0	0	0	2	0	8.041666666666666		0.0	0.0	0.0
+all_test	P2-D	direct_two_channel_psg	test	expanded	45.0	0.99	22	1	0	3	0	3	0	0	7.183333333333334	0.0		0.0	0.4176334106728538
+all_test	P2-D	direct_two_channel_psg	test	expanded	45.0	0.99	23	1	1	4	0	4	1	0	7.025	0.0	0.0	0.0	0.5693950177935942
+all_test	P2-D	direct_two_channel_psg	test	expanded	45.0	0.99	26	1	4	1	0	1	4	0	7.941666666666666	0.0	0.0	0.0	0.12591815320041974
+all_test	P2-D	direct_two_channel_psg	test	expanded	45.0	0.99	28	1	1	2	1	1	0	0	8.608333333333333	0.5	1.0	0.6666666666666666	0.11616650532429817
+all_test	P2-D	direct_two_channel_psg	test	expanded	45.0	0.99	30	1	5	1	1	0	4	0	7.4	1.0	0.2	0.3333333333333333	0.0
+all_test	P2-D	direct_two_channel_psg	test	expanded	45.0	0.99	41	1	2	2	1	1	1	0	8.675	0.5	0.5	0.5	0.11527377521613832
+all_test	P2-D	direct_two_channel_psg	test	expanded	45.0	0.99	52	1	5	20	3	17	2	0	8.95	0.15	0.6	0.24	1.8994413407821231
+all_test	P2-D	direct_two_channel_psg	test	expanded	45.0	0.99	56	1	0	2	0	2	0	0	8.058333333333334	0.0		0.0	0.2481902792140641
+all_test	P2-D	direct_two_channel_psg	test	expanded	45.0	0.99	57	1	5	7	2	5	3	0	8.483333333333333	0.2857142857142857	0.4	0.3333333333333333	0.5893909626719057
+all_test	P2-D	direct_two_channel_psg	test	expanded	45.0	0.99	69	1	3	0	0	0	3	0	7.966666666666667		0.0	0.0	0.0
+all_test	P2-D	direct_two_channel_psg	test	expanded	45.0	0.99	74	1	1	0	0	0	1	0	7.258333333333334		0.0	0.0	0.0
+all_test	P2-D	direct_two_channel_psg	test	expanded	45.0	0.99	77	2	6	10	4	4	2	2	17.424999999999997	0.5	0.6666666666666666	0.5714285714285714	0.2295552367288379
+all_test	P2-D	direct_two_channel_psg	test	expanded	45.0	0.99	83	3	8	7	1	6	7	0	21.55	0.14285714285714285	0.125	0.13333333333333333	0.27842227378190254
+all_test	P2-D	direct_two_channel_psg	test	expanded	45.0	0.99	86	2	6	3	3	0	3	0	13.75	1.0	0.5	0.6666666666666666	0.0
+all_test	P2-D	direct_two_channel_psg	test	expanded	45.0	0.99	88	3	8	12	0	12	8	0	19.016666666666666	0.0	0.0	0.0	0.63102541630149
+all_test	P2-D	direct_two_channel_psg	test	expanded	45.0	0.99	90	1	1	6	1	5	0	0	8.733333333333333	0.16666666666666666	1.0	0.2857142857142857	0.5725190839694657
+all_test	P2-D	direct_two_channel_psg	test	expanded	45.0	0.99	102	1	2	2	1	1	1	0	7.266666666666667	0.5	0.5	0.5	0.13761467889908258
+all_test	P2-D	direct_two_channel_psg	test	expanded	45.0	0.99	107	1	1	0	0	0	1	0	6.875		0.0	0.0	0.0
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	15.0	0.99	12	1	9	9	2	7	7	0	8.666666666666666	0.2222222222222222	0.2222222222222222	0.2222222222222222	0.8076923076923077
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	15.0	0.99	18	1	2	0	0	0	2	0	8.041666666666666		0.0	0.0	0.0
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	15.0	0.99	22	1	0	0	0	0	0	0	7.183333333333334				0.0
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	15.0	0.99	23	1	1	2	0	2	1	0	7.025	0.0	0.0	0.0	0.2846975088967971
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	15.0	0.99	26	1	4	0	0	0	4	0	7.941666666666666		0.0	0.0	0.0
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	15.0	0.99	28	1	0	4	0	4	0	0	8.608333333333333	0.0		0.0	0.4646660212971927
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	15.0	0.99	30	1	4	1	0	1	4	0	7.4	0.0	0.0	0.0	0.13513513513513511
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	15.0	0.99	41	1	0	2	0	1	0	1	8.675	0.0		0.0	0.11527377521613832
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	15.0	0.99	52	1	5	4	2	2	3	0	8.95	0.5	0.4	0.4444444444444444	0.223463687150838
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	15.0	0.99	56	1	0	10	0	10	0	0	8.058333333333334	0.0		0.0	1.2409513960703205
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	15.0	0.99	57	1	5	5	1	4	4	0	8.483333333333333	0.2	0.2	0.2	0.47151277013752463
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	15.0	0.99	69	1	3	0	0	0	3	0	7.966666666666667		0.0	0.0	0.0
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	15.0	0.99	74	1	1	0	0	0	1	0	7.258333333333334		0.0	0.0	0.0
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	15.0	0.99	77	2	2	31	0	28	2	3	17.424999999999997	0.0	0.0	0.0	1.6068866571018654
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	15.0	0.99	83	3	8	6	1	5	7	0	21.55	0.16666666666666666	0.125	0.14285714285714285	0.23201856148491878
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	15.0	0.99	86	2	4	8	0	7	4	1	13.75	0.0	0.0	0.0	0.509090909090909
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	15.0	0.99	88	3	8	10	0	10	8	0	19.016666666666666	0.0	0.0	0.0	0.5258545135845749
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	15.0	0.99	90	1	0	2	0	2	0	0	8.733333333333333	0.0		0.0	0.22900763358778628
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	15.0	0.99	102	1	2	2	2	0	0	0	7.266666666666667	1.0	1.0	1.0	0.0
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	15.0	0.99	107	1	1	0	0	0	1	0	6.875		0.0	0.0	0.0
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	45.0	0.99	12	1	9	9	4	5	5	0	8.666666666666666	0.4444444444444444	0.4444444444444444	0.4444444444444444	0.576923076923077
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	45.0	0.99	18	1	2	0	0	0	2	0	8.041666666666666		0.0	0.0	0.0
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	45.0	0.99	22	1	0	0	0	0	0	0	7.183333333333334				0.0
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	45.0	0.99	23	1	1	2	0	2	1	0	7.025	0.0	0.0	0.0	0.2846975088967971
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	45.0	0.99	26	1	4	0	0	0	4	0	7.941666666666666		0.0	0.0	0.0
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	45.0	0.99	28	1	0	4	0	3	0	1	8.608333333333333	0.0		0.0	0.3484995159728945
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	45.0	0.99	30	1	4	1	1	0	3	0	7.4	1.0	0.25	0.4	0.0
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	45.0	0.99	41	1	0	2	0	1	0	1	8.675	0.0		0.0	0.11527377521613832
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	45.0	0.99	52	1	5	4	2	2	3	0	8.95	0.5	0.4	0.4444444444444444	0.223463687150838
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	45.0	0.99	56	1	0	10	0	10	0	0	8.058333333333334	0.0		0.0	1.2409513960703205
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	45.0	0.99	57	1	5	5	1	4	4	0	8.483333333333333	0.2	0.2	0.2	0.47151277013752463
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	45.0	0.99	69	1	3	0	0	0	3	0	7.966666666666667		0.0	0.0	0.0
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	45.0	0.99	74	1	1	0	0	0	1	0	7.258333333333334		0.0	0.0	0.0
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	45.0	0.99	77	2	2	31	0	28	2	3	17.424999999999997	0.0	0.0	0.0	1.6068866571018654
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	45.0	0.99	83	3	8	6	1	5	7	0	21.55	0.16666666666666666	0.125	0.14285714285714285	0.23201856148491878
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	45.0	0.99	86	2	4	8	2	5	2	1	13.75	0.2857142857142857	0.5	0.36363636363636365	0.36363636363636365
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	45.0	0.99	88	3	8	10	0	10	8	0	19.016666666666666	0.0	0.0	0.0	0.5258545135845749
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	45.0	0.99	90	1	0	2	0	1	0	1	8.733333333333333	0.0		0.0	0.11450381679389314
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	45.0	0.99	102	1	2	2	2	0	0	0	7.266666666666667	1.0	1.0	1.0	0.0
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	45.0	0.99	107	1	1	0	0	0	1	0	6.875		0.0	0.0	0.0
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	15.0	0.99	12	1	9	9	2	7	7	0	8.666666666666666	0.2222222222222222	0.2222222222222222	0.2222222222222222	0.8076923076923077
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	15.0	0.99	18	1	2	0	0	0	2	0	8.041666666666666		0.0	0.0	0.0
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	15.0	0.99	22	1	0	0	0	0	0	0	7.183333333333334				0.0
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	15.0	0.99	23	1	1	2	0	2	1	0	7.025	0.0	0.0	0.0	0.2846975088967971
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	15.0	0.99	26	1	4	0	0	0	4	0	7.941666666666666		0.0	0.0	0.0
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	15.0	0.99	28	1	1	4	0	4	1	0	8.608333333333333	0.0	0.0	0.0	0.4646660212971927
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	15.0	0.99	30	1	5	1	0	1	5	0	7.4	0.0	0.0	0.0	0.13513513513513511
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	15.0	0.99	41	1	2	2	1	1	1	0	8.675	0.5	0.5	0.5	0.11527377521613832
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	15.0	0.99	52	1	5	4	2	2	3	0	8.95	0.5	0.4	0.4444444444444444	0.223463687150838
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	15.0	0.99	56	1	0	10	0	10	0	0	8.058333333333334	0.0		0.0	1.2409513960703205
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	15.0	0.99	57	1	5	5	1	4	4	0	8.483333333333333	0.2	0.2	0.2	0.47151277013752463
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	15.0	0.99	69	1	3	0	0	0	3	0	7.966666666666667		0.0	0.0	0.0
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	15.0	0.99	74	1	1	0	0	0	1	0	7.258333333333334		0.0	0.0	0.0
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	15.0	0.99	77	2	6	31	3	28	3	0	17.424999999999997	0.0967741935483871	0.5	0.16216216216216217	1.6068866571018654
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	15.0	0.99	83	3	8	6	1	5	7	0	21.55	0.16666666666666666	0.125	0.14285714285714285	0.23201856148491878
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	15.0	0.99	86	2	6	8	1	7	5	0	13.75	0.125	0.16666666666666666	0.14285714285714285	0.509090909090909
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	15.0	0.99	88	3	8	10	0	10	8	0	19.016666666666666	0.0	0.0	0.0	0.5258545135845749
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	15.0	0.99	90	1	1	2	0	2	1	0	8.733333333333333	0.0	0.0	0.0	0.22900763358778628
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	15.0	0.99	102	1	2	2	2	0	0	0	7.266666666666667	1.0	1.0	1.0	0.0
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	15.0	0.99	107	1	1	0	0	0	1	0	6.875		0.0	0.0	0.0
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	45.0	0.99	12	1	9	9	4	5	5	0	8.666666666666666	0.4444444444444444	0.4444444444444444	0.4444444444444444	0.576923076923077
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	45.0	0.99	18	1	2	0	0	0	2	0	8.041666666666666		0.0	0.0	0.0
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	45.0	0.99	22	1	0	0	0	0	0	0	7.183333333333334				0.0
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	45.0	0.99	23	1	1	2	0	2	1	0	7.025	0.0	0.0	0.0	0.2846975088967971
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	45.0	0.99	26	1	4	0	0	0	4	0	7.941666666666666		0.0	0.0	0.0
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	45.0	0.99	28	1	1	4	1	3	0	0	8.608333333333333	0.25	1.0	0.4	0.3484995159728945
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	45.0	0.99	30	1	5	1	1	0	4	0	7.4	1.0	0.2	0.3333333333333333	0.0
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	45.0	0.99	41	1	2	2	1	1	1	0	8.675	0.5	0.5	0.5	0.11527377521613832
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	45.0	0.99	52	1	5	4	2	2	3	0	8.95	0.5	0.4	0.4444444444444444	0.223463687150838
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	45.0	0.99	56	1	0	10	0	10	0	0	8.058333333333334	0.0		0.0	1.2409513960703205
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	45.0	0.99	57	1	5	5	1	4	4	0	8.483333333333333	0.2	0.2	0.2	0.47151277013752463
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	45.0	0.99	69	1	3	0	0	0	3	0	7.966666666666667		0.0	0.0	0.0
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	45.0	0.99	74	1	1	0	0	0	1	0	7.258333333333334		0.0	0.0	0.0
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	45.0	0.99	77	2	6	31	3	28	3	0	17.424999999999997	0.0967741935483871	0.5	0.16216216216216217	1.6068866571018654
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	45.0	0.99	83	3	8	6	1	5	7	0	21.55	0.16666666666666666	0.125	0.14285714285714285	0.23201856148491878
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	45.0	0.99	86	2	6	8	3	5	3	0	13.75	0.375	0.5	0.42857142857142855	0.36363636363636365
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	45.0	0.99	88	3	8	10	0	10	8	0	19.016666666666666	0.0	0.0	0.0	0.5258545135845749
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	45.0	0.99	90	1	1	2	1	1	0	0	8.733333333333333	0.5	1.0	0.6666666666666666	0.11450381679389314
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	45.0	0.99	102	1	2	2	2	0	0	0	7.266666666666667	1.0	1.0	1.0	0.0
+all_test	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	45.0	0.99	107	1	1	0	0	0	1	0	6.875		0.0	0.0	0.0
+all_test	P6-D	direct_six_channel_psg	test	primary	15.0	0.99	12	1	9	8	2	6	7	0	8.666666666666666	0.25	0.2222222222222222	0.23529411764705882	0.6923076923076924
+all_test	P6-D	direct_six_channel_psg	test	primary	15.0	0.99	18	1	2	1	0	1	2	0	8.041666666666666	0.0	0.0	0.0	0.12435233160621763
+all_test	P6-D	direct_six_channel_psg	test	primary	15.0	0.99	22	1	0	5	0	5	0	0	7.183333333333334	0.0		0.0	0.6960556844547564
+all_test	P6-D	direct_six_channel_psg	test	primary	15.0	0.99	23	1	1	4	0	4	1	0	7.025	0.0	0.0	0.0	0.5693950177935942
+all_test	P6-D	direct_six_channel_psg	test	primary	15.0	0.99	26	1	4	1	0	1	4	0	7.941666666666666	0.0	0.0	0.0	0.12591815320041974
+all_test	P6-D	direct_six_channel_psg	test	primary	15.0	0.99	28	1	0	3	0	3	0	0	8.608333333333333	0.0		0.0	0.3484995159728945
+all_test	P6-D	direct_six_channel_psg	test	primary	15.0	0.99	30	1	4	4	0	3	4	1	7.4	0.0	0.0	0.0	0.4054054054054054
+all_test	P6-D	direct_six_channel_psg	test	primary	15.0	0.99	41	1	0	3	0	1	0	2	8.675	0.0		0.0	0.11527377521613832
+all_test	P6-D	direct_six_channel_psg	test	primary	15.0	0.99	52	1	5	11	3	8	2	0	8.95	0.2727272727272727	0.6	0.375	0.893854748603352
+all_test	P6-D	direct_six_channel_psg	test	primary	15.0	0.99	56	1	0	9	0	9	0	0	8.058333333333334	0.0		0.0	1.1168562564632885
+all_test	P6-D	direct_six_channel_psg	test	primary	15.0	0.99	57	1	5	16	3	13	2	0	8.483333333333333	0.1875	0.6	0.2857142857142857	1.532416502946955
+all_test	P6-D	direct_six_channel_psg	test	primary	15.0	0.99	69	1	3	0	0	0	3	0	7.966666666666667		0.0	0.0	0.0
+all_test	P6-D	direct_six_channel_psg	test	primary	15.0	0.99	74	1	1	0	0	0	1	0	7.258333333333334		0.0	0.0	0.0
+all_test	P6-D	direct_six_channel_psg	test	primary	15.0	0.99	77	2	2	11	2	6	0	3	17.424999999999997	0.25	1.0	0.4	0.3443328550932569
+all_test	P6-D	direct_six_channel_psg	test	primary	15.0	0.99	83	3	8	14	4	10	4	0	21.55	0.2857142857142857	0.5	0.36363636363636365	0.46403712296983757
+all_test	P6-D	direct_six_channel_psg	test	primary	15.0	0.99	86	2	4	4	0	4	4	0	13.75	0.0	0.0	0.0	0.2909090909090909
+all_test	P6-D	direct_six_channel_psg	test	primary	15.0	0.99	88	3	8	9	1	8	7	0	19.016666666666666	0.1111111111111111	0.125	0.11764705882352941	0.42068361086766
+all_test	P6-D	direct_six_channel_psg	test	primary	15.0	0.99	90	1	0	6	0	6	0	0	8.733333333333333	0.0		0.0	0.6870229007633588
+all_test	P6-D	direct_six_channel_psg	test	primary	15.0	0.99	102	1	2	4	2	2	0	0	7.266666666666667	0.5	1.0	0.6666666666666666	0.27522935779816515
+all_test	P6-D	direct_six_channel_psg	test	primary	15.0	0.99	107	1	1	0	0	0	1	0	6.875		0.0	0.0	0.0
+all_test	P6-D	direct_six_channel_psg	test	primary	45.0	0.99	12	1	9	8	4	4	5	0	8.666666666666666	0.5	0.4444444444444444	0.47058823529411764	0.46153846153846156
+all_test	P6-D	direct_six_channel_psg	test	primary	45.0	0.99	18	1	2	1	1	0	1	0	8.041666666666666	1.0	0.5	0.6666666666666666	0.0
+all_test	P6-D	direct_six_channel_psg	test	primary	45.0	0.99	22	1	0	5	0	5	0	0	7.183333333333334	0.0		0.0	0.6960556844547564
+all_test	P6-D	direct_six_channel_psg	test	primary	45.0	0.99	23	1	1	4	0	4	1	0	7.025	0.0	0.0	0.0	0.5693950177935942
+all_test	P6-D	direct_six_channel_psg	test	primary	45.0	0.99	26	1	4	1	0	1	4	0	7.941666666666666	0.0	0.0	0.0	0.12591815320041974
+all_test	P6-D	direct_six_channel_psg	test	primary	45.0	0.99	28	1	0	3	0	2	0	1	8.608333333333333	0.0		0.0	0.23233301064859635
+all_test	P6-D	direct_six_channel_psg	test	primary	45.0	0.99	30	1	4	4	1	2	3	1	7.4	0.3333333333333333	0.25	0.2857142857142857	0.27027027027027023
+all_test	P6-D	direct_six_channel_psg	test	primary	45.0	0.99	41	1	0	3	0	1	0	2	8.675	0.0		0.0	0.11527377521613832
+all_test	P6-D	direct_six_channel_psg	test	primary	45.0	0.99	52	1	5	11	3	8	2	0	8.95	0.2727272727272727	0.6	0.375	0.893854748603352
+all_test	P6-D	direct_six_channel_psg	test	primary	45.0	0.99	56	1	0	9	0	9	0	0	8.058333333333334	0.0		0.0	1.1168562564632885
+all_test	P6-D	direct_six_channel_psg	test	primary	45.0	0.99	57	1	5	16	3	13	2	0	8.483333333333333	0.1875	0.6	0.2857142857142857	1.532416502946955
+all_test	P6-D	direct_six_channel_psg	test	primary	45.0	0.99	69	1	3	0	0	0	3	0	7.966666666666667		0.0	0.0	0.0
+all_test	P6-D	direct_six_channel_psg	test	primary	45.0	0.99	74	1	1	0	0	0	1	0	7.258333333333334		0.0	0.0	0.0
+all_test	P6-D	direct_six_channel_psg	test	primary	45.0	0.99	77	2	2	11	2	5	0	4	17.424999999999997	0.2857142857142857	1.0	0.4444444444444444	0.2869440459110474
+all_test	P6-D	direct_six_channel_psg	test	primary	45.0	0.99	83	3	8	14	4	10	4	0	21.55	0.2857142857142857	0.5	0.36363636363636365	0.46403712296983757
+all_test	P6-D	direct_six_channel_psg	test	primary	45.0	0.99	86	2	4	4	2	2	2	0	13.75	0.5	0.5	0.5	0.14545454545454545
+all_test	P6-D	direct_six_channel_psg	test	primary	45.0	0.99	88	3	8	9	1	8	7	0	19.016666666666666	0.1111111111111111	0.125	0.11764705882352941	0.42068361086766
+all_test	P6-D	direct_six_channel_psg	test	primary	45.0	0.99	90	1	0	6	0	5	0	1	8.733333333333333	0.0		0.0	0.5725190839694657
+all_test	P6-D	direct_six_channel_psg	test	primary	45.0	0.99	102	1	2	4	2	2	0	0	7.266666666666667	0.5	1.0	0.6666666666666666	0.27522935779816515
+all_test	P6-D	direct_six_channel_psg	test	primary	45.0	0.99	107	1	1	0	0	0	1	0	6.875		0.0	0.0	0.0
+all_test	P6-D	direct_six_channel_psg	test	expanded	15.0	0.99	12	1	9	8	2	6	7	0	8.666666666666666	0.25	0.2222222222222222	0.23529411764705882	0.6923076923076924
+all_test	P6-D	direct_six_channel_psg	test	expanded	15.0	0.99	18	1	2	1	0	1	2	0	8.041666666666666	0.0	0.0	0.0	0.12435233160621763
+all_test	P6-D	direct_six_channel_psg	test	expanded	15.0	0.99	22	1	0	5	0	5	0	0	7.183333333333334	0.0		0.0	0.6960556844547564
+all_test	P6-D	direct_six_channel_psg	test	expanded	15.0	0.99	23	1	1	4	0	4	1	0	7.025	0.0	0.0	0.0	0.5693950177935942
+all_test	P6-D	direct_six_channel_psg	test	expanded	15.0	0.99	26	1	4	1	0	1	4	0	7.941666666666666	0.0	0.0	0.0	0.12591815320041974
+all_test	P6-D	direct_six_channel_psg	test	expanded	15.0	0.99	28	1	1	3	0	3	1	0	8.608333333333333	0.0	0.0	0.0	0.3484995159728945
+all_test	P6-D	direct_six_channel_psg	test	expanded	15.0	0.99	30	1	5	4	1	3	4	0	7.4	0.25	0.2	0.2222222222222222	0.4054054054054054
+all_test	P6-D	direct_six_channel_psg	test	expanded	15.0	0.99	41	1	2	3	2	1	0	0	8.675	0.6666666666666666	1.0	0.8	0.11527377521613832
+all_test	P6-D	direct_six_channel_psg	test	expanded	15.0	0.99	52	1	5	11	3	8	2	0	8.95	0.2727272727272727	0.6	0.375	0.893854748603352
+all_test	P6-D	direct_six_channel_psg	test	expanded	15.0	0.99	56	1	0	9	0	9	0	0	8.058333333333334	0.0		0.0	1.1168562564632885
+all_test	P6-D	direct_six_channel_psg	test	expanded	15.0	0.99	57	1	5	16	3	13	2	0	8.483333333333333	0.1875	0.6	0.2857142857142857	1.532416502946955
+all_test	P6-D	direct_six_channel_psg	test	expanded	15.0	0.99	69	1	3	0	0	0	3	0	7.966666666666667		0.0	0.0	0.0
+all_test	P6-D	direct_six_channel_psg	test	expanded	15.0	0.99	74	1	1	0	0	0	1	0	7.258333333333334		0.0	0.0	0.0
+all_test	P6-D	direct_six_channel_psg	test	expanded	15.0	0.99	77	2	6	11	3	6	3	2	17.424999999999997	0.3333333333333333	0.5	0.4	0.3443328550932569
+all_test	P6-D	direct_six_channel_psg	test	expanded	15.0	0.99	83	3	8	14	4	10	4	0	21.55	0.2857142857142857	0.5	0.36363636363636365	0.46403712296983757
+all_test	P6-D	direct_six_channel_psg	test	expanded	15.0	0.99	86	2	6	4	0	4	6	0	13.75	0.0	0.0	0.0	0.2909090909090909
+all_test	P6-D	direct_six_channel_psg	test	expanded	15.0	0.99	88	3	8	9	1	8	7	0	19.016666666666666	0.1111111111111111	0.125	0.11764705882352941	0.42068361086766
+all_test	P6-D	direct_six_channel_psg	test	expanded	15.0	0.99	90	1	1	6	0	6	1	0	8.733333333333333	0.0	0.0	0.0	0.6870229007633588
+all_test	P6-D	direct_six_channel_psg	test	expanded	15.0	0.99	102	1	2	4	2	2	0	0	7.266666666666667	0.5	1.0	0.6666666666666666	0.27522935779816515
+all_test	P6-D	direct_six_channel_psg	test	expanded	15.0	0.99	107	1	1	0	0	0	1	0	6.875		0.0	0.0	0.0
+all_test	P6-D	direct_six_channel_psg	test	expanded	45.0	0.99	12	1	9	8	4	4	5	0	8.666666666666666	0.5	0.4444444444444444	0.47058823529411764	0.46153846153846156
+all_test	P6-D	direct_six_channel_psg	test	expanded	45.0	0.99	18	1	2	1	1	0	1	0	8.041666666666666	1.0	0.5	0.6666666666666666	0.0
+all_test	P6-D	direct_six_channel_psg	test	expanded	45.0	0.99	22	1	0	5	0	5	0	0	7.183333333333334	0.0		0.0	0.6960556844547564
+all_test	P6-D	direct_six_channel_psg	test	expanded	45.0	0.99	23	1	1	4	0	4	1	0	7.025	0.0	0.0	0.0	0.5693950177935942
+all_test	P6-D	direct_six_channel_psg	test	expanded	45.0	0.99	26	1	4	1	0	1	4	0	7.941666666666666	0.0	0.0	0.0	0.12591815320041974
+all_test	P6-D	direct_six_channel_psg	test	expanded	45.0	0.99	28	1	1	3	1	2	0	0	8.608333333333333	0.3333333333333333	1.0	0.5	0.23233301064859635
+all_test	P6-D	direct_six_channel_psg	test	expanded	45.0	0.99	30	1	5	4	2	2	3	0	7.4	0.5	0.4	0.4444444444444444	0.27027027027027023
+all_test	P6-D	direct_six_channel_psg	test	expanded	45.0	0.99	41	1	2	3	2	1	0	0	8.675	0.6666666666666666	1.0	0.8	0.11527377521613832
+all_test	P6-D	direct_six_channel_psg	test	expanded	45.0	0.99	52	1	5	11	3	8	2	0	8.95	0.2727272727272727	0.6	0.375	0.893854748603352
+all_test	P6-D	direct_six_channel_psg	test	expanded	45.0	0.99	56	1	0	9	0	9	0	0	8.058333333333334	0.0		0.0	1.1168562564632885
+all_test	P6-D	direct_six_channel_psg	test	expanded	45.0	0.99	57	1	5	16	3	13	2	0	8.483333333333333	0.1875	0.6	0.2857142857142857	1.532416502946955
+all_test	P6-D	direct_six_channel_psg	test	expanded	45.0	0.99	69	1	3	0	0	0	3	0	7.966666666666667		0.0	0.0	0.0
+all_test	P6-D	direct_six_channel_psg	test	expanded	45.0	0.99	74	1	1	0	0	0	1	0	7.258333333333334		0.0	0.0	0.0
+all_test	P6-D	direct_six_channel_psg	test	expanded	45.0	0.99	77	2	6	11	4	5	2	2	17.424999999999997	0.4444444444444444	0.6666666666666666	0.5333333333333333	0.2869440459110474
+all_test	P6-D	direct_six_channel_psg	test	expanded	45.0	0.99	83	3	8	14	4	10	4	0	21.55	0.2857142857142857	0.5	0.36363636363636365	0.46403712296983757
+all_test	P6-D	direct_six_channel_psg	test	expanded	45.0	0.99	86	2	6	4	2	2	4	0	13.75	0.5	0.3333333333333333	0.4	0.14545454545454545
+all_test	P6-D	direct_six_channel_psg	test	expanded	45.0	0.99	88	3	8	9	1	8	7	0	19.016666666666666	0.1111111111111111	0.125	0.11764705882352941	0.42068361086766
+all_test	P6-D	direct_six_channel_psg	test	expanded	45.0	0.99	90	1	1	6	1	5	0	0	8.733333333333333	0.16666666666666666	1.0	0.2857142857142857	0.5725190839694657
+all_test	P6-D	direct_six_channel_psg	test	expanded	45.0	0.99	102	1	2	4	2	2	0	0	7.266666666666667	0.5	1.0	0.6666666666666666	0.27522935779816515
+all_test	P6-D	direct_six_channel_psg	test	expanded	45.0	0.99	107	1	1	0	0	0	1	0	6.875		0.0	0.0	0.0
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	primary	15.0	0.96	12	1	9	28	5	23	4	0	8.666666666666666	0.17857142857142858	0.5555555555555556	0.2702702702702703	2.653846153846154
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	primary	15.0	0.96	18	1	2	0	0	0	2	0	8.041666666666666		0.0	0.0	0.0
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	primary	15.0	0.96	22	1	0	5	0	5	0	0	7.183333333333334	0.0		0.0	0.6960556844547564
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	primary	15.0	0.96	23	1	1	2	0	2	1	0	7.025	0.0	0.0	0.0	0.2846975088967971
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	primary	15.0	0.96	26	1	4	8	2	6	2	0	7.941666666666666	0.25	0.5	0.3333333333333333	0.7555089192025184
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	primary	15.0	0.96	28	1	0	19	0	19	0	0	8.608333333333333	0.0		0.0	2.2071636011616653
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	primary	15.0	0.96	30	1	4	6	1	5	3	0	7.4	0.16666666666666666	0.25	0.2	0.6756756756756757
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	primary	15.0	0.96	41	1	0	6	0	5	0	1	8.675	0.0		0.0	0.5763688760806917
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	primary	15.0	0.96	52	1	5	9	5	4	0	0	8.95	0.5555555555555556	1.0	0.7142857142857143	0.446927374301676
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	primary	15.0	0.96	56	1	0	21	0	21	0	0	8.058333333333334	0.0		0.0	2.605997931747673
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	primary	15.0	0.96	57	1	5	9	3	6	2	0	8.483333333333333	0.3333333333333333	0.6	0.42857142857142855	0.7072691552062869
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	primary	15.0	0.96	69	1	3	0	0	0	3	0	7.966666666666667		0.0	0.0	0.0
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	primary	15.0	0.96	74	1	1	5	0	5	1	0	7.258333333333334	0.0	0.0	0.0	0.6888633754305395
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	primary	15.0	0.96	77	2	2	84	2	78	0	4	17.424999999999997	0.025	1.0	0.04878048780487805	4.47632711621234
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	primary	15.0	0.96	83	2	5	19	2	17	3	0	14.675	0.10526315789473684	0.4	0.16666666666666666	1.1584327086882453
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	primary	15.0	0.96	86	2	4	17	0	16	4	1	13.75	0.0	0.0	0.0	1.1636363636363636
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	primary	15.0	0.96	88	2	7	20	0	20	7	0	11.766666666666666	0.0	0.0	0.0	1.6997167138810199
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	primary	15.0	0.96	90	1	0	6	0	6	0	0	8.733333333333333	0.0		0.0	0.6870229007633588
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	primary	15.0	0.96	102	1	2	4	2	2	0	0	7.266666666666667	0.5	1.0	0.6666666666666666	0.27522935779816515
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	primary	15.0	0.96	107	1	1	2	0	2	1	0	6.875	0.0	0.0	0.0	0.2909090909090909
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	primary	45.0	0.96	12	1	9	28	9	19	0	0	8.666666666666666	0.32142857142857145	1.0	0.4864864864864865	2.1923076923076925
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	primary	45.0	0.96	18	1	2	0	0	0	2	0	8.041666666666666		0.0	0.0	0.0
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	primary	45.0	0.96	22	1	0	5	0	5	0	0	7.183333333333334	0.0		0.0	0.6960556844547564
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	primary	45.0	0.96	23	1	1	2	0	2	1	0	7.025	0.0	0.0	0.0	0.2846975088967971
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	primary	45.0	0.96	26	1	4	8	2	6	2	0	7.941666666666666	0.25	0.5	0.3333333333333333	0.7555089192025184
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	primary	45.0	0.96	28	1	0	19	0	18	0	1	8.608333333333333	0.0		0.0	2.090997095837367
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	primary	45.0	0.96	30	1	4	6	2	3	2	1	7.4	0.4	0.5	0.4444444444444444	0.4054054054054054
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	primary	45.0	0.96	41	1	0	6	0	5	0	1	8.675	0.0		0.0	0.5763688760806917
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	primary	45.0	0.96	52	1	5	9	5	4	0	0	8.95	0.5555555555555556	1.0	0.7142857142857143	0.446927374301676
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	primary	45.0	0.96	56	1	0	21	0	21	0	0	8.058333333333334	0.0		0.0	2.605997931747673
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	primary	45.0	0.96	57	1	5	9	3	6	2	0	8.483333333333333	0.3333333333333333	0.6	0.42857142857142855	0.7072691552062869
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	primary	45.0	0.96	69	1	3	0	0	0	3	0	7.966666666666667		0.0	0.0	0.0
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	primary	45.0	0.96	74	1	1	5	0	5	1	0	7.258333333333334	0.0	0.0	0.0	0.6888633754305395
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	primary	45.0	0.96	77	2	2	84	2	78	0	4	17.424999999999997	0.025	1.0	0.04878048780487805	4.47632711621234
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	primary	45.0	0.96	83	2	5	19	3	16	2	0	14.675	0.15789473684210525	0.6	0.25	1.090289608177172
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	primary	45.0	0.96	86	2	4	17	2	13	2	2	13.75	0.13333333333333333	0.5	0.21052631578947367	0.9454545454545454
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	primary	45.0	0.96	88	2	7	20	0	20	7	0	11.766666666666666	0.0	0.0	0.0	1.6997167138810199
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	primary	45.0	0.96	90	1	0	6	0	5	0	1	8.733333333333333	0.0		0.0	0.5725190839694657
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	primary	45.0	0.96	102	1	2	4	2	2	0	0	7.266666666666667	0.5	1.0	0.6666666666666666	0.27522935779816515
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	primary	45.0	0.96	107	1	1	2	0	2	1	0	6.875	0.0	0.0	0.0	0.2909090909090909
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	expanded	15.0	0.96	12	1	9	28	5	23	4	0	8.666666666666666	0.17857142857142858	0.5555555555555556	0.2702702702702703	2.653846153846154
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	expanded	15.0	0.96	18	1	2	0	0	0	2	0	8.041666666666666		0.0	0.0	0.0
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	expanded	15.0	0.96	22	1	0	5	0	5	0	0	7.183333333333334	0.0		0.0	0.6960556844547564
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	expanded	15.0	0.96	23	1	1	2	0	2	1	0	7.025	0.0	0.0	0.0	0.2846975088967971
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	expanded	15.0	0.96	26	1	4	8	2	6	2	0	7.941666666666666	0.25	0.5	0.3333333333333333	0.7555089192025184
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	expanded	15.0	0.96	28	1	1	19	0	19	1	0	8.608333333333333	0.0	0.0	0.0	2.2071636011616653
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	expanded	15.0	0.96	30	1	5	6	1	5	4	0	7.4	0.16666666666666666	0.2	0.18181818181818182	0.6756756756756757
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	expanded	15.0	0.96	41	1	2	6	1	5	1	0	8.675	0.16666666666666666	0.5	0.25	0.5763688760806917
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	expanded	15.0	0.96	52	1	5	9	5	4	0	0	8.95	0.5555555555555556	1.0	0.7142857142857143	0.446927374301676
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	expanded	15.0	0.96	56	1	0	21	0	21	0	0	8.058333333333334	0.0		0.0	2.605997931747673
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	expanded	15.0	0.96	57	1	5	9	3	6	2	0	8.483333333333333	0.3333333333333333	0.6	0.42857142857142855	0.7072691552062869
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	expanded	15.0	0.96	69	1	3	0	0	0	3	0	7.966666666666667		0.0	0.0	0.0
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	expanded	15.0	0.96	74	1	1	5	0	5	1	0	7.258333333333334	0.0	0.0	0.0	0.6888633754305395
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	expanded	15.0	0.96	77	2	6	84	6	78	0	0	17.424999999999997	0.07142857142857142	1.0	0.13333333333333333	4.47632711621234
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	expanded	15.0	0.96	83	2	5	19	2	17	3	0	14.675	0.10526315789473684	0.4	0.16666666666666666	1.1584327086882453
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	expanded	15.0	0.96	86	2	6	17	1	16	5	0	13.75	0.058823529411764705	0.16666666666666666	0.08695652173913043	1.1636363636363636
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	expanded	15.0	0.96	88	2	7	20	0	20	7	0	11.766666666666666	0.0	0.0	0.0	1.6997167138810199
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	expanded	15.0	0.96	90	1	1	6	0	6	1	0	8.733333333333333	0.0	0.0	0.0	0.6870229007633588
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	expanded	15.0	0.96	102	1	2	4	2	2	0	0	7.266666666666667	0.5	1.0	0.6666666666666666	0.27522935779816515
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	expanded	15.0	0.96	107	1	1	2	0	2	1	0	6.875	0.0	0.0	0.0	0.2909090909090909
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	expanded	45.0	0.96	12	1	9	28	9	19	0	0	8.666666666666666	0.32142857142857145	1.0	0.4864864864864865	2.1923076923076925
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	expanded	45.0	0.96	18	1	2	0	0	0	2	0	8.041666666666666		0.0	0.0	0.0
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	expanded	45.0	0.96	22	1	0	5	0	5	0	0	7.183333333333334	0.0		0.0	0.6960556844547564
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	expanded	45.0	0.96	23	1	1	2	0	2	1	0	7.025	0.0	0.0	0.0	0.2846975088967971
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	expanded	45.0	0.96	26	1	4	8	2	6	2	0	7.941666666666666	0.25	0.5	0.3333333333333333	0.7555089192025184
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	expanded	45.0	0.96	28	1	1	19	1	18	0	0	8.608333333333333	0.05263157894736842	1.0	0.1	2.090997095837367
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	expanded	45.0	0.96	30	1	5	6	3	3	2	0	7.4	0.5	0.6	0.5454545454545454	0.4054054054054054
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	expanded	45.0	0.96	41	1	2	6	1	5	1	0	8.675	0.16666666666666666	0.5	0.25	0.5763688760806917
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	expanded	45.0	0.96	52	1	5	9	5	4	0	0	8.95	0.5555555555555556	1.0	0.7142857142857143	0.446927374301676
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	expanded	45.0	0.96	56	1	0	21	0	21	0	0	8.058333333333334	0.0		0.0	2.605997931747673
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	expanded	45.0	0.96	57	1	5	9	3	6	2	0	8.483333333333333	0.3333333333333333	0.6	0.42857142857142855	0.7072691552062869
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	expanded	45.0	0.96	69	1	3	0	0	0	3	0	7.966666666666667		0.0	0.0	0.0
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	expanded	45.0	0.96	74	1	1	5	0	5	1	0	7.258333333333334	0.0	0.0	0.0	0.6888633754305395
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	expanded	45.0	0.96	77	2	6	84	6	78	0	0	17.424999999999997	0.07142857142857142	1.0	0.13333333333333333	4.47632711621234
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	expanded	45.0	0.96	83	2	5	19	3	16	2	0	14.675	0.15789473684210525	0.6	0.25	1.090289608177172
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	expanded	45.0	0.96	86	2	6	17	4	13	2	0	13.75	0.23529411764705882	0.6666666666666666	0.34782608695652173	0.9454545454545454
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	expanded	45.0	0.96	88	2	7	20	0	20	7	0	11.766666666666666	0.0	0.0	0.0	1.6997167138810199
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	expanded	45.0	0.96	90	1	1	6	1	5	0	0	8.733333333333333	0.16666666666666666	1.0	0.2857142857142857	0.5725190839694657
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	expanded	45.0	0.96	102	1	2	4	2	2	0	0	7.266666666666667	0.5	1.0	0.6666666666666666	0.27522935779816515
+exclude_sub32_sub50	H2-D	direct_two_channel_wearable	test	expanded	45.0	0.96	107	1	1	2	0	2	1	0	6.875	0.0	0.0	0.0	0.2909090909090909
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	primary	15.0	0.99	12	1	9	5	2	3	7	0	8.666666666666666	0.4	0.2222222222222222	0.2857142857142857	0.3461538461538462
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	primary	15.0	0.99	18	1	2	0	0	0	2	0	8.041666666666666		0.0	0.0	0.0
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	primary	15.0	0.99	22	1	0	3	0	3	0	0	7.183333333333334	0.0		0.0	0.4176334106728538
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	primary	15.0	0.99	23	1	1	4	0	4	1	0	7.025	0.0	0.0	0.0	0.5693950177935942
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	primary	15.0	0.99	26	1	4	1	0	1	4	0	7.941666666666666	0.0	0.0	0.0	0.12591815320041974
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	primary	15.0	0.99	28	1	0	2	0	2	0	0	8.608333333333333	0.0		0.0	0.23233301064859635
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	primary	15.0	0.99	30	1	4	1	0	1	4	0	7.4	0.0	0.0	0.0	0.13513513513513511
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	primary	15.0	0.99	41	1	0	2	0	1	0	1	8.675	0.0		0.0	0.11527377521613832
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	primary	15.0	0.99	52	1	5	20	3	17	2	0	8.95	0.15	0.6	0.24	1.8994413407821231
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	primary	15.0	0.99	56	1	0	2	0	2	0	0	8.058333333333334	0.0		0.0	0.2481902792140641
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	primary	15.0	0.99	57	1	5	7	2	5	3	0	8.483333333333333	0.2857142857142857	0.4	0.3333333333333333	0.5893909626719057
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	primary	15.0	0.99	69	1	3	0	0	0	3	0	7.966666666666667		0.0	0.0	0.0
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	primary	15.0	0.99	74	1	1	0	0	0	1	0	7.258333333333334		0.0	0.0	0.0
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	primary	15.0	0.99	77	2	2	10	1	5	1	4	17.424999999999997	0.16666666666666666	0.5	0.25	0.2869440459110474
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	primary	15.0	0.99	83	2	5	6	1	5	4	0	14.675	0.16666666666666666	0.2	0.18181818181818182	0.34071550255536626
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	primary	15.0	0.99	86	2	4	3	0	2	4	1	13.75	0.0	0.0	0.0	0.14545454545454545
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	primary	15.0	0.99	88	2	7	9	0	9	7	0	11.766666666666666	0.0	0.0	0.0	0.764872521246459
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	primary	15.0	0.99	90	1	0	6	0	6	0	0	8.733333333333333	0.0		0.0	0.6870229007633588
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	primary	15.0	0.99	102	1	2	2	1	1	1	0	7.266666666666667	0.5	0.5	0.5	0.13761467889908258
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	primary	15.0	0.99	107	1	1	0	0	0	1	0	6.875		0.0	0.0	0.0
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	primary	45.0	0.99	12	1	9	5	4	1	5	0	8.666666666666666	0.8	0.4444444444444444	0.5714285714285714	0.11538461538461539
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	primary	45.0	0.99	18	1	2	0	0	0	2	0	8.041666666666666		0.0	0.0	0.0
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	primary	45.0	0.99	22	1	0	3	0	3	0	0	7.183333333333334	0.0		0.0	0.4176334106728538
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	primary	45.0	0.99	23	1	1	4	0	4	1	0	7.025	0.0	0.0	0.0	0.5693950177935942
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	primary	45.0	0.99	26	1	4	1	0	1	4	0	7.941666666666666	0.0	0.0	0.0	0.12591815320041974
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	primary	45.0	0.99	28	1	0	2	0	1	0	1	8.608333333333333	0.0		0.0	0.11616650532429817
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	primary	45.0	0.99	30	1	4	1	0	0	4	1	7.4		0.0	0.0	0.0
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	primary	45.0	0.99	41	1	0	2	0	1	0	1	8.675	0.0		0.0	0.11527377521613832
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	primary	45.0	0.99	52	1	5	20	3	17	2	0	8.95	0.15	0.6	0.24	1.8994413407821231
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	primary	45.0	0.99	56	1	0	2	0	2	0	0	8.058333333333334	0.0		0.0	0.2481902792140641
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	primary	45.0	0.99	57	1	5	7	2	5	3	0	8.483333333333333	0.2857142857142857	0.4	0.3333333333333333	0.5893909626719057
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	primary	45.0	0.99	69	1	3	0	0	0	3	0	7.966666666666667		0.0	0.0	0.0
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	primary	45.0	0.99	74	1	1	0	0	0	1	0	7.258333333333334		0.0	0.0	0.0
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	primary	45.0	0.99	77	2	2	10	2	4	0	4	17.424999999999997	0.3333333333333333	1.0	0.5	0.2295552367288379
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	primary	45.0	0.99	83	2	5	6	1	5	4	0	14.675	0.16666666666666666	0.2	0.18181818181818182	0.34071550255536626
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	primary	45.0	0.99	86	2	4	3	2	0	2	1	13.75	1.0	0.5	0.6666666666666666	0.0
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	primary	45.0	0.99	88	2	7	9	0	9	7	0	11.766666666666666	0.0	0.0	0.0	0.764872521246459
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	primary	45.0	0.99	90	1	0	6	0	5	0	1	8.733333333333333	0.0		0.0	0.5725190839694657
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	primary	45.0	0.99	102	1	2	2	1	1	1	0	7.266666666666667	0.5	0.5	0.5	0.13761467889908258
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	primary	45.0	0.99	107	1	1	0	0	0	1	0	6.875		0.0	0.0	0.0
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	expanded	15.0	0.99	12	1	9	5	2	3	7	0	8.666666666666666	0.4	0.2222222222222222	0.2857142857142857	0.3461538461538462
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	expanded	15.0	0.99	18	1	2	0	0	0	2	0	8.041666666666666		0.0	0.0	0.0
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	expanded	15.0	0.99	22	1	0	3	0	3	0	0	7.183333333333334	0.0		0.0	0.4176334106728538
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	expanded	15.0	0.99	23	1	1	4	0	4	1	0	7.025	0.0	0.0	0.0	0.5693950177935942
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	expanded	15.0	0.99	26	1	4	1	0	1	4	0	7.941666666666666	0.0	0.0	0.0	0.12591815320041974
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	expanded	15.0	0.99	28	1	1	2	0	2	1	0	8.608333333333333	0.0	0.0	0.0	0.23233301064859635
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	expanded	15.0	0.99	30	1	5	1	0	1	5	0	7.4	0.0	0.0	0.0	0.13513513513513511
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	expanded	15.0	0.99	41	1	2	2	1	1	1	0	8.675	0.5	0.5	0.5	0.11527377521613832
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	expanded	15.0	0.99	52	1	5	20	3	17	2	0	8.95	0.15	0.6	0.24	1.8994413407821231
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	expanded	15.0	0.99	56	1	0	2	0	2	0	0	8.058333333333334	0.0		0.0	0.2481902792140641
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	expanded	15.0	0.99	57	1	5	7	2	5	3	0	8.483333333333333	0.2857142857142857	0.4	0.3333333333333333	0.5893909626719057
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	expanded	15.0	0.99	69	1	3	0	0	0	3	0	7.966666666666667		0.0	0.0	0.0
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	expanded	15.0	0.99	74	1	1	0	0	0	1	0	7.258333333333334		0.0	0.0	0.0
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	expanded	15.0	0.99	77	2	6	10	3	5	3	2	17.424999999999997	0.375	0.5	0.42857142857142855	0.2869440459110474
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	expanded	15.0	0.99	83	2	5	6	1	5	4	0	14.675	0.16666666666666666	0.2	0.18181818181818182	0.34071550255536626
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	expanded	15.0	0.99	86	2	6	3	1	2	5	0	13.75	0.3333333333333333	0.16666666666666666	0.2222222222222222	0.14545454545454545
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	expanded	15.0	0.99	88	2	7	9	0	9	7	0	11.766666666666666	0.0	0.0	0.0	0.764872521246459
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	expanded	15.0	0.99	90	1	1	6	0	6	1	0	8.733333333333333	0.0	0.0	0.0	0.6870229007633588
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	expanded	15.0	0.99	102	1	2	2	1	1	1	0	7.266666666666667	0.5	0.5	0.5	0.13761467889908258
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	expanded	15.0	0.99	107	1	1	0	0	0	1	0	6.875		0.0	0.0	0.0
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	expanded	45.0	0.99	12	1	9	5	4	1	5	0	8.666666666666666	0.8	0.4444444444444444	0.5714285714285714	0.11538461538461539
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	expanded	45.0	0.99	18	1	2	0	0	0	2	0	8.041666666666666		0.0	0.0	0.0
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	expanded	45.0	0.99	22	1	0	3	0	3	0	0	7.183333333333334	0.0		0.0	0.4176334106728538
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	expanded	45.0	0.99	23	1	1	4	0	4	1	0	7.025	0.0	0.0	0.0	0.5693950177935942
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	expanded	45.0	0.99	26	1	4	1	0	1	4	0	7.941666666666666	0.0	0.0	0.0	0.12591815320041974
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	expanded	45.0	0.99	28	1	1	2	1	1	0	0	8.608333333333333	0.5	1.0	0.6666666666666666	0.11616650532429817
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	expanded	45.0	0.99	30	1	5	1	1	0	4	0	7.4	1.0	0.2	0.3333333333333333	0.0
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	expanded	45.0	0.99	41	1	2	2	1	1	1	0	8.675	0.5	0.5	0.5	0.11527377521613832
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	expanded	45.0	0.99	52	1	5	20	3	17	2	0	8.95	0.15	0.6	0.24	1.8994413407821231
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	expanded	45.0	0.99	56	1	0	2	0	2	0	0	8.058333333333334	0.0		0.0	0.2481902792140641
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	expanded	45.0	0.99	57	1	5	7	2	5	3	0	8.483333333333333	0.2857142857142857	0.4	0.3333333333333333	0.5893909626719057
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	expanded	45.0	0.99	69	1	3	0	0	0	3	0	7.966666666666667		0.0	0.0	0.0
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	expanded	45.0	0.99	74	1	1	0	0	0	1	0	7.258333333333334		0.0	0.0	0.0
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	expanded	45.0	0.99	77	2	6	10	4	4	2	2	17.424999999999997	0.5	0.6666666666666666	0.5714285714285714	0.2295552367288379
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	expanded	45.0	0.99	83	2	5	6	1	5	4	0	14.675	0.16666666666666666	0.2	0.18181818181818182	0.34071550255536626
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	expanded	45.0	0.99	86	2	6	3	3	0	3	0	13.75	1.0	0.5	0.6666666666666666	0.0
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	expanded	45.0	0.99	88	2	7	9	0	9	7	0	11.766666666666666	0.0	0.0	0.0	0.764872521246459
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	expanded	45.0	0.99	90	1	1	6	1	5	0	0	8.733333333333333	0.16666666666666666	1.0	0.2857142857142857	0.5725190839694657
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	expanded	45.0	0.99	102	1	2	2	1	1	1	0	7.266666666666667	0.5	0.5	0.5	0.13761467889908258
+exclude_sub32_sub50	P2-D	direct_two_channel_psg	test	expanded	45.0	0.99	107	1	1	0	0	0	1	0	6.875		0.0	0.0	0.0
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	15.0	0.99	12	1	9	9	2	7	7	0	8.666666666666666	0.2222222222222222	0.2222222222222222	0.2222222222222222	0.8076923076923077
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	15.0	0.99	18	1	2	0	0	0	2	0	8.041666666666666		0.0	0.0	0.0
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	15.0	0.99	22	1	0	0	0	0	0	0	7.183333333333334				0.0
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	15.0	0.99	23	1	1	2	0	2	1	0	7.025	0.0	0.0	0.0	0.2846975088967971
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	15.0	0.99	26	1	4	0	0	0	4	0	7.941666666666666		0.0	0.0	0.0
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	15.0	0.99	28	1	0	4	0	4	0	0	8.608333333333333	0.0		0.0	0.4646660212971927
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	15.0	0.99	30	1	4	1	0	1	4	0	7.4	0.0	0.0	0.0	0.13513513513513511
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	15.0	0.99	41	1	0	2	0	1	0	1	8.675	0.0		0.0	0.11527377521613832
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	15.0	0.99	52	1	5	4	2	2	3	0	8.95	0.5	0.4	0.4444444444444444	0.223463687150838
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	15.0	0.99	56	1	0	10	0	10	0	0	8.058333333333334	0.0		0.0	1.2409513960703205
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	15.0	0.99	57	1	5	5	1	4	4	0	8.483333333333333	0.2	0.2	0.2	0.47151277013752463
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	15.0	0.99	69	1	3	0	0	0	3	0	7.966666666666667		0.0	0.0	0.0
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	15.0	0.99	74	1	1	0	0	0	1	0	7.258333333333334		0.0	0.0	0.0
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	15.0	0.99	77	2	2	31	0	28	2	3	17.424999999999997	0.0	0.0	0.0	1.6068866571018654
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	15.0	0.99	83	2	5	5	1	4	4	0	14.675	0.2	0.2	0.2	0.272572402044293
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	15.0	0.99	86	2	4	8	0	7	4	1	13.75	0.0	0.0	0.0	0.509090909090909
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	15.0	0.99	88	2	7	10	0	10	7	0	11.766666666666666	0.0	0.0	0.0	0.8498583569405099
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	15.0	0.99	90	1	0	2	0	2	0	0	8.733333333333333	0.0		0.0	0.22900763358778628
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	15.0	0.99	102	1	2	2	2	0	0	0	7.266666666666667	1.0	1.0	1.0	0.0
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	15.0	0.99	107	1	1	0	0	0	1	0	6.875		0.0	0.0	0.0
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	45.0	0.99	12	1	9	9	4	5	5	0	8.666666666666666	0.4444444444444444	0.4444444444444444	0.4444444444444444	0.576923076923077
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	45.0	0.99	18	1	2	0	0	0	2	0	8.041666666666666		0.0	0.0	0.0
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	45.0	0.99	22	1	0	0	0	0	0	0	7.183333333333334				0.0
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	45.0	0.99	23	1	1	2	0	2	1	0	7.025	0.0	0.0	0.0	0.2846975088967971
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	45.0	0.99	26	1	4	0	0	0	4	0	7.941666666666666		0.0	0.0	0.0
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	45.0	0.99	28	1	0	4	0	3	0	1	8.608333333333333	0.0		0.0	0.3484995159728945
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	45.0	0.99	30	1	4	1	1	0	3	0	7.4	1.0	0.25	0.4	0.0
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	45.0	0.99	41	1	0	2	0	1	0	1	8.675	0.0		0.0	0.11527377521613832
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	45.0	0.99	52	1	5	4	2	2	3	0	8.95	0.5	0.4	0.4444444444444444	0.223463687150838
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	45.0	0.99	56	1	0	10	0	10	0	0	8.058333333333334	0.0		0.0	1.2409513960703205
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	45.0	0.99	57	1	5	5	1	4	4	0	8.483333333333333	0.2	0.2	0.2	0.47151277013752463
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	45.0	0.99	69	1	3	0	0	0	3	0	7.966666666666667		0.0	0.0	0.0
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	45.0	0.99	74	1	1	0	0	0	1	0	7.258333333333334		0.0	0.0	0.0
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	45.0	0.99	77	2	2	31	0	28	2	3	17.424999999999997	0.0	0.0	0.0	1.6068866571018654
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	45.0	0.99	83	2	5	5	1	4	4	0	14.675	0.2	0.2	0.2	0.272572402044293
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	45.0	0.99	86	2	4	8	2	5	2	1	13.75	0.2857142857142857	0.5	0.36363636363636365	0.36363636363636365
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	45.0	0.99	88	2	7	10	0	10	7	0	11.766666666666666	0.0	0.0	0.0	0.8498583569405099
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	45.0	0.99	90	1	0	2	0	1	0	1	8.733333333333333	0.0		0.0	0.11450381679389314
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	45.0	0.99	102	1	2	2	2	0	0	0	7.266666666666667	1.0	1.0	1.0	0.0
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	primary	45.0	0.99	107	1	1	0	0	0	1	0	6.875		0.0	0.0	0.0
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	15.0	0.99	12	1	9	9	2	7	7	0	8.666666666666666	0.2222222222222222	0.2222222222222222	0.2222222222222222	0.8076923076923077
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	15.0	0.99	18	1	2	0	0	0	2	0	8.041666666666666		0.0	0.0	0.0
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	15.0	0.99	22	1	0	0	0	0	0	0	7.183333333333334				0.0
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	15.0	0.99	23	1	1	2	0	2	1	0	7.025	0.0	0.0	0.0	0.2846975088967971
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	15.0	0.99	26	1	4	0	0	0	4	0	7.941666666666666		0.0	0.0	0.0
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	15.0	0.99	28	1	1	4	0	4	1	0	8.608333333333333	0.0	0.0	0.0	0.4646660212971927
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	15.0	0.99	30	1	5	1	0	1	5	0	7.4	0.0	0.0	0.0	0.13513513513513511
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	15.0	0.99	41	1	2	2	1	1	1	0	8.675	0.5	0.5	0.5	0.11527377521613832
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	15.0	0.99	52	1	5	4	2	2	3	0	8.95	0.5	0.4	0.4444444444444444	0.223463687150838
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	15.0	0.99	56	1	0	10	0	10	0	0	8.058333333333334	0.0		0.0	1.2409513960703205
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	15.0	0.99	57	1	5	5	1	4	4	0	8.483333333333333	0.2	0.2	0.2	0.47151277013752463
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	15.0	0.99	69	1	3	0	0	0	3	0	7.966666666666667		0.0	0.0	0.0
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	15.0	0.99	74	1	1	0	0	0	1	0	7.258333333333334		0.0	0.0	0.0
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	15.0	0.99	77	2	6	31	3	28	3	0	17.424999999999997	0.0967741935483871	0.5	0.16216216216216217	1.6068866571018654
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	15.0	0.99	83	2	5	5	1	4	4	0	14.675	0.2	0.2	0.2	0.272572402044293
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	15.0	0.99	86	2	6	8	1	7	5	0	13.75	0.125	0.16666666666666666	0.14285714285714285	0.509090909090909
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	15.0	0.99	88	2	7	10	0	10	7	0	11.766666666666666	0.0	0.0	0.0	0.8498583569405099
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	15.0	0.99	90	1	1	2	0	2	1	0	8.733333333333333	0.0	0.0	0.0	0.22900763358778628
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	15.0	0.99	102	1	2	2	2	0	0	0	7.266666666666667	1.0	1.0	1.0	0.0
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	15.0	0.99	107	1	1	0	0	0	1	0	6.875		0.0	0.0	0.0
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	45.0	0.99	12	1	9	9	4	5	5	0	8.666666666666666	0.4444444444444444	0.4444444444444444	0.4444444444444444	0.576923076923077
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	45.0	0.99	18	1	2	0	0	0	2	0	8.041666666666666		0.0	0.0	0.0
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	45.0	0.99	22	1	0	0	0	0	0	0	7.183333333333334				0.0
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	45.0	0.99	23	1	1	2	0	2	1	0	7.025	0.0	0.0	0.0	0.2846975088967971
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	45.0	0.99	26	1	4	0	0	0	4	0	7.941666666666666		0.0	0.0	0.0
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	45.0	0.99	28	1	1	4	1	3	0	0	8.608333333333333	0.25	1.0	0.4	0.3484995159728945
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	45.0	0.99	30	1	5	1	1	0	4	0	7.4	1.0	0.2	0.3333333333333333	0.0
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	45.0	0.99	41	1	2	2	1	1	1	0	8.675	0.5	0.5	0.5	0.11527377521613832
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	45.0	0.99	52	1	5	4	2	2	3	0	8.95	0.5	0.4	0.4444444444444444	0.223463687150838
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	45.0	0.99	56	1	0	10	0	10	0	0	8.058333333333334	0.0		0.0	1.2409513960703205
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	45.0	0.99	57	1	5	5	1	4	4	0	8.483333333333333	0.2	0.2	0.2	0.47151277013752463
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	45.0	0.99	69	1	3	0	0	0	3	0	7.966666666666667		0.0	0.0	0.0
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	45.0	0.99	74	1	1	0	0	0	1	0	7.258333333333334		0.0	0.0	0.0
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	45.0	0.99	77	2	6	31	3	28	3	0	17.424999999999997	0.0967741935483871	0.5	0.16216216216216217	1.6068866571018654
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	45.0	0.99	83	2	5	5	1	4	4	0	14.675	0.2	0.2	0.2	0.272572402044293
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	45.0	0.99	86	2	6	8	3	5	3	0	13.75	0.375	0.5	0.42857142857142855	0.36363636363636365
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	45.0	0.99	88	2	7	10	0	10	7	0	11.766666666666666	0.0	0.0	0.0	0.8498583569405099
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	45.0	0.99	90	1	1	2	1	1	0	0	8.733333333333333	0.5	1.0	0.6666666666666666	0.11450381679389314
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	45.0	0.99	102	1	2	2	2	0	0	0	7.266666666666667	1.0	1.0	1.0	0.0
+exclude_sub32_sub50	P2-H2-Z	strict_psg_to_wearable_zero_shot	test	expanded	45.0	0.99	107	1	1	0	0	0	1	0	6.875		0.0	0.0	0.0
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	primary	15.0	0.99	12	1	9	8	2	6	7	0	8.666666666666666	0.25	0.2222222222222222	0.23529411764705882	0.6923076923076924
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	primary	15.0	0.99	18	1	2	1	0	1	2	0	8.041666666666666	0.0	0.0	0.0	0.12435233160621763
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	primary	15.0	0.99	22	1	0	5	0	5	0	0	7.183333333333334	0.0		0.0	0.6960556844547564
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	primary	15.0	0.99	23	1	1	4	0	4	1	0	7.025	0.0	0.0	0.0	0.5693950177935942
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	primary	15.0	0.99	26	1	4	1	0	1	4	0	7.941666666666666	0.0	0.0	0.0	0.12591815320041974
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	primary	15.0	0.99	28	1	0	3	0	3	0	0	8.608333333333333	0.0		0.0	0.3484995159728945
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	primary	15.0	0.99	30	1	4	4	0	3	4	1	7.4	0.0	0.0	0.0	0.4054054054054054
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	primary	15.0	0.99	41	1	0	3	0	1	0	2	8.675	0.0		0.0	0.11527377521613832
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	primary	15.0	0.99	52	1	5	11	3	8	2	0	8.95	0.2727272727272727	0.6	0.375	0.893854748603352
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	primary	15.0	0.99	56	1	0	9	0	9	0	0	8.058333333333334	0.0		0.0	1.1168562564632885
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	primary	15.0	0.99	57	1	5	16	3	13	2	0	8.483333333333333	0.1875	0.6	0.2857142857142857	1.532416502946955
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	primary	15.0	0.99	69	1	3	0	0	0	3	0	7.966666666666667		0.0	0.0	0.0
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	primary	15.0	0.99	74	1	1	0	0	0	1	0	7.258333333333334		0.0	0.0	0.0
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	primary	15.0	0.99	77	2	2	11	2	6	0	3	17.424999999999997	0.25	1.0	0.4	0.3443328550932569
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	primary	15.0	0.99	83	2	5	13	4	9	1	0	14.675	0.3076923076923077	0.8	0.4444444444444444	0.6132879045996592
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	primary	15.0	0.99	86	2	4	4	0	4	4	0	13.75	0.0	0.0	0.0	0.2909090909090909
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	primary	15.0	0.99	88	2	7	9	1	8	6	0	11.766666666666666	0.1111111111111111	0.14285714285714285	0.125	0.6798866855524079
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	primary	15.0	0.99	90	1	0	6	0	6	0	0	8.733333333333333	0.0		0.0	0.6870229007633588
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	primary	15.0	0.99	102	1	2	4	2	2	0	0	7.266666666666667	0.5	1.0	0.6666666666666666	0.27522935779816515
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	primary	15.0	0.99	107	1	1	0	0	0	1	0	6.875		0.0	0.0	0.0
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	primary	45.0	0.99	12	1	9	8	4	4	5	0	8.666666666666666	0.5	0.4444444444444444	0.47058823529411764	0.46153846153846156
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	primary	45.0	0.99	18	1	2	1	1	0	1	0	8.041666666666666	1.0	0.5	0.6666666666666666	0.0
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	primary	45.0	0.99	22	1	0	5	0	5	0	0	7.183333333333334	0.0		0.0	0.6960556844547564
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	primary	45.0	0.99	23	1	1	4	0	4	1	0	7.025	0.0	0.0	0.0	0.5693950177935942
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	primary	45.0	0.99	26	1	4	1	0	1	4	0	7.941666666666666	0.0	0.0	0.0	0.12591815320041974
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	primary	45.0	0.99	28	1	0	3	0	2	0	1	8.608333333333333	0.0		0.0	0.23233301064859635
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	primary	45.0	0.99	30	1	4	4	1	2	3	1	7.4	0.3333333333333333	0.25	0.2857142857142857	0.27027027027027023
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	primary	45.0	0.99	41	1	0	3	0	1	0	2	8.675	0.0		0.0	0.11527377521613832
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	primary	45.0	0.99	52	1	5	11	3	8	2	0	8.95	0.2727272727272727	0.6	0.375	0.893854748603352
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	primary	45.0	0.99	56	1	0	9	0	9	0	0	8.058333333333334	0.0		0.0	1.1168562564632885
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	primary	45.0	0.99	57	1	5	16	3	13	2	0	8.483333333333333	0.1875	0.6	0.2857142857142857	1.532416502946955
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	primary	45.0	0.99	69	1	3	0	0	0	3	0	7.966666666666667		0.0	0.0	0.0
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	primary	45.0	0.99	74	1	1	0	0	0	1	0	7.258333333333334		0.0	0.0	0.0
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	primary	45.0	0.99	77	2	2	11	2	5	0	4	17.424999999999997	0.2857142857142857	1.0	0.4444444444444444	0.2869440459110474
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	primary	45.0	0.99	83	2	5	13	4	9	1	0	14.675	0.3076923076923077	0.8	0.4444444444444444	0.6132879045996592
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	primary	45.0	0.99	86	2	4	4	2	2	2	0	13.75	0.5	0.5	0.5	0.14545454545454545
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	primary	45.0	0.99	88	2	7	9	1	8	6	0	11.766666666666666	0.1111111111111111	0.14285714285714285	0.125	0.6798866855524079
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	primary	45.0	0.99	90	1	0	6	0	5	0	1	8.733333333333333	0.0		0.0	0.5725190839694657
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	primary	45.0	0.99	102	1	2	4	2	2	0	0	7.266666666666667	0.5	1.0	0.6666666666666666	0.27522935779816515
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	primary	45.0	0.99	107	1	1	0	0	0	1	0	6.875		0.0	0.0	0.0
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	expanded	15.0	0.99	12	1	9	8	2	6	7	0	8.666666666666666	0.25	0.2222222222222222	0.23529411764705882	0.6923076923076924
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	expanded	15.0	0.99	18	1	2	1	0	1	2	0	8.041666666666666	0.0	0.0	0.0	0.12435233160621763
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	expanded	15.0	0.99	22	1	0	5	0	5	0	0	7.183333333333334	0.0		0.0	0.6960556844547564
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	expanded	15.0	0.99	23	1	1	4	0	4	1	0	7.025	0.0	0.0	0.0	0.5693950177935942
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	expanded	15.0	0.99	26	1	4	1	0	1	4	0	7.941666666666666	0.0	0.0	0.0	0.12591815320041974
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	expanded	15.0	0.99	28	1	1	3	0	3	1	0	8.608333333333333	0.0	0.0	0.0	0.3484995159728945
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	expanded	15.0	0.99	30	1	5	4	1	3	4	0	7.4	0.25	0.2	0.2222222222222222	0.4054054054054054
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	expanded	15.0	0.99	41	1	2	3	2	1	0	0	8.675	0.6666666666666666	1.0	0.8	0.11527377521613832
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	expanded	15.0	0.99	52	1	5	11	3	8	2	0	8.95	0.2727272727272727	0.6	0.375	0.893854748603352
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	expanded	15.0	0.99	56	1	0	9	0	9	0	0	8.058333333333334	0.0		0.0	1.1168562564632885
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	expanded	15.0	0.99	57	1	5	16	3	13	2	0	8.483333333333333	0.1875	0.6	0.2857142857142857	1.532416502946955
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	expanded	15.0	0.99	69	1	3	0	0	0	3	0	7.966666666666667		0.0	0.0	0.0
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	expanded	15.0	0.99	74	1	1	0	0	0	1	0	7.258333333333334		0.0	0.0	0.0
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	expanded	15.0	0.99	77	2	6	11	3	6	3	2	17.424999999999997	0.3333333333333333	0.5	0.4	0.3443328550932569
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	expanded	15.0	0.99	83	2	5	13	4	9	1	0	14.675	0.3076923076923077	0.8	0.4444444444444444	0.6132879045996592
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	expanded	15.0	0.99	86	2	6	4	0	4	6	0	13.75	0.0	0.0	0.0	0.2909090909090909
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	expanded	15.0	0.99	88	2	7	9	1	8	6	0	11.766666666666666	0.1111111111111111	0.14285714285714285	0.125	0.6798866855524079
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	expanded	15.0	0.99	90	1	1	6	0	6	1	0	8.733333333333333	0.0	0.0	0.0	0.6870229007633588
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	expanded	15.0	0.99	102	1	2	4	2	2	0	0	7.266666666666667	0.5	1.0	0.6666666666666666	0.27522935779816515
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	expanded	15.0	0.99	107	1	1	0	0	0	1	0	6.875		0.0	0.0	0.0
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	expanded	45.0	0.99	12	1	9	8	4	4	5	0	8.666666666666666	0.5	0.4444444444444444	0.47058823529411764	0.46153846153846156
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	expanded	45.0	0.99	18	1	2	1	1	0	1	0	8.041666666666666	1.0	0.5	0.6666666666666666	0.0
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	expanded	45.0	0.99	22	1	0	5	0	5	0	0	7.183333333333334	0.0		0.0	0.6960556844547564
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	expanded	45.0	0.99	23	1	1	4	0	4	1	0	7.025	0.0	0.0	0.0	0.5693950177935942
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	expanded	45.0	0.99	26	1	4	1	0	1	4	0	7.941666666666666	0.0	0.0	0.0	0.12591815320041974
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	expanded	45.0	0.99	28	1	1	3	1	2	0	0	8.608333333333333	0.3333333333333333	1.0	0.5	0.23233301064859635
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	expanded	45.0	0.99	30	1	5	4	2	2	3	0	7.4	0.5	0.4	0.4444444444444444	0.27027027027027023
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	expanded	45.0	0.99	41	1	2	3	2	1	0	0	8.675	0.6666666666666666	1.0	0.8	0.11527377521613832
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	expanded	45.0	0.99	52	1	5	11	3	8	2	0	8.95	0.2727272727272727	0.6	0.375	0.893854748603352
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	expanded	45.0	0.99	56	1	0	9	0	9	0	0	8.058333333333334	0.0		0.0	1.1168562564632885
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	expanded	45.0	0.99	57	1	5	16	3	13	2	0	8.483333333333333	0.1875	0.6	0.2857142857142857	1.532416502946955
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	expanded	45.0	0.99	69	1	3	0	0	0	3	0	7.966666666666667		0.0	0.0	0.0
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	expanded	45.0	0.99	74	1	1	0	0	0	1	0	7.258333333333334		0.0	0.0	0.0
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	expanded	45.0	0.99	77	2	6	11	4	5	2	2	17.424999999999997	0.4444444444444444	0.6666666666666666	0.5333333333333333	0.2869440459110474
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	expanded	45.0	0.99	83	2	5	13	4	9	1	0	14.675	0.3076923076923077	0.8	0.4444444444444444	0.6132879045996592
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	expanded	45.0	0.99	86	2	6	4	2	2	4	0	13.75	0.5	0.3333333333333333	0.4	0.14545454545454545
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	expanded	45.0	0.99	88	2	7	9	1	8	6	0	11.766666666666666	0.1111111111111111	0.14285714285714285	0.125	0.6798866855524079
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	expanded	45.0	0.99	90	1	1	6	1	5	0	0	8.733333333333333	0.16666666666666666	1.0	0.2857142857142857	0.5725190839694657
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	expanded	45.0	0.99	102	1	2	4	2	2	0	0	7.266666666666667	0.5	1.0	0.6666666666666666	0.27522935779816515
+exclude_sub32_sub50	P6-D	direct_six_channel_psg	test	expanded	45.0	0.99	107	1	1	0	0	0	1	0	6.875		0.0	0.0	0.0

@@ -1,0 +1,14 @@
+check	status	detail
+frozen_test_membership	pass	26 recordings; 20 pid groups
+four_features_per_recording	pass	104 feature artifacts
+finite_test_features	pass	all generated features finite
+epoch_and_stage_parity	pass	all test recordings
+context_center_parity	pass	all test recordings
+psg_overlap_parity	pass	maximum=0
+frozen_model_hashes	pass	three exact model hashes
+four_frozen_comparators	pass	alignment comparator remains excluded
+test_partition_only	pass	test rows only
+complete_test_support	pass	26 recordings for each comparator
+frozen_thresholds_applied	pass	{'P6-D': 0.99, 'P2-D': 0.99, 'H2-D': 0.96, 'P2-H2-Z': 0.99}
+complete_fixed_evaluations	pass	4 comparators x 2 subsets x 2 memberships x 2 tolerances
+external_hashes_recorded	pass	104 features, 3 models, 1 score artifact

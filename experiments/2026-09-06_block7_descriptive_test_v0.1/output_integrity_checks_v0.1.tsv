@@ -1,0 +1,14 @@
+check	status	detail
+frozen_test_assignments	pass	26 recordings; 20 pid groups
+feature_manifest_shape	pass	104 rows; 26 recordings
+feature_artifacts_reopened	pass	shape, size, hash, and finite values
+feature_epoch_stage_parity	pass	all four modalities
+feature_context_parity	pass	all four modalities
+psg_overlap_reproduced	pass	maximum=0
+external_manifest_rehashed	pass	108 external artifacts
+frozen_models_rehashed	pass	three exact validation-frozen models
+continuous_scores_reproduced	pass	rows=95460
+test_support_reproduced	pass	26 recordings for four comparators
+event_outputs_recomputed	pass	alarms, metrics, recording, participant, and match rows
+paired_bootstrap_recomputed	pass	four paired contrasts; 2,000 resamples
+validation_pattern_table_recomputed	pass	three frozen interpretation checks
