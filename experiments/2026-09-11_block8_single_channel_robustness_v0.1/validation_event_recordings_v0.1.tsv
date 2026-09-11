@@ -1,0 +1,241 @@
+comparator	model_role	partition	membership	threshold	subject	pid	tolerance_sec	reference_events	predicted_events	ignored_reference_events	true_positive	false_positive	false_negative	ignored_predictions	supported_hours	precision	recall	f1	false_alarms_per_hour
+H2-INTACT	frozen_two_channel_wearable	validation	primary	0.96	sub-1	89	15.0	0	9	5	0	9	0	0	7.5	0.0		0.0	1.2
+H2-INTACT	frozen_two_channel_wearable	validation	primary	0.96	sub-105	73	15.0	3	12	0	1	11	2	0	7.866666666666666	0.08333333333333333	0.3333333333333333	0.13333333333333333	1.3983050847457628
+H2-INTACT	frozen_two_channel_wearable	validation	primary	0.96	sub-112	97	15.0	3	8	0	2	6	1	0	7.6	0.25	0.6666666666666666	0.36363636363636365	0.7894736842105263
+H2-INTACT	frozen_two_channel_wearable	validation	primary	0.96	sub-113	97	15.0	2	8	0	1	7	1	0	7.75	0.125	0.5	0.2	0.9032258064516129
+H2-INTACT	frozen_two_channel_wearable	validation	primary	0.96	sub-114	97	15.0	1	9	0	1	8	0	0	7.716666666666667	0.1111111111111111	1.0	0.2	1.036717062634989
+H2-INTACT	frozen_two_channel_wearable	validation	primary	0.96	sub-124	15	15.0	4	3	0	1	2	3	0	7.35	0.3333333333333333	0.25	0.2857142857142857	0.272108843537415
+H2-INTACT	frozen_two_channel_wearable	validation	primary	0.96	sub-126	106	15.0	1	12	5	0	10	1	2	7.2	0.0	0.0	0.0	1.3888888888888888
+H2-INTACT	frozen_two_channel_wearable	validation	primary	0.96	sub-2	89	15.0	7	18	0	2	16	5	0	7.55	0.1111111111111111	0.2857142857142857	0.16	2.119205298013245
+H2-INTACT	frozen_two_channel_wearable	validation	primary	0.96	sub-23	15	15.0	1	6	1	1	5	0	0	9.266666666666667	0.16666666666666666	1.0	0.2857142857142857	0.539568345323741
+H2-INTACT	frozen_two_channel_wearable	validation	primary	0.96	sub-25	17	15.0	3	14	0	0	14	3	0	8.966666666666667	0.0	0.0	0.0	1.5613382899628252
+H2-INTACT	frozen_two_channel_wearable	validation	primary	0.96	sub-4	2	15.0	2	13	0	1	12	1	0	8.858333333333333	0.07692307692307693	0.5	0.13333333333333333	1.354656632173095
+H2-INTACT	frozen_two_channel_wearable	validation	primary	0.96	sub-5	3	15.0	4	6	0	2	4	2	0	8.316666666666666	0.3333333333333333	0.5	0.4	0.4809619238476954
+H2-INTACT	frozen_two_channel_wearable	validation	primary	0.96	sub-6	4	15.0	1	15	0	0	15	1	0	8.258333333333333	0.0	0.0	0.0	1.8163471241170537
+H2-INTACT	frozen_two_channel_wearable	validation	primary	0.96	sub-7	5	15.0	0	43	3	0	41	0	2	7.733333333333333	0.0		0.0	5.301724137931035
+H2-INTACT	frozen_two_channel_wearable	validation	primary	0.96	sub-72	37	15.0	0	7	2	0	6	0	1	7.991666666666666	0.0		0.0	0.7507820646506779
+H2-INTACT	frozen_two_channel_wearable	validation	primary	0.96	sub-75	40	15.0	0	34	2	0	33	0	1	7.133333333333334	0.0		0.0	4.626168224299065
+H2-INTACT	frozen_two_channel_wearable	validation	primary	0.96	sub-79	44	15.0	0	1	0	0	1	0	0	8.558333333333334	0.0		0.0	0.11684518013631938
+H2-INTACT	frozen_two_channel_wearable	validation	primary	0.96	sub-82	48	15.0	0	10	2	0	8	0	2	7.341666666666667	0.0		0.0	1.0896708286038592
+H2-INTACT	frozen_two_channel_wearable	validation	primary	0.96	sub-88	55	15.0	0	10	0	0	10	0	0	7.416666666666667	0.0		0.0	1.348314606741573
+H2-INTACT	frozen_two_channel_wearable	validation	primary	0.96	sub-97	64	15.0	5	18	0	4	14	1	0	8.983333333333333	0.2222222222222222	0.8	0.34782608695652173	1.5584415584415585
+H2-INTACT	frozen_two_channel_wearable	validation	primary	0.96	sub-1	89	45.0	0	9	5	0	9	0	0	7.5	0.0		0.0	1.2
+H2-INTACT	frozen_two_channel_wearable	validation	primary	0.96	sub-105	73	45.0	3	12	0	3	9	0	0	7.866666666666666	0.25	1.0	0.4	1.1440677966101696
+H2-INTACT	frozen_two_channel_wearable	validation	primary	0.96	sub-112	97	45.0	3	8	0	2	6	1	0	7.6	0.25	0.6666666666666666	0.36363636363636365	0.7894736842105263
+H2-INTACT	frozen_two_channel_wearable	validation	primary	0.96	sub-113	97	45.0	2	8	0	1	7	1	0	7.75	0.125	0.5	0.2	0.9032258064516129
+H2-INTACT	frozen_two_channel_wearable	validation	primary	0.96	sub-114	97	45.0	1	9	0	1	8	0	0	7.716666666666667	0.1111111111111111	1.0	0.2	1.036717062634989
+H2-INTACT	frozen_two_channel_wearable	validation	primary	0.96	sub-124	15	45.0	4	3	0	1	2	3	0	7.35	0.3333333333333333	0.25	0.2857142857142857	0.272108843537415
+H2-INTACT	frozen_two_channel_wearable	validation	primary	0.96	sub-126	106	45.0	1	12	5	1	7	0	4	7.2	0.125	1.0	0.2222222222222222	0.9722222222222222
+H2-INTACT	frozen_two_channel_wearable	validation	primary	0.96	sub-2	89	45.0	7	18	0	2	16	5	0	7.55	0.1111111111111111	0.2857142857142857	0.16	2.119205298013245
+H2-INTACT	frozen_two_channel_wearable	validation	primary	0.96	sub-23	15	45.0	1	6	1	1	5	0	0	9.266666666666667	0.16666666666666666	1.0	0.2857142857142857	0.539568345323741
+H2-INTACT	frozen_two_channel_wearable	validation	primary	0.96	sub-25	17	45.0	3	14	0	1	13	2	0	8.966666666666667	0.07142857142857142	0.3333333333333333	0.11764705882352941	1.449814126394052
+H2-INTACT	frozen_two_channel_wearable	validation	primary	0.96	sub-4	2	45.0	2	13	0	1	12	1	0	8.858333333333333	0.07692307692307693	0.5	0.13333333333333333	1.354656632173095
+H2-INTACT	frozen_two_channel_wearable	validation	primary	0.96	sub-5	3	45.0	4	6	0	2	4	2	0	8.316666666666666	0.3333333333333333	0.5	0.4	0.4809619238476954
+H2-INTACT	frozen_two_channel_wearable	validation	primary	0.96	sub-6	4	45.0	1	15	0	0	15	1	0	8.258333333333333	0.0	0.0	0.0	1.8163471241170537
+H2-INTACT	frozen_two_channel_wearable	validation	primary	0.96	sub-7	5	45.0	0	43	3	0	40	0	3	7.733333333333333	0.0		0.0	5.172413793103448
+H2-INTACT	frozen_two_channel_wearable	validation	primary	0.96	sub-72	37	45.0	0	7	2	0	6	0	1	7.991666666666666	0.0		0.0	0.7507820646506779
+H2-INTACT	frozen_two_channel_wearable	validation	primary	0.96	sub-75	40	45.0	0	34	2	0	32	0	2	7.133333333333334	0.0		0.0	4.485981308411215
+H2-INTACT	frozen_two_channel_wearable	validation	primary	0.96	sub-79	44	45.0	0	1	0	0	1	0	0	8.558333333333334	0.0		0.0	0.11684518013631938
+H2-INTACT	frozen_two_channel_wearable	validation	primary	0.96	sub-82	48	45.0	0	10	2	0	8	0	2	7.341666666666667	0.0		0.0	1.0896708286038592
+H2-INTACT	frozen_two_channel_wearable	validation	primary	0.96	sub-88	55	45.0	0	10	0	0	10	0	0	7.416666666666667	0.0		0.0	1.348314606741573
+H2-INTACT	frozen_two_channel_wearable	validation	primary	0.96	sub-97	64	45.0	5	18	0	4	14	1	0	8.983333333333333	0.2222222222222222	0.8	0.34782608695652173	1.5584415584415585
+H2-INTACT	frozen_two_channel_wearable	validation	expanded	0.96	sub-1	89	15.0	0	9	5	0	9	0	0	7.5	0.0		0.0	1.2
+H2-INTACT	frozen_two_channel_wearable	validation	expanded	0.96	sub-105	73	15.0	3	12	0	1	11	2	0	7.866666666666666	0.08333333333333333	0.3333333333333333	0.13333333333333333	1.3983050847457628
+H2-INTACT	frozen_two_channel_wearable	validation	expanded	0.96	sub-112	97	15.0	3	8	0	2	6	1	0	7.6	0.25	0.6666666666666666	0.36363636363636365	0.7894736842105263
+H2-INTACT	frozen_two_channel_wearable	validation	expanded	0.96	sub-113	97	15.0	2	8	0	1	7	1	0	7.75	0.125	0.5	0.2	0.9032258064516129
+H2-INTACT	frozen_two_channel_wearable	validation	expanded	0.96	sub-114	97	15.0	1	9	0	1	8	0	0	7.716666666666667	0.1111111111111111	1.0	0.2	1.036717062634989
+H2-INTACT	frozen_two_channel_wearable	validation	expanded	0.96	sub-124	15	15.0	4	3	0	1	2	3	0	7.35	0.3333333333333333	0.25	0.2857142857142857	0.272108843537415
+H2-INTACT	frozen_two_channel_wearable	validation	expanded	0.96	sub-126	106	15.0	6	12	0	2	10	4	0	7.2	0.16666666666666666	0.3333333333333333	0.2222222222222222	1.3888888888888888
+H2-INTACT	frozen_two_channel_wearable	validation	expanded	0.96	sub-2	89	15.0	7	18	0	2	16	5	0	7.55	0.1111111111111111	0.2857142857142857	0.16	2.119205298013245
+H2-INTACT	frozen_two_channel_wearable	validation	expanded	0.96	sub-23	15	15.0	1	6	1	1	5	0	0	9.266666666666667	0.16666666666666666	1.0	0.2857142857142857	0.539568345323741
+H2-INTACT	frozen_two_channel_wearable	validation	expanded	0.96	sub-25	17	15.0	3	14	0	0	14	3	0	8.966666666666667	0.0	0.0	0.0	1.5613382899628252
+H2-INTACT	frozen_two_channel_wearable	validation	expanded	0.96	sub-4	2	15.0	2	13	0	1	12	1	0	8.858333333333333	0.07692307692307693	0.5	0.13333333333333333	1.354656632173095
+H2-INTACT	frozen_two_channel_wearable	validation	expanded	0.96	sub-5	3	15.0	4	6	0	2	4	2	0	8.316666666666666	0.3333333333333333	0.5	0.4	0.4809619238476954
+H2-INTACT	frozen_two_channel_wearable	validation	expanded	0.96	sub-6	4	15.0	1	15	0	0	15	1	0	8.258333333333333	0.0	0.0	0.0	1.8163471241170537
+H2-INTACT	frozen_two_channel_wearable	validation	expanded	0.96	sub-7	5	15.0	3	43	0	2	41	1	0	7.733333333333333	0.046511627906976744	0.6666666666666666	0.08695652173913043	5.301724137931035
+H2-INTACT	frozen_two_channel_wearable	validation	expanded	0.96	sub-72	37	15.0	2	7	0	1	6	1	0	7.991666666666666	0.14285714285714285	0.5	0.2222222222222222	0.7507820646506779
+H2-INTACT	frozen_two_channel_wearable	validation	expanded	0.96	sub-75	40	15.0	2	34	0	1	33	1	0	7.133333333333334	0.029411764705882353	0.5	0.05555555555555555	4.626168224299065
+H2-INTACT	frozen_two_channel_wearable	validation	expanded	0.96	sub-79	44	15.0	0	1	0	0	1	0	0	8.558333333333334	0.0		0.0	0.11684518013631938
+H2-INTACT	frozen_two_channel_wearable	validation	expanded	0.96	sub-82	48	15.0	2	10	0	2	8	0	0	7.341666666666667	0.2	1.0	0.3333333333333333	1.0896708286038592
+H2-INTACT	frozen_two_channel_wearable	validation	expanded	0.96	sub-88	55	15.0	0	10	0	0	10	0	0	7.416666666666667	0.0		0.0	1.348314606741573
+H2-INTACT	frozen_two_channel_wearable	validation	expanded	0.96	sub-97	64	15.0	5	18	0	4	14	1	0	8.983333333333333	0.2222222222222222	0.8	0.34782608695652173	1.5584415584415585
+H2-INTACT	frozen_two_channel_wearable	validation	expanded	0.96	sub-1	89	45.0	0	9	5	0	9	0	0	7.5	0.0		0.0	1.2
+H2-INTACT	frozen_two_channel_wearable	validation	expanded	0.96	sub-105	73	45.0	3	12	0	3	9	0	0	7.866666666666666	0.25	1.0	0.4	1.1440677966101696
+H2-INTACT	frozen_two_channel_wearable	validation	expanded	0.96	sub-112	97	45.0	3	8	0	2	6	1	0	7.6	0.25	0.6666666666666666	0.36363636363636365	0.7894736842105263
+H2-INTACT	frozen_two_channel_wearable	validation	expanded	0.96	sub-113	97	45.0	2	8	0	1	7	1	0	7.75	0.125	0.5	0.2	0.9032258064516129
+H2-INTACT	frozen_two_channel_wearable	validation	expanded	0.96	sub-114	97	45.0	1	9	0	1	8	0	0	7.716666666666667	0.1111111111111111	1.0	0.2	1.036717062634989
+H2-INTACT	frozen_two_channel_wearable	validation	expanded	0.96	sub-124	15	45.0	4	3	0	1	2	3	0	7.35	0.3333333333333333	0.25	0.2857142857142857	0.272108843537415
+H2-INTACT	frozen_two_channel_wearable	validation	expanded	0.96	sub-126	106	45.0	6	12	0	5	7	1	0	7.2	0.4166666666666667	0.8333333333333334	0.5555555555555556	0.9722222222222222
+H2-INTACT	frozen_two_channel_wearable	validation	expanded	0.96	sub-2	89	45.0	7	18	0	2	16	5	0	7.55	0.1111111111111111	0.2857142857142857	0.16	2.119205298013245
+H2-INTACT	frozen_two_channel_wearable	validation	expanded	0.96	sub-23	15	45.0	1	6	1	1	5	0	0	9.266666666666667	0.16666666666666666	1.0	0.2857142857142857	0.539568345323741
+H2-INTACT	frozen_two_channel_wearable	validation	expanded	0.96	sub-25	17	45.0	3	14	0	1	13	2	0	8.966666666666667	0.07142857142857142	0.3333333333333333	0.11764705882352941	1.449814126394052
+H2-INTACT	frozen_two_channel_wearable	validation	expanded	0.96	sub-4	2	45.0	2	13	0	1	12	1	0	8.858333333333333	0.07692307692307693	0.5	0.13333333333333333	1.354656632173095
+H2-INTACT	frozen_two_channel_wearable	validation	expanded	0.96	sub-5	3	45.0	4	6	0	2	4	2	0	8.316666666666666	0.3333333333333333	0.5	0.4	0.4809619238476954
+H2-INTACT	frozen_two_channel_wearable	validation	expanded	0.96	sub-6	4	45.0	1	15	0	0	15	1	0	8.258333333333333	0.0	0.0	0.0	1.8163471241170537
+H2-INTACT	frozen_two_channel_wearable	validation	expanded	0.96	sub-7	5	45.0	3	43	0	3	40	0	0	7.733333333333333	0.06976744186046512	1.0	0.13043478260869565	5.172413793103448
+H2-INTACT	frozen_two_channel_wearable	validation	expanded	0.96	sub-72	37	45.0	2	7	0	1	6	1	0	7.991666666666666	0.14285714285714285	0.5	0.2222222222222222	0.7507820646506779
+H2-INTACT	frozen_two_channel_wearable	validation	expanded	0.96	sub-75	40	45.0	2	34	0	2	32	0	0	7.133333333333334	0.058823529411764705	1.0	0.1111111111111111	4.485981308411215
+H2-INTACT	frozen_two_channel_wearable	validation	expanded	0.96	sub-79	44	45.0	0	1	0	0	1	0	0	8.558333333333334	0.0		0.0	0.11684518013631938
+H2-INTACT	frozen_two_channel_wearable	validation	expanded	0.96	sub-82	48	45.0	2	10	0	2	8	0	0	7.341666666666667	0.2	1.0	0.3333333333333333	1.0896708286038592
+H2-INTACT	frozen_two_channel_wearable	validation	expanded	0.96	sub-88	55	45.0	0	10	0	0	10	0	0	7.416666666666667	0.0		0.0	1.348314606741573
+H2-INTACT	frozen_two_channel_wearable	validation	expanded	0.96	sub-97	64	45.0	5	18	0	4	14	1	0	8.983333333333333	0.2222222222222222	0.8	0.34782608695652173	1.5584415584415585
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	primary	0.96	sub-1	89	15.0	0	5	5	0	5	0	0	7.5	0.0		0.0	0.6666666666666666
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	primary	0.96	sub-105	73	15.0	3	1	0	0	1	3	0	7.866666666666666	0.0	0.0	0.0	0.1271186440677966
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	primary	0.96	sub-112	97	15.0	3	0	0	0	0	3	0	7.6		0.0	0.0	0.0
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	primary	0.96	sub-113	97	15.0	2	0	0	0	0	2	0	7.75		0.0	0.0	0.0
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	primary	0.96	sub-114	97	15.0	1	1	0	0	1	1	0	7.716666666666667	0.0	0.0	0.0	0.12958963282937364
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	primary	0.96	sub-124	15	15.0	4	0	0	0	0	4	0	7.35		0.0	0.0	0.0
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	primary	0.96	sub-126	106	15.0	1	17	5	0	16	1	1	7.2	0.0	0.0	0.0	2.2222222222222223
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	primary	0.96	sub-2	89	15.0	7	7	0	0	7	7	0	7.55	0.0	0.0	0.0	0.9271523178807948
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	primary	0.96	sub-23	15	15.0	1	3	1	0	3	1	0	9.266666666666667	0.0	0.0	0.0	0.3237410071942446
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	primary	0.96	sub-25	17	15.0	3	3	0	0	3	3	0	8.966666666666667	0.0	0.0	0.0	0.3345724907063197
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	primary	0.96	sub-4	2	15.0	2	2	0	0	2	2	0	8.858333333333333	0.0	0.0	0.0	0.2257761053621825
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	primary	0.96	sub-5	3	15.0	4	0	0	0	0	4	0	8.316666666666666		0.0	0.0	0.0
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	primary	0.96	sub-6	4	15.0	1	1	0	0	1	1	0	8.258333333333333	0.0	0.0	0.0	0.12108980827447025
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	primary	0.96	sub-7	5	15.0	0	32	3	0	31	0	1	7.733333333333333	0.0		0.0	4.008620689655173
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	primary	0.96	sub-72	37	15.0	0	2	2	0	2	0	0	7.991666666666666	0.0		0.0	0.2502606882168926
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	primary	0.96	sub-75	40	15.0	0	1	2	0	1	0	0	7.133333333333334	0.0		0.0	0.14018691588785046
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	primary	0.96	sub-79	44	15.0	0	0	0	0	0	0	0	8.558333333333334				0.0
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	primary	0.96	sub-82	48	15.0	0	3	2	0	3	0	0	7.341666666666667	0.0		0.0	0.4086265607264472
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	primary	0.96	sub-88	55	15.0	0	4	0	0	4	0	0	7.416666666666667	0.0		0.0	0.5393258426966292
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	primary	0.96	sub-97	64	15.0	5	3	0	0	3	5	0	8.983333333333333	0.0	0.0	0.0	0.33395176252319114
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	primary	0.96	sub-1	89	45.0	0	5	5	0	5	0	0	7.5	0.0		0.0	0.6666666666666666
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	primary	0.96	sub-105	73	45.0	3	1	0	0	1	3	0	7.866666666666666	0.0	0.0	0.0	0.1271186440677966
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	primary	0.96	sub-112	97	45.0	3	0	0	0	0	3	0	7.6		0.0	0.0	0.0
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	primary	0.96	sub-113	97	45.0	2	0	0	0	0	2	0	7.75		0.0	0.0	0.0
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	primary	0.96	sub-114	97	45.0	1	1	0	0	1	1	0	7.716666666666667	0.0	0.0	0.0	0.12958963282937364
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	primary	0.96	sub-124	15	45.0	4	0	0	0	0	4	0	7.35		0.0	0.0	0.0
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	primary	0.96	sub-126	106	45.0	1	17	5	0	14	1	3	7.2	0.0	0.0	0.0	1.9444444444444444
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	primary	0.96	sub-2	89	45.0	7	7	0	0	7	7	0	7.55	0.0	0.0	0.0	0.9271523178807948
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	primary	0.96	sub-23	15	45.0	1	3	1	0	3	1	0	9.266666666666667	0.0	0.0	0.0	0.3237410071942446
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	primary	0.96	sub-25	17	45.0	3	3	0	0	3	3	0	8.966666666666667	0.0	0.0	0.0	0.3345724907063197
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	primary	0.96	sub-4	2	45.0	2	2	0	0	2	2	0	8.858333333333333	0.0	0.0	0.0	0.2257761053621825
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	primary	0.96	sub-5	3	45.0	4	0	0	0	0	4	0	8.316666666666666		0.0	0.0	0.0
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	primary	0.96	sub-6	4	45.0	1	1	0	0	1	1	0	8.258333333333333	0.0	0.0	0.0	0.12108980827447025
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	primary	0.96	sub-7	5	45.0	0	32	3	0	30	0	2	7.733333333333333	0.0		0.0	3.8793103448275863
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	primary	0.96	sub-72	37	45.0	0	2	2	0	2	0	0	7.991666666666666	0.0		0.0	0.2502606882168926
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	primary	0.96	sub-75	40	45.0	0	1	2	0	1	0	0	7.133333333333334	0.0		0.0	0.14018691588785046
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	primary	0.96	sub-79	44	45.0	0	0	0	0	0	0	0	8.558333333333334				0.0
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	primary	0.96	sub-82	48	45.0	0	3	2	0	3	0	0	7.341666666666667	0.0		0.0	0.4086265607264472
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	primary	0.96	sub-88	55	45.0	0	4	0	0	4	0	0	7.416666666666667	0.0		0.0	0.5393258426966292
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	primary	0.96	sub-97	64	45.0	5	3	0	0	3	5	0	8.983333333333333	0.0	0.0	0.0	0.33395176252319114
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	expanded	0.96	sub-1	89	15.0	0	5	5	0	5	0	0	7.5	0.0		0.0	0.6666666666666666
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	expanded	0.96	sub-105	73	15.0	3	1	0	0	1	3	0	7.866666666666666	0.0	0.0	0.0	0.1271186440677966
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	expanded	0.96	sub-112	97	15.0	3	0	0	0	0	3	0	7.6		0.0	0.0	0.0
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	expanded	0.96	sub-113	97	15.0	2	0	0	0	0	2	0	7.75		0.0	0.0	0.0
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	expanded	0.96	sub-114	97	15.0	1	1	0	0	1	1	0	7.716666666666667	0.0	0.0	0.0	0.12958963282937364
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	expanded	0.96	sub-124	15	15.0	4	0	0	0	0	4	0	7.35		0.0	0.0	0.0
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	expanded	0.96	sub-126	106	15.0	6	17	0	1	16	5	0	7.2	0.058823529411764705	0.16666666666666666	0.08695652173913043	2.2222222222222223
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	expanded	0.96	sub-2	89	15.0	7	7	0	0	7	7	0	7.55	0.0	0.0	0.0	0.9271523178807948
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	expanded	0.96	sub-23	15	15.0	1	3	1	0	3	1	0	9.266666666666667	0.0	0.0	0.0	0.3237410071942446
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	expanded	0.96	sub-25	17	15.0	3	3	0	0	3	3	0	8.966666666666667	0.0	0.0	0.0	0.3345724907063197
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	expanded	0.96	sub-4	2	15.0	2	2	0	0	2	2	0	8.858333333333333	0.0	0.0	0.0	0.2257761053621825
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	expanded	0.96	sub-5	3	15.0	4	0	0	0	0	4	0	8.316666666666666		0.0	0.0	0.0
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	expanded	0.96	sub-6	4	15.0	1	1	0	0	1	1	0	8.258333333333333	0.0	0.0	0.0	0.12108980827447025
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	expanded	0.96	sub-7	5	15.0	3	32	0	1	31	2	0	7.733333333333333	0.03125	0.3333333333333333	0.05714285714285714	4.008620689655173
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	expanded	0.96	sub-72	37	15.0	2	2	0	0	2	2	0	7.991666666666666	0.0	0.0	0.0	0.2502606882168926
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	expanded	0.96	sub-75	40	15.0	2	1	0	0	1	2	0	7.133333333333334	0.0	0.0	0.0	0.14018691588785046
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	expanded	0.96	sub-79	44	15.0	0	0	0	0	0	0	0	8.558333333333334				0.0
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	expanded	0.96	sub-82	48	15.0	2	3	0	0	3	2	0	7.341666666666667	0.0	0.0	0.0	0.4086265607264472
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	expanded	0.96	sub-88	55	15.0	0	4	0	0	4	0	0	7.416666666666667	0.0		0.0	0.5393258426966292
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	expanded	0.96	sub-97	64	15.0	5	3	0	0	3	5	0	8.983333333333333	0.0	0.0	0.0	0.33395176252319114
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	expanded	0.96	sub-1	89	45.0	0	5	5	0	5	0	0	7.5	0.0		0.0	0.6666666666666666
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	expanded	0.96	sub-105	73	45.0	3	1	0	0	1	3	0	7.866666666666666	0.0	0.0	0.0	0.1271186440677966
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	expanded	0.96	sub-112	97	45.0	3	0	0	0	0	3	0	7.6		0.0	0.0	0.0
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	expanded	0.96	sub-113	97	45.0	2	0	0	0	0	2	0	7.75		0.0	0.0	0.0
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	expanded	0.96	sub-114	97	45.0	1	1	0	0	1	1	0	7.716666666666667	0.0	0.0	0.0	0.12958963282937364
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	expanded	0.96	sub-124	15	45.0	4	0	0	0	0	4	0	7.35		0.0	0.0	0.0
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	expanded	0.96	sub-126	106	45.0	6	17	0	3	14	3	0	7.2	0.17647058823529413	0.5	0.2608695652173913	1.9444444444444444
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	expanded	0.96	sub-2	89	45.0	7	7	0	0	7	7	0	7.55	0.0	0.0	0.0	0.9271523178807948
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	expanded	0.96	sub-23	15	45.0	1	3	1	0	3	1	0	9.266666666666667	0.0	0.0	0.0	0.3237410071942446
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	expanded	0.96	sub-25	17	45.0	3	3	0	0	3	3	0	8.966666666666667	0.0	0.0	0.0	0.3345724907063197
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	expanded	0.96	sub-4	2	45.0	2	2	0	0	2	2	0	8.858333333333333	0.0	0.0	0.0	0.2257761053621825
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	expanded	0.96	sub-5	3	45.0	4	0	0	0	0	4	0	8.316666666666666		0.0	0.0	0.0
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	expanded	0.96	sub-6	4	45.0	1	1	0	0	1	1	0	8.258333333333333	0.0	0.0	0.0	0.12108980827447025
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	expanded	0.96	sub-7	5	45.0	3	32	0	2	30	1	0	7.733333333333333	0.0625	0.6666666666666666	0.11428571428571428	3.8793103448275863
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	expanded	0.96	sub-72	37	45.0	2	2	0	0	2	2	0	7.991666666666666	0.0	0.0	0.0	0.2502606882168926
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	expanded	0.96	sub-75	40	45.0	2	1	0	0	1	2	0	7.133333333333334	0.0	0.0	0.0	0.14018691588785046
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	expanded	0.96	sub-79	44	45.0	0	0	0	0	0	0	0	8.558333333333334				0.0
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	expanded	0.96	sub-82	48	45.0	2	3	0	0	3	2	0	7.341666666666667	0.0	0.0	0.0	0.4086265607264472
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	expanded	0.96	sub-88	55	45.0	0	4	0	0	4	0	0	7.416666666666667	0.0		0.0	0.5393258426966292
+H2-NO-HB1	neutralized_hb1_feature_contribution	validation	expanded	0.96	sub-97	64	45.0	5	3	0	0	3	5	0	8.983333333333333	0.0	0.0	0.0	0.33395176252319114
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	primary	0.96	sub-1	89	15.0	0	9	5	0	9	0	0	7.5	0.0		0.0	1.2
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	primary	0.96	sub-105	73	15.0	3	12	0	0	12	3	0	7.866666666666666	0.0	0.0	0.0	1.5254237288135595
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	primary	0.96	sub-112	97	15.0	3	4	0	2	2	1	0	7.6	0.5	0.6666666666666666	0.5714285714285714	0.2631578947368421
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	primary	0.96	sub-113	97	15.0	2	5	0	1	4	1	0	7.75	0.2	0.5	0.2857142857142857	0.5161290322580645
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	primary	0.96	sub-114	97	15.0	1	2	0	0	2	1	0	7.716666666666667	0.0	0.0	0.0	0.25917926565874727
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	primary	0.96	sub-124	15	15.0	4	1	0	1	0	3	0	7.35	1.0	0.25	0.4	0.0
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	primary	0.96	sub-126	106	15.0	1	8	5	0	7	1	1	7.2	0.0	0.0	0.0	0.9722222222222222
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	primary	0.96	sub-2	89	15.0	7	5	0	0	5	7	0	7.55	0.0	0.0	0.0	0.6622516556291391
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	primary	0.96	sub-23	15	15.0	1	4	1	0	4	1	0	9.266666666666667	0.0	0.0	0.0	0.4316546762589928
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	primary	0.96	sub-25	17	15.0	3	8	0	0	8	3	0	8.966666666666667	0.0	0.0	0.0	0.8921933085501859
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	primary	0.96	sub-4	2	15.0	2	20	0	1	19	1	0	8.858333333333333	0.05	0.5	0.09090909090909091	2.144873000940734
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	primary	0.96	sub-5	3	15.0	4	4	0	2	2	2	0	8.316666666666666	0.5	0.5	0.5	0.2404809619238477
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	primary	0.96	sub-6	4	15.0	1	18	0	0	18	1	0	8.258333333333333	0.0	0.0	0.0	2.1796165489404644
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	primary	0.96	sub-7	5	15.0	0	10	3	0	8	0	2	7.733333333333333	0.0		0.0	1.0344827586206897
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	primary	0.96	sub-72	37	15.0	0	8	2	0	7	0	1	7.991666666666666	0.0		0.0	0.8759124087591241
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	primary	0.96	sub-75	40	15.0	0	26	2	0	25	0	1	7.133333333333334	0.0		0.0	3.5046728971962615
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	primary	0.96	sub-79	44	15.0	0	5	0	0	5	0	0	8.558333333333334	0.0		0.0	0.5842259006815969
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	primary	0.96	sub-82	48	15.0	0	12	2	0	10	0	2	7.341666666666667	0.0		0.0	1.362088535754824
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	primary	0.96	sub-88	55	15.0	0	8	0	0	8	0	0	7.416666666666667	0.0		0.0	1.0786516853932584
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	primary	0.96	sub-97	64	15.0	5	20	0	3	17	2	0	8.983333333333333	0.15	0.6	0.24	1.8923933209647497
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	primary	0.96	sub-1	89	45.0	0	9	5	0	9	0	0	7.5	0.0		0.0	1.2
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	primary	0.96	sub-105	73	45.0	3	12	0	1	11	2	0	7.866666666666666	0.08333333333333333	0.3333333333333333	0.13333333333333333	1.3983050847457628
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	primary	0.96	sub-112	97	45.0	3	4	0	2	2	1	0	7.6	0.5	0.6666666666666666	0.5714285714285714	0.2631578947368421
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	primary	0.96	sub-113	97	45.0	2	5	0	1	4	1	0	7.75	0.2	0.5	0.2857142857142857	0.5161290322580645
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	primary	0.96	sub-114	97	45.0	1	2	0	0	2	1	0	7.716666666666667	0.0	0.0	0.0	0.25917926565874727
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	primary	0.96	sub-124	15	45.0	4	1	0	1	0	3	0	7.35	1.0	0.25	0.4	0.0
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	primary	0.96	sub-126	106	45.0	1	8	5	1	6	0	1	7.2	0.14285714285714285	1.0	0.25	0.8333333333333333
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	primary	0.96	sub-2	89	45.0	7	5	0	0	5	7	0	7.55	0.0	0.0	0.0	0.6622516556291391
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	primary	0.96	sub-23	15	45.0	1	4	1	0	4	1	0	9.266666666666667	0.0	0.0	0.0	0.4316546762589928
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	primary	0.96	sub-25	17	45.0	3	8	0	0	8	3	0	8.966666666666667	0.0	0.0	0.0	0.8921933085501859
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	primary	0.96	sub-4	2	45.0	2	20	0	1	19	1	0	8.858333333333333	0.05	0.5	0.09090909090909091	2.144873000940734
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	primary	0.96	sub-5	3	45.0	4	4	0	2	2	2	0	8.316666666666666	0.5	0.5	0.5	0.2404809619238477
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	primary	0.96	sub-6	4	45.0	1	18	0	0	18	1	0	8.258333333333333	0.0	0.0	0.0	2.1796165489404644
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	primary	0.96	sub-7	5	45.0	0	10	3	0	8	0	2	7.733333333333333	0.0		0.0	1.0344827586206897
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	primary	0.96	sub-72	37	45.0	0	8	2	0	7	0	1	7.991666666666666	0.0		0.0	0.8759124087591241
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	primary	0.96	sub-75	40	45.0	0	26	2	0	24	0	2	7.133333333333334	0.0		0.0	3.364485981308411
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	primary	0.96	sub-79	44	45.0	0	5	0	0	5	0	0	8.558333333333334	0.0		0.0	0.5842259006815969
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	primary	0.96	sub-82	48	45.0	0	12	2	0	10	0	2	7.341666666666667	0.0		0.0	1.362088535754824
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	primary	0.96	sub-88	55	45.0	0	8	0	0	8	0	0	7.416666666666667	0.0		0.0	1.0786516853932584
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	primary	0.96	sub-97	64	45.0	5	20	0	3	17	2	0	8.983333333333333	0.15	0.6	0.24	1.8923933209647497
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	expanded	0.96	sub-1	89	15.0	0	9	5	0	9	0	0	7.5	0.0		0.0	1.2
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	expanded	0.96	sub-105	73	15.0	3	12	0	0	12	3	0	7.866666666666666	0.0	0.0	0.0	1.5254237288135595
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	expanded	0.96	sub-112	97	15.0	3	4	0	2	2	1	0	7.6	0.5	0.6666666666666666	0.5714285714285714	0.2631578947368421
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	expanded	0.96	sub-113	97	15.0	2	5	0	1	4	1	0	7.75	0.2	0.5	0.2857142857142857	0.5161290322580645
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	expanded	0.96	sub-114	97	15.0	1	2	0	0	2	1	0	7.716666666666667	0.0	0.0	0.0	0.25917926565874727
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	expanded	0.96	sub-124	15	15.0	4	1	0	1	0	3	0	7.35	1.0	0.25	0.4	0.0
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	expanded	0.96	sub-126	106	15.0	6	8	0	1	7	5	0	7.2	0.125	0.16666666666666666	0.14285714285714285	0.9722222222222222
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	expanded	0.96	sub-2	89	15.0	7	5	0	0	5	7	0	7.55	0.0	0.0	0.0	0.6622516556291391
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	expanded	0.96	sub-23	15	15.0	1	4	1	0	4	1	0	9.266666666666667	0.0	0.0	0.0	0.4316546762589928
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	expanded	0.96	sub-25	17	15.0	3	8	0	0	8	3	0	8.966666666666667	0.0	0.0	0.0	0.8921933085501859
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	expanded	0.96	sub-4	2	15.0	2	20	0	1	19	1	0	8.858333333333333	0.05	0.5	0.09090909090909091	2.144873000940734
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	expanded	0.96	sub-5	3	15.0	4	4	0	2	2	2	0	8.316666666666666	0.5	0.5	0.5	0.2404809619238477
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	expanded	0.96	sub-6	4	15.0	1	18	0	0	18	1	0	8.258333333333333	0.0	0.0	0.0	2.1796165489404644
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	expanded	0.96	sub-7	5	15.0	3	10	0	2	8	1	0	7.733333333333333	0.2	0.6666666666666666	0.3076923076923077	1.0344827586206897
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	expanded	0.96	sub-72	37	15.0	2	8	0	1	7	1	0	7.991666666666666	0.125	0.5	0.2	0.8759124087591241
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	expanded	0.96	sub-75	40	15.0	2	26	0	1	25	1	0	7.133333333333334	0.038461538461538464	0.5	0.07142857142857142	3.5046728971962615
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	expanded	0.96	sub-79	44	15.0	0	5	0	0	5	0	0	8.558333333333334	0.0		0.0	0.5842259006815969
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	expanded	0.96	sub-82	48	15.0	2	12	0	2	10	0	0	7.341666666666667	0.16666666666666666	1.0	0.2857142857142857	1.362088535754824
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	expanded	0.96	sub-88	55	15.0	0	8	0	0	8	0	0	7.416666666666667	0.0		0.0	1.0786516853932584
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	expanded	0.96	sub-97	64	15.0	5	20	0	3	17	2	0	8.983333333333333	0.15	0.6	0.24	1.8923933209647497
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	expanded	0.96	sub-1	89	45.0	0	9	5	0	9	0	0	7.5	0.0		0.0	1.2
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	expanded	0.96	sub-105	73	45.0	3	12	0	1	11	2	0	7.866666666666666	0.08333333333333333	0.3333333333333333	0.13333333333333333	1.3983050847457628
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	expanded	0.96	sub-112	97	45.0	3	4	0	2	2	1	0	7.6	0.5	0.6666666666666666	0.5714285714285714	0.2631578947368421
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	expanded	0.96	sub-113	97	45.0	2	5	0	1	4	1	0	7.75	0.2	0.5	0.2857142857142857	0.5161290322580645
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	expanded	0.96	sub-114	97	45.0	1	2	0	0	2	1	0	7.716666666666667	0.0	0.0	0.0	0.25917926565874727
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	expanded	0.96	sub-124	15	45.0	4	1	0	1	0	3	0	7.35	1.0	0.25	0.4	0.0
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	expanded	0.96	sub-126	106	45.0	6	8	0	2	6	4	0	7.2	0.25	0.3333333333333333	0.2857142857142857	0.8333333333333333
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	expanded	0.96	sub-2	89	45.0	7	5	0	0	5	7	0	7.55	0.0	0.0	0.0	0.6622516556291391
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	expanded	0.96	sub-23	15	45.0	1	4	1	0	4	1	0	9.266666666666667	0.0	0.0	0.0	0.4316546762589928
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	expanded	0.96	sub-25	17	45.0	3	8	0	0	8	3	0	8.966666666666667	0.0	0.0	0.0	0.8921933085501859
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	expanded	0.96	sub-4	2	45.0	2	20	0	1	19	1	0	8.858333333333333	0.05	0.5	0.09090909090909091	2.144873000940734
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	expanded	0.96	sub-5	3	45.0	4	4	0	2	2	2	0	8.316666666666666	0.5	0.5	0.5	0.2404809619238477
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	expanded	0.96	sub-6	4	45.0	1	18	0	0	18	1	0	8.258333333333333	0.0	0.0	0.0	2.1796165489404644
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	expanded	0.96	sub-7	5	45.0	3	10	0	2	8	1	0	7.733333333333333	0.2	0.6666666666666666	0.3076923076923077	1.0344827586206897
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	expanded	0.96	sub-72	37	45.0	2	8	0	1	7	1	0	7.991666666666666	0.125	0.5	0.2	0.8759124087591241
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	expanded	0.96	sub-75	40	45.0	2	26	0	2	24	0	0	7.133333333333334	0.07692307692307693	1.0	0.14285714285714285	3.364485981308411
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	expanded	0.96	sub-79	44	45.0	0	5	0	0	5	0	0	8.558333333333334	0.0		0.0	0.5842259006815969
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	expanded	0.96	sub-82	48	45.0	2	12	0	2	10	0	0	7.341666666666667	0.16666666666666666	1.0	0.2857142857142857	1.362088535754824
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	expanded	0.96	sub-88	55	45.0	0	8	0	0	8	0	0	7.416666666666667	0.0		0.0	1.0786516853932584
+H2-NO-HB2	neutralized_hb2_feature_contribution	validation	expanded	0.96	sub-97	64	45.0	5	20	0	3	17	2	0	8.983333333333333	0.15	0.6	0.24	1.8923933209647497

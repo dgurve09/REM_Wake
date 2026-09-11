@@ -4,7 +4,7 @@ This repository investigates event-specific REM-to-Wake boundary detection from 
 
 ## Current Status
 
-As of 2026-09-06, Blocks 3-7 are complete. Block 8 robustness work is scheduled to begin on 2026-09-07.
+As of 2026-09-11, Blocks 3-7 are complete and Block 8 robustness work is in progress.
 
 - BOAS snapshot `1.1.1` is frozen at 128 paired recordings and 100 participant-table `pid` groups.
 - The conservative primary set contains 276 REM-to-Wake events across 72 groups; the expanded quality-sensitivity set contains 348 across 88 groups.
@@ -22,6 +22,8 @@ As of 2026-09-06, Blocks 3-7 are complete. Block 8 robustness work is scheduled 
 - The validation ordering did not fully reproduce. `P6-D - P2-D` test F1 was +0.0620 with paired 95% interval +0.0019 to +0.1194, reversing the validation point direction. The direct reduced-PSG versus zero-shot F1 difference remained positive at +0.0362 but its interval crossed zero.
 - Zero-shot transfer again had lower F1 but substantially fewer false alarms than direct wearable: the paired test differences were -0.0426 F1 and -0.8448 false alarms/hour, with only the false-alarm interval excluding zero.
 - All 13/13 in-run checks and 13/13 independent output checks passed. The validator rehashed 108 external artifacts and reproduced 95,460 probabilities, event outputs, and paired contrasts twice.
+- The first Block 8 experiment tested single-channel feature-contribution robustness using the frozen direct wearable model and validation partition only. Neutralizing `HB_1` reduced F1 from 0.1123 to 0 and false alarms from 1.4558 to 0.5208/hour, failing the predefined material-change screen. Neutralizing `HB_2` reduced F1 to 0.0913 and false alarms to 1.0793/hour.
+- Both ablation directions persisted across all 16 leave-one-`pid`-out folds. This identifies asymmetric channel dependence in the frozen classifier; it does not simulate physical electrode failure.
 
 The Block 7 paired-transfer protocol was committed before the channel audit and before feature extraction or fitting. The fixed descriptive test now closes Block 7, but the test partition was already used in earlier blocks and does not provide independent confirmation. Its results cannot be used to revise the frozen models or thresholds. The observed validation-to-test reversal makes participant and channel robustness the next uncertainty rather than justifying immediate adaptation or a more complex classifier.
 
@@ -42,7 +44,10 @@ The Block 7 paired-transfer protocol was committed before the channel audit and 
 - [Block 7 validation freeze and test entry](docs/evaluation/block7_validation_freeze_and_test_entry_v0.1.md)
 - [Block 7 descriptive test result](experiments/2026-09-06_block7_descriptive_test_v0.1/README.md)
 - [Block 7 transfer-gate decision](docs/evaluation/block7_transfer_gate_decision_2026-09-06.md)
-- [Current weekly record](docs/weekly/2026-08-31_to_2026-09-06.md)
+- [Block 8 single-channel protocol](docs/evaluation/block8_single_channel_robustness_protocol_v0.1.md)
+- [Block 8 single-channel result](experiments/2026-09-11_block8_single_channel_robustness_v0.1/README.md)
+- [Block 8 single-channel decision](docs/evaluation/block8_single_channel_decision_2026-09-11.md)
+- [Current weekly record](docs/weekly/2026-09-07_to_2026-09-13.md)
 - [BOAS dataset manifest](docs/data/boas_dataset_manifest.md)
 - [Label/preprocessing gate](docs/feasibility/label_preprocessing_gate_closeout_2026-07-18.md)
 - [Block 6 baseline decision](docs/evaluation/block6_baseline_gate_decision_2026-08-22.md)

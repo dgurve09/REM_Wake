@@ -1,0 +1,12 @@
+check	status	detail
+validation_assignment	pass	20 recordings; 16 pid groups
+frozen_model_rehashed	pass	d679d1142abc229b109ca912645b52ed16c4d449a87ee43185da28cafc3e3066
+ablation_map_recomputed	pass	80 dimensions; 40 per channel
+source_features_rehashed	pass	20 validation feature arrays
+ablation_probabilities_recomputed	pass	rows=57369
+validation_support_recomputed	pass	identical support for three comparators
+intact_probability_reproduced	pass	maximum=1.11022302463e-16
+event_outputs_recomputed	pass	alarms, metrics, recordings, participants, matches
+robustness_tables_recomputed	pass	material effects, 32 leave-one-out folds, and concentration
+external_manifest_rehashed	pass	23 external artifacts
+test_artifacts_absent	pass	no test path in manifest

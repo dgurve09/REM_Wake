@@ -1,0 +1,4 @@
+comparator	pid	pid_with_false_positive	total_false_positive	top_four_pid_false_positive	top_four_pid_false_positive_share
+H2-INTACT	16	16	232	120	0.5172413793103449
+H2-NO-HB1	16	14	83	63	0.7590361445783133
+H2-NO-HB2	16	16	172	79	0.45930232558139533

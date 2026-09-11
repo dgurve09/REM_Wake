@@ -1,0 +1,3 @@
+comparison	ablated_channel	f1_difference	false_alarms_per_hour_difference	material_f1_drop_bound	material_far_increase_bound	materially_adverse	apparent_metric_improvement
+H2-NO-HB1_minus_H2-INTACT	HB_1	-0.11228070175438597	-0.9349997385347488	0.03	0.5	True	True
+H2-NO-HB2_minus_H2-INTACT	HB_2	-0.020956500841143963	-0.37650996182607344	0.03	0.5	False	True

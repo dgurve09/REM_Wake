@@ -1,0 +1,2 @@
+source_comparator	reproduced_comparator	rows	maximum_absolute_probability_difference	probability_tolerance	reproduction_pass
+H2-D	H2-INTACT	19123	1.1102230246251565e-16	1e-12	True

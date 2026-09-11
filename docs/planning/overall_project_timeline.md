@@ -4,7 +4,7 @@
 **Project window:** 2026-06-01 to 2026-11-29
 **Prepared during:** 2026-06-25 to 2026-06-28
 **Finalized:** 2026-06-28
-**Current status:** Blocks 3-7 are complete; Block 5 was completed as catch-up work on 2026-08-15 after an inactive 2026-07-20 to 2026-08-14 interval; Block 6 closed on 2026-08-22 with direct DE-B improving on transparent stage-first SF-C while retaining low precision; validation-only endpoint factorization DE-D subsequently improved both validation F1 and false alarms but remains unevaluated on a new locked cohort; Block 7 closed on 2026-09-06 after the frozen descriptive test showed six-channel PSG leading, a validation-to-test channel-order reversal, and a persistent zero-shot/direct-wearable F1-versus-false-alarm tradeoff; Block 8 robustness work begins next
+**Current status:** Blocks 3-7 are complete; Block 5 was completed as catch-up work on 2026-08-15 after an inactive 2026-07-20 to 2026-08-14 interval; Block 6 closed on 2026-08-22 with direct DE-B improving on transparent stage-first SF-C while retaining low precision; validation-only endpoint factorization DE-D subsequently improved both validation F1 and false alarms but remains unevaluated on a new locked cohort; Block 7 closed on 2026-09-06 after the frozen descriptive test showed six-channel PSG leading, a validation-to-test channel-order reversal, and a persistent zero-shot/direct-wearable F1-versus-false-alarm tradeoff; Block 8 began on 2026-09-11 with a failed single-channel feature-contribution robustness screen caused by material dependence on `HB_1`
 
 ## 1. Project Boundary
 
@@ -78,7 +78,7 @@ flowchart TD
 | 5 | Jul 27-Aug 9 | What does a stage-first comparator achieve? | Wearable sleep-stage baseline, transition derivation from predicted stages | Stage-first event metrics | Completed as catch-up work on Aug 15; fixed `stage_ai`, epoch-only logistic, and five-epoch-context logistic comparators evaluated under frozen event matching |
 | 6 | Aug 10-Aug 23 | Does direct transition detection add value? | Simple direct baseline, small CNN only if justified, comparison to stage-first | Comparative baseline report | Complete Aug 22; DE-B improved test event F1 and false alarms/hour versus SF-C but retained precision 0.0909; validation-only DE-D improved F1 to 0.1604 and false alarms to 0.9915/hour versus DE-B validation; CNN deferred and DE-D test evaluation withheld |
 | 7 | Aug 24-Sep 6 | How large is the PSG-to-wearable device-shift problem? | Common six-channel PSG EEG, reduced PSG, wearable, strict zero-shot, and conditionally gated feature alignment | Paired transfer results and decision log | Complete Sep 6; `P2-D` led validation, `P6-D` led the descriptive test, strict zero-shot remained below direct wearable F1 with fewer false alarms, and alignment was skipped by the frozen gate |
-| 8 | Sep 7-Sep 20 | Is the approach robust to signal/channel variability? | Missing-channel tests, degradation tests, ablations, justified adaptation if needed | Robustness and ablation report | Not started; Block 7 transfer comparison must be completed before this work begins |
+| 8 | Sep 7-Sep 20 | Is the approach robust to signal/channel variability? | Missing-channel tests, degradation tests, ablations, justified adaptation if needed | Robustness and ablation report | In progress; validation-only neutralization found material `HB_1` dependence and smaller `HB_2` dependence; raw-signal degradation remains untested |
 | 9 | Sep 21-Oct 4 | Is external PSG comparison scientifically valid? | Audit one external PSG dataset and test reduced-channel generalization if appropriate | External generalization report or no-go | Not started |
 | 10 | Oct 5-Oct 18 | How should 30-second label uncertainty be handled? | Hard-label versus interval-aware temporal analysis | Label-uncertainty and localization report | Not started |
 | 11 | Oct 19-Nov 1 | Are transition-derived measures stable enough to report? | Event burden, REM stability, repeated-night reliability, streaming decision | Technical measures and streaming go/no-go | Not started |
@@ -293,9 +293,22 @@ Additional evidence completed on 2026-08-31 and 2026-09-06:
 - passed 13/13 in-run and 13/13 independent checks, rehashed 108 external artifacts, and independently reconstructed 95,460 probabilities, all event outputs, and four paired contrasts twice; and
 - closed Block 7 without revising any model or threshold, retaining the current test evidence as descriptive and requiring a new locked or external cohort for confirmation.
 
+Additional evidence completed on 2026-09-11:
+
+- predeclared a validation-only single-channel feature-contribution experiment before implementation or execution;
+- retained the frozen `H2-D` model, scaler, threshold 0.96, validation membership, temporal support, and event-matching rules without refitting;
+- neutralized exactly 40 context dimensions for `HB_1` or `HB_2` using the corresponding train-fitted model means;
+- reproduced the intact Block 7 probabilities within `1.12e-16` and all four intact event summaries within `1e-12`;
+- found that `HB_1` neutralization eliminated all true detections, reducing F1 from 0.1123 to 0 while reducing false alarms by 0.9350/hour;
+- found that `HB_2` neutralization reduced F1 by 0.0210 and false alarms by 0.3765/hour, remaining inside the predefined material bounds;
+- confirmed both F1 and false-alarm directions in all 16 leave-one-`pid`-out folds for each ablation;
+- failed the single-channel robustness screen because the `HB_1` F1 loss exceeded the predefined 0.03 bound;
+- passed 15/15 in-run and 11/11 independent checks, including reconstruction of 57,369 probabilities and 32 leave-one-participant-out folds; and
+- retained the result as a classifier-input contribution test rather than a physical electrode-failure simulation.
+
 ## 7. Next Work
 
-Block 8 should begin with a separate frozen robustness protocol. It should test whether the direct wearable result and PSG channel-order reversal are sensitive to missing channels, controlled signal degradation, and participant concentration. It must use the existing frozen scores where sufficient, generate new corrupted-signal features only under a committed protocol, and keep the current test partition closed to model or threshold revision. No adaptation method is authorized merely because Block 7 performance is low; a method requires a specific failure mechanism and a separate hypothesis.
+Continue Block 8 with a separate frozen raw-signal degradation protocol. It should test predefined degradation levels before filtering and feature extraction, distinguish score-distribution movement from event-ranking loss, and keep the current test partition closed to model or threshold revision. No channel-aware retraining, recalibration, or adaptation method is authorized from the validation ablation alone; each requires a specific mechanism, new hypothesis, and separately committed protocol.
 
 ## 8. Rules for the Rest of the Project
 

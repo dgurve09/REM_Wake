@@ -1,0 +1,3 @@
+comparison	ablated_channel	folds	f1_direction_match_folds	far_direction_match_folds	f1_difference_min	f1_difference_max	far_difference_min	far_difference_max	participant_stable
+H2-NO-HB1_minus_H2-INTACT	HB_1	16	16	16	-0.13114754098360656	-0.0916030534351145	-1.0186757215619693	-0.7685991131548695	True
+H2-NO-HB2_minus_H2-INTACT	HB_2	16	16	16	-0.036360811125786666	-0.010543683850456759	-0.4451827242524917	-0.17807089859851621	True

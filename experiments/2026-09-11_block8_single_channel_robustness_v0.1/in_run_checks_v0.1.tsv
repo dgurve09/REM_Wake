@@ -1,0 +1,16 @@
+check	status	detail
+validation_assignment_only	pass	20 recordings; 16 pid groups
+frozen_model_hash	pass	d679d1142abc229b109ca912645b52ed16c4d449a87ee43185da28cafc3e3066
+ablation_dimensions	pass	40 dimensions for each channel
+validation_features_reopened	pass	20 hashed feature arrays
+three_fixed_comparators	pass	intact, no-HB1, no-HB2
+validation_scores_only	pass	no non-validation score rows
+intact_probability_reproduction	pass	maximum=1.11022302463e-16
+intact_event_reproduction	pass	four membership/tolerance rows
+identical_support	pass	same 20 recordings and boundaries
+fixed_threshold_only	pass	threshold=0.96
+complete_event_outputs	pass	3 comparators x 2 memberships x 2 tolerances
+two_material_comparisons	pass	one comparison per neutralized channel
+complete_leave_one_pid_out	pass	two comparisons x 16 omitted pid groups
+external_manifest	pass	20 features, model, source scores, ablation scores
+test_artifacts_closed	pass	no test path in external manifest

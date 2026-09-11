@@ -2,11 +2,11 @@
 
 ## Wearable EEG REM-to-Wake Transition Detection Under Label and Device Uncertainty
 
-**Version:** 1.15
+**Version:** 1.16
 **Planning date:** 2026-06-21
-**Last revised:** 2026-09-06
+**Last revised:** 2026-09-11
 **Project window:** 2026-06-01 to 2026-11-29
-**Status:** Working research plan; Blocks 3-7 are complete; the conservative primary tier contains 276 REM-to-Wake events across 72 `pid` groups and the expanded quality-sensitivity tier contains 348 across 88 groups; the transparent stage-first and simple direct baselines have been compared; direct DE-B improved on transparent SF-C but retained precision 0.0909 and 1.2571 false alarms per hour; Block 7 found a validation F1 loss under strict PSG-to-wearable transfer, skipped conditional alignment under the predeclared gate, and completed its fixed descriptive test; six-channel PSG led on the descriptive test, while the reduced-PSG and zero-shot differences were less stable than on validation; Block 8 robustness work is next
+**Status:** Working research plan; Blocks 3-7 are complete and Block 8 is in progress; the conservative primary tier contains 276 REM-to-Wake events across 72 `pid` groups and the expanded quality-sensitivity tier contains 348 across 88 groups; the transparent stage-first and simple direct baselines have been compared; direct DE-B improved on transparent SF-C but retained precision 0.0909 and 1.2571 false alarms per hour; Block 7 found a validation F1 loss under strict PSG-to-wearable transfer, skipped conditional alignment under the predeclared gate, and completed its fixed descriptive test; Block 8 has found that the frozen wearable detector is materially dependent on `HB_1` feature contribution at its fixed threshold, while `HB_2` neutralization has a smaller effect
 
 ## 1. Technology Area
 
@@ -357,6 +357,8 @@ The schedule is organized into two-week research blocks. Actual work records sho
 - Perform modality ablations where data coverage permits.
 
 **Deliverable:** Robustness and ablation report.
+
+**Status update, 2026-09-11:** A validation-only feature-contribution protocol was committed before implementation or execution. The unchanged `H2-D` model and threshold 0.96 were applied to intact features and to two fixed neutralizations that replaced all 40 context dimensions from one channel with their corresponding train-fitted model means. The intact path reproduced Block 7 probabilities within `1.12e-16` and reproduced all four stored event summaries. Neutralizing `HB_1` reduced primary F1 from 0.1123 to 0 and false alarms from 1.4558 to 0.5208/hour, meeting the predeclared material F1-loss condition. Neutralizing `HB_2` reduced F1 to 0.0913 and false alarms to 1.0793/hour, remaining inside the predefined material bounds. Both F1 and false-alarm directions persisted in all 16 leave-one-`pid`-out folds for each ablation. The experiment passed 15/15 in-run and 11/11 independent checks, with no test or raw-signal access. The result establishes asymmetric feature dependence in this frozen classifier, not physical electrode-failure performance.
 
 ### Block 9: September 21 to October 4 - External PSG generalization
 
