@@ -24,6 +24,8 @@ As of 2026-09-11, Blocks 3-7 are complete and Block 8 robustness work is in prog
 - All 13/13 in-run checks and 13/13 independent output checks passed. The validator rehashed 108 external artifacts and reproduced 95,460 probabilities, event outputs, and paired contrasts twice.
 - The first Block 8 experiment tested single-channel feature-contribution robustness using the frozen direct wearable model and validation partition only. Neutralizing `HB_1` reduced F1 from 0.1123 to 0 and false alarms from 1.4558 to 0.5208/hour, failing the predefined material-change screen. Neutralizing `HB_2` reduced F1 to 0.0913 and false alarms to 1.0793/hour.
 - Both ablation directions persisted across all 16 leave-one-`pid`-out folds. This identifies asymmetric channel dependence in the frozen classifier; it does not simulate physical electrode failure.
+- The second Block 8 experiment added deterministic raw-rate Gaussian noise before feature extraction. Both-channel probability agreement degraded monotonically from 20 to 0 dB; at 0 dB the detector found no true event. At 10 dB, isolated `HB_1` noise reduced F1 to 0.0419 and increased false alarms to 4.4616/hour, while isolated `HB_2` noise produced F1 0.0825 and 0.3514 false alarms/hour.
+- The raw-signal experiment passed 17/17 in-run checks and 12/12 independent checks twice. The validator regenerated 100 degraded feature arrays from EDF and reproduced 114,738 probabilities, event outputs, participant intervals, and frozen decisions. These controlled white-noise findings do not represent natural field artefacts.
 
 The Block 7 paired-transfer protocol was committed before the channel audit and before feature extraction or fitting. The fixed descriptive test now closes Block 7, but the test partition was already used in earlier blocks and does not provide independent confirmation. Its results cannot be used to revise the frozen models or thresholds. The observed validation-to-test reversal makes participant and channel robustness the next uncertainty rather than justifying immediate adaptation or a more complex classifier.
 
@@ -47,6 +49,9 @@ The Block 7 paired-transfer protocol was committed before the channel audit and 
 - [Block 8 single-channel protocol](docs/evaluation/block8_single_channel_robustness_protocol_v0.1.md)
 - [Block 8 single-channel result](experiments/2026-09-11_block8_single_channel_robustness_v0.1/README.md)
 - [Block 8 single-channel decision](docs/evaluation/block8_single_channel_decision_2026-09-11.md)
+- [Block 8 raw-signal noise protocol](docs/evaluation/block8_raw_signal_noise_protocol_v0.1.md)
+- [Block 8 raw-signal noise result](experiments/2026-09-11_block8_raw_signal_noise_v0.1/README.md)
+- [Block 8 raw-signal noise decision](docs/evaluation/block8_raw_signal_noise_decision_2026-09-11.md)
 - [Current weekly record](docs/weekly/2026-09-07_to_2026-09-13.md)
 - [BOAS dataset manifest](docs/data/boas_dataset_manifest.md)
 - [Label/preprocessing gate](docs/feasibility/label_preprocessing_gate_closeout_2026-07-18.md)

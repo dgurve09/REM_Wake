@@ -1,0 +1,13 @@
+check	status	detail
+validation_assignment	pass	20 recordings; 16 pid groups
+frozen_model_rehashed	pass	d679d1142abc229b109ca912645b52ed16c4d449a87ee43185da28cafc3e3066
+raw_noise_features_reconstructed	pass	100 arrays; maximum difference=4.66395759346e-07
+noise_control_tables_recomputed	pass	manifests, calibration, bases, and clean reproduction
+noise_probabilities_recomputed	pass	rows=114738
+condition_support_recomputed	pass	six comparators; identical temporal support
+clean_probability_reproduced	pass	maximum=1.11022302463e-16
+score_fidelity_recomputed	pass	five degraded-clean comparisons
+event_outputs_recomputed	pass	alarms, metrics, recordings, participants, and matches
+uncertainty_and_decisions_recomputed	pass	10 bootstrap rows; three hypotheses; three dose levels
+external_manifest_rehashed	pass	123 external artifacts
+test_artifacts_absent	pass	no test path in manifest

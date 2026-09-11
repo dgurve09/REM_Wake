@@ -1,0 +1,5 @@
+membership	tolerance_sec	maximum_absolute_metric_difference	tolerance	reproduction_pass
+expanded	15.0	5.551115123125783e-17	1e-12	True
+expanded	45.0	5.551115123125783e-17	1e-12	True
+primary	15.0	6.938893903907228e-17	1e-12	True
+primary	45.0	9.71445146547012e-17	1e-12	True

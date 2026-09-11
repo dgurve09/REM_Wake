@@ -1,0 +1,18 @@
+check	status	detail
+validation_assignment_only	pass	20 recordings; 16 pid groups
+frozen_model_hash	pass	d679d1142abc229b109ca912645b52ed16c4d449a87ee43185da28cafc3e3066
+clean_feature_reproduction	pass	maximum=4.66395759346e-07
+deterministic_noise_bases	pass	one basis per recording-channel
+snr_calibration	pass	maximum error=8.881784197e-15 dB
+generated_feature_artifacts	pass	20 recordings x 5 noise conditions
+six_complete_comparators	pass	six comparators; 20 recordings each
+validation_scores_only	pass	no non-validation scores
+clean_probability_reproduction	pass	maximum=1.11022302463e-16
+clean_event_reproduction	pass	four event summaries
+identical_condition_support	pass	same context count for all conditions
+score_fidelity_complete	pass	five degraded-clean comparisons
+complete_event_outputs	pass	6 comparators x 2 memberships x 2 tolerances
+paired_participant_bootstrap	pass	five comparisons x two metrics
+hypotheses_evaluated	pass	H8.3, H8.4, H8.5
+external_manifest	pass	20 source features, 100 generated features, model, two score files
+test_artifacts_closed	pass	no test path in manifest

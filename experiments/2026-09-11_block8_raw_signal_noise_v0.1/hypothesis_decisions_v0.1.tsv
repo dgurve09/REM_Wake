@@ -1,0 +1,4 @@
+hypothesis	criterion	value_1	value_2	supported	decision
+H8.3_mild_noise_tolerance	20dB both-channel material bounds	0.028744939271255057	-0.7781205877738849	True	pass
+H8.4_nested_probability_dose	correlation nonincrease and mean-absolute-difference nondecrease	1.0	1.0	True	supported
+H8.5_channel_noise_asymmetry	HB1 F1 loss and probability MAD at least HB2	0.040589410050197006	0.1440461434293189	True	supported

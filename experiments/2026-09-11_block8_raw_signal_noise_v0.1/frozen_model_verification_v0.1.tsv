@@ -1,0 +1,2 @@
+model	expected_sha256	observed_sha256	hash_match	threshold
+H2-D	d679d1142abc229b109ca912645b52ed16c4d449a87ee43185da28cafc3e3066	d679d1142abc229b109ca912645b52ed16c4d449a87ee43185da28cafc3e3066	True	0.96
