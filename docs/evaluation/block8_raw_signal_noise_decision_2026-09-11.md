@@ -1,11 +1,11 @@
 # Block 8 Raw-Signal Noise Robustness Decision
 
-**Decision date:** 2026-09-11  
-**Protocol:** `block8_raw_signal_noise_protocol_v0.1.md`  
-**Dataset:** BOAS OpenNeuro `ds005555`, snapshot `1.1.1`  
-**Partition:** Validation only, 20 recordings from 16 `pid` groups  
-**Frozen comparator:** `H2-D`, threshold 0.96  
-**Model fitting or threshold search:** None  
+**Decision date:** 2026-09-11
+**Protocol:** `block8_raw_signal_noise_protocol_v0.1.md`
+**Dataset:** BOAS OpenNeuro `ds005555`, snapshot `1.1.1`
+**Partition:** Validation only, 20 recordings from 16 `pid` groups
+**Frozen comparator:** `H2-D`, threshold 0.96
+**Model fitting or threshold search:** None
 **Current test access:** None
 
 ## Decision
