@@ -1,0 +1,2 @@
+model	result_code_commit	threshold	threshold_source	model_sha256	train_recordings	train_pid	augmented_labeled_rows	validation_accessed	test_accessed
+H2-NA	d8e9b62	0.99	five_fold_grouped_train_oof_clean_full_night	cccb4632e9abb0c011ff40b44c1e1ccdef5de34abf3eb4b62364bed227cfce77	82	64	13715	False	False

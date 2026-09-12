@@ -1,0 +1,16 @@
+augmentation_condition	label	source_tier	retained_rows	dropped_rows
+TRAIN-BOTH-10DB	0	nontarget_window_no_remwake_nearby	2021	0
+TRAIN-BOTH-10DB	0	strict_same_stage_window	542	0
+TRAIN-BOTH-10DB	1	REM_to_Wake	180	0
+TRAIN-BOTH-20DB	0	nontarget_window_no_remwake_nearby	2021	0
+TRAIN-BOTH-20DB	0	strict_same_stage_window	542	0
+TRAIN-BOTH-20DB	1	REM_to_Wake	180	0
+TRAIN-CLEAN	0	nontarget_window_no_remwake_nearby	2021	0
+TRAIN-CLEAN	0	strict_same_stage_window	542	0
+TRAIN-CLEAN	1	REM_to_Wake	180	0
+TRAIN-HB1-10DB	0	nontarget_window_no_remwake_nearby	2021	0
+TRAIN-HB1-10DB	0	strict_same_stage_window	542	0
+TRAIN-HB1-10DB	1	REM_to_Wake	180	0
+TRAIN-HB2-10DB	0	nontarget_window_no_remwake_nearby	2021	0
+TRAIN-HB2-10DB	0	strict_same_stage_window	542	0
+TRAIN-HB2-10DB	1	REM_to_Wake	180	0

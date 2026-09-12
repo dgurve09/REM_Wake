@@ -1,0 +1,7 @@
+fit	fit_pid	heldout_pid	fit_rows	fit_positive	fit_negative	convergence_warning_count	maximum_iterations_used
+fold_1	51	13	10950	640	10310	0	129
+fold_2	51	13	10955	755	10200	0	125
+fold_3	51	13	10955	735	10220	0	137
+fold_4	51	13	10945	680	10265	0	137
+fold_5	52	12	11055	790	10265	0	148
+final_all_train	64	0	13715	900	12815	0	121

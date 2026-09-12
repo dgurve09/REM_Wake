@@ -1,0 +1,2 @@
+model	partition	membership	tolerance_sec	threshold	recordings	pid	reference_events	predicted_events	true_positive	false_positive	false_negative	ignored_predictions	supported_hours	precision	recall	f1	false_alarms_per_hour	median_absolute_error_sec	maximum_absolute_error_sec	selection_rule
+H2-NA	train_oof	primary	15.0	0.99	82	64	180	856	60	766	120	30	629.4916666666667	0.07263922518159806	0.3333333333333333	0.11928429423459244	1.2168548696699717	0.0	0.0	max_f1_then_min_far_then_max_recall_then_max_threshold

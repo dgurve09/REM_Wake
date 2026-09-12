@@ -1,0 +1,14 @@
+check	status	detail
+train_membership	pass	82 recordings; 64 pid groups
+clean_feature_reproduction	pass	maximum=4.7661988134e-07
+noise_basis	pass	82 recordings x two channels
+snr_calibration	pass	maximum error=1.42108547152e-14 dB
+generated_train_features	pass	82 recordings x four noise conditions
+five_condition_labeled_multiplicity	pass	base rows=2743; augmented rows=13715
+grouped_oof_assignment	pass	each train pid held out exactly once
+complete_oof_scores	pass	rows=75539
+threshold_frozen	pass	threshold=0.99
+final_model_frozen	pass	cccb4632e9abb0c011ff40b44c1e1ccdef5de34abf3eb4b62364bed227cfce77
+no_convergence_warning	pass	six fits; max iterations=148
+train_external_manifest	pass	82 source features, 328 generated features, model, OOF scores
+validation_and_test_closed	pass	train artifacts only
