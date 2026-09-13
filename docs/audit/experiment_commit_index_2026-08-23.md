@@ -43,6 +43,7 @@ This index records the first Git commit containing each historical experiment fo
 | `2026-09-11_block8_raw_signal_noise_v0.1` | `59b25e7` | 2026-09-11 |
 | `2026-09-12_block8_noise_augmented_training_v0.1` | `071b48c` | 2026-09-13 |
 | `2026-09-13_block8_cross_modality_event_overlap_v0.1` | `68a8a64` | 2026-09-13 |
+| `2026-09-13_block8_fixed_alarm_fusion_v0.1` | `e52e86c` | 2026-09-13 |
 
 The three 2026-08-23 audit experiment folders first appear in commit `63a8008`.
 
