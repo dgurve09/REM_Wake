@@ -1,0 +1,15 @@
+check	status	detail
+partition_membership	pass	82/64 train and 20/16 validation; no pid overlap
+original_model_rehashed	pass	d679d1142abc229b109ca912645b52ed16c4d449a87ee43185da28cafc3e3066
+train_noise_arrays_reconstructed	pass	328 arrays; maximum difference=4.7661988134e-07
+train_noise_controls_recomputed	pass	basis, calibration, clean reproduction, and feature manifest
+augmented_labeled_rows_recomputed	pass	base rows=2743; augmented rows=13715
+train_oof_threshold_recomputed	pass	threshold=0.99; rows=75539
+final_model_and_freeze_recomputed	pass	cccb4632e9abb0c011ff40b44c1e1ccdef5de34abf3eb4b62364bed227cfce77
+validation_probabilities_recomputed	pass	rows=229476
+validation_support_recomputed	pass	two models x six conditions
+validation_events_recomputed	pass	events, metrics, recordings, participants, and matches
+comparisons_and_decisions_recomputed	pass	condition contrasts, 16 bootstrap rows, and six decisions
+train_external_artifact_manifest_v0.1.tsv_rehashed	pass	412 external artifacts
+external_artifact_manifest_v0.1.tsv_rehashed	pass	535 external artifacts
+test_artifacts_absent	pass	no test path in manifest

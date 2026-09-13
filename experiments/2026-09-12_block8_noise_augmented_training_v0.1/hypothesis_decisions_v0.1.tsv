@@ -1,0 +1,7 @@
+hypothesis	value_1	value_2	supported	decision
+H8.6_clean_preservation	-0.00991849702997652	-0.17570464885216763	True	pass
+H8.7_hb1_failure_mitigation	0.04995191793995085	-3.520368143073785	True	pass
+H8.8_degradation_gap_reduction	0.05987041496992737	3.344663494221618	True	pass
+H8.9_meaningful_clean_advancement	-0.00991849702997652	-0.17570464885216763	False	fail
+overall_robustness_method_advance	1.0		True	advance
+overall_core_detector_advance	0.0		False	do_not_replace

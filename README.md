@@ -4,7 +4,7 @@ This repository investigates event-specific REM-to-Wake boundary detection from 
 
 ## Current Status
 
-As of 2026-09-11, Blocks 3-7 are complete and Block 8 robustness work is in progress.
+As of 2026-09-13, Blocks 3-7 are complete and Block 8 robustness work is in progress.
 
 - BOAS snapshot `1.1.1` is frozen at 128 paired recordings and 100 participant-table `pid` groups.
 - The conservative primary set contains 276 REM-to-Wake events across 72 groups; the expanded quality-sensitivity set contains 348 across 88 groups.
@@ -26,6 +26,8 @@ As of 2026-09-11, Blocks 3-7 are complete and Block 8 robustness work is in prog
 - Both ablation directions persisted across all 16 leave-one-`pid`-out folds. This identifies asymmetric channel dependence in the frozen classifier; it does not simulate physical electrode failure.
 - The second Block 8 experiment added deterministic raw-rate Gaussian noise before feature extraction. Both-channel probability agreement degraded monotonically from 20 to 0 dB; at 0 dB the detector found no true event. At 10 dB, isolated `HB_1` noise reduced F1 to 0.0419 and increased false alarms to 4.4616/hour, while isolated `HB_2` noise produced F1 0.0825 and 0.3514 false alarms/hour.
 - The raw-signal experiment passed 17/17 in-run checks and 12/12 independent checks twice. The validator regenerated 100 degraded feature arrays from EDF and reproduced 114,738 probabilities, event outputs, participant intervals, and frozen decisions. These controlled white-noise findings do not represent natural field artefacts.
+- A predeclared train-only augmentation then exposed the unchanged bandpower-logistic pipeline to clean and four fixed noise conditions. Its grouped train-OOF threshold was 0.99. It reduced the isolated `HB_1` false-alarm result from 4.4616 to 0.9413/hour, but clean F1 decreased from 0.1123 to 0.1024 and other noise conditions showed false-alarm tradeoffs.
+- The augmentation passed its targeted `HB_1` robustness gates but failed the required +0.05 clean-F1 advancement gate. It is retained as a robustness comparator and does not replace the core detector. All 13 train, 11 validation, and 14 independent checks passed; the full independent reconstruction passed twice.
 
 The Block 7 paired-transfer protocol was committed before the channel audit and before feature extraction or fitting. The fixed descriptive test now closes Block 7, but the test partition was already used in earlier blocks and does not provide independent confirmation. Its results cannot be used to revise the frozen models or thresholds. The observed validation-to-test reversal makes participant and channel robustness the next uncertainty rather than justifying immediate adaptation or a more complex classifier.
 
@@ -52,6 +54,9 @@ The Block 7 paired-transfer protocol was committed before the channel audit and 
 - [Block 8 raw-signal noise protocol](docs/evaluation/block8_raw_signal_noise_protocol_v0.1.md)
 - [Block 8 raw-signal noise result](experiments/2026-09-11_block8_raw_signal_noise_v0.1/README.md)
 - [Block 8 raw-signal noise decision](docs/evaluation/block8_raw_signal_noise_decision_2026-09-11.md)
+- [Block 8 train-only augmentation protocol](docs/evaluation/block8_noise_augmented_training_protocol_v0.1.md)
+- [Block 8 train-only augmentation result](experiments/2026-09-12_block8_noise_augmented_training_v0.1/README.md)
+- [Block 8 train-only augmentation decision](docs/evaluation/block8_noise_augmented_training_decision_2026-09-13.md)
 - [Current weekly record](docs/weekly/2026-09-07_to_2026-09-13.md)
 - [BOAS dataset manifest](docs/data/boas_dataset_manifest.md)
 - [Label/preprocessing gate](docs/feasibility/label_preprocessing_gate_closeout_2026-07-18.md)

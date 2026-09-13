@@ -4,7 +4,7 @@
 **Project window:** 2026-06-01 to 2026-11-29
 **Prepared during:** 2026-06-25 to 2026-06-28
 **Finalized:** 2026-06-28
-**Current status:** Blocks 3-7 are complete; Block 5 was completed as catch-up work on 2026-08-15 after an inactive 2026-07-20 to 2026-08-14 interval; Block 6 closed on 2026-08-22 with direct DE-B improving on transparent SF-C while retaining low precision; validation-only endpoint factorization DE-D subsequently improved both validation F1 and false alarms but remains unevaluated on a new locked cohort; Block 7 closed on 2026-09-06 after the frozen descriptive test showed six-channel PSG leading, a validation-to-test channel-order reversal, and a persistent zero-shot/direct-wearable F1-versus-false-alarm tradeoff; Block 8 has now identified material `HB_1` feature dependence, monotonic probability degradation under nested both-channel noise, and opposite calibration failures under isolated `HB_1` and `HB_2` noise
+**Current status:** Blocks 3-7 are complete; Block 5 was completed as catch-up work on 2026-08-15 after an inactive 2026-07-20 to 2026-08-14 interval; Block 6 closed on 2026-08-22 with direct DE-B improving on transparent SF-C while retaining low precision; validation-only endpoint factorization DE-D subsequently improved both validation F1 and false alarms but remains unevaluated on a new locked cohort; Block 7 closed on 2026-09-06 after the frozen descriptive test showed six-channel PSG leading, a validation-to-test channel-order reversal, and a persistent zero-shot/direct-wearable F1-versus-false-alarm tradeoff; Block 8 identified material `HB_1` dependence and channel-specific noise failures; train-only noise augmentation corrected the targeted `HB_1` false-alarm mode but failed to improve clean F1 and is not adopted as the core detector
 
 ## 1. Project Boundary
 
@@ -78,7 +78,7 @@ flowchart TD
 | 5 | Jul 27-Aug 9 | What does a stage-first comparator achieve? | Wearable sleep-stage baseline, transition derivation from predicted stages | Stage-first event metrics | Completed as catch-up work on Aug 15; fixed `stage_ai`, epoch-only logistic, and five-epoch-context logistic comparators evaluated under frozen event matching |
 | 6 | Aug 10-Aug 23 | Does direct transition detection add value? | Simple direct baseline, small CNN only if justified, comparison to stage-first | Comparative baseline report | Complete Aug 22; DE-B improved test event F1 and false alarms/hour versus SF-C but retained precision 0.0909; validation-only DE-D improved F1 to 0.1604 and false alarms to 0.9915/hour versus DE-B validation; CNN deferred and DE-D test evaluation withheld |
 | 7 | Aug 24-Sep 6 | How large is the PSG-to-wearable device-shift problem? | Common six-channel PSG EEG, reduced PSG, wearable, strict zero-shot, and conditionally gated feature alignment | Paired transfer results and decision log | Complete Sep 6; `P2-D` led validation, `P6-D` led the descriptive test, strict zero-shot remained below direct wearable F1 with fewer false alarms, and alignment was skipped by the frozen gate |
-| 8 | Sep 7-Sep 20 | Is the approach robust to signal/channel variability? | Missing-channel tests, degradation tests, ablations, justified adaptation if needed | Robustness and ablation report | In progress; validation-only neutralization found material `HB_1` dependence; controlled raw-signal noise showed monotonic probability degradation, complete detection failure at 0 dB, and a high-false-alarm `HB_1` failure at 10 dB |
+| 8 | Sep 7-Sep 20 | Is the approach robust to signal/channel variability? | Missing-channel tests, degradation tests, ablations, justified adaptation if needed | Robustness and ablation report | In progress; material `HB_1` dependence and controlled degradation failures documented; train-only augmentation corrected the targeted `HB_1` false-alarm mode but failed the meaningful clean-advancement gate and is retained only as a robustness comparator |
 | 9 | Sep 21-Oct 4 | Is external PSG comparison scientifically valid? | Audit one external PSG dataset and test reduced-channel generalization if appropriate | External generalization report or no-go | Not started |
 | 10 | Oct 5-Oct 18 | How should 30-second label uncertainty be handled? | Hard-label versus interval-aware temporal analysis | Label-uncertainty and localization report | Not started |
 | 11 | Oct 19-Nov 1 | Are transition-derived measures stable enough to report? | Event burden, REM stability, repeated-night reliability, streaming decision | Technical measures and streaming go/no-go | Not started |
@@ -293,7 +293,7 @@ Additional evidence completed on 2026-08-31 and 2026-09-06:
 - passed 13/13 in-run and 13/13 independent checks, rehashed 108 external artifacts, and independently reconstructed 95,460 probabilities, all event outputs, and four paired contrasts twice; and
 - closed Block 7 without revising any model or threshold, retaining the current test evidence as descriptive and requiring a new locked or external cohort for confirmation.
 
-Additional evidence completed on 2026-09-11:
+Additional evidence completed on 2026-09-11 to 2026-09-13:
 
 - predeclared a validation-only single-channel feature-contribution experiment before implementation or execution;
 - retained the frozen `H2-D` model, scaler, threshold 0.96, validation membership, temporal support, and event-matching rules without refitting;
@@ -314,10 +314,19 @@ Additional evidence completed on 2026-09-11:
 - confirmed that isolated `HB_1` and `HB_2` noise drove median probabilities in opposite directions, supporting channel-specific calibration sensitivity;
 - passed 17/17 in-run checks and 12/12 independent checks twice, including independent reconstruction of 100 noisy arrays and 114,738 probabilities; and
 - completed an immutable rerun without changing any reviewed or external artifact.
+- predeclared one train-only Gaussian-noise augmentation mechanism before implementation and result generation;
+- generated 328 train noise-feature arrays with 492/492 SNR calibrations passing and exact five-condition multiplicity for 2,743 base labeled candidates;
+- selected threshold 0.99 from 75,539 full-night scores produced by five participant-grouped train folds, then froze the final model before validation;
+- reduced the isolated `HB_1` noise false-alarm result from 4.4616 to 0.9413/hour and improved F1 from 0.0419 to 0.0918;
+- found that the `HB_1` FAR reduction interval excluded zero while its F1 improvement interval crossed zero;
+- failed the meaningful clean-advancement gate because clean F1 decreased from 0.1123 to 0.1024 rather than improving by at least 0.05;
+- identified FAR tradeoffs under both-channel and isolated `HB_2` degradation, showing that augmentation was not uniformly beneficial;
+- passed 13/13 train, 11/11 validation, and 14/14 independent checks, with the independent reconstruction completed twice; and
+- stopped the generic noise-augmentation path at v0.1 without reopening the current test partition.
 
 ## 7. Next Work
 
-Continue Block 8 by defining one mechanism-specific robustness method before any new fitting. A channel-quality masking or train-only noise-augmentation approach may be considered, but it must have a separate hypothesis, a fixed unchanged-model comparator, training-only method development, and a predeclared validation decision. Keep the current test partition closed and do not revise the threshold from these reused-validation results. Natural nonstationary artefacts and an independent cohort remain unresolved.
+Complete the Block 8 robustness report without adopting `H2-NA` as the core detector. The next model experiment should target the low clean event separability of the current bandpower-logistic representation, with a separately committed temporal-representation hypothesis and a meaningful clean-performance gate. Keep the current test partition closed. Block 9 should first assess whether an external PSG dataset can provide a valid generalization comparison; independent wearable confirmation remains unresolved.
 
 ## 8. Rules for the Rest of the Project
 

@@ -1,0 +1,12 @@
+check	status	detail
+train_freeze_verified	pass	threshold=0.99; model=cccb4632e9abb0c011ff40b44c1e1ccdef5de34abf3eb4b62364bed227cfce77
+original_model_verified	pass	d679d1142abc229b109ca912645b52ed16c4d449a87ee43185da28cafc3e3066
+validation_membership	pass	20 recordings; 16 pid groups
+complete_model_condition_scores	pass	rows=229476
+identical_temporal_support	pass	two models x six conditions x 20 recordings
+finite_probabilities	pass	all probabilities finite and bounded
+complete_event_outputs	pass	2 models x 6 conditions x 2 memberships x 2 tolerances
+paired_participant_bootstrap	pass	six between-model and two within-model comparisons
+four_fixed_hypotheses	pass	H8.6-H8.9 plus two overall decisions
+external_manifest	pass	train, validation, models, and scores
+test_closed	pass	no test artifact path
