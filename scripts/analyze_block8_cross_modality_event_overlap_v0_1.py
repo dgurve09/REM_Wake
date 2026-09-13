@@ -418,7 +418,7 @@ def checks(
         >= summary[["p6_d_recall", "p2_d_recall", "h2_d_recall"]].max(axis=1)
     ).all()
     no_test_path = ~manifest["path_relative_to_repository"].str.contains(
-        r"(^|/)test($|/)", case=False, regex=True
+        r"(?:^|/)test(?:$|/)", case=False, regex=True
     ).any()
     rows = [
         ("validation_support", len(support) == 80 and support["subject"].nunique() == 20 and support["pid"].nunique() == 16, "four comparators; 20 recordings; 16 pid groups"),

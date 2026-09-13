@@ -376,7 +376,7 @@ def main() -> None:
         and set(support["partition"]) == {"validation"}
     )
     no_test_paths = ~recorded_manifest["path_relative_to_repository"].str.contains(
-        r"(^|/)test($|/)", case=False, regex=True
+        r"(?:^|/)test(?:$|/)", case=False, regex=True
     ).any()
     compact_outputs = all(
         path.stat().st_size < 1_000_000 for path in output.glob("*") if path.is_file()
