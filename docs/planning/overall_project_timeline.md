@@ -4,7 +4,7 @@
 **Project window:** 2026-06-01 to 2026-11-29
 **Prepared during:** 2026-06-25 to 2026-06-28
 **Finalized:** 2026-06-28
-**Current status:** Blocks 3-7 are complete; Block 5 was completed as catch-up work on 2026-08-15 after an inactive 2026-07-20 to 2026-08-14 interval; Block 6 closed on 2026-08-22 with direct DE-B improving on transparent SF-C while retaining low precision; validation-only endpoint factorization DE-D subsequently improved both validation F1 and false alarms but remains unevaluated on a new locked cohort; Block 7 closed on 2026-09-06 after the frozen descriptive test showed six-channel PSG leading, a validation-to-test channel-order reversal, and a persistent zero-shot/direct-wearable F1-versus-false-alarm tradeoff; Block 8 identified material `HB_1` dependence, channel-specific noise failures, no clean gain from train-only augmentation, a PSG-only recoverable event subset, and measurable boundary-tolerance sensitivity
+**Current status:** Blocks 3-7 are complete; Block 5 was completed as catch-up work on 2026-08-15 after an inactive 2026-07-20 to 2026-08-14 interval; Block 6 closed on 2026-08-22 with direct DE-B improving on transparent SF-C while retaining low precision; validation-only endpoint factorization DE-D subsequently improved both validation F1 and false alarms but remains unevaluated on a new locked cohort; Block 7 closed on 2026-09-06 after the frozen descriptive test showed six-channel PSG leading, a validation-to-test channel-order reversal, and a persistent zero-shot/direct-wearable F1-versus-false-alarm tradeoff; Block 8 identified material `HB_1` dependence, channel-specific noise failures, no clean gain from train-only augmentation, a PSG-only event subset, boundary-tolerance sensitivity, failure of fixed OR fusion, and false-alarm suppression under non-deployable 2-of-3 laboratory consensus
 
 ## 1. Project Boundary
 
@@ -78,7 +78,7 @@ flowchart TD
 | 5 | Jul 27-Aug 9 | What does a stage-first comparator achieve? | Wearable sleep-stage baseline, transition derivation from predicted stages | Stage-first event metrics | Completed as catch-up work on Aug 15; fixed `stage_ai`, epoch-only logistic, and five-epoch-context logistic comparators evaluated under frozen event matching |
 | 6 | Aug 10-Aug 23 | Does direct transition detection add value? | Simple direct baseline, small CNN only if justified, comparison to stage-first | Comparative baseline report | Complete Aug 22; DE-B improved test event F1 and false alarms/hour versus SF-C but retained precision 0.0909; validation-only DE-D improved F1 to 0.1604 and false alarms to 0.9915/hour versus DE-B validation; CNN deferred and DE-D test evaluation withheld |
 | 7 | Aug 24-Sep 6 | How large is the PSG-to-wearable device-shift problem? | Common six-channel PSG EEG, reduced PSG, wearable, strict zero-shot, and conditionally gated feature alignment | Paired transfer results and decision log | Complete Sep 6; `P2-D` led validation, `P6-D` led the descriptive test, strict zero-shot remained below direct wearable F1 with fewer false alarms, and alignment was skipped by the frozen gate |
-| 8 | Sep 7-Sep 20 | Is the approach robust to signal/channel variability? | Missing-channel tests, degradation tests, ablations, justified adaptation if needed | Robustness and ablation report | In progress; material `HB_1` dependence, controlled degradation failures, and failed clean augmentation documented; event overlap found PSG-only and complementary subsets plus measurable boundary-tolerance sensitivity |
+| 8 | Sep 7-Sep 20 | Is the approach robust to signal/channel variability? | Missing-channel tests, degradation tests, ablations, justified adaptation if needed | Robustness and ablation report | In progress; channel/noise failures and failed clean augmentation documented; fixed OR fusion accumulated alarms, while 2-of-3 PSG/wearable consensus suppressed alarms but remains non-deployable and participant-inconclusive for F1 |
 | 9 | Sep 21-Oct 4 | Is external PSG comparison scientifically valid? | Audit one external PSG dataset and test reduced-channel generalization if appropriate | External generalization report or no-go | Not started |
 | 10 | Oct 5-Oct 18 | How should 30-second label uncertainty be handled? | Hard-label versus interval-aware temporal analysis | Label-uncertainty and localization report | Not started |
 | 11 | Oct 19-Nov 1 | Are transition-derived measures stable enough to report? | Event burden, REM stability, repeated-night reliability, streaming decision | Technical measures and streaming go/no-go | Not started |
@@ -330,10 +330,19 @@ Additional evidence completed on 2026-09-11 to 2026-09-13:
 - found that expanding tolerance to +/-45 seconds increased union recall by 0.1081 with participant interval 0.0238 to 0.2400;
 - passed 9/9 in-run and 10/10 independent reconstruction checks, corrected a warning-only regular-expression implementation issue, and reproduced all reviewed outputs in warning-free reruns; and
 - retained the current test partition closed and performed no fitting or threshold selection.
+- predeclared three fixed alarm-fusion rules before calculating their combined false-alarm burden;
+- reproduced all 12 frozen direct-model metric rows and clustered each applicable source alarm exactly once under a fixed 30-second maximum span;
+- found that `P6-H2-OR` increased recall but reduced F1 from 0.1631 to 0.1100 and increased false alarms from 1.1107 to 2.2465/hour;
+- found the same adverse direction for all-direct OR, with F1 and FAR participant intervals excluding zero;
+- found that 2-of-3 laboratory consensus reduced 210 `P6-D` alarms to 110, producing F1 0.2174 and 0.5397 false alarms/hour;
+- retained the consensus F1 gain as participant-inconclusive because its difference interval was -0.0192 to +0.1323, while the FAR reduction interval excluded zero;
+- found that the consensus +/-45-second F1 gain was positive but failed the predeclared +0.05 materiality gate;
+- passed 10/10 in-run and 10/10 independent checks and completed an immutable result rerun; and
+- stopped fixed fusion at v0.1 because its only advancing rule requires laboratory PSG and does not solve wearable-only detection.
 
 ## 7. Next Work
 
-Complete the Block 8 robustness synthesis without adopting `H2-NA` or the diagnostic model union as a detector. Block 9 should assess whether an external PSG dataset can provide a valid generalization comparison. The interval-aware boundary experiment in Block 10 now has direct empirical priority because tolerance changed recoverability consistently across participant resamples. Any later temporal-representation experiment must have a separately committed hypothesis, meaningful clean-performance and false-alarm gates, participant-grouped development, and a new locked or external confirmation boundary. Keep the current test partition closed.
+Complete the Block 8 robustness synthesis without adopting `H2-NA`, OR fusion, or PSG-dependent consensus as the wearable detector. Block 9 should assess whether an external PSG dataset can provide a valid generalization comparison. The interval-aware boundary experiment in Block 10 retains empirical priority, but its goal must include precision and alarm burden rather than tolerance-only recall. Any later wearable temporal-representation experiment must have a separately committed hypothesis, meaningful clean-performance and false-alarm gates, participant-grouped development, and a new locked or external confirmation boundary. Keep the current test partition closed.
 
 ## 8. Rules for the Rest of the Project
 

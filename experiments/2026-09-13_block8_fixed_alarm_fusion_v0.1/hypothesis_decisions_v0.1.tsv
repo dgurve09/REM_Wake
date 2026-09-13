@@ -1,0 +1,6 @@
+hypothesis	value_1	criterion_1	value_2	criterion_2	supported	decision
+H8.14_two_modality_or_advancement	-0.05304228186541264	>=0.05_f1	1.1358050515086546	<=0.25_far_per_hour	False	fail
+H8.15_consensus_advancement	0.05430117559246128	>=0_f1	-0.5710401087695447	<=0_far_per_hour	True	pass
+H8.16_consensus_boundary_sensitivity	0.03634003893575602	>=0.05_f1		not_applicable	False	fail
+H8.17_all_direct_or_alarm_penalty	1.1734560476912619	>=0.50_far_per_hour		not_applicable	True	pass
+overall_fixed_fusion_advance	1.0	H8.14_or_H8.15		not_applicable	True	advance

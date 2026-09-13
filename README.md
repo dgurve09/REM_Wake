@@ -30,6 +30,8 @@ As of 2026-09-13, Blocks 3-7 are complete and Block 8 robustness work is in prog
 - The augmentation passed its targeted `HB_1` robustness gates but failed the required +0.05 clean-F1 advancement gate. It is retained as a robustness comparator and does not replace the core detector. All 13 train, 11 validation, and 14 independent checks passed; the full independent reconstruction passed twice.
 - A frozen validation event-overlap analysis found 13/37 primary references detected by both direct PSG and wearable, seven by PSG only, three by wearable only, and 14 missed by all three direct models. The diagnostic union recall was 0.6216 but is not an ensemble result because its false-alarm burden was not evaluated.
 - Widening event tolerance from +/-15 to +/-45 seconds increased direct-model union recall by 0.1081, with a participant interval of 0.0238 to 0.2400. This supports explicit boundary-uncertainty work; it does not make the present detector reliable. All 9/9 in-run and 10/10 independent checks passed without current-test access.
+- A fixed alarm-fusion experiment then counted the hidden alarm cost. `P6-H2-OR` reduced F1 to 0.1100 and increased false alarms to 2.2465/hour. The all-direct OR result was similarly adverse, with both paired participant directions excluding zero.
+- Fixed 2-of-3 laboratory consensus reached validation F1 0.2174 and 0.5397 false alarms/hour. Its FAR reduction versus six-channel PSG was consistent, but its F1-gain interval crossed zero. Because it requires PSG and remains low-precision, it is a mechanism comparator rather than a wearable result. Fixed fusion stops at v0.1.
 
 The Block 7 paired-transfer protocol was committed before the channel audit and before feature extraction or fitting. The fixed descriptive test now closes Block 7, but the test partition was already used in earlier blocks and does not provide independent confirmation. Its results cannot be used to revise the frozen models or thresholds. The observed validation-to-test reversal makes participant and channel robustness the next uncertainty rather than justifying immediate adaptation or a more complex classifier.
 
@@ -62,6 +64,9 @@ The Block 7 paired-transfer protocol was committed before the channel audit and 
 - [Block 8 cross-modality overlap protocol](docs/evaluation/block8_cross_modality_event_overlap_protocol_v0.1.md)
 - [Block 8 cross-modality overlap result](experiments/2026-09-13_block8_cross_modality_event_overlap_v0.1/README.md)
 - [Block 8 cross-modality overlap decision](docs/evaluation/block8_cross_modality_event_overlap_decision_2026-09-13.md)
+- [Block 8 fixed alarm-fusion protocol](docs/evaluation/block8_fixed_alarm_fusion_protocol_v0.1.md)
+- [Block 8 fixed alarm-fusion result](experiments/2026-09-13_block8_fixed_alarm_fusion_v0.1/README.md)
+- [Block 8 fixed alarm-fusion decision](docs/evaluation/block8_fixed_alarm_fusion_decision_2026-09-13.md)
 - [Current weekly record](docs/weekly/2026-09-07_to_2026-09-13.md)
 - [BOAS dataset manifest](docs/data/boas_dataset_manifest.md)
 - [Label/preprocessing gate](docs/feasibility/label_preprocessing_gate_closeout_2026-07-18.md)

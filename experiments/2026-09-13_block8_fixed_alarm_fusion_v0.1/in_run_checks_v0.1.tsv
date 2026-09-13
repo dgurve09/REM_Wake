@@ -1,0 +1,11 @@
+check	status	detail
+validation_membership	pass	20 recordings; 16 pid groups
+identical_direct_support	pass	same supported hours for all direct comparators
+frozen_direct_metrics_reproduced	pass	all 12 direct-model metric rows
+source_alarm_accounting	pass	all source alarms enter each applicable clustering once
+cluster_span	pass	all cluster spans at most 30 seconds
+consensus_rule	pass	retained exactly when at least two models contribute
+event_accounting	pass	TP/FN and TP/FP/ignored identities hold
+participant_bootstrap	pass	13 paired contrasts; 5000 resamples
+source_paths_exclude_test	pass	no test path in source manifest
+validation_rows_only	pass	all fusion clusters restricted to validation

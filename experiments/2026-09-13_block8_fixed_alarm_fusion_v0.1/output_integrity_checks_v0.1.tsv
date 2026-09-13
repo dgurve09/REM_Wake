@@ -1,0 +1,11 @@
+check	status	detail
+input_manifest_rehashed	pass	five frozen source artifacts
+source_validation_only	pass	source alarms restricted to validation
+fusion_clusters_reconstructed	pass	rows=1194
+fused_events_reconstructed	pass	rows=904
+direct_controls_reproduced	pass	all direct-model controls
+event_outputs_reconstructed	pass	metrics, recording, participant, and match rows
+fusion_comparisons_reconstructed	pass	12 fixed comparisons
+paired_bootstrap_reconstructed	pass	13 contrasts; 5000 resamples
+hypothesis_decisions_reconstructed	pass	four hypotheses and overall decision
+source_paths_exclude_test	pass	no test path in source manifest
