@@ -1,7 +1,7 @@
 # Experiment First-Commit Index
 
 **Prepared:** 2026-08-23
-**Updated:** 2026-09-11
+**Updated:** 2026-09-13
 **Repository base reviewed:** `d936ea4`
 
 This index records the first Git commit containing each historical experiment folder. It improves artifact discovery but must not be misread as the code commit used to execute a run. For several past experiments, protocol, code, and result files first appear together, so Git cannot independently establish their within-session order.
@@ -41,6 +41,7 @@ This index records the first Git commit containing each historical experiment fo
 | `2026-09-06_block7_descriptive_test_v0.1` | `6664a2b` | 2026-09-06 |
 | `2026-09-11_block8_single_channel_robustness_v0.1` | `8a79758` | 2026-09-11 |
 | `2026-09-11_block8_raw_signal_noise_v0.1` | `59b25e7` | 2026-09-11 |
+| `2026-09-12_block8_noise_augmented_training_v0.1` | `071b48c` | 2026-09-13 |
 
 The three 2026-08-23 audit experiment folders first appear in commit `63a8008`.
 
