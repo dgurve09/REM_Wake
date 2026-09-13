@@ -1,0 +1,5 @@
+hypothesis	observed	pass_threshold	supported	decision
+H8.10_shared_direct_failure	0.3783783783783784	0.5	False	fail
+H8.11_wearable_specific_recovery_gap	0.1891891891891892	0.15	True	pass
+H8.12_direct_model_complementarity	0.10810810810810811	0.1	True	pass
+H8.13_boundary_tolerance_sensitivity	0.10810810810810811	0.1	True	pass

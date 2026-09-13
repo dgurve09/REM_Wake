@@ -1,0 +1,10 @@
+check	status	detail
+validation_support	pass	four comparators; 20 recordings; 16 pid groups
+primary_reference_count	pass	references=37
+unique_reference_identity	pass	unique within every analysis scope
+frozen_true_positives_reproduced	pass	all comparator, membership, and tolerance cells
+category_accounting	pass	four categories sum to every scope denominator
+union_monotonic	pass	direct union recall is not below any component
+participant_bootstrap	pass	seven metrics; 5000 participant-grouped resamples
+source_paths_exclude_test	pass	no test path in source manifest
+validation_rows_only	pass	reviewed support restricted to validation

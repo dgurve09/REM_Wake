@@ -1,0 +1,11 @@
+check	status	detail
+input_manifest_rehashed	pass	five source artifacts
+source_validation_only	pass	reviewed matches, metrics, and support
+reference_matrix_reconstructed	pass	rows=176
+frozen_true_positives_reproduced	pass	all 16 metric cells
+overlap_summary_reconstructed	pass	four analysis scopes
+pairwise_overlap_reconstructed	pass	rows=24
+participant_bootstrap_reconstructed	pass	seven metrics; 5000 resamples
+hypothesis_decisions_reconstructed	pass	four fixed decisions
+source_paths_exclude_test	pass	no test path in source manifest
+compact_reviewed_outputs	pass	no output file reaches 1 MB
