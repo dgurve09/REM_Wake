@@ -528,7 +528,7 @@ def synthesis_checks(
         r"(?:^|/)test(?:$|/)", case=False, regex=True
     ).any()
     prohibited_extension = manifest["path_relative_to_repository"].str.contains(
-        r"\.(edf|npz|joblib|pth|pt|tsv\.gz|csv\.gz)$", case=False, regex=True
+        r"\.(?:edf|npz|joblib|pth|pt|tsv\.gz|csv\.gz)$", case=False, regex=True
     ).any()
     rows = [
         ("five_experiments_present", len(census) == 6, "five experiments plus total row"),

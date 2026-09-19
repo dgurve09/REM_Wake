@@ -463,7 +463,7 @@ def main() -> None:
         r"(?:^|/)test(?:$|/)", case=False, regex=True
     ).any()
     no_binary = ~recorded_manifest["path_relative_to_repository"].str.contains(
-        r"\.(edf|npz|joblib|pth|pt|tsv\.gz|csv\.gz)$", case=False, regex=True
+        r"\.(?:edf|npz|joblib|pth|pt|tsv\.gz|csv\.gz)$", case=False, regex=True
     ).any()
     total = census[census["experiment"].eq("TOTAL")].iloc[0]
     synthesis_checks_valid = (
