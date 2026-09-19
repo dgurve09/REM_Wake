@@ -1,0 +1,5 @@
+decision	supported	outcome	basis
+C8.1_wearable_robustness_sufficient	False	fail	material channel dependence and severe/channel-specific noise failures remain
+C8.2_deployable_wearable_method_advances	False	do_not_advance	augmentation failed clean advancement and advancing fusion requires PSG
+C8.3_boundary_uncertainty_priority	True	prioritize	tolerance changed union recall with participant interval above zero
+C8.4_block8_closeout_complete	True	close	five experiments, ten evidence statements, and 132 integrity checks reviewed

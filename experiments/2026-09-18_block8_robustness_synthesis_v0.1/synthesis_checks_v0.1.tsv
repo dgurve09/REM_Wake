@@ -1,0 +1,10 @@
+check	status	detail
+five_experiments_present	pass	five experiments plus total row
+integrity_check_census	pass	132/132 source checks pass
+ten_evidence_statements	pass	all ten source statements reconstructed
+four_block_decisions	pass	three technical decisions plus closeout decision
+wearable_nonadvance_preserved	pass	no wearable detector advance
+block_closeout_not_success_claim	pass	closeout separated from performance success
+unresolved_register	pass	five unresolved uncertainties retained
+source_paths_exclude_test	pass	no current-test path in source manifest
+compact_sources_only	pass	no raw, binary feature, model, or compressed score input

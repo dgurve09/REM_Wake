@@ -1,0 +1,10 @@
+check	status	detail
+input_manifest_rehashed	pass	23 frozen source artifacts
+integrity_census_reconstructed	pass	five experiments plus total
+source_checks_all_pass	pass	132/132 checks
+evidence_ledger_reconstructed	pass	ten evidence statements
+block_decisions_reconstructed	pass	four closeout decisions
+unresolved_register_reconstructed	pass	five unresolved uncertainties
+synthesis_checks_valid	pass	nine synthesis checks pass
+source_paths_exclude_test	pass	no current-test path
+compact_sources_only	pass	no raw, model, feature-array, or compressed-score input

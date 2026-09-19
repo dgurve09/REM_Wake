@@ -1,0 +1,7 @@
+experiment	check_tables	expected_checks	recorded_checks	passing_checks	failing_checks	complete_and_passing
+single_channel	2	26	26	26	0	True
+raw_noise	2	29	29	29	0	True
+noise_augmentation	3	38	38	38	0	True
+event_overlap	2	19	19	19	0	True
+alarm_fusion	2	20	20	20	0	True
+TOTAL	11	132	132	132	0	True

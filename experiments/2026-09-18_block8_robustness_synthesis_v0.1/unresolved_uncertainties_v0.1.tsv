@@ -1,0 +1,6 @@
+uncertainty	status	evidence_basis	next_action	timing_boundary
+external_psg_compatibility	unresolved	Block 8 uses one paired dataset	perform the scheduled Block 9 dataset compatibility audit	not started before 2026-09-21
+stage_derived_boundary_timing	unresolved_prioritized	B8-E8 tolerance sensitivity	predeclare interval-aware label and alarm-burden comparison	planned Block 10 work; not performed
+wearable_only_temporal_specificity	unresolved	consensus FAR mechanism requires PSG	test a bounded wearable temporal-representation hypothesis only with a new confirmation boundary	conditional future work; not performed
+natural_wearable_artefacts	unresolved	controlled Gaussian noise is not a field artefact model	identify externally observed or annotated artefact evidence before another robustness model	no current experiment scheduled
+independent_wearable_confirmation	unresolved	current validation and test cohorts have both informed prior work	require a new locked or external wearable cohort for confirmation	not available in current Block 8 evidence

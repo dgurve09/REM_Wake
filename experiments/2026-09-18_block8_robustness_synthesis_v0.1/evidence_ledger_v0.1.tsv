@@ -1,0 +1,11 @@
+evidence_id	source_experiment	statement	value_1_name	value_1	value_2_name	value_2	supported	wearable_relevance	remaining_limitation
+B8-E1	single_channel	HB_1 neutralization causes a material clean F1 loss	f1_difference	-0.1122807017543859	material_drop_bound	-0.03	True	direct	feature neutralization is not physical channel loss
+B8-E2	raw_noise	Mild both-channel noise passes fixed material bounds	f1_difference	0.028744939271255	far_difference_per_hour	-0.7781205877738849	True	controlled_robustness	white noise is not natural wearable artefact
+B8-E3	raw_noise	Severe both-channel noise eliminates primary true detections	true_positive	0.0	f1	0.0	True	direct	0 dB Gaussian noise is a stress condition
+B8-E4	raw_noise	Isolated HB_1 noise creates a high-alarm failure	f1_difference	-0.07039588500045921	far_difference_per_hour	3.005804528578152	True	direct	controlled isolated noise does not reproduce field failure
+B8-E5	noise_augmentation	Train-only noise augmentation mitigates the HB_1 failure	f1_difference	0.0499519179399508	far_difference_per_hour	-3.520368143073785	True	degraded_condition_only	other degradation conditions gained false alarms
+B8-E6	noise_augmentation	Noise augmentation fails meaningful clean advancement	clean_f1_difference	-0.0099184970299765	clean_far_difference_per_hour	-0.1757046488521676	True	core_detector	generic augmentation does not improve clean separability
+B8-E7	event_overlap	Direct PSG recovers a material subset missed by wearable	psg_only_fraction	0.1891891891891892	fixed_gate	0.15	True	information_gap	participant interval crosses the fixed gate
+B8-E8	event_overlap	Boundary tolerance materially changes union recall	recall_gain	0.1081081081081081	bootstrap_lower_95	0.0238095238095237	True	label_timing	tolerance sensitivity does not improve precision
+B8-E9	alarm_fusion	Fixed OR fusion worsens F1 and false-alarm burden	f1_difference	-0.0530422818654126	far_difference_per_hour	1.1358050515086546	True	nondeployable_fusion	fusion includes laboratory PSG
+B8-E10	alarm_fusion	Laboratory consensus suppresses FAR but F1 gain is inconclusive	f1_interval_lower	-0.0192059247757107	far_interval_upper	-0.1345805209689554	True	mechanism_only	requires PSG and F1 interval crosses zero
