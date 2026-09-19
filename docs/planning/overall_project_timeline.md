@@ -4,7 +4,7 @@
 **Project window:** 2026-06-01 to 2026-11-29
 **Prepared during:** 2026-06-25 to 2026-06-28
 **Finalized:** 2026-06-28
-**Current status:** Blocks 3-8 are complete; Block 5 was completed as catch-up work on 2026-08-15 after an inactive 2026-07-20 to 2026-08-14 interval; Block 6 closed on 2026-08-22 with direct DE-B improving on transparent SF-C while retaining low precision; validation-only endpoint factorization DE-D subsequently improved both validation F1 and false alarms but remains unevaluated on a new locked cohort; Block 7 closed on 2026-09-06 after the frozen descriptive test showed six-channel PSG leading, a validation-to-test channel-order reversal, and a persistent zero-shot/direct-wearable F1-versus-false-alarm tradeoff; Block 8 closed on 2026-09-18 after documenting material `HB_1` dependence, severe and channel-specific noise failures, failed clean advancement under train-only augmentation, adverse OR fusion, a non-deployable consensus specificity mechanism, and prioritized stage-derived boundary uncertainty; no deployable wearable method advanced and Block 9 is not started before 2026-09-21
+**Current status:** Blocks 3-8 are complete; Block 5 was completed as catch-up work on 2026-08-15 after an inactive 2026-07-20 to 2026-08-14 interval; Block 6 closed on 2026-08-22 with direct DE-B improving on transparent SF-C while retaining low precision; validation-only endpoint factorization DE-D subsequently improved both validation F1 and false alarms but remains unevaluated on a new locked cohort; Block 7 closed on 2026-09-06 after the frozen descriptive test showed six-channel PSG leading, a validation-to-test channel-order reversal, and a persistent zero-shot/direct-wearable F1-versus-false-alarm tradeoff; Block 8 closed on 2026-09-18 after documenting material `HB_1` dependence, severe and channel-specific noise failures, failed clean advancement under train-only augmentation, adverse OR fusion, a non-deployable consensus specificity mechanism, and prioritized stage-derived boundary uncertainty; a 25-claim evidence-strength analysis retained non-advancement while showing that boundary materiality is point-gate-only; Block 9 is not started before 2026-09-21
 
 ## 1. Project Boundary
 
@@ -78,7 +78,7 @@ flowchart TD
 | 5 | Jul 27-Aug 9 | What does a stage-first comparator achieve? | Wearable sleep-stage baseline, transition derivation from predicted stages | Stage-first event metrics | Completed as catch-up work on Aug 15; fixed `stage_ai`, epoch-only logistic, and five-epoch-context logistic comparators evaluated under frozen event matching |
 | 6 | Aug 10-Aug 23 | Does direct transition detection add value? | Simple direct baseline, small CNN only if justified, comparison to stage-first | Comparative baseline report | Complete Aug 22; DE-B improved test event F1 and false alarms/hour versus SF-C but retained precision 0.0909; validation-only DE-D improved F1 to 0.1604 and false alarms to 0.9915/hour versus DE-B validation; CNN deferred and DE-D test evaluation withheld |
 | 7 | Aug 24-Sep 6 | How large is the PSG-to-wearable device-shift problem? | Common six-channel PSG EEG, reduced PSG, wearable, strict zero-shot, and conditionally gated feature alignment | Paired transfer results and decision log | Complete Sep 6; `P2-D` led validation, `P6-D` led the descriptive test, strict zero-shot remained below direct wearable F1 with fewer false alarms, and alignment was skipped by the frozen gate |
-| 8 | Sep 7-Sep 20 | Is the approach robust to signal/channel variability? | Missing-channel tests, degradation tests, ablations, justified adaptation if needed | Robustness and ablation report | Complete Sep 18; wearable robustness failed, no deployable wearable method advanced, boundary uncertainty was prioritized, and all 132 source checks plus 18 synthesis/reconstruction checks passed |
+| 8 | Sep 7-Sep 20 | Is the approach robust to signal/channel variability? | Missing-channel tests, degradation tests, ablations, justified adaptation if needed | Robustness and ablation report | Complete Sep 18; wearable robustness failed, no deployable wearable method advanced, and boundary uncertainty was prioritized; the 25-claim extension separated eight uncertainty-supported gates from eight point-gate-only findings |
 | 9 | Sep 21-Oct 4 | Is external PSG comparison scientifically valid? | Audit one external PSG dataset and test reduced-channel generalization if appropriate | External generalization report or no-go | Not started |
 | 10 | Oct 5-Oct 18 | How should 30-second label uncertainty be handled? | Hard-label versus interval-aware temporal analysis | Label-uncertainty and localization report | Not started |
 | 11 | Oct 19-Nov 1 | Are transition-derived measures stable enough to report? | Event burden, REM stability, repeated-night reliability, streaming decision | Technical measures and streaming go/no-go | Not started |
@@ -351,6 +351,17 @@ Additional evidence completed on 2026-09-18:
 - failed the wearable-robustness decision and did not advance any deployable wearable method;
 - prioritized stage-derived boundary uncertainty while retaining natural artefacts, wearable temporal specificity, external compatibility, and independent confirmation as unresolved; and
 - closed Block 8 as a complete investigation without accessing current-test data or beginning Block 9 early.
+
+Participant evidence-strength extension completed on 2026-09-18:
+
+- predeclared 25 claim-level classifications using the original gates and stored participant ranges;
+- found eight passing gates supported by the full range and eight passing only at the aggregate point;
+- found four uncertainty-supported gate failures and four failed points with gate-overlapping ranges;
+- retained one joint augmentation degradation-gap claim without a direct interval rather than substituting separate within-model intervals;
+- strengthened wearable non-advancement because the clean `+0.05` F1 gate was ruled out by its participant interval;
+- retained boundary uncertainty as a priority because its interval was positive, while removing any implication that the full interval cleared the `+0.10` material gate;
+- passed 11/11 primary and 10/10 independent reconstruction checks; and
+- completed an immutable rerun without changing any reviewed file.
 
 ## 7. Next Work
 

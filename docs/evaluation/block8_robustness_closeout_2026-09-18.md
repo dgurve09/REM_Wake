@@ -55,6 +55,14 @@ The negative result is more specific than a low aggregate F1 alone. The present 
 
 The strongest resolved next question concerns the target boundary rather than another threshold or augmentation variation. Moving from +/-15 to +/-45 seconds materially changes which reference events are counted as recovered. That result identifies label-timing uncertainty; it does not improve precision and cannot be interpreted as detector advancement.
 
+## Participant Evidence Strength
+
+A predeclared extension graded 25 original gates against their stored participant uncertainty ranges. Eight gates were supported by the full range, eight passed only at the aggregate point, four failures were supported by the full range, four failed points had ranges overlapping their gate, and one joint degradation-gap contrast had no direct difference-in-differences interval.
+
+This strengthens the wearable non-advancement decision. The augmentation clean-F1 interval, -0.0438 to +0.0132, lies entirely below the required `+0.05` advancement threshold. It also narrows the boundary conclusion: the boundary-tolerance interval is positive at +0.0238 to +0.2400, but it does not remain above the `+0.10` materiality gate. Boundary timing remains a prioritized uncertainty, while material boundary gain is retained as a point-gate result rather than a participant-supported conclusion.
+
+The extension passed 11/11 primary and 10/10 independent checks. Its protocol, implementation, and result commits are `777e641`, `2842623`, and `687a858`.
+
 ## Unresolved Uncertainties
 
 - compatibility of an external PSG dataset with the current target and channel definitions;

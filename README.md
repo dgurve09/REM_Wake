@@ -34,6 +34,8 @@ As of 2026-09-18, Blocks 3-8 are complete. Block 9 is scheduled to begin 2026-09
 - Fixed 2-of-3 laboratory consensus reached validation F1 0.2174 and 0.5397 false alarms/hour. Its FAR reduction versus six-channel PSG was consistent, but its F1-gain interval crossed zero. Because it requires PSG and remains low-precision, it is a mechanism comparator rather than a wearable result. Fixed fusion stops at v0.1.
 - The Block 8 closeout synthesis rehashed 23 compact source artifacts and reviewed ten fixed evidence statements. All 132/132 source checks, 9/9 synthesis checks, and 9/9 independent reconstruction checks passed; an immutable rerun changed no reviewed file.
 - Block 8 closes with wearable robustness failed and no deployable wearable method advanced. Stage-derived boundary uncertainty is prioritized because widening tolerance increased union recall by 0.1081 with a participant lower bound of 0.0238. Closing the block records a completed investigation, not a reliable detector.
+- A 25-claim participant evidence-strength analysis found eight gates supported by their full stored range, eight point-gate-only results, four uncertainty-supported failures, four failed points with gate-overlapping ranges, and one joint contrast without a direct interval.
+- Wearable non-advancement is strengthened because the augmentation clean-F1 interval, -0.0438 to +0.0132, remains below the required `+0.05` gain. Boundary timing remains a priority because its interval is positive, but its lower bound does not clear the `+0.10` materiality gate.
 
 The Block 7 and Block 8 results do not justify revising the frozen models or thresholds. The current test partition was already used descriptively and cannot provide independent confirmation. Block 9 will assess external-PSG compatibility; interval-aware boundary analysis remains scheduled for Block 10. A new locked or external wearable cohort is still required before any wearable-method advancement claim.
 
@@ -72,6 +74,9 @@ The Block 7 and Block 8 results do not justify revising the frozen models or thr
 - [Block 8 closeout protocol](docs/evaluation/block8_robustness_synthesis_protocol_v0.1.md)
 - [Block 8 closeout result](experiments/2026-09-18_block8_robustness_synthesis_v0.1/README.md)
 - [Block 8 closeout decision](docs/evaluation/block8_robustness_closeout_2026-09-18.md)
+- [Block 8 evidence-strength protocol](docs/evaluation/block8_evidence_strength_protocol_v0.1.md)
+- [Block 8 evidence-strength result](experiments/2026-09-18_block8_evidence_strength_v0.1/README.md)
+- [Block 8 evidence-strength decision](docs/evaluation/block8_evidence_strength_decision_2026-09-18.md)
 - [Current weekly record](docs/weekly/2026-09-14_to_2026-09-20.md)
 - [BOAS dataset manifest](docs/data/boas_dataset_manifest.md)
 - [Label/preprocessing gate](docs/feasibility/label_preprocessing_gate_closeout_2026-07-18.md)

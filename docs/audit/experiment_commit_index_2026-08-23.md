@@ -45,6 +45,7 @@ This index records the first Git commit containing each historical experiment fo
 | `2026-09-13_block8_cross_modality_event_overlap_v0.1` | `68a8a64` | 2026-09-13 |
 | `2026-09-13_block8_fixed_alarm_fusion_v0.1` | `e52e86c` | 2026-09-13 |
 | `2026-09-18_block8_robustness_synthesis_v0.1` | `08c0368` | 2026-09-18 |
+| `2026-09-18_block8_evidence_strength_v0.1` | `687a858` | 2026-09-18 |
 
 The three 2026-08-23 audit experiment folders first appear in commit `63a8008`.
 
