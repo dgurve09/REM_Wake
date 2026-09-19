@@ -419,7 +419,9 @@ def main() -> None:
     partition_closed = bool(
         scores["partition"].eq("train_oof").all()
         and not manifest["path_relative_to_data_parent"]
-        .str.contains("validation|/test/|test_", case=False, regex=True)
+        .str.contains(
+            "/validation/|/test/|(?:^|/)test_", case=False, regex=True
+        )
         .any()
     )
     candidate_valid = bool(

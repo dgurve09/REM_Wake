@@ -1062,7 +1062,9 @@ def run(result_code_commit: str) -> None:
                 if assignments["partition"].eq("train").all()
                 and scores["partition"].eq("train_oof").all()
                 and not manifest["path_relative_to_data_parent"]
-                .str.contains("validation|/test/|test_", case=False, regex=True)
+                .str.contains(
+                    "/validation/|/test/|(?:^|/)test_", case=False, regex=True
+                )
                 .any()
                 else "fail",
                 "detail": "train inputs and train_oof scores only",

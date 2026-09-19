@@ -1,0 +1,4 @@
+check	value	tolerance	status
+forward_partition_matches_exhaustive_enumeration	4.76837158203125e-07	1e-06	pass
+negative_log_likelihood_matches_definition	4.76837158203125e-07	1e-06	pass
+synthetic_gradients_finite	1.0	1.0	pass

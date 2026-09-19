@@ -1,0 +1,3 @@
+model	partition	membership	tolerance_sec	threshold	recordings	pid	reference_events	predicted_events	true_positive	false_positive	false_negative	ignored_predictions	supported_hours	precision	recall	f1	false_alarms_per_hour	median_absolute_error_sec	maximum_absolute_error_sec	selection_rule
+LR-OOF	train_oof	primary	15.0	0.98	82	64	180	1006	57	924	123	25	629.4916666666667	0.0581039755351682	0.31666666666666665	0.09819121447028424	1.4678510438316632	0.0	0.0	max_f1_then_min_far_then_max_recall_then_max_threshold
+LC-1	train_oof	primary	15.0	0.99	82	64	180	400	56	334	124	10	629.4916666666667	0.14358974358974358	0.3111111111111111	0.19649122807017544	0.5305868491772462	0.0	0.0	max_f1_then_min_far_then_max_recall_then_max_threshold
