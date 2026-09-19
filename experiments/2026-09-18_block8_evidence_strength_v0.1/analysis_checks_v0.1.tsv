@@ -1,0 +1,12 @@
+check	status	detail
+ten_sources	pass	ten compact frozen source tables
+twenty_five_claims	pass	ES01 through ES25 present once
+allowed_grades	pass	all grades follow protocol
+point_inside_stored_range	pass	24 ranged claims
+one_no_interval_claim	pass	ES15 retained without invented interval
+summary_counts	pass	grade counts sum to 25
+flags_complete	pass	all non-fully-supported grades flagged
+clean_advance_failure_supported	pass	clean +0.05 F1 gate ruled out by interval
+boundary_nuance_preserved	pass	positive direction but material gate not interval-supported
+nonadvance_unchanged	pass	Block 8 closeout and nonadvance retained
+source_paths_exclude_test	pass	no current-test source path

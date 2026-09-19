@@ -1,0 +1,11 @@
+check	status	detail
+source_manifest_rehashed	pass	ten frozen source tables
+claim_ids_reconstructed	pass	ES01 through ES25
+source_values_reconstructed	pass	points, ranges, and gates match sources
+classifications_reconstructed	pass	gate grades and zero relations match
+summary_reconstructed	pass	grade counts sum to 25
+interpretation_flags_reconstructed	pass	all non-fully-supported claims flagged
+block_decisions_reconstructed	pass	nonadvance, boundary nuance, and closeout retained
+analysis_checks_valid	pass	11/11 primary checks pass
+source_paths_exclude_test	pass	no current-test path
+compact_sources_only	pass	no raw, model, feature-array, or compressed-score source

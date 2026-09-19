@@ -1,0 +1,16 @@
+dimension	category	count
+evidence_grade	gate_supported_by_uncertainty	8
+evidence_grade	point_gate_only	8
+evidence_grade	gate_failure_supported_by_uncertainty	4
+evidence_grade	point_failure_with_gate_overlap	4
+evidence_grade	no_direct_uncertainty_interval	1
+zero_relation	positive	7
+zero_relation	negative	9
+zero_relation	spans_zero	8
+zero_relation	exact_zero	0
+zero_relation	not_available	1
+experiment	alarm_fusion	6
+experiment	event_overlap	4
+experiment	noise_augmentation	6
+experiment	raw_noise	7
+experiment	single_channel	2

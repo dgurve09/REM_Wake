@@ -1,0 +1,18 @@
+claim_id	experiment	claim	evidence_grade	zero_relation	interpretation
+ES02	single_channel	HB_2 neutralization has a material F1 loss	point_failure_with_gate_overlap	negative	aggregate point fails but stored range overlaps the gate; range is negative relative to zero
+ES03	raw_noise	Mild both-channel noise preserves F1	point_gate_only	spans_zero	aggregate point passes but stored range overlaps the gate; range is spans_zero relative to zero
+ES06	raw_noise	Isolated HB_1 noise causes material F1 loss	point_gate_only	negative	aggregate point passes but stored range overlaps the gate; range is negative relative to zero
+ES08	raw_noise	Isolated HB_2 noise causes material F1 loss	point_failure_with_gate_overlap	spans_zero	aggregate point fails but stored range overlaps the gate; range is spans_zero relative to zero
+ES09	raw_noise	Isolated HB_2 noise causes material FAR increase	gate_failure_supported_by_uncertainty	negative	full stored range remains on the failing side of the gate; range is negative relative to zero
+ES10	noise_augmentation	Augmentation preserves clean F1	point_gate_only	spans_zero	aggregate point passes but stored range overlaps the gate; range is spans_zero relative to zero
+ES12	noise_augmentation	Augmentation materially improves HB_1-noise F1	point_gate_only	spans_zero	aggregate point passes but stored range overlaps the gate; range is spans_zero relative to zero
+ES14	noise_augmentation	Augmentation meaningfully advances clean F1	gate_failure_supported_by_uncertainty	spans_zero	full stored range remains on the failing side of the gate; range is spans_zero relative to zero
+ES15	noise_augmentation	Augmentation reduces the joint HB_1 degradation gap	no_direct_uncertainty_interval	not_available	exact derived contrast has no stored participant interval
+ES16	event_overlap	Shared direct-model misses are material	point_failure_with_gate_overlap	positive	aggregate point fails but stored range overlaps the gate; range is positive relative to zero
+ES17	event_overlap	PSG-only recovery is material	point_gate_only	positive	aggregate point passes but stored range overlaps the gate; range is positive relative to zero
+ES18	event_overlap	Direct-model union gain is material	point_gate_only	spans_zero	aggregate point passes but stored range overlaps the gate; range is spans_zero relative to zero
+ES19	event_overlap	Boundary-tolerance gain is material	point_gate_only	positive	aggregate point passes but stored range overlaps the gate; range is positive relative to zero
+ES20	alarm_fusion	Two-modality OR meaningfully improves F1	gate_failure_supported_by_uncertainty	negative	full stored range remains on the failing side of the gate; range is negative relative to zero
+ES21	alarm_fusion	Two-modality OR keeps FAR increase within its bound	gate_failure_supported_by_uncertainty	positive	full stored range remains on the failing side of the gate; range is positive relative to zero
+ES22	alarm_fusion	Laboratory consensus preserves or improves F1	point_gate_only	spans_zero	aggregate point passes but stored range overlaps the gate; range is spans_zero relative to zero
+ES24	alarm_fusion	Wider tolerance materially improves consensus F1	point_failure_with_gate_overlap	positive	aggregate point fails but stored range overlaps the gate; range is positive relative to zero

@@ -1,0 +1,5 @@
+decision	outcome	supported	basis
+deployable_wearable_method_advances	do_not_advance	True	clean F1 advancement gate is ruled out by the stored participant interval; PSG fusion is nondeployable
+boundary_uncertainty_priority	retain_priority	True	boundary effect is directionally positive, although the interval does not clear the 0.10 material gate
+boundary_materiality_participant_supported	not_supported	False	participant interval lower bound is above zero but below the predeclared 0.10 material gate
+block8_closeout	remain_closed	True	evidence-strength analysis changes interpretation strength but does not create a wearable advance
