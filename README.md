@@ -4,7 +4,7 @@ This repository investigates event-specific REM-to-Wake boundary detection from 
 
 ## Current Status
 
-As of 2026-09-13, Blocks 3-7 are complete and Block 8 robustness work is in progress.
+As of 2026-09-18, Blocks 3-8 are complete. Block 9 is scheduled to begin 2026-09-21.
 
 - BOAS snapshot `1.1.1` is frozen at 128 paired recordings and 100 participant-table `pid` groups.
 - The conservative primary set contains 276 REM-to-Wake events across 72 groups; the expanded quality-sensitivity set contains 348 across 88 groups.
@@ -32,8 +32,10 @@ As of 2026-09-13, Blocks 3-7 are complete and Block 8 robustness work is in prog
 - Widening event tolerance from +/-15 to +/-45 seconds increased direct-model union recall by 0.1081, with a participant interval of 0.0238 to 0.2400. This supports explicit boundary-uncertainty work; it does not make the present detector reliable. All 9/9 in-run and 10/10 independent checks passed without current-test access.
 - A fixed alarm-fusion experiment then counted the hidden alarm cost. `P6-H2-OR` reduced F1 to 0.1100 and increased false alarms to 2.2465/hour. The all-direct OR result was similarly adverse, with both paired participant directions excluding zero.
 - Fixed 2-of-3 laboratory consensus reached validation F1 0.2174 and 0.5397 false alarms/hour. Its FAR reduction versus six-channel PSG was consistent, but its F1-gain interval crossed zero. Because it requires PSG and remains low-precision, it is a mechanism comparator rather than a wearable result. Fixed fusion stops at v0.1.
+- The Block 8 closeout synthesis rehashed 23 compact source artifacts and reviewed ten fixed evidence statements. All 132/132 source checks, 9/9 synthesis checks, and 9/9 independent reconstruction checks passed; an immutable rerun changed no reviewed file.
+- Block 8 closes with wearable robustness failed and no deployable wearable method advanced. Stage-derived boundary uncertainty is prioritized because widening tolerance increased union recall by 0.1081 with a participant lower bound of 0.0238. Closing the block records a completed investigation, not a reliable detector.
 
-The Block 7 paired-transfer protocol was committed before the channel audit and before feature extraction or fitting. The fixed descriptive test now closes Block 7, but the test partition was already used in earlier blocks and does not provide independent confirmation. Its results cannot be used to revise the frozen models or thresholds. The observed validation-to-test reversal makes participant and channel robustness the next uncertainty rather than justifying immediate adaptation or a more complex classifier.
+The Block 7 and Block 8 results do not justify revising the frozen models or thresholds. The current test partition was already used descriptively and cannot provide independent confirmation. Block 9 will assess external-PSG compatibility; interval-aware boundary analysis remains scheduled for Block 10. A new locked or external wearable cohort is still required before any wearable-method advancement claim.
 
 ## Start Here
 
@@ -67,7 +69,10 @@ The Block 7 paired-transfer protocol was committed before the channel audit and 
 - [Block 8 fixed alarm-fusion protocol](docs/evaluation/block8_fixed_alarm_fusion_protocol_v0.1.md)
 - [Block 8 fixed alarm-fusion result](experiments/2026-09-13_block8_fixed_alarm_fusion_v0.1/README.md)
 - [Block 8 fixed alarm-fusion decision](docs/evaluation/block8_fixed_alarm_fusion_decision_2026-09-13.md)
-- [Current weekly record](docs/weekly/2026-09-07_to_2026-09-13.md)
+- [Block 8 closeout protocol](docs/evaluation/block8_robustness_synthesis_protocol_v0.1.md)
+- [Block 8 closeout result](experiments/2026-09-18_block8_robustness_synthesis_v0.1/README.md)
+- [Block 8 closeout decision](docs/evaluation/block8_robustness_closeout_2026-09-18.md)
+- [Current weekly record](docs/weekly/2026-09-14_to_2026-09-20.md)
 - [BOAS dataset manifest](docs/data/boas_dataset_manifest.md)
 - [Label/preprocessing gate](docs/feasibility/label_preprocessing_gate_closeout_2026-07-18.md)
 - [Block 6 baseline decision](docs/evaluation/block6_baseline_gate_decision_2026-08-22.md)

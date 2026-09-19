@@ -4,7 +4,7 @@
 **Project window:** 2026-06-01 to 2026-11-29
 **Prepared during:** 2026-06-25 to 2026-06-28
 **Finalized:** 2026-06-28
-**Current status:** Blocks 3-7 are complete; Block 5 was completed as catch-up work on 2026-08-15 after an inactive 2026-07-20 to 2026-08-14 interval; Block 6 closed on 2026-08-22 with direct DE-B improving on transparent SF-C while retaining low precision; validation-only endpoint factorization DE-D subsequently improved both validation F1 and false alarms but remains unevaluated on a new locked cohort; Block 7 closed on 2026-09-06 after the frozen descriptive test showed six-channel PSG leading, a validation-to-test channel-order reversal, and a persistent zero-shot/direct-wearable F1-versus-false-alarm tradeoff; Block 8 identified material `HB_1` dependence, channel-specific noise failures, no clean gain from train-only augmentation, a PSG-only event subset, boundary-tolerance sensitivity, failure of fixed OR fusion, and false-alarm suppression under non-deployable 2-of-3 laboratory consensus
+**Current status:** Blocks 3-8 are complete; Block 5 was completed as catch-up work on 2026-08-15 after an inactive 2026-07-20 to 2026-08-14 interval; Block 6 closed on 2026-08-22 with direct DE-B improving on transparent SF-C while retaining low precision; validation-only endpoint factorization DE-D subsequently improved both validation F1 and false alarms but remains unevaluated on a new locked cohort; Block 7 closed on 2026-09-06 after the frozen descriptive test showed six-channel PSG leading, a validation-to-test channel-order reversal, and a persistent zero-shot/direct-wearable F1-versus-false-alarm tradeoff; Block 8 closed on 2026-09-18 after documenting material `HB_1` dependence, severe and channel-specific noise failures, failed clean advancement under train-only augmentation, adverse OR fusion, a non-deployable consensus specificity mechanism, and prioritized stage-derived boundary uncertainty; no deployable wearable method advanced and Block 9 is not started before 2026-09-21
 
 ## 1. Project Boundary
 
@@ -33,8 +33,8 @@ gantt
     Direct transition baselines                      :done, b6, 2026-08-10, 2026-08-23
 
     section Transfer and Robustness
-    Paired PSG-to-wearable transfer                  :b7, 2026-08-24, 2026-09-06
-    Robustness and justified adaptation              :b8, 2026-09-07, 2026-09-20
+    Paired PSG-to-wearable transfer                  :done, b7, 2026-08-24, 2026-09-06
+    Robustness and justified adaptation              :done, b8, 2026-09-07, 2026-09-20
     External PSG generalization check                :b9, 2026-09-21, 2026-10-04
 
     section Analysis and Measures
@@ -69,7 +69,7 @@ flowchart TD
 
 ## 4. Phase Table
 
-| Block | Dates | Main Question | Main Work | Deliverable | Status as of 2026-09-06 |
+| Block | Dates | Main Question | Main Work | Deliverable | Status as of 2026-09-18 |
 |---:|---|---|---|---|---|
 | 1 | Jun 1-Jun 14 | What is known and what is uncertain? | Literature review, initial planning, public-dataset search | Initial proposal, literature evidence, dataset candidate list | Complete |
 | 2 | Jun 15-Jun 28 | Can the project be set up cleanly with a defensible dataset and target? | Scope refinement, BOAS selection, repository setup, environment audit, pilot checks, E0 readiness | Revised proposal, manifest, setup records, pilot reports, E0 readiness package | Complete |
@@ -78,7 +78,7 @@ flowchart TD
 | 5 | Jul 27-Aug 9 | What does a stage-first comparator achieve? | Wearable sleep-stage baseline, transition derivation from predicted stages | Stage-first event metrics | Completed as catch-up work on Aug 15; fixed `stage_ai`, epoch-only logistic, and five-epoch-context logistic comparators evaluated under frozen event matching |
 | 6 | Aug 10-Aug 23 | Does direct transition detection add value? | Simple direct baseline, small CNN only if justified, comparison to stage-first | Comparative baseline report | Complete Aug 22; DE-B improved test event F1 and false alarms/hour versus SF-C but retained precision 0.0909; validation-only DE-D improved F1 to 0.1604 and false alarms to 0.9915/hour versus DE-B validation; CNN deferred and DE-D test evaluation withheld |
 | 7 | Aug 24-Sep 6 | How large is the PSG-to-wearable device-shift problem? | Common six-channel PSG EEG, reduced PSG, wearable, strict zero-shot, and conditionally gated feature alignment | Paired transfer results and decision log | Complete Sep 6; `P2-D` led validation, `P6-D` led the descriptive test, strict zero-shot remained below direct wearable F1 with fewer false alarms, and alignment was skipped by the frozen gate |
-| 8 | Sep 7-Sep 20 | Is the approach robust to signal/channel variability? | Missing-channel tests, degradation tests, ablations, justified adaptation if needed | Robustness and ablation report | In progress; channel/noise failures and failed clean augmentation documented; fixed OR fusion accumulated alarms, while 2-of-3 PSG/wearable consensus suppressed alarms but remains non-deployable and participant-inconclusive for F1 |
+| 8 | Sep 7-Sep 20 | Is the approach robust to signal/channel variability? | Missing-channel tests, degradation tests, ablations, justified adaptation if needed | Robustness and ablation report | Complete Sep 18; wearable robustness failed, no deployable wearable method advanced, boundary uncertainty was prioritized, and all 132 source checks plus 18 synthesis/reconstruction checks passed |
 | 9 | Sep 21-Oct 4 | Is external PSG comparison scientifically valid? | Audit one external PSG dataset and test reduced-channel generalization if appropriate | External generalization report or no-go | Not started |
 | 10 | Oct 5-Oct 18 | How should 30-second label uncertainty be handled? | Hard-label versus interval-aware temporal analysis | Label-uncertainty and localization report | Not started |
 | 11 | Oct 19-Nov 1 | Are transition-derived measures stable enough to report? | Event burden, REM stability, repeated-night reliability, streaming decision | Technical measures and streaming go/no-go | Not started |
@@ -92,7 +92,7 @@ flowchart TD
 | E0 feasibility gate | 2026-07-12 | Proceed, narrow, redesign, or stop | Event counts by recording and `pid`, label-quality flags, unlabeled-tail summary, participant spread |
 | Label/preprocessing gate | 2026-07-26 | Passed 2026-07-18; freeze v0.1/v0.3 inputs | Tested label generation, alignment checks, quality flags, participant split, preprocessing checks, analysis membership |
 | Baseline gate | 2026-08-23 | Passed 2026-08-22: continue direct-event research with limitations; retain simple baseline and defer CNN | Stage-first versus direct event-level comparison, paired participant uncertainty, residual failure analysis |
-| Transfer/robustness gate | 2026-09-20 | Add adaptation or keep simpler model | PSG-to-wearable transfer result and robustness evidence |
+| Transfer/robustness gate | 2026-09-20 | Closed 2026-09-18: keep the simpler comparator, stop Block 8 variations, and do not advance a deployable wearable method | PSG-to-wearable transfer result, five robustness experiments, ten-statement synthesis, and 132 source integrity checks |
 | External-data gate | 2026-10-04 | External test or documented no-go | Compatibility audit and clear label/channel mapping |
 | Streaming gate | 2026-11-01 | Prototype or no-go | Offline evidence, threshold sensitivity, repeated-night reliability if possible |
 | Final QA gate | 2026-11-15 | Freeze prototype/results or no-go | Clean rerun, split/seed/config verification, artifact linkage |
@@ -340,9 +340,21 @@ Additional evidence completed on 2026-09-11 to 2026-09-13:
 - passed 10/10 in-run and 10/10 independent checks and completed an immutable result rerun; and
 - stopped fixed fusion at v0.1 because its only advancing rule requires laboratory PSG and does not solve wearable-only detection.
 
+Additional evidence completed on 2026-09-18:
+
+- predeclared the Block 8 closeout synthesis before implementation or first execution;
+- hashed 23 compact source artifacts from all five frozen Block 8 experiments;
+- reconstructed ten evidence statements and reviewed 132/132 passing source integrity checks;
+- independently rebuilt the source manifest, integrity census, evidence ledger, four block decisions, and five-item unresolved-uncertainty register;
+- passed 9/9 synthesis and 9/9 independent reconstruction checks;
+- reproduced every reviewed output on an immutable rerun;
+- failed the wearable-robustness decision and did not advance any deployable wearable method;
+- prioritized stage-derived boundary uncertainty while retaining natural artefacts, wearable temporal specificity, external compatibility, and independent confirmation as unresolved; and
+- closed Block 8 as a complete investigation without accessing current-test data or beginning Block 9 early.
+
 ## 7. Next Work
 
-Complete the Block 8 robustness synthesis without adopting `H2-NA`, OR fusion, or PSG-dependent consensus as the wearable detector. Block 9 should assess whether an external PSG dataset can provide a valid generalization comparison. The interval-aware boundary experiment in Block 10 retains empirical priority, but its goal must include precision and alarm burden rather than tolerance-only recall. Any later wearable temporal-representation experiment must have a separately committed hypothesis, meaningful clean-performance and false-alarm gates, participant-grouped development, and a new locked or external confirmation boundary. Keep the current test partition closed.
+Begin Block 9 no earlier than 2026-09-21 by auditing whether an external PSG dataset can provide a scientifically valid generalization comparison. The interval-aware boundary experiment in Block 10 retains empirical priority, but its goal must include precision and alarm burden rather than tolerance-only recall. Any later wearable temporal-representation experiment must have a separately committed hypothesis, meaningful clean-performance and false-alarm gates, participant-grouped development, and a new locked or external confirmation boundary. Keep the current test partition closed.
 
 ## 8. Rules for the Rest of the Project
 

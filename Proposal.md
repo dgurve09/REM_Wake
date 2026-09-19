@@ -2,11 +2,11 @@
 
 ## Wearable EEG REM-to-Wake Transition Detection Under Label and Device Uncertainty
 
-**Version:** 1.20
+**Version:** 1.21
 **Planning date:** 2026-06-21
-**Last revised:** 2026-09-13
+**Last revised:** 2026-09-18
 **Project window:** 2026-06-01 to 2026-11-29
-**Status:** Working research plan; Blocks 3-7 are complete and Block 8 is in progress; the conservative primary tier contains 276 REM-to-Wake events across 72 `pid` groups and the expanded quality-sensitivity tier contains 348 across 88 groups; the transparent stage-first and simple direct baselines have been compared; direct DE-B improved on transparent SF-C but retained precision 0.0909 and 1.2571 false alarms per hour; Block 7 found a validation F1 loss under strict PSG-to-wearable transfer, skipped conditional alignment under the predeclared gate, and completed its fixed descriptive test; Block 8 identified asymmetric channel dependence, severe and channel-specific noise failures, and no clean gain from train-only noise augmentation; cross-modality overlap showed a PSG-only subset and boundary-tolerance sensitivity; fixed alarm fusion then rejected simple OR combination and found that 2-of-3 laboratory consensus suppresses false alarms but does not advance the wearable detector
+**Status:** Working research plan; Blocks 3-8 are complete and Block 9 is scheduled to begin 2026-09-21; the conservative primary tier contains 276 REM-to-Wake events across 72 `pid` groups and the expanded quality-sensitivity tier contains 348 across 88 groups; the transparent stage-first and simple direct baselines have been compared; direct DE-B improved on transparent SF-C but retained precision 0.0909 and 1.2571 false alarms per hour; Block 7 found a validation F1 loss under strict PSG-to-wearable transfer, skipped conditional alignment under the predeclared gate, and completed its fixed descriptive test; Block 8 closed after documenting material channel dependence, severe and channel-specific noise failures, failure of clean advancement under train-only augmentation, adverse OR fusion, a non-deployable consensus specificity mechanism, and prioritized stage-derived boundary uncertainty; no deployable wearable method advanced
 
 ## 1. Technology Area
 
@@ -368,6 +368,8 @@ The schedule is organized into two-week research blocks. Actual work records sho
 
 **Fixed alarm-fusion update, 2026-09-13:** A predeclared follow-up counted the false-alarm cost of the complementary event sets using fixed 30-second alarm clustering. `P6-H2-OR` increased recall to 0.6216 but reduced F1 to 0.1100 and raised false alarms to 2.2465/hour. The all-direct OR behaved similarly. A fixed 2-of-3 consensus produced validation F1 0.2174 and 0.5397 false alarms/hour versus `P6-D` F1 0.1631 and 1.1107/hour. Its FAR reduction interval excluded zero, but its F1-difference interval crossed zero. Because the consensus requires PSG, has low precision 0.1485 and recall 0.4054, and uses reused validation, it is retained only as a laboratory mechanism comparator. Fixed fusion stops at v0.1; it is not a wearable detector and receives no current-test evaluation.
 
+**Block 8 closeout, 2026-09-18:** A predeclared synthesis hashed 23 compact source artifacts and reconstructed ten evidence statements across all five Block 8 experiments. All 132/132 applicable source checks, 9/9 synthesis checks, and 9/9 independent reconstruction checks passed; an immutable rerun changed no reviewed file. Wearable robustness failed because material `HB_1` dependence, severe-noise detection collapse, and the channel-specific high-alarm failure remain. No deployable wearable method advances: augmentation failed its clean-performance gate and the only passing fusion mechanism requires PSG. The +0.1081 boundary-tolerance effect, with participant lower bound +0.0238, prioritizes stage-derived boundary uncertainty for Block 10. Block 8 closes as a complete investigation, not as a successful detector result. Block 9 remains unstarted before 2026-09-21, and the current test partition stays closed.
+
 ### Block 9: September 21 to October 4 - External PSG generalization
 
 - Audit compatibility with one external PSG dataset.
@@ -417,7 +419,7 @@ The schedule is organized into two-week research blocks. Actual work records sho
 - **M0, July 12:** Feasibility decision completed.
 - **M1, July 26:** Reproducible labels and preprocessing completed.
 - **M2, August 23:** Completed 2026-08-22; stage-first and direct transition baselines compared, with low direct-event precision retained as the main limitation.
-- **M3, September 20:** PSG-to-wearable transfer and robustness assessed.
+- **M3, September 20:** Completed 2026-09-18; PSG-to-wearable transfer and robustness assessed, with no deployable wearable method advanced and boundary uncertainty prioritized.
 - **M4, November 15:** Temporal analysis completed and streaming decision implemented or documented as no-go.
 - **M5, November 29:** Final results, reproducibility package, and project artifact index completed.
 
