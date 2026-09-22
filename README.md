@@ -4,7 +4,7 @@ This repository investigates event-specific REM-to-Wake boundary detection from 
 
 ## Current Status
 
-As of 2026-09-18, Blocks 3-8 are complete. Block 9 is scheduled to begin 2026-09-21.
+As of 2026-09-22, Blocks 3-8 and a standalone train-only temporal-representation screen are complete. Block 9 has not started.
 
 - BOAS snapshot `1.1.1` is frozen at 128 paired recordings and 100 participant-table `pid` groups.
 - The conservative primary set contains 276 REM-to-Wake events across 72 groups; the expanded quality-sensitivity set contains 348 across 88 groups.
@@ -36,8 +36,10 @@ As of 2026-09-18, Blocks 3-8 are complete. Block 9 is scheduled to begin 2026-09
 - Block 8 closes with wearable robustness failed and no deployable wearable method advanced. Stage-derived boundary uncertainty is prioritized because widening tolerance increased union recall by 0.1081 with a participant lower bound of 0.0238. Closing the block records a completed investigation, not a reliable detector.
 - A 25-claim participant evidence-strength analysis found eight gates supported by their full stored range, eight point-gate-only results, four uncertainty-supported failures, four failed points with gate-overlapping ranges, and one joint contrast without a direct interval.
 - Wearable non-advancement is strengthened because the augmentation clean-F1 interval, -0.0438 to +0.0132, remains below the required `+0.05` gain. Boundary timing remains a priority because its interval is positive, but its lower bound does not clear the `+0.10` materiality gate.
+- A separately predeclared train-only LSTM-CRF screen compared the same eight-epoch wearable inputs with a matched flattened logistic model across five participant-held-out folds. LSTM-CRF F1 was 0.1965 versus 0.0982, while false alarms fell from 1.4679 to 0.5306/hour. The paired difference intervals were +0.0485 to +0.1367 F1 and -1.4804 to -0.4089 false alarms/hour.
+- The LSTM-CRF point result passed the fixed +0.05 F1 and no-FAR-increase gate, and the favorable direction was participant-supported. It remains a train-development result: validation and test stayed closed, F1 remained below 0.20, and a new locked or external wearable cohort is required before model advancement.
 
-The Block 7 and Block 8 results do not justify revising the frozen models or thresholds. The current test partition was already used descriptively and cannot provide independent confirmation. Block 9 will assess external-PSG compatibility; interval-aware boundary analysis remains scheduled for Block 10. A new locked or external wearable cohort is still required before any wearable-method advancement claim.
+The Block 7 and Block 8 results do not justify revising the frozen models or thresholds. The LSTM-CRF screen identifies a candidate temporal representation but does not revise that conclusion without independent confirmation. The current test partition was already used descriptively and remains closed. Block 9 will assess external-PSG compatibility; interval-aware boundary analysis remains scheduled for Block 10. A new locked or external wearable cohort is still required before any wearable-method advancement claim.
 
 ## Start Here
 
@@ -77,7 +79,10 @@ The Block 7 and Block 8 results do not justify revising the frozen models or thr
 - [Block 8 evidence-strength protocol](docs/evaluation/block8_evidence_strength_protocol_v0.1.md)
 - [Block 8 evidence-strength result](experiments/2026-09-18_block8_evidence_strength_v0.1/README.md)
 - [Block 8 evidence-strength decision](docs/evaluation/block8_evidence_strength_decision_2026-09-18.md)
-- [Current weekly record](docs/weekly/2026-09-14_to_2026-09-20.md)
+- [Train-only LSTM-CRF protocol](docs/evaluation/lstm_crf_train_oof_protocol_v0.1.md)
+- [Train-only LSTM-CRF result](experiments/2026-09-19_lstm_crf_train_oof_v0.1/README.md)
+- [Train-only LSTM-CRF decision](docs/evaluation/lstm_crf_train_oof_decision_2026-09-22.md)
+- [Current weekly record](docs/weekly/2026-09-21_to_2026-09-27.md)
 - [BOAS dataset manifest](docs/data/boas_dataset_manifest.md)
 - [Label/preprocessing gate](docs/feasibility/label_preprocessing_gate_closeout_2026-07-18.md)
 - [Block 6 baseline decision](docs/evaluation/block6_baseline_gate_decision_2026-08-22.md)
