@@ -1,0 +1,15 @@
+check	status	detail
+train_membership	pass	82 recordings; 64 pid groups
+validation_and_test_closed	pass	train inputs and train_oof scores only
+frozen_fold_reproduction	pass	reused Block 8 five-fold assignment
+each_pid_held_out_once	pass	64/64 pid groups
+no_participant_leakage	pass	fit and held-out pid sets disjoint in five folds
+feature_schema_and_values	pass	shape=(2743, 8, 10)
+candidate_accounting	pass	total=2743; retained=2743; positive=180
+crf_synthetic_math	pass	3/3 checks
+deterministic_duplicate_fit	pass	maximum probability difference=0
+complete_finite_oof_scores	pass	rows per model={'LC-1': 75539, 'LR-OOF': 75539}
+fixed_training_completion	pass	5 folds x 60 epochs
+threshold_selection	pass	99 thresholds per model
+paired_participant_support	pass	64 paired train pid groups
+external_artifact_manifest	pass	93 source, model, and score artifacts

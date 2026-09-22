@@ -1,0 +1,11 @@
+feature_index	feature_name
+0	HB_1_delta_log10_mean_psd
+1	HB_1_theta_log10_mean_psd
+2	HB_1_alpha_log10_mean_psd
+3	HB_1_sigma_log10_mean_psd
+4	HB_1_beta_log10_mean_psd
+5	HB_2_delta_log10_mean_psd
+6	HB_2_theta_log10_mean_psd
+7	HB_2_alpha_log10_mean_psd
+8	HB_2_sigma_log10_mean_psd
+9	HB_2_beta_log10_mean_psd
