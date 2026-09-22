@@ -54,7 +54,7 @@ This tests whether a lower-parameter recurrent gate improves generalization unde
 ### C3: `TCN-CRF`
 
 - one 1x1 projection from 10 to 32 channels;
-- two residual temporal blocks with kernel size 3 and dilations 1 and 2;
+- three residual temporal blocks with kernel size 3 and dilations 1, 2, and 4;
 - one convolution, ReLU, and fixed 0.10 dropout per block;
 - sequence-length-preserving symmetric padding;
 - linear projection from 32 values to three CRF emissions; and
