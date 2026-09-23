@@ -1,0 +1,5 @@
+candidate	encoder	output	trainable_parameters	epochs	learning_rate	weight_decay	batch_size
+BLSTM-CRF	bidirectional_lstm	three_state_linear_chain_crf	3698	60	0.003	0.0001	128
+BGRU-CRF	bidirectional_gru	three_state_linear_chain_crf	2802	60	0.003	0.0001	128
+TCN-CRF	residual_dilated_temporal_convolution	three_state_linear_chain_crf	9778	60	0.003	0.0001	128
+BLSTM-2H	bidirectional_lstm	two_endpoint_heads	3650	60	0.003	0.0001	128

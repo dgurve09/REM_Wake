@@ -1,0 +1,5 @@
+candidate	mean_inner_rank	mean_inner_f1	mean_inner_far	selected_outer_folds	trainable_parameters	recommendation_rank	recommended_for_new_confirmation
+BLSTM-2H	2.2	0.19945126745407699	0.32051853685479736	1	3650	1	True
+TCN-CRF	2.6	0.20134974485759477	0.41419294921370753	1	9778	2	False
+BGRU-CRF	2.6	0.19904549268465774	0.41522586470656153	2	2802	3	False
+BLSTM-CRF	2.6	0.19828955875755125	0.4003042154758988	1	3698	4	False

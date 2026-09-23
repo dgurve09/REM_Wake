@@ -1,0 +1,5 @@
+candidate	state_hash_equal	maximum_scaler_difference	maximum_probability_difference	status
+BLSTM-CRF	True	0.0	0.0	pass
+BGRU-CRF	True	0.0	0.0	pass
+TCN-CRF	True	0.0	0.0	pass
+BLSTM-2H	True	0.0	0.0	pass

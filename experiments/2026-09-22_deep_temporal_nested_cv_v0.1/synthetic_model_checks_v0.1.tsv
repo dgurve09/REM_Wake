@@ -1,0 +1,6 @@
+check	value	expected	status
+BLSTM-CRF_shape_and_probability	5	5	pass
+BGRU-CRF_shape_and_probability	5	5	pass
+TCN-CRF_shape_and_probability	5	5	pass
+BLSTM-2H_shape_and_probability	5	5	pass
+TCN_complete_sequence_length_preserved	8	8	pass

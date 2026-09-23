@@ -1,0 +1,4 @@
+hypothesis	f1_difference	required_f1_difference	false_alarms_per_hour_difference	maximum_far_difference	supported	decision
+H-DT1_nested_architecture_advancement	0.004123419087564667	0.05	-0.015885833807701977	0.0	False	stop_v0.1
+participant_direction_support	0.004123419087564667	0.0	-0.015885833807701977	0.0	False	not_supported
+participant_material_support	0.004123419087564667	0.05	-0.015885833807701977	0.0	False	not_supported

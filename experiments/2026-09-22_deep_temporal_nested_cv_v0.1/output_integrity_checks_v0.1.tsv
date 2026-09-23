@@ -1,0 +1,15 @@
+check	status	detail
+train_membership	pass	82 recordings; 64 pid groups
+validation_and_test_closed	pass	train artifacts only
+five_outer_folds	pass	each pid held out once
+complete_inner_architecture_selection	pass	four candidates and one selection per outer fold
+no_participant_leakage	pass	all fit and heldout pid sets disjoint
+common_candidate_and_feature_input	pass	shape=(2743, 8, 10); positive=180
+four_frozen_candidates	pass	BLSTM-CRF;BGRU-CRF;TCN-CRF;BLSTM-2H
+synthetic_model_checks	pass	5/5 passed
+fixed_training_completion	pass	fits=89; epochs=60
+deterministic_duplicate_fits	pass	4/4 passed
+fixed_threshold_grid	pass	64 thresholds x 20 candidate-outer pairs
+complete_outer_scores	pass	two pipelines; 82 recordings; 64 pid
+paired_participant_results	pass	64 pid per pipeline
+external_artifact_manifest	pass	202 hashed artifacts
