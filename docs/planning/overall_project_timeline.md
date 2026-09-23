@@ -4,7 +4,7 @@
 **Project window:** 2026-06-01 to 2026-11-29
 **Prepared during:** 2026-06-25 to 2026-06-28
 **Finalized:** 2026-06-28
-**Current status:** Blocks 3-8 are complete; Block 5 was completed as catch-up work on 2026-08-15 after an inactive 2026-07-20 to 2026-08-14 interval; Block 6 closed on 2026-08-22 with direct DE-B improving on transparent SF-C while retaining low precision; validation-only endpoint factorization DE-D subsequently improved both validation F1 and false alarms but remains unevaluated on a new locked cohort; Block 7 closed on 2026-09-06 after the frozen descriptive test showed six-channel PSG leading, a validation-to-test channel-order reversal, and a persistent zero-shot/direct-wearable F1-versus-false-alarm tradeoff; Block 8 closed on 2026-09-18 after documenting material `HB_1` dependence, severe and channel-specific noise failures, failed clean advancement under train-only augmentation, adverse OR fusion, a non-deployable consensus specificity mechanism, and prioritized stage-derived boundary uncertainty; a 25-claim evidence-strength analysis retained non-advancement while showing that boundary materiality is point-gate-only; a standalone train-only LSTM-CRF screen completed on 2026-09-22 with improved temporal specificity but no independent confirmation; Block 9 is not started
+**Current status:** Blocks 3-8 are complete; Block 5 was completed as catch-up work on 2026-08-15 after an inactive 2026-07-20 to 2026-08-14 interval; Block 6 closed on 2026-08-22 with direct DE-B improving on transparent SF-C while retaining low precision; validation-only endpoint factorization DE-D subsequently improved both validation F1 and false alarms but remains unevaluated on a new locked cohort; Block 7 closed on 2026-09-06 after the frozen descriptive test showed six-channel PSG leading, a validation-to-test channel-order reversal, and a persistent zero-shot/direct-wearable F1-versus-false-alarm tradeoff; Block 8 closed on 2026-09-18 after documenting material `HB_1` dependence, severe and channel-specific noise failures, failed clean advancement under train-only augmentation, adverse OR fusion, a non-deployable consensus specificity mechanism, and prioritized stage-derived boundary uncertainty; a 25-claim evidence-strength analysis retained non-advancement while showing that boundary materiality is point-gate-only; a standalone train-only LSTM-CRF screen completed on 2026-09-22 with improved temporal specificity but no independent confirmation; a nested four-architecture extension then failed its material F1 gate and stopped further encoder search on the same bandpower representation; Block 9 is not started
 
 ## 1. Project Boundary
 
@@ -374,9 +374,19 @@ Standalone temporal-representation screen completed on 2026-09-22:
 - passed 14/14 in-run and 10/10 independent reconstruction checks twice and completed an immutable rerun; and
 - retained `LC-1` for a future new-cohort confirmation without revising any frozen validation or test result.
 
+Nested deep temporal extension completed on 2026-09-22:
+
+- froze BLSTM-CRF, BGRU-CRF, TCN-CRF, and BLSTM-2H candidates before implementation and corrected the TCN receptive field before result generation;
+- used five outer participant folds with four rotating inner folds for candidate-specific threshold and architecture selection;
+- obtained primary nested F1 0.1645 and 0.2812 false alarms/hour for the selected pipeline, versus 0.1604 and 0.2971/hour for the matched nested BLSTM-CRF;
+- found only +0.0041 F1 improvement, with interval -0.0532 to +0.0608, and no participant-supported false-alarm difference;
+- selected different architecture types across the outer folds, providing no stable architecture advantage;
+- passed 14/14 in-run and 12/12 independent reconstruction checks, deterministic duplicate fits, and a complete rerun; and
+- stopped this candidate family without opening validation or test data or authorizing model advancement.
+
 ## 7. Next Work
 
-Begin Block 9 by auditing whether an external PSG dataset can provide a scientifically valid generalization comparison. The interval-aware boundary experiment in Block 10 retains empirical priority, but its goal must include precision and alarm burden rather than tolerance-only recall. `LC-1` may advance only to a separately committed evaluation on a new locked or external wearable cohort; Block 9 external PSG is not that confirmation cohort. Keep the current validation and test partitions closed.
+Begin Block 9 by auditing whether an external PSG dataset can provide a scientifically valid generalization comparison. The interval-aware boundary experiment in Block 10 retains empirical priority, but its goal must include precision and alarm burden rather than tolerance-only recall. Stop further encoder search on the current eight-epoch bandpower representation. `LC-1` may advance only under a separately committed evaluation on a new locked or external wearable cohort; the failed nested extension does not authorize any candidate to advance, and Block 9 external PSG is not a wearable confirmation cohort. Keep the current validation and test partitions closed.
 
 ## 8. Rules for the Rest of the Project
 

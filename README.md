@@ -38,8 +38,10 @@ As of 2026-09-22, Blocks 3-8 and a standalone train-only temporal-representation
 - Wearable non-advancement is strengthened because the augmentation clean-F1 interval, -0.0438 to +0.0132, remains below the required `+0.05` gain. Boundary timing remains a priority because its interval is positive, but its lower bound does not clear the `+0.10` materiality gate.
 - A separately predeclared train-only LSTM-CRF screen compared the same eight-epoch wearable inputs with a matched flattened logistic model across five participant-held-out folds. LSTM-CRF F1 was 0.1965 versus 0.0982, while false alarms fell from 1.4679 to 0.5306/hour. The paired difference intervals were +0.0485 to +0.1367 F1 and -1.4804 to -0.4089 false alarms/hour.
 - The LSTM-CRF point result passed the fixed +0.05 F1 and no-FAR-increase gate, and the favorable direction was participant-supported. It remains a train-development result: validation and test stayed closed, F1 remained below 0.20, and a new locked or external wearable cohort is required before model advancement.
+- A nested train-only comparison then evaluated BLSTM-CRF, BGRU-CRF, TCN-CRF, and BLSTM-2H under fold-local architecture and threshold selection. The selected pipeline reached F1 0.1645 and 0.2812 false alarms/hour, versus 0.1604 and 0.2971/hour for its matched nested BLSTM-CRF control.
+- The nested F1 gain was only +0.0041, with participant interval -0.0532 to +0.0608, and the false-alarm difference interval also crossed zero. Architecture choices varied across all candidate types over five folds. The +0.05 advancement gate failed, so the four-candidate exploration stops without authorizing a replacement or new-cohort confirmation.
 
-The Block 7 and Block 8 results do not justify revising the frozen models or thresholds. The LSTM-CRF screen identifies a candidate temporal representation but does not revise that conclusion without independent confirmation. The current test partition was already used descriptively and remains closed. Block 9 will assess external-PSG compatibility; interval-aware boundary analysis remains scheduled for Block 10. A new locked or external wearable cohort is still required before any wearable-method advancement claim.
+The Block 7 and Block 8 results do not justify revising the frozen models or thresholds. The LSTM-CRF screen identifies a candidate temporal representation, while the nested comparison shows no material benefit from additional small encoder variants on the same bandpower inputs. The current test partition was already used descriptively and remains closed. Block 9 will assess external-PSG compatibility; interval-aware boundary analysis remains scheduled for Block 10. A new locked or external wearable cohort is still required before any wearable-method advancement claim.
 
 ## Start Here
 
@@ -82,6 +84,9 @@ The Block 7 and Block 8 results do not justify revising the frozen models or thr
 - [Train-only LSTM-CRF protocol](docs/evaluation/lstm_crf_train_oof_protocol_v0.1.md)
 - [Train-only LSTM-CRF result](experiments/2026-09-19_lstm_crf_train_oof_v0.1/README.md)
 - [Train-only LSTM-CRF decision](docs/evaluation/lstm_crf_train_oof_decision_2026-09-22.md)
+- [Nested deep temporal protocol](docs/evaluation/deep_temporal_nested_cv_protocol_v0.1.md)
+- [Nested deep temporal result](experiments/2026-09-22_deep_temporal_nested_cv_v0.1/README.md)
+- [Nested deep temporal decision](docs/evaluation/deep_temporal_nested_cv_decision_2026-09-22.md)
 - [Current weekly record](docs/weekly/2026-09-21_to_2026-09-27.md)
 - [BOAS dataset manifest](docs/data/boas_dataset_manifest.md)
 - [Label/preprocessing gate](docs/feasibility/label_preprocessing_gate_closeout_2026-07-18.md)
