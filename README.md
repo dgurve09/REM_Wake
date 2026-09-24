@@ -4,7 +4,7 @@ This repository investigates event-specific REM-to-Wake boundary detection from 
 
 ## Current Status
 
-As of 2026-09-22, Blocks 3-8 and a standalone train-only temporal-representation screen are complete. Block 9 has not started.
+As of 2026-09-23, Blocks 3-8, a standalone train-only temporal-representation screen, and its retrospective error diagnostic are complete. Block 9 has not started.
 
 - BOAS snapshot `1.1.1` is frozen at 128 paired recordings and 100 participant-table `pid` groups.
 - The conservative primary set contains 276 REM-to-Wake events across 72 groups; the expanded quality-sensitivity set contains 348 across 88 groups.
@@ -40,8 +40,11 @@ As of 2026-09-22, Blocks 3-8 and a standalone train-only temporal-representation
 - The LSTM-CRF point result passed the fixed +0.05 F1 and no-FAR-increase gate, and the favorable direction was participant-supported. It remains a train-development result: validation and test stayed closed, F1 remained below 0.20, and a new locked or external wearable cohort is required before model advancement.
 - A nested train-only comparison then evaluated BLSTM-CRF, BGRU-CRF, TCN-CRF, and BLSTM-2H under fold-local architecture and threshold selection. The selected pipeline reached F1 0.1645 and 0.2812 false alarms/hour, versus 0.1604 and 0.2971/hour for its matched nested BLSTM-CRF control.
 - The nested F1 gain was only +0.0041, with participant interval -0.0532 to +0.0608, and the false-alarm difference interval also crossed zero. Architecture choices varied across all candidate types over five folds. The +0.05 advancement gate failed, so the four-candidate exploration stops without authorizing a replacement or new-cohort confirmation.
+- A train-only error diagnostic found that widening tolerance from +/-15 to +/-45 seconds recovered nine additional events, while widening to +/-105 seconds recovered only one more. Label-informed threshold upper bounds reached F1 0.2177-0.2324 but remained below 0.25 and are not usable performance estimates.
+- Quality-tier recall differed substantially across every train procedure. LC-1 detected 9/53 clean primary events versus 47/127 MAD-flagged events; the nested selected pipeline detected 1/53 versus 31/127. Because the 10-MAD flag is nonspecific, this is an unresolved quality-tier dependence rather than proof of artefact detection.
+- Of 177 nested false alarms, 167 were not within 45 seconds of a labeled transition. The next drafted mechanism tests robust participant-fit normalization and equal clean/MAD-flagged positive weighting without changing the LSTM-CRF architecture. It has not been executed.
 
-The Block 7 and Block 8 results do not justify revising the frozen models or thresholds. The LSTM-CRF screen identifies a candidate temporal representation, while the nested comparison shows no material benefit from additional small encoder variants on the same bandpower inputs. The current test partition was already used descriptively and remains closed. Block 9 will assess external-PSG compatibility; interval-aware boundary analysis remains scheduled for Block 10. A new locked or external wearable cohort is still required before any wearable-method advancement claim.
+The Block 7 and Block 8 results do not justify revising the frozen models or thresholds. The LSTM-CRF screen identifies a candidate temporal representation, while the nested comparison shows no material benefit from additional small encoder variants on the same bandpower inputs. The diagnostic prioritizes quality-tier balance and robust normalization over further architecture search. The current test partition was already used descriptively and remains closed. Block 9 will assess external-PSG compatibility; interval-aware boundary analysis remains scheduled for Block 10. A new locked or external wearable cohort is still required before any wearable-method advancement claim.
 
 ## Start Here
 
@@ -87,6 +90,9 @@ The Block 7 and Block 8 results do not justify revising the frozen models or thr
 - [Nested deep temporal protocol](docs/evaluation/deep_temporal_nested_cv_protocol_v0.1.md)
 - [Nested deep temporal result](experiments/2026-09-22_deep_temporal_nested_cv_v0.1/README.md)
 - [Nested deep temporal decision](docs/evaluation/deep_temporal_nested_cv_decision_2026-09-22.md)
+- [Deep temporal error diagnostic](experiments/2026-09-23_deep_temporal_error_diagnostic_v0.1/README.md)
+- [Deep temporal error decision](docs/evaluation/deep_temporal_error_diagnostic_decision_2026-09-23.md)
+- [Quality-balanced LSTM-CRF draft](docs/evaluation/quality_balanced_lstm_crf_draft_v0.1.md)
 - [Current weekly record](docs/weekly/2026-09-21_to_2026-09-27.md)
 - [BOAS dataset manifest](docs/data/boas_dataset_manifest.md)
 - [Label/preprocessing gate](docs/feasibility/label_preprocessing_gate_closeout_2026-07-18.md)

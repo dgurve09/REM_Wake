@@ -4,7 +4,7 @@
 **Project window:** 2026-06-01 to 2026-11-29
 **Prepared during:** 2026-06-25 to 2026-06-28
 **Finalized:** 2026-06-28
-**Current status:** Blocks 3-8 are complete; Block 5 was completed as catch-up work on 2026-08-15 after an inactive 2026-07-20 to 2026-08-14 interval; Block 6 closed on 2026-08-22 with direct DE-B improving on transparent SF-C while retaining low precision; validation-only endpoint factorization DE-D subsequently improved both validation F1 and false alarms but remains unevaluated on a new locked cohort; Block 7 closed on 2026-09-06 after the frozen descriptive test showed six-channel PSG leading, a validation-to-test channel-order reversal, and a persistent zero-shot/direct-wearable F1-versus-false-alarm tradeoff; Block 8 closed on 2026-09-18 after documenting material `HB_1` dependence, severe and channel-specific noise failures, failed clean advancement under train-only augmentation, adverse OR fusion, a non-deployable consensus specificity mechanism, and prioritized stage-derived boundary uncertainty; a 25-claim evidence-strength analysis retained non-advancement while showing that boundary materiality is point-gate-only; a standalone train-only LSTM-CRF screen completed on 2026-09-22 with improved temporal specificity but no independent confirmation; a nested four-architecture extension then failed its material F1 gate and stopped further encoder search on the same bandpower representation; Block 9 is not started
+**Current status:** Blocks 3-8 are complete; Block 5 was completed as catch-up work on 2026-08-15 after an inactive 2026-07-20 to 2026-08-14 interval; Block 6 closed on 2026-08-22 with direct DE-B improving on transparent SF-C while retaining low precision; validation-only endpoint factorization DE-D subsequently improved both validation F1 and false alarms but remains unevaluated on a new locked cohort; Block 7 closed on 2026-09-06 after the frozen descriptive test showed six-channel PSG leading, a validation-to-test channel-order reversal, and a persistent zero-shot/direct-wearable F1-versus-false-alarm tradeoff; Block 8 closed on 2026-09-18 after documenting material `HB_1` dependence, severe and channel-specific noise failures, failed clean advancement under train-only augmentation, adverse OR fusion, a non-deployable consensus specificity mechanism, and prioritized stage-derived boundary uncertainty; a 25-claim evidence-strength analysis retained non-advancement while showing that boundary materiality is point-gate-only; a standalone train-only LSTM-CRF screen completed on 2026-09-22 with improved temporal specificity but no independent confirmation; a nested four-architecture extension then failed its material F1 gate; a September 23 error diagnostic bounded threshold-only F1 below 0.25 and identified strong quality-tier dependence across models; Block 9 is not started
 
 ## 1. Project Boundary
 
@@ -383,6 +383,16 @@ Nested deep temporal extension completed on 2026-09-22:
 - selected different architecture types across the outer folds, providing no stable architecture advantage;
 - passed 14/14 in-run and 12/12 independent reconstruction checks, deterministic duplicate fits, and a complete rerun; and
 - stopped this candidate family without opening validation or test data or authorizing model advancement.
+
+Deep temporal error diagnostic completed on 2026-09-23:
+
+- used frozen train outer-fold outputs without fitting another model or accessing validation/test artifacts;
+- found nine additional detections at +/-45 seconds but only one more by +/-105 seconds, limiting the timing-only explanation;
+- found optimistic outer-label threshold bounds of F1 0.2177-0.2324, insufficient to make the current representation reliable;
+- reconstructed substantially lower clean-event than MAD-flagged-event recall for logistic, LC-1, and nested selected procedures;
+- found 167/177 nested false alarms more than 45 seconds from a labeled transition;
+- passed 9/9 in-run and 8/8 independent checks, including an immutable rerun; and
+- drafted, but did not execute, a controlled robust-normalization and quality-balanced-loss experiment.
 
 ## 7. Next Work
 
