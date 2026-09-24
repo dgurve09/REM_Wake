@@ -1,0 +1,4 @@
+context_category	false_alarms	fraction
+not_near_labeled_transition	167	0.943502824858757
+primary_r2w_16_to_45sec	9	0.05084745762711865
+quality_only_r2w_within_45sec	1	0.005649717514124294

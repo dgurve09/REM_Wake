@@ -1,0 +1,10 @@
+check	status	detail
+train_recordings	pass	82
+train_participants	pass	64
+primary_events	pass	180
+outer_scores_only	pass	outer_heldout
+five_frozen_thresholds	pass	one per outer fold
+event_score_completeness	pass	180
+frozen_metric_reconstruction	pass	f1=0.164524421594
+false_alarm_reconstruction	pass	177
+threshold_grid_unchanged	pass	64
