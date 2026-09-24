@@ -3,23 +3,18 @@
 from __future__ import annotations
 
 import hashlib
+import os
 from pathlib import Path
 
 import numpy as np
 import pandas as pd
 
 from reviewed_output import verify_or_create_tsv
-from run_deep_temporal_nested_cv_v0_1 import (
-    THRESHOLDS,
-    collapse_events,
-    fast_primary_summary,
-    local_event_inputs,
-    reference_events,
-    select_threshold,
-    train_assignments,
+from stage_first_event_evaluation_v0_1 import (
+    evaluate_events,
+    metric_values,
+    optimal_matches,
 )
-from run_lstm_crf_train_oof_v0_1 import data_parent, repo_root, verify_or_create_text
-from stage_first_event_evaluation_v0_1 import evaluate_events
 
 
 # Section 1: fixed paths and configuration
@@ -30,6 +25,100 @@ SOURCE_EXPERIMENT = "2026-09-22_deep_temporal_nested_cv_v0.1"
 SOURCE_DERIVED = "deep_temporal_nested_cv_v0.1"
 TOLERANCES = [15.0, 45.0, 75.0, 105.0, 135.0]
 BOUNDARY_WINDOWS = [0.0, 30.0, 60.0, 90.0]
+EPOCH_SEC = 30.0
+
+
+def threshold_grid() -> np.ndarray:
+    coarse = np.arange(0.01, 0.951, 0.05)
+    logits = np.arange(3.0, 14.001, 0.25)
+    tail = 1.0 / (1.0 + np.exp(-logits))
+    return np.unique(np.concatenate([coarse, tail]))
+
+
+THRESHOLDS = threshold_grid()
+
+
+def repo_root() -> Path:
+    return Path(__file__).resolve().parents[1]
+
+
+def data_parent() -> Path:
+    return Path(os.environ.get("REM_W_DATA_ROOT", repo_root().parent / "REM_W_data"))
+
+
+def verify_or_create_text(path: Path, value: str) -> None:
+    expected = value.replace("\r\n", "\n")
+    if path.exists():
+        actual = path.read_text(encoding="utf-8").replace("\r\n", "\n")
+        if actual != expected:
+            raise RuntimeError(f"Reviewed output changed: {path}")
+        return
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(expected, encoding="utf-8")
+
+
+def truth(series: pd.Series) -> pd.Series:
+    return series.astype(str).str.lower().eq("true")
+
+
+def subject_number(subject: str) -> int:
+    return int(subject.replace("sub-", ""))
+
+
+def train_assignments() -> pd.DataFrame:
+    split = pd.read_csv(
+        repo_root() / "splits/grouped_pid_split_v0.1/pid_split_assignments_v0.1.tsv",
+        sep="\t",
+    )
+    train = split[split["partition"].eq("train")].copy()
+    rows = []
+    for item in train.itertuples(index=False):
+        for subject in str(item.subjects).split(";"):
+            rows.append({"subject": subject, "pid": int(item.pid), "partition": "train"})
+    result = pd.DataFrame(rows)
+    if len(result) != 82 or result["pid"].nunique() != 64:
+        raise ValueError("Unexpected frozen train membership")
+    if result["subject"].duplicated().any() or not result["partition"].eq("train").all():
+        raise ValueError("Invalid frozen train assignment")
+    return result.sort_values(
+        "subject", key=lambda values: values.map(subject_number)
+    ).reset_index(drop=True)
+
+
+def reference_events(assignments: pd.DataFrame) -> pd.DataFrame:
+    membership = pd.read_csv(
+        repo_root()
+        / "labels/quality_analysis_membership_v0.1/transition_analysis_membership_v0.1.tsv",
+        sep="\t",
+    )
+    quality = pd.read_csv(
+        repo_root()
+        / "labels/signal_quality_flags_v0.3/transition_window_quality_flags_v0.3.tsv",
+        sep="\t",
+        usecols=["transition_id", "nominal_boundary_sec"],
+    )
+    rows = membership[
+        membership["subject"].isin(set(assignments["subject"]))
+        & truth(membership["is_primary_label"])
+        & membership["transition_type"].eq("REM_to_Wake")
+    ].merge(quality, on="transition_id", validate="one_to_one")
+    rows["event_time_sec"] = rows["nominal_boundary_sec"].astype(float)
+    if set(rows["partition"]) != {"train"}:
+        raise ValueError("Unauthorized reference-event partition")
+    return rows
+
+
+def local_event_inputs(
+    references: pd.DataFrame, membership: str
+) -> tuple[pd.DataFrame, pd.DataFrame]:
+    eligible_column = (
+        "primary_analysis_eligible"
+        if membership == "primary"
+        else "expanded_quality_analysis_eligible"
+    )
+    eligible = truth(references[eligible_column])
+    columns = ["subject", "pid", "event_time_sec"]
+    return references.loc[eligible, columns], references.loc[~eligible, columns]
 
 
 def output_dir() -> Path:
@@ -124,6 +213,130 @@ def evaluate(
         tolerance,
     )
     return matches, summary
+
+
+def collapsed_times(group: pd.DataFrame, threshold: float) -> np.ndarray:
+    times = group["candidate_time_sec"].to_numpy(dtype=float)
+    probabilities = group["probability"].to_numpy(dtype=float)
+    selected = np.flatnonzero(probabilities >= threshold)
+    if len(selected) == 0:
+        return np.asarray([], dtype=float)
+    splits = np.flatnonzero(np.diff(times[selected]) > EPOCH_SEC + 1e-6) + 1
+    result = []
+    for run in np.split(selected, splits):
+        local = probabilities[run]
+        maximum = local.max()
+        best = run[np.flatnonzero(np.isclose(local, maximum))[0]]
+        result.append(times[best])
+    return np.asarray(result, dtype=float)
+
+
+def fast_primary_summary(
+    scores: pd.DataFrame,
+    support: pd.DataFrame,
+    references: pd.DataFrame,
+    threshold: float,
+) -> dict:
+    eligible, ignored = local_event_inputs(references, "primary")
+    score_groups = {
+        subject: group.sort_values("candidate_time_sec")
+        for subject, group in scores.groupby("subject", sort=False)
+    }
+    eligible_groups = {
+        subject: group["event_time_sec"].to_numpy(dtype=float)
+        for subject, group in eligible.groupby("subject")
+    }
+    ignored_groups = {
+        subject: group["event_time_sec"].to_numpy(dtype=float)
+        for subject, group in ignored.groupby("subject")
+    }
+    tp = fp = fn = ignored_count = predicted = reference_count = 0
+    for item in support.itertuples(index=False):
+        predictions = collapsed_times(score_groups[item.subject], threshold)
+        refs = eligible_groups.get(item.subject, np.asarray([], dtype=float))
+        ignored_refs = ignored_groups.get(item.subject, np.asarray([], dtype=float))
+        matches = optimal_matches(refs, predictions, 15.0)
+        matched_predictions = {value[1] for value in matches}
+        unmatched = [
+            index for index in range(len(predictions)) if index not in matched_predictions
+        ]
+        ignored_matches = optimal_matches(ignored_refs, predictions[unmatched], 15.0)
+        tp += len(matches)
+        fn += len(refs) - len(matches)
+        fp += len(unmatched) - len(ignored_matches)
+        ignored_count += len(ignored_matches)
+        predicted += len(predictions)
+        reference_count += len(refs)
+    hours = float(support["supported_hours"].sum())
+    return {
+        "recordings": len(support),
+        "pid": support["pid"].nunique(),
+        "reference_events": reference_count,
+        "predicted_events": predicted,
+        "true_positive": tp,
+        "false_positive": fp,
+        "false_negative": fn,
+        "ignored_predictions": ignored_count,
+        "supported_hours": hours,
+        **metric_values(tp, fp, fn, hours),
+    }
+
+
+def select_threshold(
+    candidate: str,
+    outer: int,
+    scores: pd.DataFrame,
+    support: pd.DataFrame,
+    references: pd.DataFrame,
+) -> tuple[pd.DataFrame, dict]:
+    rows = []
+    for threshold in THRESHOLDS:
+        rows.append(
+            {
+                "outer_fold": outer,
+                "candidate": candidate,
+                "threshold": float(threshold),
+                **fast_primary_summary(scores, support, references, float(threshold)),
+            }
+        )
+    curve = pd.DataFrame(rows)
+    selected = curve.sort_values(
+        ["f1", "false_alarms_per_hour", "recall", "threshold"],
+        ascending=[False, True, False, False],
+        kind="stable",
+    ).iloc[0].to_dict()
+    return curve, selected
+
+
+def collapse_events(scores: pd.DataFrame, threshold: float, pipeline: str) -> pd.DataFrame:
+    rows = []
+    for (subject, pid, outer), group in scores.groupby(
+        ["subject", "pid", "outer_fold"], sort=True
+    ):
+        group = group.sort_values("candidate_time_sec")
+        times = group["candidate_time_sec"].to_numpy(dtype=float)
+        probabilities = group["probability"].to_numpy(dtype=float)
+        selected = np.flatnonzero(probabilities >= threshold)
+        if len(selected) == 0:
+            continue
+        splits = np.flatnonzero(np.diff(times[selected]) > EPOCH_SEC + 1e-6) + 1
+        for run in np.split(selected, splits):
+            local = probabilities[run]
+            maximum = local.max()
+            best = run[np.flatnonzero(np.isclose(local, maximum))[0]]
+            rows.append(
+                {
+                    "pipeline": pipeline,
+                    "outer_fold": int(outer),
+                    "subject": subject,
+                    "pid": int(pid),
+                    "event_time_sec": float(times[best]),
+                    "probability": float(probabilities[best]),
+                    "threshold": float(threshold),
+                    "run_candidates": len(run),
+                }
+            )
+    return pd.DataFrame(rows)
 
 
 # Section 3: boundary timing and optimistic threshold diagnostics
