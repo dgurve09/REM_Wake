@@ -678,9 +678,12 @@ def main() -> None:
         print(integrity.to_string(index=False))
         raise SystemExit("Integrity check failed")
 
+    threshold_output = threshold.astype(object).where(
+        threshold.notna(), "not_applicable"
+    )
     outputs = {
         "frozen_tolerance_curve_v0.1.tsv": tolerance,
-        "threshold_upper_bounds_v0.1.tsv": threshold,
+        "threshold_upper_bounds_v0.1.tsv": threshold_output,
         "outer_threshold_gap_v0.1.tsv": fold_thresholds,
         "primary_event_boundary_scores_v0.1.tsv": boundary_events,
         "boundary_score_summary_v0.1.tsv": boundary_summary,
