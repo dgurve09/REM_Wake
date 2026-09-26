@@ -1,0 +1,16 @@
+check	status
+train_membership_82_recordings	pass
+train_membership_64_pid	pass
+outer_score_rows_75539	pass
+outer_scores_finite_probability	pass
+outer_support_matches_scores	pass
+one_outer_assignment_per_subject	pass
+five_inner_thresholds	pass
+events_reconstruct	pass
+metrics_reconstruct	pass
+all_feature_caches_valid	pass
+first_cached_epoch_recomputes	pass
+all_manifest_artifacts_match	pass
+pipeline_pair_complete	pass
+sequence_contract_120_by_10	pass
+support_hours_formula	pass

@@ -1,0 +1,9 @@
+check	value	expected	status
+dense_output_shape	(4, 120)	(4, 120)	pass
+candidate_probability_shape_and_range	(4,)	(4,)	pass
+all_parameter_gradients_finite	true	true	pass
+center_aggregation_width	16	16	pass
+synthetic_10hz_alpha_peak	2	2	pass
+synthetic_6hz_theta_peak	1	1	pass
+encoder_receptive_field_covers_context	128	120	pass
+trainable_parameter_count	67697	67697	pass

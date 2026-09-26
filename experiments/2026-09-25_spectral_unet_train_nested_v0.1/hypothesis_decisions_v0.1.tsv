@@ -1,0 +1,3 @@
+hypothesis	f1_difference	required_f1_difference	false_alarms_per_hour_difference	maximum_far_difference	supported	decision
+H-UN1_spectral_unet_advancement	-0.021471914228407468	0.05	0.4384490130925747	0.0	False	stop_v0.1
+participant_direction_support	-0.021471914228407468	0.0	0.4384490130925747	0.0	False	not_supported

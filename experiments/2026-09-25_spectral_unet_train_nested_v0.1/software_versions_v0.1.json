@@ -1,0 +1,11 @@
+{
+  "edfio": "0.4.13",
+  "git_commit": "90477d8633027e520a91072ce25a41573f5c9fa0",
+  "numpy": "2.2.6",
+  "pandas": "2.3.3",
+  "protocol_commit": "03d0e0c",
+  "python": "3.10.20",
+  "scipy": "1.15.3",
+  "sklearn": "1.7.2",
+  "torch": "2.11.0+cpu"
+}
