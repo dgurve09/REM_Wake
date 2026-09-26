@@ -115,7 +115,13 @@ def validate() -> pd.DataFrame:
 
     cache_checks = []
     for item in feature_summary.itertuples(index=False):
-        path = data_parent() / DERIVED_DIR / "subepoch_features" / f"{item.subject}_spectral_v0.1.npz"
+        path = (
+            data_parent()
+            / "derived"
+            / DERIVED_DIR
+            / "subepoch_features"
+            / f"{item.subject}_spectral_v0.1.npz"
+        )
         if not path.exists() or sha256(path) != item.cache_sha256:
             cache_checks.append(False)
             continue
@@ -128,7 +134,13 @@ def validate() -> pd.DataFrame:
             )
 
     first_subject = str(feature_summary.sort_values("subject").iloc[0].subject)
-    first_path = data_parent() / DERIVED_DIR / "subepoch_features" / f"{first_subject}_spectral_v0.1.npz"
+    first_path = (
+        data_parent()
+        / "derived"
+        / DERIVED_DIR
+        / "subepoch_features"
+        / f"{first_subject}_spectral_v0.1.npz"
+    )
     with np.load(first_path, allow_pickle=False) as values:
         first_onset = float(values["onset"][0])
         first_cached = values["features"][0].astype(np.float32)
