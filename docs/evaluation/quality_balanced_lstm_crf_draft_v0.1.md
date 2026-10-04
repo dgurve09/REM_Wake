@@ -2,7 +2,7 @@
 
 **Created:** 2026-09-23
 
-**Status:** Draft only; not authorized for execution
+**Status:** Superseded on 2026-10-03 by `quality_balanced_lstm_crf_protocol_v0.1.md`
 
 ## Technical Uncertainty
 
