@@ -391,7 +391,8 @@ def evaluate(events: pd.DataFrame, support: pd.DataFrame, references: pd.DataFra
             "participants": pd.concat(participant_rows), "matches": pd.concat(match_rows)}
 
 
-def tier_recall(references: pd.DataFrame, matches: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
+def tier_recall(references: pd.DataFrame, matches: pd.DataFrame,
+                participant_ids: np.ndarray) -> tuple[pd.DataFrame, pd.DataFrame]:
     primary = references[truth(references.primary_analysis_eligible)].copy()
     eligible_matches = matches[(matches.membership == "primary") &
                                (matches.tolerance_sec == 15.0) &
@@ -410,7 +411,7 @@ def tier_recall(references: pd.DataFrame, matches: pd.DataFrame) -> tuple[pd.Dat
         counts = local.groupby(["pid", "membership_tier"], as_index=False).detected.agg(
             reference_events="size", detected_events="sum")
         all_rows = pd.MultiIndex.from_product(
-            [sorted(primary.pid.unique()), ["primary_clean", "primary_mad_flagged"]],
+            [sorted(participant_ids), ["primary_clean", "primary_mad_flagged"]],
             names=["pid", "membership_tier"],
         ).to_frame(index=False)
         counts = all_rows.merge(counts, how="left", on=["pid", "membership_tier"]).fillna(0)
@@ -515,7 +516,9 @@ def run(result_code_commit: str) -> None:
     events = pd.concat(event_rows, ignore_index=True)
     references = reference_events(assignments)
     results = evaluate(events, support, references)
-    tier_metrics, tier_participants = tier_recall(references, results["matches"])
+    tier_metrics, tier_participants = tier_recall(
+        references, results["matches"], assignments.pid.unique()
+    )
     intervals = bootstrap(results["participants"], tier_participants)
 
     primary = results["metrics"][(results["metrics"].membership == "primary") &

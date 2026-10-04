@@ -17,3 +17,21 @@ Resolution:
 - Reuse the immutable cached models and scores, then run the complete independent validator.
 
 This failure concerns result-table assembly only. It does not support or reject the scientific hypothesis.
+
+## 2026-10-03 second execution
+
+The cached rerun completed event evaluation, then stopped during participant-cluster bootstrap assembly.
+
+Failure:
+
+- The quality-tier participant table initially contained only participants with at least one primary event.
+- The declared bootstrap samples all 64 train participants, including participants with zero clean or MAD-flagged events.
+- Indexing the incomplete tier table therefore raised a `KeyError` for sampled zero-event participants.
+
+Resolution:
+
+- Construct the tier table over the complete frozen train participant list crossed with both quality tiers.
+- Fill absent participant-tier combinations with zero reference and detected counts.
+- Keep the participant sampling, model outputs, thresholds, and decision rule unchanged.
+
+This was a participant-accounting failure before confidence intervals were produced. It does not constitute an experimental result.
