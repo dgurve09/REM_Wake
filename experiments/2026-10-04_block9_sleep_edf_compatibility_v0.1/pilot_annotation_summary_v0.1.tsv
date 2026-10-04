@@ -1,0 +1,14 @@
+study	hypnogram_path	label	annotations	total_duration_sec	minimum_duration_sec	maximum_duration_sec	all_duration_multiple_30	all_nonoverlap	all_within_psg_support
+sleep-cassette	sleep-cassette/SC4001EC-Hypnogram.edf	Sleep stage 1	24	1740.0	30.0	180.0	True	True	True
+sleep-cassette	sleep-cassette/SC4001EC-Hypnogram.edf	Sleep stage 2	40	7500.0	30.0	990.0	True	True	True
+sleep-cassette	sleep-cassette/SC4001EC-Hypnogram.edf	Sleep stage 3	48	3030.0	30.0	210.0	True	True	True
+sleep-cassette	sleep-cassette/SC4001EC-Hypnogram.edf	Sleep stage 4	23	3570.0	30.0	1890.0	True	True	True
+sleep-cassette	sleep-cassette/SC4001EC-Hypnogram.edf	Sleep stage ?	1	6900.0	6900.0	6900.0	True	True	False
+sleep-cassette	sleep-cassette/SC4001EC-Hypnogram.edf	Sleep stage R	6	3750.0	240.0	990.0	True	True	True
+sleep-cassette	sleep-cassette/SC4001EC-Hypnogram.edf	Sleep stage W	12	59910.0	30.0	30630.0	True	True	True
+sleep-telemetry	sleep-telemetry/ST7011JP-Hypnogram.edf	Sleep stage 1	52	3030.0	30.0	240.0	True	True	True
+sleep-telemetry	sleep-telemetry/ST7011JP-Hypnogram.edf	Sleep stage 2	82	15870.0	30.0	1140.0	True	True	True
+sleep-telemetry	sleep-telemetry/ST7011JP-Hypnogram.edf	Sleep stage 3	51	2790.0	30.0	210.0	True	True	True
+sleep-telemetry	sleep-telemetry/ST7011JP-Hypnogram.edf	Sleep stage 4	10	1290.0	30.0	690.0	True	True	True
+sleep-telemetry	sleep-telemetry/ST7011JP-Hypnogram.edf	Sleep stage R	10	3660.0	120.0	810.0	True	True	True
+sleep-telemetry	sleep-telemetry/ST7011JP-Hypnogram.edf	Sleep stage W	26	6120.0	30.0	1560.0	True	True	True

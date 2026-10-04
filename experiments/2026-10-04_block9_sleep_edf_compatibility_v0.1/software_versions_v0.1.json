@@ -1,0 +1,9 @@
+{
+  "dataset_version": "1.0.0",
+  "edfio": "0.4.13",
+  "git_commit": "28dfd1a0d2c6e351a1fec3c30d66be269245064e",
+  "numpy": "2.2.6",
+  "pandas": "2.3.3",
+  "protocol_commit": "a3c81fe",
+  "python": "3.10.20"
+}

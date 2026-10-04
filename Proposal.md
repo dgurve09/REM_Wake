@@ -2,11 +2,11 @@
 
 ## Wearable EEG REM-to-Wake Transition Detection Under Label and Device Uncertainty
 
-**Version:** 1.22
+**Version:** 1.23
 **Planning date:** 2026-06-21
-**Last revised:** 2026-09-18
+**Last revised:** 2026-10-04
 **Project window:** 2026-06-01 to 2026-11-29
-**Status:** Working research plan; Blocks 3-8 are complete and Block 9 is scheduled to begin 2026-09-21; the conservative primary tier contains 276 REM-to-Wake events across 72 `pid` groups and the expanded quality-sensitivity tier contains 348 across 88 groups; the transparent stage-first and simple direct baselines have been compared; direct DE-B improved on transparent SF-C but retained precision 0.0909 and 1.2571 false alarms per hour; Block 7 found a validation F1 loss under strict PSG-to-wearable transfer, skipped conditional alignment under the predeclared gate, and completed its fixed descriptive test; Block 8 closed after documenting material channel dependence, severe and channel-specific noise failures, failure of clean advancement under train-only augmentation, adverse OR fusion, a non-deployable consensus specificity mechanism, and prioritized stage-derived boundary uncertainty; a 25-claim evidence-strength analysis retained non-advancement while separating participant-supported conclusions from point-gate-only findings
+**Status:** Working research plan; Blocks 3-9 are complete; Block 9 closed on 2026-10-04 with a predeclared Sleep-EDF direct-generalization no-go because annotation support and channel derivations did not preserve the frozen BOAS comparison; the conservative primary tier contains 276 REM-to-Wake events across 72 `pid` groups and the expanded quality-sensitivity tier contains 348 across 88 groups; the wearable detector remains low-precision and no temporal architecture, two-second spectral representation, or quality-balanced normalization extension has passed its nested advancement gate; Block 10 temporal localization under explicit label uncertainty is next
 
 ## 1. Technology Area
 
@@ -379,6 +379,8 @@ The schedule is organized into two-week research blocks. Actual work records sho
 - Clearly separate simulated channel reduction from real wearable validation.
 
 **Deliverable:** External generalization report or documented no-go decision.
+
+**Block 9 closeout, 2026-10-04:** A protocol committed before local inspection audited Sleep-EDF Expanded version 1.0.0 using the official manifest, checksum annex, subject spreadsheets, and one preselected pilot pair from each source study. The manifest yielded 197 unique PSG/hypnogram pairs from 100 participant groups. Both pilots contained `Fpz-Cz` and `Pz-Oz` at 100 Hz and explicit Wake/REM annotations; eight contiguous R-to-W events were reconstructed on the 30-second grid. One excluded `Sleep stage ?` interval extended beyond PSG support, failing the complete annotation-support criterion. More decisively, the anterior-posterior bipolar Sleep-EDF derivations do not preserve the left/right `F3-M1`/`F4-M1` feature meaning of the frozen BOAS model. Block 9 therefore closed as a complete no-go without a full dataset download or model fit. The independent validator passed 8/8 checks twice. Sleep-EDF is not wearable confirmation, and Block 10 proceeds on BOAS.
 
 ### Block 10: October 5 to October 18 - Temporal localization under uncertainty
 

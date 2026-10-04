@@ -1,0 +1,13 @@
+study	participant_id	subject_number	night	pair_key	psg_path	recording_duration_sec	data_record_duration_sec	num_data_records	channel	sampling_frequency_hz	physical_dimension	sample_count	signal_duration_sec
+sleep-cassette	sleep-cassette_00	0	1	sleep-cassette/SC4001E	sleep-cassette/SC4001E0-PSG.edf	79500.0	30.0	2650	EEG Fpz-Cz	100.0	uV	7950000	79500.0
+sleep-cassette	sleep-cassette_00	0	1	sleep-cassette/SC4001E	sleep-cassette/SC4001E0-PSG.edf	79500.0	30.0	2650	EEG Pz-Oz	100.0	uV	7950000	79500.0
+sleep-cassette	sleep-cassette_00	0	1	sleep-cassette/SC4001E	sleep-cassette/SC4001E0-PSG.edf	79500.0	30.0	2650	EOG horizontal	100.0	uV	7950000	79500.0
+sleep-cassette	sleep-cassette_00	0	1	sleep-cassette/SC4001E	sleep-cassette/SC4001E0-PSG.edf	79500.0	30.0	2650	Resp oro-nasal	1.0		79500	79500.0
+sleep-cassette	sleep-cassette_00	0	1	sleep-cassette/SC4001E	sleep-cassette/SC4001E0-PSG.edf	79500.0	30.0	2650	EMG submental	1.0	uV	79500	79500.0
+sleep-cassette	sleep-cassette_00	0	1	sleep-cassette/SC4001E	sleep-cassette/SC4001E0-PSG.edf	79500.0	30.0	2650	Temp rectal	1.0	DegC	79500	79500.0
+sleep-cassette	sleep-cassette_00	0	1	sleep-cassette/SC4001E	sleep-cassette/SC4001E0-PSG.edf	79500.0	30.0	2650	Event marker	1.0		79500	79500.0
+sleep-telemetry	sleep-telemetry_01	1	1	sleep-telemetry/ST7011J	sleep-telemetry/ST7011J0-PSG.edf	35900.0	10.0	3590	EEG Fpz-Cz	100.0	uV	3590000	35900.0
+sleep-telemetry	sleep-telemetry_01	1	1	sleep-telemetry/ST7011J	sleep-telemetry/ST7011J0-PSG.edf	35900.0	10.0	3590	EEG Pz-Oz	100.0	uV	3590000	35900.0
+sleep-telemetry	sleep-telemetry_01	1	1	sleep-telemetry/ST7011J	sleep-telemetry/ST7011J0-PSG.edf	35900.0	10.0	3590	EOG horizontal	100.0	uV	3590000	35900.0
+sleep-telemetry	sleep-telemetry_01	1	1	sleep-telemetry/ST7011J	sleep-telemetry/ST7011J0-PSG.edf	35900.0	10.0	3590	EMG submental	100.0	uV	3590000	35900.0
+sleep-telemetry	sleep-telemetry_01	1	1	sleep-telemetry/ST7011J	sleep-telemetry/ST7011J0-PSG.edf	35900.0	10.0	3590	Marker	10.0	ID+M-E	359000	35900.0

@@ -1,0 +1,4 @@
+study	recordings	participants	participants_one_night	participants_two_nights	minimum_nights	maximum_nights
+sleep-cassette	153	78	3	75	1	2
+sleep-telemetry	44	22	0	22	2	2
+all	197	100	3	97	1	2

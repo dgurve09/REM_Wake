@@ -1,0 +1,2 @@
+dataset	version	outcome	direct_external_model_evaluation_authorized	full_dataset_download_authorized	label_timing_study_authorized	wearable_confirmation_possible	blocking_reason	next_step
+Sleep-EDF Expanded	1.0.0	complete_no_go	False	False	False	False	annotation_support_and_channel_derivation_incompatibility	close_external_path

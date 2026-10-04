@@ -1,0 +1,12 @@
+criterion	status	evidence	role	blocks_direct_generalization
+dataset_identity	pass	All locally inspected files match the official SHA-256 annex	required	False
+manifest_pairing	pass	197 PSG paths pair one-to-one with 197 checksum-listed hypnograms	required	False
+participant_grouping	pass	Filename rules yield 100 participant groups across two studies	required	False
+wake_and_rem_labels	pass	Both pilot hypnograms contain explicit W and R labels	required	False
+known_label_vocabulary	pass	Pilot labels are within the official R&K vocabulary	required	False
+annotation_timing	fail	Durations use the 30-second grid and do not overlap, but one excluded '?' interval extends beyond PSG support	required	True
+rem_to_wake_derivation	pass	Contiguous R-to-W events can be derived on the 30-second grid	required	False
+sampling_and_units	pass	Pilot EEG is 100 Hz and expressed in microvolts	adaptable	False
+fixed_eeg_availability	pass	Both studies provide Fpz-Cz and Pz-Oz in the pilots	required	False
+boas_feature_semantics	fail	Fpz-Cz and Pz-Oz are anterior-posterior bipolar derivations, not the ordered left/right F3-M1 and F4-M1 BOAS pair	required	True
+wearable_confirmation	fail	Sleep-EDF has no simultaneous BOAS HB_1/HB_2 headband recording	scope	False

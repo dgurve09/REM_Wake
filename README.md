@@ -4,7 +4,7 @@ This repository investigates event-specific REM-to-Wake boundary detection from 
 
 ## Current Status
 
-As of 2026-10-04, Blocks 3-8 and the bounded train-only temporal experiments are complete. Block 9 has not started and is behind the original schedule.
+As of 2026-10-04, Blocks 3-9 and the bounded train-only temporal experiments are complete. Block 9 closed with a documented external-compatibility no-go; Block 10 is next.
 
 - BOAS snapshot `1.1.1` is frozen at 128 paired recordings and 100 participant-table `pid` groups.
 - The conservative primary set contains 276 REM-to-Wake events across 72 groups; the expanded quality-sensitivity set contains 348 across 88 groups.
@@ -47,8 +47,11 @@ As of 2026-10-04, Blocks 3-8 and the bounded train-only temporal experiments are
 - `LC-QB1` increased clean-event recall from 2/53 to 4/53 but left MAD-flagged recall at 30/127. Its F1 difference was -0.0169, false-alarm difference was +0.1160/hour, and clean-recall difference was +0.0377; all three predeclared advancement conditions failed.
 - The entire participant interval for false-alarm difference was adverse at +0.0555 to +0.1825/hour. The mechanism stops at v0.1 without post-result scaler or weight-ratio tuning.
 - The exact control reproduced 75,539 prior probabilities with maximum difference 0. The independent validator passed 9/9 checks twice, and an isolated rerun reproduced all 101 external and 19 reviewed artifacts byte-for-byte.
+- Block 9 audited Sleep-EDF Expanded version 1.0.0 before any external model fitting. The official manifest yielded 197 PSG/hypnogram pairs from 100 participant groups; seven local metadata/pilot files matched official SHA-256 values.
+- Both fixed pilots contained `Fpz-Cz` and `Pz-Oz` at 100 Hz and yielded eight contiguous R-to-W events on the 30-second grid. One excluded `Sleep stage ?` interval extended beyond PSG support, failing the complete annotation-support criterion.
+- Direct external evaluation was stopped because Sleep-EDF's anterior-posterior bipolar channels do not preserve the ordered left/right `F3-M1`/`F4-M1` feature meaning of the frozen BOAS reduced-PSG model. The full dataset was not downloaded and no model was fitted. The independent validator passed 8/8 checks twice.
 
-The Block 7 and Block 8 results do not justify revising the frozen models or thresholds. The temporal experiments show no material nested improvement from small encoder variants, two-second spectral U-Net features, or the tested robust-scaling and tier-balancing mechanism. The current test partition was already used descriptively and remains closed. Block 9 must now assess external-PSG compatibility before Block 10 begins. A new locked or external wearable cohort is still required before any wearable-method advancement claim.
+The Block 7 and Block 8 results do not justify revising the frozen models or thresholds. The temporal experiments show no material nested improvement from small encoder variants, two-second spectral U-Net features, or the tested robust-scaling and tier-balancing mechanism. Block 9 found that Sleep-EDF cannot provide a scientifically matched direct external test of the frozen reduced-PSG model. The current test partition was already used descriptively and remains closed. Block 10 will address explicit temporal label uncertainty. A new locked or external wearable cohort is still required before any wearable-method advancement claim.
 
 ## Start Here
 
@@ -99,6 +102,9 @@ The Block 7 and Block 8 results do not justify revising the frozen models or thr
 - [Quality-balanced LSTM-CRF protocol](docs/evaluation/quality_balanced_lstm_crf_protocol_v0.1.md)
 - [Quality-balanced LSTM-CRF result](experiments/2026-10-03_quality_balanced_lstm_crf_nested_v0.1/README.md)
 - [Quality-balanced LSTM-CRF decision](docs/evaluation/quality_balanced_lstm_crf_decision_2026-10-04.md)
+- [Block 9 Sleep-EDF compatibility protocol](docs/evaluation/block9_sleep_edf_compatibility_protocol_v0.1.md)
+- [Block 9 Sleep-EDF compatibility result](experiments/2026-10-04_block9_sleep_edf_compatibility_v0.1/README.md)
+- [Block 9 Sleep-EDF compatibility decision](docs/evaluation/block9_sleep_edf_compatibility_decision_2026-10-04.md)
 - [Current weekly record](docs/weekly/2026-09-28_to_2026-10-04.md)
 - [BOAS dataset manifest](docs/data/boas_dataset_manifest.md)
 - [Label/preprocessing gate](docs/feasibility/label_preprocessing_gate_closeout_2026-07-18.md)

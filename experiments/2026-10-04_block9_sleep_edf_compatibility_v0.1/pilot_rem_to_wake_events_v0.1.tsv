@@ -1,0 +1,9 @@
+study	hypnogram_path	transition_type	boundary_sec	left_label	right_label	contiguous	boundary_on_30_sec_grid
+sleep-cassette	sleep-cassette/SC4001EC-Hypnogram.edf	REM_to_Wake	45510.0	Sleep stage R	Sleep stage W	True	True
+sleep-cassette	sleep-cassette/SC4001EC-Hypnogram.edf	REM_to_Wake	50190.0	Sleep stage R	Sleep stage W	True	True
+sleep-cassette	sleep-cassette/SC4001EC-Hypnogram.edf	REM_to_Wake	50640.0	Sleep stage R	Sleep stage W	True	True
+sleep-telemetry	sleep-telemetry/ST7011JP-Hypnogram.edf	REM_to_Wake	8910.0	Sleep stage R	Sleep stage W	True	True
+sleep-telemetry	sleep-telemetry/ST7011JP-Hypnogram.edf	REM_to_Wake	12480.0	Sleep stage R	Sleep stage W	True	True
+sleep-telemetry	sleep-telemetry/ST7011JP-Hypnogram.edf	REM_to_Wake	24240.0	Sleep stage R	Sleep stage W	True	True
+sleep-telemetry	sleep-telemetry/ST7011JP-Hypnogram.edf	REM_to_Wake	24690.0	Sleep stage R	Sleep stage W	True	True
+sleep-telemetry	sleep-telemetry/ST7011JP-Hypnogram.edf	REM_to_Wake	26430.0	Sleep stage R	Sleep stage W	True	True

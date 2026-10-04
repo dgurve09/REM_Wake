@@ -4,7 +4,7 @@
 **Project window:** 2026-06-01 to 2026-11-29
 **Prepared during:** 2026-06-25 to 2026-06-28
 **Finalized:** 2026-06-28
-**Current status:** Blocks 3-8 are complete; Block 5 was completed as catch-up work on 2026-08-15 after an inactive 2026-07-20 to 2026-08-14 interval; Block 6 closed on 2026-08-22 with direct DE-B improving on transparent SF-C while retaining low precision; validation-only endpoint factorization DE-D subsequently improved both validation F1 and false alarms but remains unevaluated on a new locked cohort; Block 7 closed on 2026-09-06 after the frozen descriptive test showed six-channel PSG leading, a validation-to-test channel-order reversal, and a persistent zero-shot/direct-wearable F1-versus-false-alarm tradeoff; Block 8 closed on 2026-09-18 after documenting material `HB_1` dependence, severe and channel-specific noise failures, failed clean advancement under train-only augmentation, adverse OR fusion, a non-deployable consensus specificity mechanism, and prioritized stage-derived boundary uncertainty; subsequent bounded train-only work found no material nested gain from small temporal encoders, a two-second spectral U-Net, or robust scaling with quality-tier weighting; the October 4 quality-balanced result reduced F1 from 0.1604 to 0.1435 and increased false alarms from 0.2971 to 0.4130/hour; Block 9 is not started and is behind the original schedule
+**Current status:** Blocks 3-9 are complete; Block 5 was completed as catch-up work on 2026-08-15 after an inactive 2026-07-20 to 2026-08-14 interval; Block 6 closed on 2026-08-22 with direct DE-B improving on transparent SF-C while retaining low precision; Blocks 7-8 documented device shift, channel/noise failures, adverse wearable fusion, and prioritized stage-derived boundary uncertainty; subsequent bounded train-only work found no material nested gain from small temporal encoders, a two-second spectral U-Net, or robust scaling with quality-tier weighting; the October 4 quality-balanced result reduced F1 from 0.1604 to 0.1435 and increased false alarms from 0.2971 to 0.4130/hour; Block 9 closed on October 4 with a complete Sleep-EDF direct-generalization no-go because annotation support and channel derivations failed the frozen compatibility gate; Block 10 is next
 
 ## 1. Project Boundary
 
@@ -35,7 +35,7 @@ gantt
     section Transfer and Robustness
     Paired PSG-to-wearable transfer                  :done, b7, 2026-08-24, 2026-09-06
     Robustness and justified adaptation              :done, b8, 2026-09-07, 2026-09-20
-    External PSG generalization check                :b9, 2026-09-21, 2026-10-04
+    External PSG generalization check                :done, b9, 2026-09-21, 2026-10-04
 
     section Analysis and Measures
     Temporal localization under uncertainty          :b10, 2026-10-05, 2026-10-18
@@ -79,7 +79,7 @@ flowchart TD
 | 6 | Aug 10-Aug 23 | Does direct transition detection add value? | Simple direct baseline, small CNN only if justified, comparison to stage-first | Comparative baseline report | Complete Aug 22; DE-B improved test event F1 and false alarms/hour versus SF-C but retained precision 0.0909; validation-only DE-D improved F1 to 0.1604 and false alarms to 0.9915/hour versus DE-B validation; CNN deferred and DE-D test evaluation withheld |
 | 7 | Aug 24-Sep 6 | How large is the PSG-to-wearable device-shift problem? | Common six-channel PSG EEG, reduced PSG, wearable, strict zero-shot, and conditionally gated feature alignment | Paired transfer results and decision log | Complete Sep 6; `P2-D` led validation, `P6-D` led the descriptive test, strict zero-shot remained below direct wearable F1 with fewer false alarms, and alignment was skipped by the frozen gate |
 | 8 | Sep 7-Sep 20 | Is the approach robust to signal/channel variability? | Missing-channel tests, degradation tests, ablations, justified adaptation if needed | Robustness and ablation report | Complete Sep 18; wearable robustness failed, no deployable wearable method advanced, and boundary uncertainty was prioritized; the 25-claim extension separated eight uncertainty-supported gates from eight point-gate-only findings |
-| 9 | Sep 21-Oct 4 | Is external PSG comparison scientifically valid? | Audit one external PSG dataset and test reduced-channel generalization if appropriate | External generalization report or no-go | Not started; overdue after bounded train-only mechanism work |
+| 9 | Sep 21-Oct 4 | Is external PSG comparison scientifically valid? | Audit one external PSG dataset and test reduced-channel generalization if appropriate | External generalization report or no-go | Complete Oct 4; Sleep-EDF direct evaluation stopped because annotation support and channel semantics failed the frozen gate |
 | 10 | Oct 5-Oct 18 | How should 30-second label uncertainty be handled? | Hard-label versus interval-aware temporal analysis | Label-uncertainty and localization report | Not started |
 | 11 | Oct 19-Nov 1 | Are transition-derived measures stable enough to report? | Event burden, REM stability, repeated-night reliability, streaming decision | Technical measures and streaming go/no-go | Not started |
 | 12 | Nov 2-Nov 15 | Is a streaming demonstration justified and reproducible? | Conditional command-line prototype, latency/memory check, clean rerun, QA | Prototype or no-go plus reproducibility report | Not started |
@@ -415,9 +415,19 @@ Quality-balanced LSTM-CRF mechanism test completed on 2026-10-04:
 - reproduced all 101 external and 19 reviewed artifacts in an isolated immutable rerun; and
 - stopped robust-scaler and tier-weight variants on the reused train cohort without opening validation/test data.
 
+Block 9 Sleep-EDF compatibility audit completed on 2026-10-04:
+
+- verified the official version 1.0.0 manifest, checksum annex, and subject grouping;
+- reconstructed 197 PSG/hypnogram pairs from 100 participant groups;
+- inspected one manifest-selected pilot pair from each source study;
+- confirmed explicit Wake/REM labels and eight contiguous R-to-W pilot events on the 30-second grid;
+- found one excluded `?` interval beyond PSG support and a decisive mismatch between Sleep-EDF `Fpz-Cz`/`Pz-Oz` and BOAS `F3-M1`/`F4-M1` feature semantics;
+- passed 8/8 independent checks twice; and
+- closed direct external evaluation as a complete no-go without downloading the full dataset or fitting a model.
+
 ## 7. Next Work
 
-Complete the overdue Block 9 audit of whether an external PSG dataset can provide a scientifically valid generalization comparison. Make a documented compatibility/no-go decision before Block 10. The interval-aware boundary experiment in Block 10 retains empirical priority, but its goal must include precision and alarm burden rather than tolerance-only recall. Stop further encoder search on the current eight-epoch bandpower representation, the tested two-second spectral U-Net, and robust-scaler or quality-tier weight variants on this reused cohort. `LC-1` may advance only under a separately committed evaluation on a new locked or external wearable cohort; Block 9 external PSG is not a wearable confirmation cohort. Keep the current validation and test partitions closed.
+Begin Block 10 temporal localization under explicit 30-second label uncertainty. Predeclare one hard-label comparator and one interval-aware temporal mechanism, with participant-grouped nested evaluation, precision and false-alarm burden, and a fixed stop rule. Do not use Sleep-EDF for direct BOAS model evaluation, and stop further encoder, spectral U-Net, scaler, or quality-tier weight variants on the reused train cohort. Keep the current validation and test partitions closed.
 
 ## 8. Rules for the Rest of the Project
 

@@ -1,0 +1,9 @@
+check	status	detail
+official_hashes	pass	7 files
+manifest_pairs	pass	197 unique PSG/hypnogram pairs
+participant_grouping	pass	197 recordings; 100 participants
+pilot_edf_headers	pass	both fixed EEG derivations at 100 Hz
+pilot_label_reconstruction	pass	8 R-to-W transitions
+stored_channel_claim	pass	Fpz-Cz and Pz-Oz
+stored_annotation_failure	pass	30-second nonoverlap passes; complete PSG support fails
+decision_reconstruction	pass	annotation support and channel semantics block evaluation
