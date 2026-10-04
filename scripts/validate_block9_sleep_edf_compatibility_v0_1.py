@@ -90,17 +90,19 @@ def validate() -> pd.DataFrame:
     checks.append(("stored_channel_claim", channel_pass, "Fpz-Cz and Pz-Oz"))
     annotation_pass = (annotation_summary.all_duration_multiple_30.astype(bool).all() and
                        annotation_summary.all_nonoverlap.astype(bool).all() and
-                       annotation_summary.all_within_psg_support.astype(bool).all())
-    checks.append(("stored_annotation_claim", annotation_pass, "30-second nonoverlapping support"))
+                       not annotation_summary.all_within_psg_support.astype(bool).all())
+    checks.append(("stored_annotation_failure", annotation_pass,
+                   "30-second nonoverlap passes; complete PSG support fails"))
 
     matrix_index = matrix.set_index("criterion")
-    no_go_pass = (matrix_index.loc["boas_feature_semantics", "status"] == "fail" and
+    no_go_pass = (matrix_index.loc["annotation_timing", "status"] == "fail" and
+                  matrix_index.loc["boas_feature_semantics", "status"] == "fail" and
                   bool(matrix_index.loc["boas_feature_semantics", "blocks_direct_generalization"]) and
-                  decision.iloc[0].outcome == "limited_compatibility_direct_generalization_no_go" and
+                  decision.iloc[0].outcome == "complete_no_go" and
                   not bool(decision.iloc[0].direct_external_model_evaluation_authorized) and
                   not bool(decision.iloc[0].full_dataset_download_authorized))
     checks.append(("decision_reconstruction", no_go_pass,
-                   "channel semantics block direct evaluation and full download"))
+                   "annotation support and channel semantics block evaluation"))
 
     result = pd.DataFrame([{"check": name, "status": "pass" if passed else "fail", "detail": detail}
                            for name, passed, detail in checks])

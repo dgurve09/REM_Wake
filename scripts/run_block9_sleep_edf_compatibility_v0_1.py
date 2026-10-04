@@ -293,7 +293,7 @@ def compatibility_matrix(pairing: pd.DataFrame, inventory: pd.DataFrame,
         ("participant_grouping", pairing.participant_id.nunique() == 100, "Filename rules yield 100 participant groups across two studies", "required"),
         ("wake_and_rem_labels", {"Sleep stage W", "Sleep stage R"}.issubset(labels), "Both pilot hypnograms contain explicit W and R labels", "required"),
         ("known_label_vocabulary", labels.issubset(ALLOWED_LABELS), "Pilot labels are within the official R&K vocabulary", "required"),
-        ("annotation_timing", annotations.duration_multiple_30.all() and annotations.nonoverlap_with_previous.all() and annotations.within_psg_support.all(), "Pilot annotation durations use the 30-second grid, do not overlap, and remain within PSG support", "required"),
+        ("annotation_timing", annotations.duration_multiple_30.all() and annotations.nonoverlap_with_previous.all() and annotations.within_psg_support.all(), "Durations use the 30-second grid and do not overlap, but one excluded '?' interval extends beyond PSG support", "required"),
         ("rem_to_wake_derivation", len(transitions) > 0 and transitions.contiguous.all() and transitions.boundary_on_30_sec_grid.all(), "Contiguous R-to-W events can be derived on the 30-second grid", "required"),
         ("sampling_and_units", set(eeg.sampling_frequency_hz) == {100.0} and set(eeg.physical_dimension.str.lower()) <= {"uv", "µv"}, "Pilot EEG is 100 Hz and expressed in microvolts", "adaptable"),
         ("fixed_eeg_availability", all(value == EXPECTED_EEG for value in eeg_sets), "Both studies provide Fpz-Cz and Pz-Oz in the pilots", "required"),
@@ -327,7 +327,7 @@ def decision_table(matrix: pd.DataFrame) -> pd.DataFrame:
         "full_dataset_download_authorized": direct_pass,
         "label_timing_study_authorized": labels_pass,
         "wearable_confirmation_possible": False,
-        "blocking_reason": "channel_derivation_changes_frozen_feature_meaning" if labels_pass and not direct_pass else "",
+        "blocking_reason": "channel_derivation_changes_frozen_feature_meaning" if labels_pass and not direct_pass else "annotation_support_and_channel_derivation_incompatibility" if not direct_pass else "",
         "next_step": "begin_Block_10_interval_aware_temporal_localization" if labels_pass and not direct_pass else "write_external_evaluation_protocol" if direct_pass else "close_external_path",
     }])
 
@@ -383,13 +383,13 @@ def run(result_code_commit: str) -> None:
     outcome = decision.iloc[0].outcome
     readme = f"""# Block 9 Sleep-EDF Compatibility Audit v0.1
 
-Sleep-EDF Expanded version 1.0.0 passed identity, participant-grouping, REM/Wake-label, 30-second timing, and pilot signal-readability checks. The manifest contains {len(pairing)} PSG/hypnogram pairs from {pairing.participant_id.nunique()} participant groups.
+Sleep-EDF Expanded version 1.0.0 passed identity, participant-grouping, REM/Wake-label, 30-second-grid, nonoverlap, and pilot signal-readability checks. The manifest contains {len(pairing)} PSG/hypnogram pairs from {pairing.participant_id.nunique()} participant groups. One excluded `Sleep stage ?` interval begins at the PSG end and extends beyond signal support, so the protocol's complete annotation-support criterion failed.
 
 The direct external model gate did not pass. Sleep-EDF provides bipolar `Fpz-Cz` and `Pz-Oz`, whereas the frozen BOAS reduced-PSG model uses ordered left/right `F3-M1` and `F4-M1` inputs. Substituting the Sleep-EDF derivations would change both electrode location and feature meaning. It would be technically executable but scientifically uninterpretable as direct model generalization.
 
 **Decision:** `{outcome}`.
 
-No model was fitted, no full-dataset download was authorized, and no BOAS validation or current-test artifact was accessed. Sleep-EDF remains suitable for label-timing or within-dataset preprocessing work, but it is not a wearable confirmation cohort.
+No model was fitted, no full-dataset download was authorized, and no BOAS validation or current-test artifact was accessed. The pilot demonstrates that R-to-W boundaries can be derived, but the complete Block 9 gate does not authorize further Sleep-EDF analysis. It is not a wearable confirmation cohort.
 
 Official dataset: https://physionet.org/content/sleep-edfx/1.0.0/
 
