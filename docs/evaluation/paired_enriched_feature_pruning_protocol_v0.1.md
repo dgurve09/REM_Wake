@@ -73,7 +73,7 @@ For the two-channel pair, also calculate:
 - mean magnitude-squared coherence in each of the five bands; and
 - channel-1 minus channel-2 log-bandpower asymmetry in each band.
 
-This yields 45 features per epoch and 360 values across the same eight epochs. Use Welch estimates with a Hann window, 256 samples per segment, 128-sample overlap, and 512-point FFT. Use machine epsilon only as a denominator and logarithm guard.
+This yields 45 features per epoch and 360 values across the same eight epochs. Reuse the validated Block 7 Welch settings for all spectral features: a Hann window, 512 samples per segment, 256-sample overlap, and the default 512-point FFT. Use machine epsilon only as a denominator and logarithm guard.
 
 ## 5. Fixed candidates
 
