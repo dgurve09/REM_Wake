@@ -35,7 +35,7 @@ Exact nested BLSTM-CRF control:
 
 The architecture, optimizer, epochs, context, features, CRF paths, seed, and inference procedure are identical to C1. Only two training mechanisms change:
 
-1. Per-feature center is the fitting-subset median and scale is the fitting-subset interquartile range. Use `max(IQR, 1e-6)` as the fixed denominator guard.
+1. Per-feature center is the fitting-subset median and scale is the fitting-subset interquartile range. For both candidates, scaler statistics use all eight sequence positions from every reviewed candidate in the fitting subset. Robust quartiles use NumPy's fixed `method="linear"`. Use `max(IQR, 1e-6)` as the fixed denominator guard.
 2. Negative sequences retain weight 1. If the fitting subset contains `N_negative` negatives, `N_clean` clean positives, and `N_flagged` MAD-flagged positives, assign:
 
    - clean-positive weight `N_negative / (2 * N_clean)`; and
