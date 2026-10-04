@@ -384,7 +384,8 @@ def evaluate(events: pd.DataFrame, support: pd.DataFrame, references: pd.DataFra
                     if len(frame):
                         local = frame.copy()
                         for key, value in reversed(list(config.items())):
-                            local.insert(0, key, value)
+                            if key not in local.columns:
+                                local.insert(0, key, value)
                         destination.append(local)
     return {"metrics": pd.DataFrame(metric_rows), "recordings": pd.concat(recording_rows),
             "participants": pd.concat(participant_rows), "matches": pd.concat(match_rows)}
