@@ -122,7 +122,7 @@ Use the existing nested threshold grid:
 - 0.01 through 0.95 in increments of 0.05; and
 - sigmoid-transformed logits 3.0 through 14.0 in increments of 0.25.
 
-For a candidate and `C`, select maximum primary +/-15-second event F1, then minimum false alarms/hour, maximum recall, and maximum threshold. Consolidate contiguous above-threshold 30-second candidates into one alarm represented by the highest score, with the earliest time breaking exact ties.
+For a candidate and `C`, select maximum primary +/-15-second event F1, then minimum false alarms/hour, maximum recall, and maximum threshold. If elastic-net candidates remain tied across `C`, select the smaller `C`. Consolidate contiguous above-threshold 30-second candidates into one alarm represented by the highest score, with the earliest time breaking exact ties.
 
 Report primary-label event precision, recall, F1, false alarms/hour, and event counts at +/-15 seconds. Report fixed sensitivity results for primary +/-45 seconds, expanded +/-15 seconds, and expanded +/-45 seconds.
 
