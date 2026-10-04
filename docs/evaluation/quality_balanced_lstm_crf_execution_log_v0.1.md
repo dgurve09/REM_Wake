@@ -35,3 +35,19 @@ Resolution:
 - Keep the participant sampling, model outputs, thresholds, and decision rule unchanged.
 
 This was a participant-accounting failure before confidence intervals were produced. It does not constitute an experimental result.
+
+## 2026-10-03 third execution
+
+The cached rerun reached the experiment integrity checks. The exact-control reproduction check failed with a maximum absolute full-night probability difference of `0.3652666658` from the frozen September nested BLSTM-CRF scores.
+
+Cause:
+
+- The original control fitted and applied `StandardScaler` directly to float32 sequence arrays.
+- The first comparison implementation retained the fitted center and scale but applied them through a NumPy expression that promoted the arithmetic to float64 before casting back to float32.
+- Repeated optimization amplified this numerical-path difference, so the result was not an exact control even though its mathematical formula was the same.
+
+Resolution:
+
+- Restore `StandardScaler.transform` for all control fitting and scoring transformations.
+- Keep the robust median/IQR transformation unchanged for the experimental arm.
+- Archive the invalid cached fits and rerun all 50 fits; do not treat the invalid probabilities as scientific results.

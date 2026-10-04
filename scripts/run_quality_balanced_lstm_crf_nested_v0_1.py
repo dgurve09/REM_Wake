@@ -226,13 +226,24 @@ class RecurrentCrf(nn.Module):
 # Section 5: paired fitting treatments
 
 def scaler_parameters(sequences: np.ndarray, pipeline: str) -> tuple[np.ndarray, np.ndarray]:
-    flat = sequences.reshape(-1, FEATURE_COUNT).astype(np.float64)
+    flat = sequences.reshape(-1, FEATURE_COUNT)
     if pipeline == "LC-1-NESTED":
         scaler = StandardScaler().fit(flat)
         return scaler.mean_, scaler.scale_
     center = np.median(flat, axis=0)
     quartiles = np.quantile(flat, [0.25, 0.75], axis=0, method="linear")
     return center, np.maximum(quartiles[1] - quartiles[0], 1e-6)
+
+
+def transform_sequences(sequences: np.ndarray, pipeline: str, center: np.ndarray,
+                        scale: np.ndarray) -> np.ndarray:
+    if pipeline == "LC-1-NESTED":
+        scaler = StandardScaler()
+        scaler.mean_ = center
+        scaler.scale_ = scale
+        scaler.n_features_in_ = FEATURE_COUNT
+        return scaler.transform(sequences.reshape(-1, FEATURE_COUNT)).reshape(sequences.shape)
+    return ((sequences - center) / scale).astype(np.float32)
 
 
 def sample_weights(labels: np.ndarray, tiers: np.ndarray, pipeline: str) -> tuple[np.ndarray, dict]:
@@ -261,7 +272,7 @@ def fit_model(pipeline: str, sequences: np.ndarray, tags: np.ndarray, labels: np
               tiers: np.ndarray, seed: int, name: str) -> tuple[RecurrentCrf, np.ndarray, np.ndarray, dict]:
     configure_torch(seed)
     center, scale = scaler_parameters(sequences, pipeline)
-    scaled = ((sequences - center) / scale).astype(np.float32)
+    scaled = transform_sequences(sequences, pipeline, center, scale).astype(np.float32)
     weights, counts = sample_weights(labels, tiers, pipeline)
     dataset = TensorDataset(torch.from_numpy(scaled), torch.from_numpy(tags.astype(np.int64)),
                             torch.from_numpy(weights))
@@ -298,8 +309,10 @@ def fit_model(pipeline: str, sequences: np.ndarray, tags: np.ndarray, labels: np
 
 
 def score_model(model: RecurrentCrf, center: np.ndarray, scale: np.ndarray,
-                sequences: np.ndarray) -> np.ndarray:
-    values = torch.from_numpy(((sequences - center) / scale).astype(np.float32))
+                sequences: np.ndarray, pipeline: str) -> np.ndarray:
+    values = torch.from_numpy(
+        transform_sequences(sequences, pipeline, center, scale).astype(np.float32)
+    )
     model.eval()
     result = []
     with torch.no_grad():
@@ -317,7 +330,7 @@ def score_assignments(model: RecurrentCrf, center: np.ndarray, scale: np.ndarray
     scores, support = [], []
     for row in assignments.itertuples(index=False):
         recording = recordings[row.subject]
-        probability = score_model(model, center, scale, recording["sequences"])
+        probability = score_model(model, center, scale, recording["sequences"], pipeline)
         scores.append(pd.DataFrame({
             "pipeline": pipeline, "outer_fold": outer, "phase": phase,
             "subject": row.subject, "pid": int(row.pid),
