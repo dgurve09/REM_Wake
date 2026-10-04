@@ -1,0 +1,6 @@
+check	value	status
+train_membership	82 recordings; 64 pid	pass
+candidate_counts	2743 total; 180 positive; 53 clean; 127 flagged	pass
+control_score_reproduction	1.1102230246251565e-16	pass
+finite_probabilities	true	pass
+validation_and_test_closed	train only	pass

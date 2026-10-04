@@ -1,0 +1,10 @@
+check	status	detail
+train_membership	pass	82 recordings; 64 pid
+candidate_counts	pass	2743 total; 180 positive; 53 clean; 127 flagged
+outer_score_integrity	pass	LC-1-NESTED=75539; LC-QB1=75539
+threshold_selections	pass	10 selections
+fit_accounting	pass	50 fits
+event_metrics_recomputed	pass	stored tables match event-level recomputation
+quality_tier_metrics_recomputed	pass	53 clean and 127 MAD-flagged reference events
+external_manifest	pass	101 files checked
+control_reproduces_prior_nested_scores	pass	maximum absolute probability difference=0

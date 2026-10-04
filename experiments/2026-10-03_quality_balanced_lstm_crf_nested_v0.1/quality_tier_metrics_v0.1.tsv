@@ -1,0 +1,5 @@
+pipeline	membership_tier	reference_events	detected_events	recall
+LC-1-NESTED	primary_clean	53	2	0.03773584905660377
+LC-1-NESTED	primary_mad_flagged	127	30	0.23622047244094488
+LC-QB1	primary_clean	53	4	0.07547169811320754
+LC-QB1	primary_mad_flagged	127	30	0.23622047244094488

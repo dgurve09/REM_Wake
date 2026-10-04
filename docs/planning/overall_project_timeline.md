@@ -4,7 +4,7 @@
 **Project window:** 2026-06-01 to 2026-11-29
 **Prepared during:** 2026-06-25 to 2026-06-28
 **Finalized:** 2026-06-28
-**Current status:** Blocks 3-8 are complete; Block 5 was completed as catch-up work on 2026-08-15 after an inactive 2026-07-20 to 2026-08-14 interval; Block 6 closed on 2026-08-22 with direct DE-B improving on transparent SF-C while retaining low precision; validation-only endpoint factorization DE-D subsequently improved both validation F1 and false alarms but remains unevaluated on a new locked cohort; Block 7 closed on 2026-09-06 after the frozen descriptive test showed six-channel PSG leading, a validation-to-test channel-order reversal, and a persistent zero-shot/direct-wearable F1-versus-false-alarm tradeoff; Block 8 closed on 2026-09-18 after documenting material `HB_1` dependence, severe and channel-specific noise failures, failed clean advancement under train-only augmentation, adverse OR fusion, a non-deployable consensus specificity mechanism, and prioritized stage-derived boundary uncertainty; a 25-claim evidence-strength analysis retained non-advancement while showing that boundary materiality is point-gate-only; a standalone train-only LSTM-CRF screen completed on 2026-09-22 with improved temporal specificity but no independent confirmation; a nested four-architecture extension then failed its material F1 gate; a September 23 error diagnostic bounded threshold-only F1 below 0.25 and identified strong quality-tier dependence across models; a September 25 nested spectral U-Net increased recall but reduced F1 to 0.1389 and increased false alarms to 0.7355/hour, so it was stopped; Block 9 is not started
+**Current status:** Blocks 3-8 are complete; Block 5 was completed as catch-up work on 2026-08-15 after an inactive 2026-07-20 to 2026-08-14 interval; Block 6 closed on 2026-08-22 with direct DE-B improving on transparent SF-C while retaining low precision; validation-only endpoint factorization DE-D subsequently improved both validation F1 and false alarms but remains unevaluated on a new locked cohort; Block 7 closed on 2026-09-06 after the frozen descriptive test showed six-channel PSG leading, a validation-to-test channel-order reversal, and a persistent zero-shot/direct-wearable F1-versus-false-alarm tradeoff; Block 8 closed on 2026-09-18 after documenting material `HB_1` dependence, severe and channel-specific noise failures, failed clean advancement under train-only augmentation, adverse OR fusion, a non-deployable consensus specificity mechanism, and prioritized stage-derived boundary uncertainty; subsequent bounded train-only work found no material nested gain from small temporal encoders, a two-second spectral U-Net, or robust scaling with quality-tier weighting; the October 4 quality-balanced result reduced F1 from 0.1604 to 0.1435 and increased false alarms from 0.2971 to 0.4130/hour; Block 9 is not started and is behind the original schedule
 
 ## 1. Project Boundary
 
@@ -69,7 +69,7 @@ flowchart TD
 
 ## 4. Phase Table
 
-| Block | Dates | Main Question | Main Work | Deliverable | Status as of 2026-09-25 |
+| Block | Dates | Main Question | Main Work | Deliverable | Status as of 2026-10-04 |
 |---:|---|---|---|---|---|
 | 1 | Jun 1-Jun 14 | What is known and what is uncertain? | Literature review, initial planning, public-dataset search | Initial proposal, literature evidence, dataset candidate list | Complete |
 | 2 | Jun 15-Jun 28 | Can the project be set up cleanly with a defensible dataset and target? | Scope refinement, BOAS selection, repository setup, environment audit, pilot checks, E0 readiness | Revised proposal, manifest, setup records, pilot reports, E0 readiness package | Complete |
@@ -79,7 +79,7 @@ flowchart TD
 | 6 | Aug 10-Aug 23 | Does direct transition detection add value? | Simple direct baseline, small CNN only if justified, comparison to stage-first | Comparative baseline report | Complete Aug 22; DE-B improved test event F1 and false alarms/hour versus SF-C but retained precision 0.0909; validation-only DE-D improved F1 to 0.1604 and false alarms to 0.9915/hour versus DE-B validation; CNN deferred and DE-D test evaluation withheld |
 | 7 | Aug 24-Sep 6 | How large is the PSG-to-wearable device-shift problem? | Common six-channel PSG EEG, reduced PSG, wearable, strict zero-shot, and conditionally gated feature alignment | Paired transfer results and decision log | Complete Sep 6; `P2-D` led validation, `P6-D` led the descriptive test, strict zero-shot remained below direct wearable F1 with fewer false alarms, and alignment was skipped by the frozen gate |
 | 8 | Sep 7-Sep 20 | Is the approach robust to signal/channel variability? | Missing-channel tests, degradation tests, ablations, justified adaptation if needed | Robustness and ablation report | Complete Sep 18; wearable robustness failed, no deployable wearable method advanced, and boundary uncertainty was prioritized; the 25-claim extension separated eight uncertainty-supported gates from eight point-gate-only findings |
-| 9 | Sep 21-Oct 4 | Is external PSG comparison scientifically valid? | Audit one external PSG dataset and test reduced-channel generalization if appropriate | External generalization report or no-go | Not started |
+| 9 | Sep 21-Oct 4 | Is external PSG comparison scientifically valid? | Audit one external PSG dataset and test reduced-channel generalization if appropriate | External generalization report or no-go | Not started; overdue after bounded train-only mechanism work |
 | 10 | Oct 5-Oct 18 | How should 30-second label uncertainty be handled? | Hard-label versus interval-aware temporal analysis | Label-uncertainty and localization report | Not started |
 | 11 | Oct 19-Nov 1 | Are transition-derived measures stable enough to report? | Event burden, REM stability, repeated-night reliability, streaming decision | Technical measures and streaming go/no-go | Not started |
 | 12 | Nov 2-Nov 15 | Is a streaming demonstration justified and reproducible? | Conditional command-line prototype, latency/memory check, clean rerun, QA | Prototype or no-go plus reproducibility report | Not started |
@@ -404,9 +404,20 @@ Nested spectral U-Net representation test completed on 2026-09-25:
 - passed 8/8 synthetic and 15/15 independent controls, with a full isolated rerun reproducing every scientific artifact; and
 - stopped spectral U-Net v0.1 without tuning against outer results or opening validation/test data.
 
+Quality-balanced LSTM-CRF mechanism test completed on 2026-10-04:
+
+- retained the exact nested BLSTM-CRF and changed only fitting-subset normalization and clean-versus-MAD-flagged positive loss allocation;
+- completed 40 inner and 10 outer-final fits on 2,743 reviewed train candidates;
+- obtained primary F1 0.1435 and 0.4130 false alarms/hour, versus 0.1604 and 0.2971/hour for the exactly reproduced control;
+- increased clean recall from 2/53 to 4/53 but did not change MAD-flagged recall from 30/127;
+- failed the +0.05 F1, +0.10 clean-recall, and no-false-alarm-increase advancement gate;
+- found an entirely adverse false-alarm-difference interval of +0.0555 to +0.1825/hour;
+- reproduced all 101 external and 19 reviewed artifacts in an isolated immutable rerun; and
+- stopped robust-scaler and tier-weight variants on the reused train cohort without opening validation/test data.
+
 ## 7. Next Work
 
-Begin Block 9 by auditing whether an external PSG dataset can provide a scientifically valid generalization comparison. The interval-aware boundary experiment in Block 10 retains empirical priority, but its goal must include precision and alarm burden rather than tolerance-only recall. Stop further encoder search on the current eight-epoch bandpower representation and stop the tested two-second spectral U-Net. `LC-1` may advance only under a separately committed evaluation on a new locked or external wearable cohort; the failed nested and U-Net extensions do not authorize any candidate to advance, and Block 9 external PSG is not a wearable confirmation cohort. If train-only wearable development resumes, test the already drafted quality-balanced normalization mechanism before any further architecture change. Keep the current validation and test partitions closed.
+Complete the overdue Block 9 audit of whether an external PSG dataset can provide a scientifically valid generalization comparison. Make a documented compatibility/no-go decision before Block 10. The interval-aware boundary experiment in Block 10 retains empirical priority, but its goal must include precision and alarm burden rather than tolerance-only recall. Stop further encoder search on the current eight-epoch bandpower representation, the tested two-second spectral U-Net, and robust-scaler or quality-tier weight variants on this reused cohort. `LC-1` may advance only under a separately committed evaluation on a new locked or external wearable cohort; Block 9 external PSG is not a wearable confirmation cohort. Keep the current validation and test partitions closed.
 
 ## 8. Rules for the Rest of the Project
 

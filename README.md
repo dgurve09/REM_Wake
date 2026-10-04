@@ -4,7 +4,7 @@ This repository investigates event-specific REM-to-Wake boundary detection from 
 
 ## Current Status
 
-As of 2026-09-23, Blocks 3-8, a standalone train-only temporal-representation screen, and its retrospective error diagnostic are complete. Block 9 has not started.
+As of 2026-10-04, Blocks 3-8 and the bounded train-only temporal experiments are complete. Block 9 has not started and is behind the original schedule.
 
 - BOAS snapshot `1.1.1` is frozen at 128 paired recordings and 100 participant-table `pid` groups.
 - The conservative primary set contains 276 REM-to-Wake events across 72 groups; the expanded quality-sensitivity set contains 348 across 88 groups.
@@ -42,9 +42,13 @@ As of 2026-09-23, Blocks 3-8, a standalone train-only temporal-representation sc
 - The nested F1 gain was only +0.0041, with participant interval -0.0532 to +0.0608, and the false-alarm difference interval also crossed zero. Architecture choices varied across all candidate types over five folds. The +0.05 advancement gate failed, so the four-candidate exploration stops without authorizing a replacement or new-cohort confirmation.
 - A train-only error diagnostic found that widening tolerance from +/-15 to +/-45 seconds recovered nine additional events, while widening to +/-105 seconds recovered only one more. Label-informed threshold upper bounds reached F1 0.2177-0.2324 but remained below 0.25 and are not usable performance estimates.
 - Quality-tier recall differed substantially across every train procedure. LC-1 detected 9/53 clean primary events versus 47/127 MAD-flagged events; the nested selected pipeline detected 1/53 versus 31/127. Because the 10-MAD flag is nonspecific, this is an unresolved quality-tier dependence rather than proof of artefact detection.
-- Of 177 nested false alarms, 167 were not within 45 seconds of a labeled transition. The next drafted mechanism tests robust participant-fit normalization and equal clean/MAD-flagged positive weighting without changing the LSTM-CRF architecture. It has not been executed.
+- Of 177 nested false alarms, 167 were not within 45 seconds of a labeled transition. This motivated a predeclared robust-normalization and quality-balanced-loss experiment without an architecture change.
+- The quality-balanced nested experiment completed 50 fits on the train cohort. `LC-QB1` reached F1 0.1435 and 0.4130 false alarms/hour, versus 0.1604 and 0.2971/hour for the exactly reproduced nested BLSTM-CRF control.
+- `LC-QB1` increased clean-event recall from 2/53 to 4/53 but left MAD-flagged recall at 30/127. Its F1 difference was -0.0169, false-alarm difference was +0.1160/hour, and clean-recall difference was +0.0377; all three predeclared advancement conditions failed.
+- The entire participant interval for false-alarm difference was adverse at +0.0555 to +0.1825/hour. The mechanism stops at v0.1 without post-result scaler or weight-ratio tuning.
+- The exact control reproduced 75,539 prior probabilities with maximum difference 0. The independent validator passed 9/9 checks twice, and an isolated rerun reproduced all 101 external and 19 reviewed artifacts byte-for-byte.
 
-The Block 7 and Block 8 results do not justify revising the frozen models or thresholds. The LSTM-CRF screen identifies a candidate temporal representation, while the nested comparison shows no material benefit from additional small encoder variants on the same bandpower inputs. The diagnostic prioritizes quality-tier balance and robust normalization over further architecture search. The current test partition was already used descriptively and remains closed. Block 9 will assess external-PSG compatibility; interval-aware boundary analysis remains scheduled for Block 10. A new locked or external wearable cohort is still required before any wearable-method advancement claim.
+The Block 7 and Block 8 results do not justify revising the frozen models or thresholds. The temporal experiments show no material nested improvement from small encoder variants, two-second spectral U-Net features, or the tested robust-scaling and tier-balancing mechanism. The current test partition was already used descriptively and remains closed. Block 9 must now assess external-PSG compatibility before Block 10 begins. A new locked or external wearable cohort is still required before any wearable-method advancement claim.
 
 ## Start Here
 
@@ -92,8 +96,10 @@ The Block 7 and Block 8 results do not justify revising the frozen models or thr
 - [Nested deep temporal decision](docs/evaluation/deep_temporal_nested_cv_decision_2026-09-22.md)
 - [Deep temporal error diagnostic](experiments/2026-09-23_deep_temporal_error_diagnostic_v0.1/README.md)
 - [Deep temporal error decision](docs/evaluation/deep_temporal_error_diagnostic_decision_2026-09-23.md)
-- [Quality-balanced LSTM-CRF draft](docs/evaluation/quality_balanced_lstm_crf_draft_v0.1.md)
-- [Current weekly record](docs/weekly/2026-09-21_to_2026-09-27.md)
+- [Quality-balanced LSTM-CRF protocol](docs/evaluation/quality_balanced_lstm_crf_protocol_v0.1.md)
+- [Quality-balanced LSTM-CRF result](experiments/2026-10-03_quality_balanced_lstm_crf_nested_v0.1/README.md)
+- [Quality-balanced LSTM-CRF decision](docs/evaluation/quality_balanced_lstm_crf_decision_2026-10-04.md)
+- [Current weekly record](docs/weekly/2026-09-28_to_2026-10-04.md)
 - [BOAS dataset manifest](docs/data/boas_dataset_manifest.md)
 - [Label/preprocessing gate](docs/feasibility/label_preprocessing_gate_closeout_2026-07-18.md)
 - [Block 6 baseline decision](docs/evaluation/block6_baseline_gate_decision_2026-08-22.md)
