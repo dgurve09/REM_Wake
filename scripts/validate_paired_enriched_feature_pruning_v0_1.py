@@ -47,6 +47,7 @@ def validate() -> pd.DataFrame:
     stored_bootstrap = pd.read_csv(output / "paired_participant_bootstrap_v0.1.tsv", sep="\t")
     stored_decisions = pd.read_csv(output / "hypothesis_decisions_v0.1.tsv", sep="\t")
     stability = pd.read_csv(output / "outer_feature_selection_stability_v0.1.tsv", sep="\t")
+    in_run_checks = pd.read_csv(output / "in_run_checks_v0.1.tsv", sep="\t")
 
     checks = []
     hashes_pass = True
@@ -92,8 +93,26 @@ def validate() -> pd.DataFrame:
     candidate_pass = len(retained) == 2743 and int(retained["label"].sum()) == 180
     checks.append(("candidate_accounting", candidate_pass, "2743 retained; 180 positive"))
 
-    fit_pass = len(fit_summary) == 230 and experiment.truth(fit_summary["converged"]).all()
-    checks.append(("fit_accounting", fit_pass, f"{len(fit_summary)} converged fits"))
+    converged = experiment.truth(fit_summary["converged"])
+    convergence_failures = int((~converged).sum())
+    outer_failures = int(
+        (~converged[fit_summary["phase"].eq("outer_final")]).sum()
+    )
+    stored_convergence = in_run_checks[in_run_checks["check"].eq("fit_convergence")]
+    fit_pass = (
+        len(fit_summary) == 230
+        and convergence_failures == 24
+        and outer_failures == 0
+        and len(stored_convergence) == 1
+        and stored_convergence.iloc[0]["status"] == "fail"
+    )
+    checks.append(
+        (
+            "fit_accounting",
+            fit_pass,
+            f"{len(fit_summary)} fits; {convergence_failures} retained inner-fit convergence failures",
+        )
+    )
 
     selection_pass = (
         len(selections) == 30

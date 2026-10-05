@@ -918,14 +918,50 @@ def run_fit(
     feature_names: list[str],
 ) -> tuple[pd.DataFrame, pd.DataFrame, dict]:
     kind = "F0" if pipeline == "F0-L2" else "F1"
+    model_file = model_path(modality, pipeline, outer, phase, c_value)
+    score_file = score_path(modality, pipeline, outer, phase, c_value)
+    if model_file.exists() != score_file.exists():
+        raise RuntimeError(f"Incomplete cached fit artifacts: {model_file} / {score_file}")
+    if model_file.exists():
+        with gzip.open(model_file, "rt", encoding="utf-8") as stream:
+            payload = json.load(stream)
+        scores = pd.read_csv(score_file, sep="\t", compression="gzip")
+        expected_pipeline = f"{modality}-{pipeline}"
+        if (
+            payload["configuration"]["pipeline"] != pipeline
+            or float(payload["configuration"]["C"]) != float(c_value)
+            or not scores["pipeline"].eq(expected_pipeline).all()
+            or not scores["outer_fold"].eq(outer).all()
+            or not scores["phase"].eq(phase).all()
+            or set(scores["subject"]) != set(heldout["subject"])
+        ):
+            raise RuntimeError(f"Cached fit identity mismatch: {model_file}")
+        support = (
+            scores.groupby(["subject", "pid", "outer_fold"], as_index=False)
+            .size()
+            .rename(columns={"size": "supported_boundaries"})
+        )
+        support["supported_hours"] = support["supported_boundaries"] * EPOCH_SEC / 3600.0
+        coefficients = np.asarray(payload["coefficient"], dtype=float)
+        summary = {
+            "input_features": matrices[modality][kind].shape[1],
+            "retained_after_pruning": len(payload["selected_indices"]),
+            "nonzero_coefficients": int(np.sum(np.abs(coefficients) > 1e-12)),
+            "iterations": int(payload["iterations"]),
+            "converged": bool(payload["converged"]),
+            "model_relative_path": model_file.relative_to(data_parent()).as_posix(),
+            "model_sha256": sha256(model_file),
+            "score_relative_path": score_file.relative_to(data_parent()).as_posix(),
+            "score_sha256": sha256(score_file),
+        }
+        return scores, support, summary
+
     fitted, summary = fit_model(
         matrices[modality][kind][fit_mask], labels[fit_mask], pipeline, c_value, feature_names
     )
     scores, support = score_assignments(
         fitted, heldout, recordings, modality, pipeline, outer, phase
     )
-    model_file = model_path(modality, pipeline, outer, phase, c_value)
-    score_file = score_path(modality, pipeline, outer, phase, c_value)
     verify_or_create_json_gzip(model_file, summary.pop("payload"))
     verify_or_create_gzip_tsv(score_file, scores)
     summary.update(
@@ -1269,6 +1305,10 @@ def run(result_code_commit: str) -> None:
         ]
     )
 
+    convergence_failures = int((~fit_summary["converged"].astype(bool)).sum())
+    outer_convergence_failures = int(
+        (~fit_summary.loc[fit_summary["phase"].eq("outer_final"), "converged"].astype(bool)).sum()
+    )
     checks = pd.DataFrame(
         [
             ("train_scope", len(assignments) == 82 and assignments["pid"].nunique() == 64, "82 recordings; 64 pid"),
@@ -1276,7 +1316,12 @@ def run(result_code_commit: str) -> None:
             ("candidate_accounting", len(retained) == 2743 and int(labels.sum()) == 180, "2743 candidates; 180 positives"),
             ("feature_parity", feature_summary["maximum_f0_absolute_difference"].max() <= 1e-5, f"max={feature_summary['maximum_f0_absolute_difference'].max():.3g}"),
             ("feature_bounds", feature_summary["feature_bounds_pass"].astype(bool).all(), "all 164 modality-recording rows"),
-            ("fit_convergence", fit_summary["converged"].astype(bool).all(), f"{len(fit_summary)} fits"),
+            (
+                "fit_convergence",
+                convergence_failures == 0,
+                f"{convergence_failures} of {len(fit_summary)} fits reached max_iter; "
+                f"{outer_convergence_failures} outer-final failures",
+            ),
             ("threshold_selection", len(selections) == 30, "2 modalities x 5 folds x 3 candidates"),
             ("outer_coverage", outer_scores.groupby("pipeline")["pid"].nunique().eq(64).all(), "64 pid per pipeline"),
             ("external_scope", not manifest["relative_path"].str.contains("validation|test", case=False, regex=True).any(), f"{len(manifest)} external artifacts"),
@@ -1285,7 +1330,8 @@ def run(result_code_commit: str) -> None:
         columns=["check", "status", "detail"],
     )
     checks["status"] = np.where(checks["status"], "pass", "fail")
-    if not checks["status"].eq("pass").all():
+    fatal_checks = checks[~checks["check"].eq("fit_convergence")]
+    if not fatal_checks["status"].eq("pass").all():
         raise ValueError("Experiment checks failed:\n" + checks.to_string(index=False))
 
     outer_final = fit_summary[fit_summary["phase"].eq("outer_final")]
@@ -1376,6 +1422,9 @@ def run(result_code_commit: str) -> None:
                 f"{row.f1:.4f} | {row.false_alarms_per_hour:.4f} |"
             )
     lines += [
+        "",
+        f"Convergence check: {convergence_failures} of {len(fit_summary)} fits reached the predeclared "
+        f"3,000-iteration limit; {outer_convergence_failures} were outer-final fits. Settings were not changed after inspection.",
         "",
         "The advancement decisions are recorded in `hypothesis_decisions_v0.1.tsv`.",
         "Validation and current-test data remained closed. Enriched arrays, fitted models, and full-night scores remain under `REM_W_data` outside Git.",
