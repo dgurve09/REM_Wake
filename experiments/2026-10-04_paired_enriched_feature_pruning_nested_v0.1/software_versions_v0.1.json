@@ -1,0 +1,9 @@
+{
+  "git_commit": "e71a042a026d77602e446b90e75d9786d7ad42bc",
+  "numpy": "2.2.6",
+  "pandas": "2.3.3",
+  "protocol_commit": "7cc6253",
+  "python": "3.10.20",
+  "scipy": "1.15.3",
+  "sklearn": "1.7.2"
+}

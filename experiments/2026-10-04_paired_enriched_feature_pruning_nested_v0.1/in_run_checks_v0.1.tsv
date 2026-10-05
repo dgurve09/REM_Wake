@@ -1,0 +1,11 @@
+check	status	detail
+train_scope	pass	82 recordings; 64 pid
+fold_scope	pass	five frozen pid folds
+candidate_accounting	pass	2743 candidates; 180 positives
+feature_parity	pass	max=9.54e-07
+feature_bounds	pass	all 164 modality-recording rows
+fit_convergence	fail	24 of 230 fits reached max_iter; 0 outer-final failures
+threshold_selection	pass	2 modalities x 5 folds x 3 candidates
+outer_coverage	pass	64 pid per pipeline
+external_scope	pass	624 external artifacts
+decision_count	pass	two hypotheses per modality

@@ -1,0 +1,11 @@
+check	status	detail
+external_hashes	pass	624 files
+feature_reconstruction	pass	max F0 difference=9.54e-07
+feature_schema	pass	360 enriched and 80 F0 values per modality
+candidate_accounting	pass	2743 retained; 180 positive
+fit_accounting	pass	230 fits; 24 retained inner-fit convergence failures
+nested_selections	pass	30 outer selections
+event_reconstruction	pass	metrics and participant rows
+bootstrap_reconstruction	pass	12 paired interval rows
+decision_reconstruction	pass	four advancement decisions
+selection_stability	pass	1600 feature rows

@@ -1,0 +1,5 @@
+modality	hypothesis	comparison	f1_difference	required_f1_difference	false_alarms_per_hour_difference	maximum_far_difference	point_gate_pass	directional_participant_support	material_participant_support	decision
+P2	H-F1-L2	F1-L2_minus_F0-L2	0.047686427953956056	0.05	-0.1525040045539391	0.0	False	True	False	stop_v0.1
+P2	H-F1-EN	F1-EN_minus_F0-L2	0.05291147793504428	0.05	-0.18745283893088338	0.0	True	True	False	freeze_for_new_confirmation
+H2	H-F1-L2	F1-L2_minus_F0-L2	0.014137970097255426	0.05	-0.4829293477541401	0.0	False	False	False	stop_v0.1
+H2	H-F1-EN	F1-EN_minus_F0-L2	0.08178055210987067	0.05	-0.7434570222004526	0.0	True	True	False	freeze_for_new_confirmation
