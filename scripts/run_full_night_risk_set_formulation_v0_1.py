@@ -8,6 +8,7 @@ import json
 import platform
 import subprocess
 import warnings
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 import numpy as np
@@ -31,6 +32,7 @@ VERSION = "v0.1"
 EXPERIMENT_DIR = "2026-10-07_full_night_risk_set_formulation_v0.1"
 DERIVED_DIR = "full_night_risk_set_formulation_v0.1"
 PROTOCOL_COMMIT = "72a37eb"
+INITIAL_SEQUENTIAL_COMMIT = "53b1b07"
 BASE_SEED = 20261007
 OUTER_FOLDS = 5
 C_VALUE = 0.1
@@ -38,6 +40,7 @@ MAX_ITER = 3000
 ALARM_BUDGETS = [0.10, 0.25, 0.50, 1.00]
 PRIMARY_ALARM_BUDGET = 0.25
 BOOTSTRAP_RESAMPLES = 2000
+MAX_CONCURRENT_FITS = 4
 TOLERANCES = [15.0, 45.0]
 MEMBERSHIPS = ["primary", "expanded"]
 CANDIDATES = ["SAMP-BAL", "RISK-BAL", "RISK-NAT"]
@@ -791,6 +794,7 @@ def run(result_code_commit: str) -> None:
     for outer in range(1, OUTER_FOLDS + 1):
         outer_pid = set(folds[folds["fold"].eq(outer)]["pid"].astype(int))
         pooled = {candidate: {"scores": [], "support": []} for candidate in CANDIDATES}
+        fit_tasks = []
         for inner in sorted(set(range(1, OUTER_FOLDS + 1)) - {outer}):
             inner_pid = set(folds[folds["fold"].eq(inner)]["pid"].astype(int))
             heldout = assignments[assignments["pid"].isin(inner_pid)].copy()
@@ -803,20 +807,58 @@ def run(result_code_commit: str) -> None:
             fit_rows.append(summary)
             fit_mask = ~np.isin(groups, list(outer_pid | inner_pid))
             for candidate in NEW_CANDIDATES:
-                scores, support, summary = run_new_fit(
-                    candidate,
-                    outer,
-                    f"inner_{inner}",
-                    fit_mask,
-                    heldout,
+                fit_tasks.append(
+                    {
+                        "candidate": candidate,
+                        "outer": outer,
+                        "phase": f"inner_{inner}",
+                        "fit_mask": fit_mask,
+                        "heldout": heldout,
+                        "inner": inner,
+                    }
+                )
+
+        outer_heldout = assignments[assignments["pid"].isin(outer_pid)].copy()
+        outer_fit_mask = ~np.isin(groups, list(outer_pid))
+        for candidate in NEW_CANDIDATES:
+            fit_tasks.append(
+                {
+                    "candidate": candidate,
+                    "outer": outer,
+                    "phase": "outer_final",
+                    "fit_mask": outer_fit_mask,
+                    "heldout": outer_heldout,
+                    "inner": None,
+                }
+            )
+
+        with ThreadPoolExecutor(max_workers=MAX_CONCURRENT_FITS) as executor:
+            futures = [
+                executor.submit(
+                    run_new_fit,
+                    task["candidate"],
+                    task["outer"],
+                    task["phase"],
+                    task["fit_mask"],
+                    task["heldout"],
                     matrix,
                     labels,
                     recordings,
                     feature_names,
                 )
-                pooled[candidate]["scores"].append(scores)
-                pooled[candidate]["support"].append(support)
-                fit_rows.append(summary)
+                for task in fit_tasks
+            ]
+            fitted_results = [future.result() for future in futures]
+
+        outer_new_results = []
+        for task, result in zip(fit_tasks, fitted_results):
+            scores, support, summary = result
+            fit_rows.append(summary)
+            if task["phase"] == "outer_final":
+                outer_new_results.append(result)
+            else:
+                pooled[task["candidate"]]["scores"].append(scores)
+                pooled[task["candidate"]]["support"].append(support)
 
         for candidate in CANDIDATES:
             scores = pd.concat(pooled[candidate]["scores"], ignore_index=True)
@@ -831,30 +873,16 @@ def run(result_code_commit: str) -> None:
                 selected["outer_fold"] = outer
                 selection_rows.append(selected)
 
-        heldout = assignments[assignments["pid"].isin(outer_pid)].copy()
         fitting_pids = set(assignments["pid"].astype(int)) - outer_pid
         scores, support, summary = load_prior_score(
-            outer, "outer_final", heldout, fitting_pids
+            outer, "outer_final", outer_heldout, fitting_pids
         )
         outer_score_rows.append(scores)
         outer_support_rows.append(support)
         fit_rows.append(summary)
-        fit_mask = ~np.isin(groups, list(outer_pid))
-        for candidate in NEW_CANDIDATES:
-            scores, support, summary = run_new_fit(
-                candidate,
-                outer,
-                "outer_final",
-                fit_mask,
-                heldout,
-                matrix,
-                labels,
-                recordings,
-                feature_names,
-            )
+        for scores, support, summary in outer_new_results:
             outer_score_rows.append(scores)
             outer_support_rows.append(support)
-            fit_rows.append(summary)
         print(f"completed outer fold {outer}", flush=True)
 
     fit_summary = pd.DataFrame(fit_rows)
@@ -970,6 +998,11 @@ def run(result_code_commit: str) -> None:
         "sklearn": sklearn.__version__,
         "git_commit": git_commit,
         "protocol_commit": PROTOCOL_COMMIT,
+        "initial_sequential_code_commit": INITIAL_SEQUENTIAL_COMMIT,
+        "execution_note": (
+            "The first two completed fits used the identical frozen fit function at the initial "
+            "sequential commit; remaining independent fits used concurrency-only orchestration."
+        ),
     }
     verify_or_create_text(
         output / "software_versions_v0.1.json",
