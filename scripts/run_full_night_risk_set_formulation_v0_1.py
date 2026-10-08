@@ -314,10 +314,8 @@ def fit_new_model(
         tol=1e-4,
         random_state=BASE_SEED,
     )
-    with warnings.catch_warnings(record=True) as caught:
-        warnings.simplefilter("always", ConvergenceWarning)
-        model.fit(scaler.transform(values[:, selected]), labels)
-    converged = not any(issubclass(item.category, ConvergenceWarning) for item in caught)
+    model.fit(scaler.transform(values[:, selected]), labels)
+    converged = int(model.n_iter_[0]) < MAX_ITER
     nonzero = int(np.sum(np.abs(model.coef_[0]) > 1e-12))
     payload = {
         "configuration": {
@@ -774,6 +772,7 @@ def run(result_code_commit: str) -> None:
     git_commit = current_git_commit()
     if not git_commit.startswith(result_code_commit):
         raise ValueError("Result code commit does not match current checkout")
+    warnings.filterwarnings("ignore", category=ConvergenceWarning)
 
     assignments = prior.train_assignments()
     folds = prior.frozen_fold_assignments(assignments)
@@ -989,6 +988,30 @@ def run(result_code_commit: str) -> None:
     verify_or_create_tsv(decisions, output / "hypothesis_decisions_v0.1.tsv")
     verify_or_create_tsv(manifest, output / "external_artifact_manifest_v0.1.tsv")
     verify_or_create_tsv(checks, output / "in_run_checks_v0.1.tsv")
+    execution_failures = pd.DataFrame(
+        [
+            {
+                "execution": "initial_sequential_run",
+                "code_commit": INITIAL_SEQUENTIAL_COMMIT,
+                "failure_or_stop": "estimated runtime was approximately nine hours after two completed fits",
+                "scientific_consequence": "none; completed partial artifacts were not reviewed",
+                "resolution": "introduced concurrency without changing model settings",
+                "external_archive": "not retained separately; included in the later aborted-run archive",
+            },
+            {
+                "execution": "first_concurrent_run",
+                "code_commit": "9e71310",
+                "failure_or_stop": "thread-unsafe warning capture misreported some iteration-limit failures",
+                "scientific_consequence": "aborted outputs were excluded from all reported results",
+                "resolution": "derive convergence from n_iter and restart from an empty result directory",
+                "external_archive": (
+                    "derived/full_night_risk_set_formulation_v0.1_"
+                    "aborted_threaded_warning_capture_20261007"
+                ),
+            },
+        ]
+    )
+    verify_or_create_tsv(execution_failures, output / "execution_failures_v0.1.tsv")
 
     versions = {
         "python": platform.python_version(),
@@ -999,10 +1022,7 @@ def run(result_code_commit: str) -> None:
         "git_commit": git_commit,
         "protocol_commit": PROTOCOL_COMMIT,
         "initial_sequential_code_commit": INITIAL_SEQUENTIAL_COMMIT,
-        "execution_note": (
-            "The first two completed fits used the identical frozen fit function at the initial "
-            "sequential commit; remaining independent fits used concurrency-only orchestration."
-        ),
+        "execution_note": "Final reviewed outputs were restarted after the archived warning-capture failure.",
     }
     verify_or_create_text(
         output / "software_versions_v0.1.json",

@@ -46,6 +46,12 @@ def main() -> None:
     require(len(fits) == 75, "Expected 75 nested fit records")
     require(set(fits["candidate"]) == set(experiment.CANDIDATES), "Candidate set changed")
     require(fits.groupby("candidate").size().eq(25).all(), "Expected 25 fit records per candidate")
+    new_fits = fits[fits["candidate"].isin(experiment.NEW_CANDIDATES)]
+    expected_convergence = new_fits["iterations"].astype(int) < experiment.MAX_ITER
+    require(
+        np.array_equal(prior.truth(new_fits["converged"]).to_numpy(), expected_convergence.to_numpy()),
+        "Convergence status does not match solver iteration count",
+    )
 
     selections = read_table("inner_threshold_selections_v0.1.tsv")
     require(len(selections) == 60, "Expected 60 threshold selections")
@@ -103,6 +109,13 @@ def main() -> None:
 
     decisions = read_table("hypothesis_decisions_v0.1.tsv")
     require(set(decisions["hypothesis"]) == {"H-RISK", "H-PRIOR"}, "Decision set changed")
+    failures = read_table("execution_failures_v0.1.tsv")
+    require(len(failures) == 2, "Execution-failure record changed")
+    archived = (
+        experiment.data_parent()
+        / "derived/full_night_risk_set_formulation_v0.1_aborted_threaded_warning_capture_20261007"
+    )
+    require(archived.exists(), "Aborted concurrent-run artifacts were not retained")
     checks = read_table("in_run_checks_v0.1.tsv")
     required_checks = checks.loc[~checks["check"].eq("convergence"), "passed"]
     require(prior.truth(required_checks).all(), "Required in-run check failed")
