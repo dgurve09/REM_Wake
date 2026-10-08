@@ -34,6 +34,10 @@ def main() -> None:
         (experiment.output_dir() / "software_versions_v0.1.json").read_text(encoding="utf-8")
     )
     require(versions["protocol_commit"].startswith(experiment.PROTOCOL_COMMIT), "Protocol commit mismatch")
+    require(
+        versions["protocol_amendment_commit"].startswith(experiment.PROTOCOL_AMENDMENT_COMMIT),
+        "Protocol amendment commit mismatch",
+    )
 
     construction = read_table("candidate_construction_summary_v0.1.tsv").set_index("metric")["value"]
     require(int(construction["eligible_backgrounds_before_context_intersection"]) == 73476, "Eligible background count changed")
@@ -110,7 +114,7 @@ def main() -> None:
     decisions = read_table("hypothesis_decisions_v0.1.tsv")
     require(set(decisions["hypothesis"]) == {"H-RISK", "H-PRIOR"}, "Decision set changed")
     failures = read_table("execution_failures_v0.1.tsv")
-    require(len(failures) == 2, "Execution-failure record changed")
+    require(len(failures) == 3, "Execution-failure record changed")
     archived = (
         experiment.data_parent()
         / "derived/full_night_risk_set_formulation_v0.1_aborted_threaded_warning_capture_20261007"

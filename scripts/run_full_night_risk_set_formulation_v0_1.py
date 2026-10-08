@@ -32,6 +32,7 @@ VERSION = "v0.1"
 EXPERIMENT_DIR = "2026-10-07_full_night_risk_set_formulation_v0.1"
 DERIVED_DIR = "full_night_risk_set_formulation_v0.1"
 PROTOCOL_COMMIT = "72a37eb"
+PROTOCOL_AMENDMENT_COMMIT = "5d035ca"
 INITIAL_SEQUENTIAL_COMMIT = "53b1b07"
 BASE_SEED = 20261007
 OUTER_FOLDS = 5
@@ -463,7 +464,8 @@ def run_new_fit(
 
 def threshold_grid() -> np.ndarray:
     logits = np.arange(-16.0, 16.001, 0.25)
-    return np.unique(np.concatenate([1.0 / (1.0 + np.exp(-logits)), [1.0]]))
+    no_alarm = np.nextafter(1.0, np.inf)
+    return np.unique(np.concatenate([1.0 / (1.0 + np.exp(-logits)), [1.0, no_alarm]]))
 
 
 def threshold_curve(
@@ -1009,6 +1011,14 @@ def run(result_code_commit: str) -> None:
                     "aborted_threaded_warning_capture_20261007"
                 ),
             },
+            {
+                "execution": "first_threshold_selection_attempt",
+                "code_commit": "01a6663",
+                "failure_or_stop": "probabilities equal to one defeated the assumed no-alarm threshold",
+                "scientific_consequence": "no outer metric or hypothesis decision was produced",
+                "resolution": "predeclared a threshold strictly greater than one as a no-alarm sentinel",
+                "external_archive": "models and scores retained unchanged in the active external cache",
+            },
         ]
     )
     verify_or_create_tsv(execution_failures, output / "execution_failures_v0.1.tsv")
@@ -1021,6 +1031,7 @@ def run(result_code_commit: str) -> None:
         "sklearn": sklearn.__version__,
         "git_commit": git_commit,
         "protocol_commit": PROTOCOL_COMMIT,
+        "protocol_amendment_commit": PROTOCOL_AMENDMENT_COMMIT,
         "initial_sequential_code_commit": INITIAL_SEQUENTIAL_COMMIT,
         "execution_note": "Final reviewed outputs were restarted after the archived warning-capture failure.",
     }
