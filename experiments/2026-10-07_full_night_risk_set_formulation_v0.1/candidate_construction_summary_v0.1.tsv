@@ -1,0 +1,9 @@
+metric	value
+eligible_backgrounds_before_context_intersection	73476.0
+backgrounds_dropped_at_context_intersection	0.0
+retained_backgrounds	73476.0
+retained_primary_events	180.0
+risk_set_rows	73656.0
+risk_set_prevalence	0.0024437927663734115
+old_review_negative_rows	2563.0
+old_review_raw_prevalence	0.06562158220925994

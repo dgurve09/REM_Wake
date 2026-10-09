@@ -1,0 +1,10 @@
+check	passed	detail
+train_membership	True	82 recordings; 64 pid groups
+partition_scope	True	train only
+fold_membership	True	five frozen pid folds
+positive_count	True	180 retained positives
+full_risk_set	True	73476 retained negatives
+outer_candidate_coverage	True	64 pid groups per candidate
+threshold_selection	True	3 candidates x 5 folds x 4 budgets
+external_hashes	True	127 artifacts verified
+convergence	False	44 new-fit convergence failures retained

@@ -1,0 +1,3 @@
+hypothesis	comparison	primary_value	required_primary_value	secondary_value	required_secondary_value	point_gate_pass	decision
+H-RISK	RISK-BAL_minus_SAMP-BAL	-0.05	0.05			False	stop_v0.1
+H-PRIOR	RISK-NAT_minus_RISK-BAL	0.9239259758966791	0.1	0.16111111111111112	-0.05	True	retain_for_new_confirmation

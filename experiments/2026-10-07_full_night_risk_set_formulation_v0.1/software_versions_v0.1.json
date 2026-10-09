@@ -1,0 +1,12 @@
+{
+  "execution_note": "Final reviewed outputs were restarted after the archived warning-capture failure.",
+  "git_commit": "a131072abacf23c771f57895a2b92f240ac51d8c",
+  "initial_sequential_code_commit": "53b1b07",
+  "numpy": "2.2.6",
+  "pandas": "2.3.3",
+  "protocol_amendment_commit": "5d035ca",
+  "protocol_commit": "72a37eb",
+  "python": "3.10.20",
+  "scipy": "1.15.3",
+  "sklearn": "1.7.2"
+}
