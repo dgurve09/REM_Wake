@@ -26,6 +26,8 @@ def require(condition: bool, message: str) -> None:
 
 
 def close(left: float, right: float, tolerance: float = 1e-12) -> bool:
+    if np.isnan(left) and np.isnan(right):
+        return True
     return bool(np.isclose(left, right, atol=tolerance, rtol=tolerance))
 
 
