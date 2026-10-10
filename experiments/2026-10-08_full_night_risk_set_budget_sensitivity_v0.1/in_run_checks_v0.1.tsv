@@ -1,0 +1,9 @@
+check	passed	detail
+selection_grid	True	3 candidates x 5 folds x 4 budgets
+score_artifact_hashes	True	15 frozen outer score artifacts verified
+score_key_uniqueness	True	one score per candidate and risk-set boundary
+score_coverage	True	75,539 supported outer scores per candidate
+support_scope	True	82 train recordings; 64 participant groups
+metric_grid	True	48 predeclared sensitivity configurations
+participant_grid	True	3,072 participant-configuration rows
+primary_reproduction	True	0.25/h metrics exactly reproduce the validated primary table

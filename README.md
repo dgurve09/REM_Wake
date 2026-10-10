@@ -4,7 +4,7 @@ This repository investigates event-specific REM-to-Wake boundary detection from 
 
 ## Current Status
 
-As of 2026-10-04, Blocks 3-9 and the bounded train-only temporal and enriched-feature experiments are complete. Block 9 closed with a documented external-compatibility no-go; Block 10 is next.
+As of 2026-10-10, Blocks 3-9 are complete and Block 10 is in progress. The first Block 10 formulation test corrected the sampled-negative/class-prior problem, but interval-aware label-uncertainty testing remains next.
 
 - BOAS snapshot `1.1.1` is frozen at 128 paired recordings and 100 participant-table `pid` groups.
 - The conservative primary set contains 276 REM-to-Wake events across 72 groups; the expanded quality-sensitivity set contains 348 across 88 groups.
@@ -54,8 +54,12 @@ As of 2026-10-04, Blocks 3-9 and the bounded train-only temporal and enriched-fe
 - Reduced-PSG elastic-net F1 improved from 0.1749 to 0.2278 while false alarms fell from 0.7419 to 0.5544/hour. Wearable F1 improved from 0.0978 to 0.1796 while false alarms fell from 1.5362 to 0.7927/hour.
 - Both elastic-net candidates passed the predeclared point gate and had directional participant-bootstrap support. Their F1 lower bounds, +0.0186 for reduced PSG and +0.0439 for wearable EEG, did not reach the +0.05 material-support threshold, so the candidates are frozen for new-cohort confirmation rather than advanced as reliable detectors.
 - Twenty-four elastic-net inner fits at `C=1.0` reached the fixed iteration limit; all outer-final fits converged. The wearable selected `C=0.1` in every fold and showed a supported improvement over unpruned enriched features. The independent validator passed 10/10 checks twice over 624 hashed external artifacts.
+- A predeclared full-night formulation audit found that the 2,563 review-sampled negatives covered only 3.488% of the regenerated eligible pool and differed materially in night position and stage-pair composition. The corrected labelled risk set contained 73,656 rows with natural positive prevalence 0.2444%.
+- At the 0.25 false-alarms/hour selection budget, natural-prior full-risk-set fitting reached precision 0.1480, recall 0.1611, F1 0.1543, and 0.2653 false alarms/hour. The sampled balanced control reached F1 0.0513, while balanced full-risk fitting selected no alarms and reached F1 0.
+- Natural-prior fitting reduced Brier score by 92.39% relative to balanced full-risk fitting and passed its frozen point gate. It led at the 0.10, 0.25, and 0.50/hour sensitivity budgets but not at 1.00/hour; no candidate exceeded F1 0.183.
+- Forty-four of 50 new fits reached the fixed iteration limit. The formulation direction is retained for a separately predeclared confirmation, but it is not a reliable detector and must not be tuned against the observed outer results. Both independent result validators passed twice.
 
-The Block 7 and Block 8 results do not justify revising the frozen models or thresholds. The temporal experiments show no material nested improvement from small encoder variants, two-second spectral U-Net features, or the tested robust-scaling and tier-balancing mechanism. The enriched elastic-net experiment identified a positive train-cohort direction, especially for wearable EEG, but absolute precision and F1 remain low and material bootstrap support was not met. Block 9 found that Sleep-EDF cannot provide a scientifically matched direct external test of the frozen reduced-PSG model. The current test partition was already used descriptively and remains closed. Block 10 will address explicit temporal label uncertainty. A new locked or external wearable cohort is still required before any wearable-method advancement claim.
+The Block 7 and Block 8 results do not justify revising the frozen models or thresholds. The temporal experiments show no material nested improvement from small encoder variants, two-second spectral U-Net features, or the tested robust-scaling and tier-balancing mechanism. The enriched elastic-net experiment identified a positive train-cohort direction, especially for wearable EEG, but absolute precision and F1 remain low and material bootstrap support was not met. Block 9 found that Sleep-EDF cannot provide a scientifically matched direct external test of the frozen reduced-PSG model. The first Block 10 test identified natural-prior full-risk-set fitting as preferable under constrained alarm budgets, while also exposing substantial numerical nonconvergence. The current test partition was already used descriptively and remains closed. Block 10 must next isolate explicit temporal label uncertainty with a numerically stable comparator. A new locked or external wearable cohort is still required before any wearable-method advancement claim.
 
 ## Start Here
 
@@ -112,7 +116,12 @@ The Block 7 and Block 8 results do not justify revising the frozen models or thr
 - [Paired enriched-feature protocol](docs/evaluation/paired_enriched_feature_pruning_protocol_v0.1.md)
 - [Paired enriched-feature result](experiments/2026-10-04_paired_enriched_feature_pruning_nested_v0.1/README.md)
 - [Paired enriched-feature decision](docs/evaluation/paired_enriched_feature_pruning_decision_2026-10-04.md)
-- [Current weekly record](docs/weekly/2026-09-28_to_2026-10-04.md)
+- [Full-night risk-set protocol](docs/evaluation/full_night_risk_set_formulation_protocol_v0.1.md)
+- [Full-night risk-set amendment](docs/evaluation/full_night_risk_set_formulation_protocol_amendment_2026-10-07.md)
+- [Full-night risk-set result](experiments/2026-10-07_full_night_risk_set_formulation_v0.1/README.md)
+- [Alarm-budget sensitivity result](experiments/2026-10-08_full_night_risk_set_budget_sensitivity_v0.1/README.md)
+- [Full-night risk-set decision](docs/evaluation/full_night_risk_set_formulation_decision_2026-10-10.md)
+- [Current weekly record](docs/weekly/2026-10-05_to_2026-10-11.md)
 - [BOAS dataset manifest](docs/data/boas_dataset_manifest.md)
 - [Label/preprocessing gate](docs/feasibility/label_preprocessing_gate_closeout_2026-07-18.md)
 - [Block 6 baseline decision](docs/evaluation/block6_baseline_gate_decision_2026-08-22.md)

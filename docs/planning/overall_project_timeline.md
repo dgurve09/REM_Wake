@@ -4,7 +4,7 @@
 **Project window:** 2026-06-01 to 2026-11-29
 **Prepared during:** 2026-06-25 to 2026-06-28
 **Finalized:** 2026-06-28
-**Current status:** Blocks 3-9 are complete; Block 5 was completed as catch-up work on 2026-08-15 after an inactive 2026-07-20 to 2026-08-14 interval; Block 6 closed on 2026-08-22 with direct DE-B improving on transparent SF-C while retaining low precision; Blocks 7-8 documented device shift, channel/noise failures, adverse wearable fusion, and prioritized stage-derived boundary uncertainty; subsequent bounded train-only work found no material nested gain from small temporal encoders, a two-second spectral U-Net, or robust scaling with quality-tier weighting; the October 4 quality-balanced result reduced F1 from 0.1604 to 0.1435 and increased false alarms from 0.2971 to 0.4130/hour; Block 9 closed on October 4 with a complete Sleep-EDF direct-generalization no-go because annotation support and channel derivations failed the frozen compatibility gate; Block 10 is next
+**Current status:** Blocks 3-9 are complete and Block 10 is in progress; the October 7-10 full-night formulation test found that natural-prior fitting improved constrained-budget event detection and calibration relative to balanced full-risk fitting, but F1 remained below 0.18 and 44/50 new fits reached the iteration limit; interval-aware label-uncertainty testing remains next under a separately frozen numerical-stability control
 
 ## 1. Project Boundary
 
@@ -38,7 +38,7 @@ gantt
     External PSG generalization check                :done, b9, 2026-09-21, 2026-10-04
 
     section Analysis and Measures
-    Temporal localization under uncertainty          :b10, 2026-10-05, 2026-10-18
+    Temporal localization under uncertainty          :active, b10, 2026-10-05, 2026-10-18
     Transition-derived measures and streaming gate   :b11, 2026-10-19, 2026-11-01
 
     section Prototype and Final Package
@@ -69,7 +69,7 @@ flowchart TD
 
 ## 4. Phase Table
 
-| Block | Dates | Main Question | Main Work | Deliverable | Status as of 2026-10-04 |
+| Block | Dates | Main Question | Main Work | Deliverable | Status as of 2026-10-10 |
 |---:|---|---|---|---|---|
 | 1 | Jun 1-Jun 14 | What is known and what is uncertain? | Literature review, initial planning, public-dataset search | Initial proposal, literature evidence, dataset candidate list | Complete |
 | 2 | Jun 15-Jun 28 | Can the project be set up cleanly with a defensible dataset and target? | Scope refinement, BOAS selection, repository setup, environment audit, pilot checks, E0 readiness | Revised proposal, manifest, setup records, pilot reports, E0 readiness package | Complete |
@@ -80,7 +80,7 @@ flowchart TD
 | 7 | Aug 24-Sep 6 | How large is the PSG-to-wearable device-shift problem? | Common six-channel PSG EEG, reduced PSG, wearable, strict zero-shot, and conditionally gated feature alignment | Paired transfer results and decision log | Complete Sep 6; `P2-D` led validation, `P6-D` led the descriptive test, strict zero-shot remained below direct wearable F1 with fewer false alarms, and alignment was skipped by the frozen gate |
 | 8 | Sep 7-Sep 20 | Is the approach robust to signal/channel variability? | Missing-channel tests, degradation tests, ablations, justified adaptation if needed | Robustness and ablation report | Complete Sep 18; wearable robustness failed, no deployable wearable method advanced, and boundary uncertainty was prioritized; the 25-claim extension separated eight uncertainty-supported gates from eight point-gate-only findings |
 | 9 | Sep 21-Oct 4 | Is external PSG comparison scientifically valid? | Audit one external PSG dataset and test reduced-channel generalization if appropriate | External generalization report or no-go | Complete Oct 4; Sleep-EDF direct evaluation stopped because annotation support and channel semantics failed the frozen gate |
-| 10 | Oct 5-Oct 18 | How should 30-second label uncertainty be handled? | Hard-label versus interval-aware temporal analysis | Label-uncertainty and localization report | Not started |
+| 10 | Oct 5-Oct 18 | How should 30-second label uncertainty be handled? | Correct the full-night risk-set formulation, then compare a stable hard-label comparator with one interval-aware temporal mechanism | Label-uncertainty and localization report | In progress; risk-set/class-prior formulation test complete, interval-aware comparison remains next |
 | 11 | Oct 19-Nov 1 | Are transition-derived measures stable enough to report? | Event burden, REM stability, repeated-night reliability, streaming decision | Technical measures and streaming go/no-go | Not started |
 | 12 | Nov 2-Nov 15 | Is a streaming demonstration justified and reproducible? | Conditional command-line prototype, latency/memory check, clean rerun, QA | Prototype or no-go plus reproducibility report | Not started |
 | 13 | Nov 16-Nov 29 | What is the final defensible package? | Freeze reviewed results, final report, artifact index, manuscript outline | Final technical report and reproducible project package | Not started |
@@ -93,7 +93,7 @@ flowchart TD
 | Label/preprocessing gate | 2026-07-26 | Passed 2026-07-18; freeze v0.1/v0.3 inputs | Tested label generation, alignment checks, quality flags, participant split, preprocessing checks, analysis membership |
 | Baseline gate | 2026-08-23 | Passed 2026-08-22: continue direct-event research with limitations; retain simple baseline and defer CNN | Stage-first versus direct event-level comparison, paired participant uncertainty, residual failure analysis |
 | Transfer/robustness gate | 2026-09-20 | Closed 2026-09-18: keep the simpler comparator, stop Block 8 variations, and do not advance a deployable wearable method | PSG-to-wearable transfer result, five robustness experiments, ten-statement synthesis, and 132 source integrity checks |
-| External-data gate | 2026-10-04 | External test or documented no-go | Compatibility audit and clear label/channel mapping |
+| External-data gate | 2026-10-04 | Closed with a documented direct-evaluation no-go | Compatibility audit and clear label/channel mapping |
 | Streaming gate | 2026-11-01 | Prototype or no-go | Offline evidence, threshold sensitivity, repeated-night reliability if possible |
 | Final QA gate | 2026-11-15 | Freeze prototype/results or no-go | Clean rerun, split/seed/config verification, artifact linkage |
 
@@ -425,9 +425,20 @@ Block 9 Sleep-EDF compatibility audit completed on 2026-10-04:
 - passed 8/8 independent checks twice; and
 - closed direct external evaluation as a complete no-go without downloading the full dataset or fitting a model.
 
+Block 10 full-night formulation test completed on 2026-10-10:
+
+- showed that the 2,563 review-sampled negatives covered only 3.488% of the regenerated eligible pool and did not represent the full night;
+- compared the exact sampled balanced control with balanced and natural-prior fitting on 73,656 labelled full-risk-set rows;
+- found that balanced full-risk fitting selected no alarms at the primary budget and failed the negative-coverage hypothesis;
+- found that natural-prior full-risk fitting reached F1 0.1543 and 0.2653 false alarms/hour, versus F1 0.0513 and 0.2574/hour for the sampled control;
+- reduced Brier score by 92.39% relative to balanced full-risk fitting and passed the natural-prior point gate;
+- found natural-prior F1 0.0972, 0.1543, 0.1748, and 0.1716 across the predeclared 0.10, 0.25, 0.50, and 1.00/hour budgets;
+- retained 44/50 iteration-limit failures, preventing a model-stability conclusion; and
+- passed both the primary and sensitivity independent validators twice without validation or current-test access.
+
 ## 7. Next Work
 
-Begin Block 10 temporal localization under explicit 30-second label uncertainty. Predeclare one hard-label comparator and one interval-aware temporal mechanism, with participant-grouped nested evaluation, precision and false-alarm burden, and a fixed stop rule. Do not use Sleep-EDF for direct BOAS model evaluation, and stop further encoder, spectral U-Net, scaler, or quality-tier weight variants on the reused train cohort. Keep the current validation and test partitions closed.
+Continue Block 10 under a separate predeclared interval-aware label-uncertainty protocol. Define a numerically stable hard-label comparator before outcome inspection, then isolate one interval-aware mechanism while retaining the natural full-night risk set, participant-grouped nested evaluation, precision-recall metrics, false-alarm burden, and a fixed stop rule. Treat any solver stabilization as a control rather than as post-result model tuning. Do not use Sleep-EDF for direct BOAS model evaluation, and keep the current validation and test partitions closed.
 
 ## 8. Rules for the Rest of the Project
 

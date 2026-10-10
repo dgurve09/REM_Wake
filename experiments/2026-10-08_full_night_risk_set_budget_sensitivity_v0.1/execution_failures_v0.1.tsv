@@ -1,0 +1,2 @@
+execution	code_commit	failure_or_stop	scientific_consequence	resolution
+first_sensitivity_attempt	2eddb59	score-coverage control incorrectly expected the 73,656-row labelled risk set rather than all 75,539 supported boundaries	none; execution stopped before writing outputs	derive expected score coverage from the frozen support table

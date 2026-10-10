@@ -1,0 +1,8 @@
+{
+  "analysis_scope": "read-only application of preselected thresholds; no refitting",
+  "git_commit": "9ab54e3b8bd2433d96b4b2ce2cec89aee4ea22b0",
+  "numpy": "2.2.6",
+  "pandas": "2.3.3",
+  "source_experiment": "2026-10-07_full_night_risk_set_formulation_v0.1",
+  "source_result_code_commit": "a131072abacf23c771f57895a2b92f240ac51d8c"
+}
