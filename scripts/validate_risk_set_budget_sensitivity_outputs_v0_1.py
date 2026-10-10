@@ -158,12 +158,15 @@ def run(result_code_commit: str) -> None:
     events = pd.read_csv(output / "alarm_budget_predicted_events_v0.1.tsv", sep="\t")
     manifest = pd.read_csv(output / "source_artifact_manifest_v0.1.tsv", sep="\t")
     checks = pd.read_csv(output / "in_run_checks_v0.1.tsv", sep="\t")
+    failures = pd.read_csv(output / "execution_failures_v0.1.tsv", sep="\t")
     versions = json.loads(
         (output / "software_versions_v0.1.json").read_text(encoding="utf-8")
     )
 
     if not checks.passed.astype(bool).all():
         raise AssertionError("Sensitivity report retained a failed in-run check")
+    if len(failures) != 1 or failures.iloc[0].code_commit != "2eddb59":
+        raise AssertionError("Stopped sensitivity attempt was not retained")
     if not versions["git_commit"].startswith(result_code_commit):
         raise AssertionError("Recorded result code commit does not match")
     validate_sources(manifest)

@@ -222,8 +222,13 @@ def run(result_code_commit: str) -> None:
             },
             {
                 "check": "score_coverage",
-                "passed": scores.groupby("candidate").size().eq(73656).all(),
-                "detail": "73,656 outer scores per candidate",
+                "passed": scores.groupby("candidate").size().eq(
+                    int(support.supported_boundaries.sum())
+                ).all(),
+                "detail": (
+                    f"{int(support.supported_boundaries.sum()):,} supported outer scores "
+                    "per candidate"
+                ),
             },
             {
                 "check": "support_scope",
@@ -258,6 +263,21 @@ def run(result_code_commit: str) -> None:
     verify_or_create_tsv(events, output / "alarm_budget_predicted_events_v0.1.tsv")
     verify_or_create_tsv(artifacts, output / "source_artifact_manifest_v0.1.tsv")
     verify_or_create_tsv(checks, output / "in_run_checks_v0.1.tsv")
+    failures = pd.DataFrame(
+        [
+            {
+                "execution": "first_sensitivity_attempt",
+                "code_commit": "2eddb59",
+                "failure_or_stop": (
+                    "score-coverage control incorrectly expected the 73,656-row "
+                    "labelled risk set rather than all 75,539 supported boundaries"
+                ),
+                "scientific_consequence": "none; execution stopped before writing outputs",
+                "resolution": "derive expected score coverage from the frozen support table",
+            }
+        ]
+    )
+    verify_or_create_tsv(failures, output / "execution_failures_v0.1.tsv")
 
     source_versions = json.loads(
         (source_dir() / "software_versions_v0.1.json").read_text(encoding="utf-8")
