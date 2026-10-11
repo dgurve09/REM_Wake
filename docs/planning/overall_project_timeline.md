@@ -4,7 +4,7 @@
 **Project window:** 2026-06-01 to 2026-11-29
 **Prepared during:** 2026-06-25 to 2026-06-28
 **Finalized:** 2026-06-28
-**Current status:** Blocks 3-9 are complete and Block 10 is in progress; the October 7-10 full-night formulation test found that natural-prior fitting improved constrained-budget event detection and calibration relative to balanced full-risk fitting, but F1 remained below 0.18 and 44/50 new fits reached the iteration limit; interval-aware label-uncertainty testing remains next under a separately frozen numerical-stability control
+**Current status:** Blocks 3-10 are complete; the interval-aware comparison failed its F1 gate and exposed endpoint saturation in the supposedly converged SGD comparator, so the uniform label-distribution mechanism stops at v0.1 without post-result solver tuning; Block 11 remains scheduled for October 19
 
 ## 1. Project Boundary
 
@@ -38,7 +38,7 @@ gantt
     External PSG generalization check                :done, b9, 2026-09-21, 2026-10-04
 
     section Analysis and Measures
-    Temporal localization under uncertainty          :active, b10, 2026-10-05, 2026-10-18
+    Temporal localization under uncertainty          :done, b10, 2026-10-05, 2026-10-18
     Transition-derived measures and streaming gate   :b11, 2026-10-19, 2026-11-01
 
     section Prototype and Final Package
@@ -80,7 +80,7 @@ flowchart TD
 | 7 | Aug 24-Sep 6 | How large is the PSG-to-wearable device-shift problem? | Common six-channel PSG EEG, reduced PSG, wearable, strict zero-shot, and conditionally gated feature alignment | Paired transfer results and decision log | Complete Sep 6; `P2-D` led validation, `P6-D` led the descriptive test, strict zero-shot remained below direct wearable F1 with fewer false alarms, and alignment was skipped by the frozen gate |
 | 8 | Sep 7-Sep 20 | Is the approach robust to signal/channel variability? | Missing-channel tests, degradation tests, ablations, justified adaptation if needed | Robustness and ablation report | Complete Sep 18; wearable robustness failed, no deployable wearable method advanced, and boundary uncertainty was prioritized; the 25-claim extension separated eight uncertainty-supported gates from eight point-gate-only findings |
 | 9 | Sep 21-Oct 4 | Is external PSG comparison scientifically valid? | Audit one external PSG dataset and test reduced-channel generalization if appropriate | External generalization report or no-go | Complete Oct 4; Sleep-EDF direct evaluation stopped because annotation support and channel semantics failed the frozen gate |
-| 10 | Oct 5-Oct 18 | How should 30-second label uncertainty be handled? | Correct the full-night risk-set formulation, then compare a stable hard-label comparator with one interval-aware temporal mechanism | Label-uncertainty and localization report | In progress; risk-set/class-prior formulation test complete, interval-aware comparison remains next |
+| 10 | Oct 5-Oct 18 | How should 30-second label uncertainty be handled? | Correct the full-night risk-set formulation, then compare a stable hard-label comparator with one interval-aware temporal mechanism | Label-uncertainty and localization report | Complete Oct 11; uniform interval labels failed the F1 gate, and post-run audit found endpoint saturation that prevents a stable mechanism interpretation; no post-result retry authorized |
 | 11 | Oct 19-Nov 1 | Are transition-derived measures stable enough to report? | Event burden, REM stability, repeated-night reliability, streaming decision | Technical measures and streaming go/no-go | Not started |
 | 12 | Nov 2-Nov 15 | Is a streaming demonstration justified and reproducible? | Conditional command-line prototype, latency/memory check, clean rerun, QA | Prototype or no-go plus reproducibility report | Not started |
 | 13 | Nov 16-Nov 29 | What is the final defensible package? | Freeze reviewed results, final report, artifact index, manuscript outline | Final technical report and reproducible project package | Not started |
@@ -436,9 +436,20 @@ Block 10 full-night formulation test completed on 2026-10-10:
 - retained 44/50 iteration-limit failures, preventing a model-stability conclusion; and
 - passed both the primary and sensitivity independent validators twice without validation or current-test access.
 
+Block 10 interval-aware localization test completed on 2026-10-11:
+
+- generated 75,428 shifted raw-signal feature windows and combined them with 75,539 nominal windows into a 150,967-boundary 15-second grid;
+- compared nominal hard labels with equal-mass labels distributed over nominal -15, nominal, and nominal +15 seconds;
+- completed 50 participant-grouped nested fits using identical preprocessing within every candidate pair;
+- found primary F1 0.0109 for `HARD15` and 0 for `INT15`, failing the required +0.03 interval-label gain;
+- identified 99.87% exact endpoint probabilities and extreme intercepts despite iteration-count convergence;
+- retained the literal frozen `stop_v0.1` result while limiting its interpretation to a failed SGD configuration;
+- passed 12/12 independent checks and rehashed 182 external artifacts; and
+- closed Block 10 without solver, label-width, threshold, or alarm-budget tuning on the observed outer results.
+
 ## 7. Next Work
 
-Continue Block 10 under a separate predeclared interval-aware label-uncertainty protocol. Define a numerically stable hard-label comparator before outcome inspection, then isolate one interval-aware mechanism while retaining the natural full-night risk set, participant-grouped nested evaluation, precision-recall metrics, false-alarm burden, and a fixed stop rule. Treat any solver stabilization as a control rather than as post-result model tuning. Do not use Sleep-EDF for direct BOAS model evaluation, and keep the current validation and test partitions closed.
+Do not start Block 11 before 2026-10-19. At that point, quantify transition-derived measures and apply the streaming go/no-go gate using frozen evidence. Do not retry the Block 10 solver or interval width on the observed outer results. Keep validation and current test closed, and require a new confirmation boundary for any future detector-advancement claim.
 
 ## 8. Rules for the Rest of the Project
 

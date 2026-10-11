@@ -1,0 +1,11 @@
+{
+  "git_commit": "1661f092090e023aaaaaf9bc1f5f251acd5f5892",
+  "numpy": "2.2.6",
+  "pandas": "2.3.3",
+  "protocol_amendment_commit": "ab4397d",
+  "protocol_commit": "58ef4c3",
+  "python": "3.10.20",
+  "random_seed": 20261010,
+  "scipy": "1.15.3",
+  "sklearn": "1.7.2"
+}

@@ -1,0 +1,13 @@
+check	status	detail
+frozen_commits	pass	1661f092090e
+feature_grid	pass	150,967 supported 15-second boundaries
+target_accounting	pass	equal positive mass and shared negatives
+fit_accounting	pass	50 fits with paired preprocessing
+nested_thresholds	pass	40 budget-constrained selections
+outer_support	pass	82 recordings; 64 participants
+event_reconstruction	pass	metrics, participant rows, and matches
+bootstrap_reconstruction	pass	2,000 paired participant resamples
+localization_reconstruction	pass	primary +/-15-second offsets
+decision_reconstruction	pass	frozen H-INT gate
+external_hashes	pass	182 external artifacts
+reviewed_in_run_checks	pass	11/11 required controls passed

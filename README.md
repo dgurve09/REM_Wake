@@ -4,7 +4,7 @@ This repository investigates event-specific REM-to-Wake boundary detection from 
 
 ## Current Status
 
-As of 2026-10-10, Blocks 3-9 are complete and Block 10 is in progress. The first Block 10 formulation test corrected the sampled-negative/class-prior problem, but interval-aware label-uncertainty testing remains next.
+As of 2026-10-11, Blocks 3-10 are complete. The Block 10 interval-aware comparison failed its F1 gate and exposed severe endpoint saturation in the SGD comparator; the mechanism stops at v0.1 without post-result solver tuning. Block 11 remains scheduled for October 19.
 
 - BOAS snapshot `1.1.1` is frozen at 128 paired recordings and 100 participant-table `pid` groups.
 - The conservative primary set contains 276 REM-to-Wake events across 72 groups; the expanded quality-sensitivity set contains 348 across 88 groups.
@@ -58,8 +58,10 @@ As of 2026-10-10, Blocks 3-9 are complete and Block 10 is in progress. The first
 - At the 0.25 false-alarms/hour selection budget, natural-prior full-risk-set fitting reached precision 0.1480, recall 0.1611, F1 0.1543, and 0.2653 false alarms/hour. The sampled balanced control reached F1 0.0513, while balanced full-risk fitting selected no alarms and reached F1 0.
 - Natural-prior fitting reduced Brier score by 92.39% relative to balanced full-risk fitting and passed its frozen point gate. It led at the 0.10, 0.25, and 0.50/hour sensitivity budgets but not at 1.00/hour; no candidate exceeded F1 0.183.
 - Forty-four of 50 new fits reached the fixed iteration limit. The formulation direction is retained for a separately predeclared confirmation, but it is not a reliable detector and must not be tuned against the observed outer results. Both independent result validators passed twice.
+- The interval-aware experiment then built a signal-derived 15-second grid with 150,967 supported boundaries and compared nominal hard labels with equal event mass distributed over nominal -15, nominal, and nominal +15 seconds. At the primary budget, `HARD15` reached F1 0.0109 and `INT15` reached F1 0, so the required +0.03 gain failed.
+- Although all 50 SGD fits stopped before the iteration limit, a post-run numerical audit found exact endpoint probabilities for 99.87% of outer scores and intercepts between approximately -1005 and -749. The frozen result is retained, but it identifies an unstable comparator rather than resolving the biological value of interval labels. The independent validator passed 12/12 checks and rehashed 182 external artifacts.
 
-The Block 7 and Block 8 results do not justify revising the frozen models or thresholds. The temporal experiments show no material nested improvement from small encoder variants, two-second spectral U-Net features, or the tested robust-scaling and tier-balancing mechanism. The enriched elastic-net experiment identified a positive train-cohort direction, especially for wearable EEG, but absolute precision and F1 remain low and material bootstrap support was not met. Block 9 found that Sleep-EDF cannot provide a scientifically matched direct external test of the frozen reduced-PSG model. The first Block 10 test identified natural-prior full-risk-set fitting as preferable under constrained alarm budgets, while also exposing substantial numerical nonconvergence. The current test partition was already used descriptively and remains closed. Block 10 must next isolate explicit temporal label uncertainty with a numerically stable comparator. A new locked or external wearable cohort is still required before any wearable-method advancement claim.
+The Block 7 and Block 8 results do not justify revising the frozen models or thresholds. The temporal experiments show no material nested improvement from small encoder variants, two-second spectral U-Net features, or the tested robust-scaling and tier-balancing mechanism. The enriched elastic-net experiment identified a positive train-cohort direction, especially for wearable EEG, but absolute precision and F1 remain low and material bootstrap support was not met. Block 9 found that Sleep-EDF cannot provide a scientifically matched direct external test of the frozen reduced-PSG model. Block 10 corrected the full-night risk formulation, then found that its supposedly converged SGD comparator was numerically degenerate in the interval-label test. The interval mechanism stops at v0.1 rather than being retuned against the same outer results. The current test partition was already used descriptively and remains closed. A new locked or external wearable cohort is still required before any wearable-method advancement claim.
 
 ## Start Here
 
@@ -121,6 +123,10 @@ The Block 7 and Block 8 results do not justify revising the frozen models or thr
 - [Full-night risk-set result](experiments/2026-10-07_full_night_risk_set_formulation_v0.1/README.md)
 - [Alarm-budget sensitivity result](experiments/2026-10-08_full_night_risk_set_budget_sensitivity_v0.1/README.md)
 - [Full-night risk-set decision](docs/evaluation/full_night_risk_set_formulation_decision_2026-10-10.md)
+- [Interval-aware protocol](docs/evaluation/interval_aware_localization_protocol_v0.1.md)
+- [Interval-aware amendment](docs/evaluation/interval_aware_localization_protocol_amendment_2026-10-10.md)
+- [Interval-aware result](experiments/2026-10-10_interval_aware_localization_v0.1/README.md)
+- [Interval-aware decision](docs/evaluation/interval_aware_localization_decision_2026-10-11.md)
 - [Current weekly record](docs/weekly/2026-10-05_to_2026-10-11.md)
 - [BOAS dataset manifest](docs/data/boas_dataset_manifest.md)
 - [Label/preprocessing gate](docs/feasibility/label_preprocessing_gate_closeout_2026-07-18.md)

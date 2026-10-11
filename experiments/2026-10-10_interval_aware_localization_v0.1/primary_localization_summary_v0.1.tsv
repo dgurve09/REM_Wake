@@ -1,0 +1,3 @@
+candidate	matched_events	offset_minus_15	offset_zero	offset_plus_15	median_absolute_error_sec	maximum_absolute_error_sec
+HARD15	1	0	0	1	15.0	15.0
+INT15	0	0	0	0		

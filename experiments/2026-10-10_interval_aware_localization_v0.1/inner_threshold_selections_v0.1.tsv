@@ -1,0 +1,41 @@
+candidate	outer_fold	threshold	recordings	pid	reference_events	predicted_events	true_positive	false_positive	false_negative	ignored_predictions	supported_hours	precision	recall	f1	false_alarms_per_hour	alarm_budget_per_hour	selection_rule
+HARD15	1	1.0	66	51	180	2	0	2	128	0	506.45833333333337	0.0	0.0	0.0	0.003948992184286302	0.1	max_recall_then_precision_then_f1_then_threshold_under_far_budget
+HARD15	1	1.0	66	51	180	2	0	2	128	0	506.45833333333337	0.0	0.0	0.0	0.003948992184286302	0.25	max_recall_then_precision_then_f1_then_threshold_under_far_budget
+HARD15	1	1.0	66	51	180	2	0	2	128	0	506.45833333333337	0.0	0.0	0.0	0.003948992184286302	0.5	max_recall_then_precision_then_f1_then_threshold_under_far_budget
+HARD15	1	1.0	66	51	180	2	0	2	128	0	506.45833333333337	0.0	0.0	0.0	0.003948992184286302	1.0	max_recall_then_precision_then_f1_then_threshold_under_far_budget
+INT15	1	1.0	66	51	180	2	0	2	128	0	506.45833333333337	0.0	0.0	0.0	0.003948992184286302	0.1	max_recall_then_precision_then_f1_then_threshold_under_far_budget
+INT15	1	1.0	66	51	180	2	0	2	128	0	506.45833333333337	0.0	0.0	0.0	0.003948992184286302	0.25	max_recall_then_precision_then_f1_then_threshold_under_far_budget
+INT15	1	1.0	66	51	180	2	0	2	128	0	506.45833333333337	0.0	0.0	0.0	0.003948992184286302	0.5	max_recall_then_precision_then_f1_then_threshold_under_far_budget
+INT15	1	1.0	66	51	180	2	0	2	128	0	506.45833333333337	0.0	0.0	0.0	0.003948992184286302	1.0	max_recall_then_precision_then_f1_then_threshold_under_far_budget
+HARD15	2	1.0	66	51	180	11	0	11	151	0	509.86249999999995	0.0	0.0	0.0	0.02157444409031847	0.1	max_recall_then_precision_then_f1_then_threshold_under_far_budget
+HARD15	2	1.0	66	51	180	11	0	11	151	0	509.86249999999995	0.0	0.0	0.0	0.02157444409031847	0.25	max_recall_then_precision_then_f1_then_threshold_under_far_budget
+HARD15	2	1.0	66	51	180	11	0	11	151	0	509.86249999999995	0.0	0.0	0.0	0.02157444409031847	0.5	max_recall_then_precision_then_f1_then_threshold_under_far_budget
+HARD15	2	1.0	66	51	180	11	0	11	151	0	509.86249999999995	0.0	0.0	0.0	0.02157444409031847	1.0	max_recall_then_precision_then_f1_then_threshold_under_far_budget
+INT15	2	1.0	66	51	180	17	0	17	151	0	509.86249999999995	0.0	0.0	0.0	0.03334232268503764	0.1	max_recall_then_precision_then_f1_then_threshold_under_far_budget
+INT15	2	1.0	66	51	180	17	0	17	151	0	509.86249999999995	0.0	0.0	0.0	0.03334232268503764	0.25	max_recall_then_precision_then_f1_then_threshold_under_far_budget
+INT15	2	1.0	66	51	180	17	0	17	151	0	509.86249999999995	0.0	0.0	0.0	0.03334232268503764	0.5	max_recall_then_precision_then_f1_then_threshold_under_far_budget
+INT15	2	1.0	66	51	180	17	0	17	151	0	509.86249999999995	0.0	0.0	0.0	0.03334232268503764	1.0	max_recall_then_precision_then_f1_then_threshold_under_far_budget
+HARD15	3	1.0	66	51	180	3	0	3	147	0	503.23333333333335	0.0	0.0	0.0	0.005961449294561833	0.1	max_recall_then_precision_then_f1_then_threshold_under_far_budget
+HARD15	3	1.0	66	51	180	3	0	3	147	0	503.23333333333335	0.0	0.0	0.0	0.005961449294561833	0.25	max_recall_then_precision_then_f1_then_threshold_under_far_budget
+HARD15	3	1.0	66	51	180	3	0	3	147	0	503.23333333333335	0.0	0.0	0.0	0.005961449294561833	0.5	max_recall_then_precision_then_f1_then_threshold_under_far_budget
+HARD15	3	1.0	66	51	180	3	0	3	147	0	503.23333333333335	0.0	0.0	0.0	0.005961449294561833	1.0	max_recall_then_precision_then_f1_then_threshold_under_far_budget
+INT15	3	1.0	66	51	180	2	0	2	147	0	503.23333333333335	0.0	0.0	0.0	0.003974299529707889	0.1	max_recall_then_precision_then_f1_then_threshold_under_far_budget
+INT15	3	1.0	66	51	180	2	0	2	147	0	503.23333333333335	0.0	0.0	0.0	0.003974299529707889	0.25	max_recall_then_precision_then_f1_then_threshold_under_far_budget
+INT15	3	1.0	66	51	180	2	0	2	147	0	503.23333333333335	0.0	0.0	0.0	0.003974299529707889	0.5	max_recall_then_precision_then_f1_then_threshold_under_far_budget
+INT15	3	1.0	66	51	180	2	0	2	147	0	503.23333333333335	0.0	0.0	0.0	0.003974299529707889	1.0	max_recall_then_precision_then_f1_then_threshold_under_far_budget
+HARD15	4	1.0000000000000002	65	51	180	0	0	0	136	0	497.4583333333333		0.0	0.0	0.0	0.1	max_recall_then_precision_then_f1_then_threshold_under_far_budget
+HARD15	4	1.0000000000000002	65	51	180	0	0	0	136	0	497.4583333333333		0.0	0.0	0.0	0.25	max_recall_then_precision_then_f1_then_threshold_under_far_budget
+HARD15	4	1.0000000000000002	65	51	180	0	0	0	136	0	497.4583333333333		0.0	0.0	0.0	0.5	max_recall_then_precision_then_f1_then_threshold_under_far_budget
+HARD15	4	1.0000000000000002	65	51	180	0	0	0	136	0	497.4583333333333		0.0	0.0	0.0	1.0	max_recall_then_precision_then_f1_then_threshold_under_far_budget
+INT15	4	1.0000000000000002	65	51	180	0	0	0	136	0	497.4583333333333		0.0	0.0	0.0	0.1	max_recall_then_precision_then_f1_then_threshold_under_far_budget
+INT15	4	1.0000000000000002	65	51	180	0	0	0	136	0	497.4583333333333		0.0	0.0	0.0	0.25	max_recall_then_precision_then_f1_then_threshold_under_far_budget
+INT15	4	1.0000000000000002	65	51	180	0	0	0	136	0	497.4583333333333		0.0	0.0	0.0	0.5	max_recall_then_precision_then_f1_then_threshold_under_far_budget
+INT15	4	1.0000000000000002	65	51	180	0	0	0	136	0	497.4583333333333		0.0	0.0	0.0	1.0	max_recall_then_precision_then_f1_then_threshold_under_far_budget
+HARD15	5	1.0	65	52	180	4	0	4	158	0	499.10416666666663	0.0	0.0	0.0	0.008014359059982469	0.1	max_recall_then_precision_then_f1_then_threshold_under_far_budget
+HARD15	5	1.0	65	52	180	4	0	4	158	0	499.10416666666663	0.0	0.0	0.0	0.008014359059982469	0.25	max_recall_then_precision_then_f1_then_threshold_under_far_budget
+HARD15	5	1.0	65	52	180	4	0	4	158	0	499.10416666666663	0.0	0.0	0.0	0.008014359059982469	0.5	max_recall_then_precision_then_f1_then_threshold_under_far_budget
+HARD15	5	1.0	65	52	180	4	0	4	158	0	499.10416666666663	0.0	0.0	0.0	0.008014359059982469	1.0	max_recall_then_precision_then_f1_then_threshold_under_far_budget
+INT15	5	0.9820137900379085	65	52	180	3	1	2	157	0	499.10416666666663	0.3333333333333333	0.006329113924050633	0.012422360248447204	0.0040071795299912345	0.1	max_recall_then_precision_then_f1_then_threshold_under_far_budget
+INT15	5	0.9820137900379085	65	52	180	3	1	2	157	0	499.10416666666663	0.3333333333333333	0.006329113924050633	0.012422360248447204	0.0040071795299912345	0.25	max_recall_then_precision_then_f1_then_threshold_under_far_budget
+INT15	5	0.9820137900379085	65	52	180	3	1	2	157	0	499.10416666666663	0.3333333333333333	0.006329113924050633	0.012422360248447204	0.0040071795299912345	0.5	max_recall_then_precision_then_f1_then_threshold_under_far_budget
+INT15	5	0.9820137900379085	65	52	180	3	1	2	157	0	499.10416666666663	0.3333333333333333	0.006329113924050633	0.012422360248447204	0.0040071795299912345	1.0	max_recall_then_precision_then_f1_then_threshold_under_far_budget

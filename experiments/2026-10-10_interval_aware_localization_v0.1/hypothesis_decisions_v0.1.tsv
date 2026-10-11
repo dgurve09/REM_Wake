@@ -1,0 +1,2 @@
+hypothesis	comparison	f1_difference	required_f1_difference	false_alarms_per_hour_difference	maximum_false_alarm_difference	convergence_control_pass	point_gate_pass	direction_participant_supported	material_participant_supported	decision
+H-INT	INT15_minus_HARD15	-0.01092896174863388	0.03	0.0015897514026244142	0.05	True	False	False	False	stop_v0.1

@@ -1,0 +1,13 @@
+check	passed	detail
+train_membership	True	82 recordings; 64 participant groups
+partition_scope	True	train partition only
+fold_membership	True	five frozen participant-grouped folds
+feature_grid	True	75,539 base + 75,428 shifted = 150,967 supported boundaries
+target_accounting	True	147,055 negatives; both candidates carry positive weight 180
+fit_accounting	True	25 nested fits per candidate
+shared_preprocessing	True	candidate pairs share retained indices and scaler in every fit
+outer_score_coverage	True	150,967 boundaries and 64 participants per candidate
+threshold_selection	True	2 candidates x 5 outer folds x 4 alarm budgets
+event_output_accounting	True	32 metric rows; 2,048 participant rows
+external_hashes	True	182 external artifacts verified
+convergence	True	0 of 50 fits reached the iteration limit

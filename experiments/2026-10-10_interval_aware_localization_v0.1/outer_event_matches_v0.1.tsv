@@ -1,0 +1,17 @@
+candidate	partition	membership	tolerance_sec	alarm_budget_per_hour	subject	pid	match_type	reference_time_sec	prediction_time_sec	absolute_error_sec
+HARD15	train_nested_oof	primary	15.0	0.1	sub-27	19	eligible	21510.0	21525.0	15.0
+HARD15	train_nested_oof	primary	45.0	0.1	sub-27	19	eligible	21510.0	21525.0	15.0
+HARD15	train_nested_oof	expanded	15.0	0.1	sub-27	19	eligible	21510.0	21525.0	15.0
+HARD15	train_nested_oof	expanded	45.0	0.1	sub-27	19	eligible	21510.0	21525.0	15.0
+HARD15	train_nested_oof	primary	15.0	0.25	sub-27	19	eligible	21510.0	21525.0	15.0
+HARD15	train_nested_oof	primary	45.0	0.25	sub-27	19	eligible	21510.0	21525.0	15.0
+HARD15	train_nested_oof	expanded	15.0	0.25	sub-27	19	eligible	21510.0	21525.0	15.0
+HARD15	train_nested_oof	expanded	45.0	0.25	sub-27	19	eligible	21510.0	21525.0	15.0
+HARD15	train_nested_oof	primary	15.0	0.5	sub-27	19	eligible	21510.0	21525.0	15.0
+HARD15	train_nested_oof	primary	45.0	0.5	sub-27	19	eligible	21510.0	21525.0	15.0
+HARD15	train_nested_oof	expanded	15.0	0.5	sub-27	19	eligible	21510.0	21525.0	15.0
+HARD15	train_nested_oof	expanded	45.0	0.5	sub-27	19	eligible	21510.0	21525.0	15.0
+HARD15	train_nested_oof	primary	15.0	1.0	sub-27	19	eligible	21510.0	21525.0	15.0
+HARD15	train_nested_oof	primary	45.0	1.0	sub-27	19	eligible	21510.0	21525.0	15.0
+HARD15	train_nested_oof	expanded	15.0	1.0	sub-27	19	eligible	21510.0	21525.0	15.0
+HARD15	train_nested_oof	expanded	45.0	1.0	sub-27	19	eligible	21510.0	21525.0	15.0
