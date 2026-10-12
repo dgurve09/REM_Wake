@@ -1,0 +1,2 @@
+hypothesis	comparison	scope	f1_difference	required_f1_difference	false_alarms_per_hour_difference	maximum_false_alarm_difference	numerical_gate_pass	point_gate_pass	decision
+H-BI	CAUSAL-BI_minus_CAUSAL-RW	REM_to_Wake	-0.013014460511679642	0.03	-0.0556412990918545	0.05	True	False	stop_v0.1

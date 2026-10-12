@@ -1,0 +1,14 @@
+check	status	detail
+frozen_commits	pass	a5a80957ca8b
+causal_feature_grid	pass	150,967 decisions; zero future signal
+target_accounting	pass	180 R-W; 61 W-R; one support exclusion
+pre_result_audit	pass	8/8 support controls
+in_run_controls	pass	15/15 execution controls
+fit_and_numerical_gate	pass	55 fits; Stage A gate passed
+nested_thresholds	pass	10 inner-selected thresholds
+outer_support	pass	82 recordings; 64 participants
+alarm_reconstruction	pass	outer alarms from external scores
+event_reconstruction	pass	metrics, participants, matches
+direction_reconstruction	pass	oracle-event direction metrics
+bootstrap_and_decision	pass	2,000 resamples and H-BI gate
+external_hashes	pass	57 external artifacts
