@@ -1,7 +1,9 @@
 # Causal Bidirectional REM/Wake Transition v0.1
 
-**Date:** 2026-10-11  
-**Status:** Protocol frozen; result-producing implementation not yet executed  
+**Date:** 2026-10-11
+
+**Status:** Protocol frozen; result-producing implementation not yet executed
+
 **Partition:** Train only; validation and current test remain closed
 
 ## Purpose
