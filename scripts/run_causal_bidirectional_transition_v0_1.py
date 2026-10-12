@@ -444,7 +444,7 @@ def causal_matches(references: np.ndarray, predictions: np.ndarray) -> list[tupl
 
 
 def scope_mask(references: pd.DataFrame, scope: str) -> pd.Series:
-    primary = prior.truth(references.primary_analysis_eligible)
+    primary = references.causal_primary_eligible.astype(bool)
     if scope == "REM_to_Wake":
         return primary & references.transition_type.eq("REM_to_Wake")
     if scope == "Wake_to_REM":
@@ -926,6 +926,13 @@ def main() -> None:
     references = load_references(assignments)
     targets, target_summary, event_support = build_targets(
         assignments, recordings, references
+    )
+    supported_ids = set(
+        event_support.loc[event_support.causal_context_supported, "transition_id"].astype(int)
+    )
+    references["causal_primary_eligible"] = (
+        prior.truth(references.primary_analysis_eligible)
+        & references.transition_id.astype(int).isin(supported_ids)
     )
     verify_or_create_tsv(feature_summary, output_dir() / "feature_grid_summary_v0.1.tsv")
     verify_or_create_tsv(target_summary, output_dir() / "target_construction_summary_v0.1.tsv")
