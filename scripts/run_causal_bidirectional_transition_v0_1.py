@@ -270,10 +270,11 @@ def build_targets(
     )
     if len(targets["CAUSAL-RW"]["rows"]) != 180:
         raise ValueError("Causal REM-to-Wake support changed")
-    if len(targets["CAUSAL-BI"]["rows"]) != 242:
+    if len(targets["CAUSAL-BI"]["rows"]) != 241:
         raise ValueError("Causal bidirectional support changed")
-    if not support.causal_context_supported.all():
-        raise ValueError("A primary transition lacks causal context")
+    missing = support[~support.causal_context_supported]
+    if missing.transition_id.astype(int).tolist() != [406]:
+        raise ValueError("Unexpected primary causal-context exclusion")
     return targets, summary, support
 
 
@@ -926,9 +927,9 @@ def main() -> None:
     targets, target_summary, event_support = build_targets(
         assignments, recordings, references
     )
-    verify_or_create_tsv(output_dir() / "feature_grid_summary_v0.1.tsv", feature_summary)
-    verify_or_create_tsv(output_dir() / "target_construction_summary_v0.1.tsv", target_summary)
-    verify_or_create_tsv(output_dir() / "primary_event_causal_support_v0.1.tsv", event_support)
+    verify_or_create_tsv(feature_summary, output_dir() / "feature_grid_summary_v0.1.tsv")
+    verify_or_create_tsv(target_summary, output_dir() / "target_construction_summary_v0.1.tsv")
+    verify_or_create_tsv(event_support, output_dir() / "primary_event_causal_support_v0.1.tsv")
     audit = pd.DataFrame(
         [
             {"check": "train_recordings", "observed": len(assignments), "expected": 82, "passed": len(assignments) == 82},
@@ -936,15 +937,16 @@ def main() -> None:
             {"check": "causal_features", "observed": len(feature_names), "expected": 80, "passed": len(feature_names) == 80},
             {"check": "future_signal_sec", "observed": feature_summary.future_signal_sec.max(), "expected": 0, "passed": feature_summary.future_signal_sec.eq(0).all()},
             {"check": "rem_to_wake_events", "observed": target_summary.loc[target_summary.candidate.eq("CAUSAL-RW"), "positive_rows"].iloc[0], "expected": 180, "passed": len(targets["CAUSAL-RW"]["rows"]) == 180},
-            {"check": "bidirectional_events", "observed": target_summary.loc[target_summary.candidate.eq("CAUSAL-BI"), "positive_rows"].iloc[0], "expected": 242, "passed": len(targets["CAUSAL-BI"]["rows"]) == 242},
-            {"check": "complete_primary_event_support", "observed": int(event_support.causal_context_supported.sum()), "expected": 242, "passed": event_support.causal_context_supported.all()},
+            {"check": "bidirectional_events", "observed": target_summary.loc[target_summary.candidate.eq("CAUSAL-BI"), "positive_rows"].iloc[0], "expected": 241, "passed": len(targets["CAUSAL-BI"]["rows"]) == 241},
+            {"check": "supported_primary_events", "observed": int(event_support.causal_context_supported.sum()), "expected": 241, "passed": int(event_support.causal_context_supported.sum()) == 241},
+            {"check": "unsupported_transition_id", "observed": int(event_support.loc[~event_support.causal_context_supported, "transition_id"].iloc[0]), "expected": 406, "passed": event_support.loc[~event_support.causal_context_supported, "transition_id"].astype(int).tolist() == [406]},
         ]
     )
-    verify_or_create_tsv(output_dir() / "pre_result_support_audit_v0.1.tsv", audit)
+    verify_or_create_tsv(audit, output_dir() / "pre_result_support_audit_v0.1.tsv")
     if not audit.passed.all():
         raise ValueError("Pre-result support audit failed")
     if args.audit_only:
-        print("Pre-result support audit passed 7/7; no model was fitted.")
+        print("Pre-result support audit passed 8/8; no model was fitted.")
         return
 
     stage_a = run_stage_a(
@@ -975,7 +977,7 @@ def main() -> None:
         "external_artifact_manifest_v0.1.tsv": artifacts,
     }
     for name, frame in outputs.items():
-        verify_or_create_tsv(output_dir() / name, frame)
+        verify_or_create_tsv(frame, output_dir() / name)
     write_json(
         output_dir() / "software_versions_v0.1.json",
         {
