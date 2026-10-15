@@ -1,0 +1,2 @@
+recordings	candidate_rows	selected_folds_at_grid_minimum	folds	above_threshold_rows	above_threshold_fraction	alarm_runs	stored_alarms	median_run_duration_sec	p95_run_duration_sec	maximum_run_duration_sec	runs_at_least_30_min	runs_at_least_2_hours
+82	150967	5	5	150904	0.9995826902568111	142	142	16290.0	30124.499999999996	33015.0	111	97

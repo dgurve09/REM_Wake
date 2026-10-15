@@ -1,0 +1,2 @@
+candidate	scope	partition	alarm_budget_per_hour	causal_match_start_sec	causal_match_stop_sec	recordings	pid	reference_events	predicted_events	true_positive	false_positive	false_negative	ignored_predictions	supported_hours	precision	recall	f1	false_alarms_per_hour
+CEF	REM_to_Wake	train_nested_oof	0.25	0.0	15.0	82	64	180	142	6	134	174	2	629.0291666666667	0.04285714285714286	0.03333333333333333	0.0375	0.21302668795167154

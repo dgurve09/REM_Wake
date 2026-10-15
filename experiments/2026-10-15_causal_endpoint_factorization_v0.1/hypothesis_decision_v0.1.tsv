@@ -1,0 +1,2 @@
+hypothesis	comparison	f1_difference	required_f1_difference	false_alarms_per_hour_difference	maximum_false_alarm_difference	numerical_gate_pass	point_gate_pass	decision
+H-CEF	CEF_minus_CAUSAL-RW	-0.0142241379310344	0.03	-0.039743785065610354	0.05	True	False	stop_v0.1

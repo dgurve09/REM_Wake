@@ -1,0 +1,5 @@
+endpoint_pair	alarms	median_score
+REM_to_Wake	5	0.8396544579418403
+REM_to_other	19	0.879194828914858
+neither_endpoint	47	0.1121204959114547
+other_to_Wake	71	0.876179709872549

@@ -4,7 +4,7 @@
 **Project window:** 2026-06-01 to 2026-11-29
 **Prepared during:** 2026-06-25 to 2026-06-28
 **Finalized:** 2026-06-28
-**Current status:** Blocks 3-10 are complete; the interval-aware comparison failed its F1 gate and exposed endpoint saturation in the supposedly converged SGD comparator, so the uniform label-distribution mechanism stops at v0.1 without post-result solver tuning; Block 11 remains scheduled for October 19
+**Current status:** Blocks 3-10 are complete; a supplemental causal endpoint test found measurable state discrimination but no event-F1 gain and exposed multi-hour collapse in the present contiguous-run alarm rule; Block 11 remains scheduled for October 19
 
 ## 1. Project Boundary
 
@@ -69,7 +69,7 @@ flowchart TD
 
 ## 4. Phase Table
 
-| Block | Dates | Main Question | Main Work | Deliverable | Status as of 2026-10-10 |
+| Block | Dates | Main Question | Main Work | Deliverable | Status as of 2026-10-15 |
 |---:|---|---|---|---|---|
 | 1 | Jun 1-Jun 14 | What is known and what is uncertain? | Literature review, initial planning, public-dataset search | Initial proposal, literature evidence, dataset candidate list | Complete |
 | 2 | Jun 15-Jun 28 | Can the project be set up cleanly with a defensible dataset and target? | Scope refinement, BOAS selection, repository setup, environment audit, pilot checks, E0 readiness | Revised proposal, manifest, setup records, pilot reports, E0 readiness package | Complete |
@@ -80,7 +80,7 @@ flowchart TD
 | 7 | Aug 24-Sep 6 | How large is the PSG-to-wearable device-shift problem? | Common six-channel PSG EEG, reduced PSG, wearable, strict zero-shot, and conditionally gated feature alignment | Paired transfer results and decision log | Complete Sep 6; `P2-D` led validation, `P6-D` led the descriptive test, strict zero-shot remained below direct wearable F1 with fewer false alarms, and alignment was skipped by the frozen gate |
 | 8 | Sep 7-Sep 20 | Is the approach robust to signal/channel variability? | Missing-channel tests, degradation tests, ablations, justified adaptation if needed | Robustness and ablation report | Complete Sep 18; wearable robustness failed, no deployable wearable method advanced, and boundary uncertainty was prioritized; the 25-claim extension separated eight uncertainty-supported gates from eight point-gate-only findings |
 | 9 | Sep 21-Oct 4 | Is external PSG comparison scientifically valid? | Audit one external PSG dataset and test reduced-channel generalization if appropriate | External generalization report or no-go | Complete Oct 4; Sleep-EDF direct evaluation stopped because annotation support and channel semantics failed the frozen gate |
-| 10 | Oct 5-Oct 18 | How should 30-second label uncertainty be handled? | Correct the full-night risk-set formulation, then compare a stable hard-label comparator with one interval-aware temporal mechanism | Label-uncertainty and localization report | Complete Oct 11; uniform interval labels failed the F1 gate, and post-run audit found endpoint saturation that prevents a stable mechanism interpretation; no post-result retry authorized |
+| 10 | Oct 5-Oct 18 | How should 30-second label uncertainty be handled? | Correct the full-night risk-set formulation, compare interval labels, and isolate causal localization failures | Label-uncertainty and localization report | Complete Oct 15; uniform interval labels failed under a saturated comparator, bidirectional causal fitting failed, and endpoint factorization learned state occupancy without improving event F1; the alarm-morphology audit found multi-hour run collapse |
 | 11 | Oct 19-Nov 1 | Are transition-derived measures stable enough to report? | Event burden, REM stability, repeated-night reliability, streaming decision | Technical measures and streaming go/no-go | Not started |
 | 12 | Nov 2-Nov 15 | Is a streaming demonstration justified and reproducible? | Conditional command-line prototype, latency/memory check, clean rerun, QA | Prototype or no-go plus reproducibility report | Not started |
 | 13 | Nov 16-Nov 29 | What is the final defensible package? | Freeze reviewed results, final report, artifact index, manuscript outline | Final technical report and reproducible project package | Not started |
@@ -447,9 +447,20 @@ Block 10 interval-aware localization test completed on 2026-10-11:
 - passed 12/12 independent checks and rehashed 182 external artifacts; and
 - closed Block 10 without solver, label-width, threshold, or alarm-budget tuning on the observed outer results.
 
+Supplemental causal localization work completed on 2026-10-15:
+
+- tested past-only REM-to-Wake and bidirectional transition targets on 150,967 causal decisions;
+- found causal REM-to-Wake F1 0.0517 and bidirectional F1 0.0387, while known-checkpoint direction classification reached macro F1 0.8290;
+- replaced rare-event fitting with two full-night endpoint heads using 24,772 REM-before and 21,076 Wake-after positives;
+- found outer out-of-fold ROC AUC 0.7692 for REM-before and 0.8835 for Wake-after, confirming state information without reliable event localization;
+- found endpoint-factorized event F1 0.0375 versus 0.0517 for the direct causal comparator, failing the +0.03 gate;
+- found that all folds selected the minimum threshold, placing 99.9583% of candidates above threshold and producing a median run duration of 16,290 seconds;
+- preserved the frozen result without selecting a new peak width, refractory rule, threshold, loss, or probability combination; and
+- passed independent validation twice over the core endpoint-factorization result while validation and current test remained closed.
+
 ## 7. Next Work
 
-Do not start Block 11 before 2026-10-19. At that point, quantify transition-derived measures and apply the streaming go/no-go gate using frozen evidence. Do not retry the Block 10 solver or interval width on the observed outer results. Keep validation and current test closed, and require a new confirmation boundary for any future detector-advancement claim.
+Do not start Block 11 before 2026-10-19. At that point, quantify transition-derived measures and apply the streaming go/no-go gate using frozen evidence, including multi-hour alarm-run collapse as a no-go condition for the present alarm representation. Do not retry the Block 10 solver, interval width, endpoint product, threshold grid, or run rule on the observed outer results. Keep validation and current test closed, and require a new confirmation boundary for any future detector-advancement claim.
 
 ## 8. Rules for the Rest of the Project
 

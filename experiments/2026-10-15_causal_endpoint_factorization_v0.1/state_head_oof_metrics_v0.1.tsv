@@ -1,0 +1,3 @@
+candidate	head	partition	rows	positive_rows	positive_fraction	average_precision	roc_auc
+CEF	rem_before	train_outer_oof	150967	24772	0.16408884060755	0.29781187221189626	0.7691820624028539
+CEF	wake_after	train_outer_oof	150967	21076	0.139606669007134	0.467193470678243	0.8835016475900339

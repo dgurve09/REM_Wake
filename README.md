@@ -4,7 +4,7 @@ This repository investigates event-specific REM-to-Wake boundary detection from 
 
 ## Current Status
 
-As of 2026-10-11, Blocks 3-10 are complete. The Block 10 interval-aware comparison failed its F1 gate and exposed severe endpoint saturation in the SGD comparator; the mechanism stops at v0.1 without post-result solver tuning. Block 11 remains scheduled for October 19.
+As of 2026-10-15, Blocks 3-10 are complete. A supplemental train-only causal endpoint experiment found measurable REM/Wake state information but no event-F1 improvement, and exposed multi-hour alarm-run collapse at the selected thresholds. Both the factorized model and the present alarm representation stop at v0.1. Block 11 remains scheduled for October 19.
 
 - BOAS snapshot `1.1.1` is frozen at 128 paired recordings and 100 participant-table `pid` groups.
 - The conservative primary set contains 276 REM-to-Wake events across 72 groups; the expanded quality-sensitivity set contains 348 across 88 groups.
@@ -60,8 +60,10 @@ As of 2026-10-11, Blocks 3-10 are complete. The Block 10 interval-aware comparis
 - Forty-four of 50 new fits reached the fixed iteration limit. The formulation direction is retained for a separately predeclared confirmation, but it is not a reliable detector and must not be tuned against the observed outer results. Both independent result validators passed twice.
 - The interval-aware experiment then built a signal-derived 15-second grid with 150,967 supported boundaries and compared nominal hard labels with equal event mass distributed over nominal -15, nominal, and nominal +15 seconds. At the primary budget, `HARD15` reached F1 0.0109 and `INT15` reached F1 0, so the required +0.03 gain failed.
 - Although all 50 SGD fits stopped before the iteration limit, a post-run numerical audit found exact endpoint probabilities for 99.87% of outer scores and intercepts between approximately -1005 and -749. The frozen result is retained, but it identifies an unstable comparator rather than resolving the biological value of interval labels. The independent validator passed 12/12 checks and rehashed 182 external artifacts.
+- A separately frozen causal endpoint-factorization test replaced rare-event fitting with 24,772 REM-before and 21,076 Wake-after state positives across the 150,967-point train grid. The heads reached ROC AUC 0.7692 and 0.8835, but their product reached event F1 0.0375 versus 0.0517 for CAUSAL-RW, failing the +0.03 advancement gate.
+- All five endpoint-factorization folds selected the minimum threshold, placing 99.9583% of candidates above threshold. Contiguous collapse produced 142 runs with median duration 16,290 seconds; 97 lasted at least two hours. This identifies the score-to-alarm representation, not another architecture, as the next specific methodological issue. The independent validator passed 13/13 checks twice and verified 51 external artifacts.
 
-The Block 7 and Block 8 results do not justify revising the frozen models or thresholds. The temporal experiments show no material nested improvement from small encoder variants, two-second spectral U-Net features, or the tested robust-scaling and tier-balancing mechanism. The enriched elastic-net experiment identified a positive train-cohort direction, especially for wearable EEG, but absolute precision and F1 remain low and material bootstrap support was not met. Block 9 found that Sleep-EDF cannot provide a scientifically matched direct external test of the frozen reduced-PSG model. Block 10 corrected the full-night risk formulation, then found that its supposedly converged SGD comparator was numerically degenerate in the interval-label test. The interval mechanism stops at v0.1 rather than being retuned against the same outer results. The current test partition was already used descriptively and remains closed. A new locked or external wearable cohort is still required before any wearable-method advancement claim.
+The Block 7 and Block 8 results do not justify revising the frozen models or thresholds. The temporal experiments show no material nested improvement from small encoder variants, two-second spectral U-Net features, or the tested robust-scaling and tier-balancing mechanism. The enriched elastic-net experiment identified a positive train-cohort direction, especially for wearable EEG, but absolute precision and F1 remain low and material bootstrap support was not met. Block 9 found that Sleep-EDF cannot provide a scientifically matched direct external test of the frozen reduced-PSG model. Block 10 corrected the full-night risk formulation, then found numerical degeneration in the interval-label comparator. The causal follow-up showed that state occupancy is more learnable than exact boundary timing and that the current contiguous-run alarm rule can collapse multi-hour regions. No post-result threshold or peak rule is being selected. The current test partition was already used descriptively and remains closed. A new locked or external wearable cohort is still required before any wearable-method advancement claim.
 
 ## Start Here
 
@@ -127,7 +129,13 @@ The Block 7 and Block 8 results do not justify revising the frozen models or thr
 - [Interval-aware amendment](docs/evaluation/interval_aware_localization_protocol_amendment_2026-10-10.md)
 - [Interval-aware result](experiments/2026-10-10_interval_aware_localization_v0.1/README.md)
 - [Interval-aware decision](docs/evaluation/interval_aware_localization_decision_2026-10-11.md)
-- [Current weekly record](docs/weekly/2026-10-05_to_2026-10-11.md)
+- [Causal bidirectional protocol](docs/evaluation/causal_bidirectional_transition_protocol_v0.1.md)
+- [Causal bidirectional result](experiments/2026-10-11_causal_bidirectional_transition_v0.1/README.md)
+- [Causal bidirectional decision](docs/evaluation/causal_bidirectional_transition_decision_2026-10-12.md)
+- [Causal endpoint-factorization protocol](docs/evaluation/causal_endpoint_factorization_protocol_v0.1.md)
+- [Causal endpoint-factorization result](experiments/2026-10-15_causal_endpoint_factorization_v0.1/README.md)
+- [Causal endpoint-factorization decision](docs/evaluation/causal_endpoint_factorization_decision_2026-10-15.md)
+- [Current weekly record](docs/weekly/2026-10-12_to_2026-10-18.md)
 - [BOAS dataset manifest](docs/data/boas_dataset_manifest.md)
 - [Label/preprocessing gate](docs/feasibility/label_preprocessing_gate_closeout_2026-07-18.md)
 - [Block 6 baseline decision](docs/evaluation/block6_baseline_gate_decision_2026-08-22.md)

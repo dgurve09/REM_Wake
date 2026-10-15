@@ -1,0 +1,9 @@
+candidate	scope	partition	alarm_budget_per_hour	causal_match_start_sec	causal_match_stop_sec	subject	pid	match_type	reference_time_sec	prediction_time_sec
+CEF	REM_to_Wake	train_nested_oof	0.25	0.0	15.0	sub-119	99	eligible	6525.0	6540.0
+CEF	REM_to_Wake	train_nested_oof	0.25	0.0	15.0	sub-120	99	ignored	13875.0	13875.0
+CEF	REM_to_Wake	train_nested_oof	0.25	0.0	15.0	sub-52	31	ignored	27675.0	27675.0
+CEF	REM_to_Wake	train_nested_oof	0.25	0.0	15.0	sub-111	96	eligible	9975.0	9975.0
+CEF	REM_to_Wake	train_nested_oof	0.25	0.0	15.0	sub-63	81	eligible	22935.0	22950.0
+CEF	REM_to_Wake	train_nested_oof	0.25	0.0	15.0	sub-66	82	eligible	30165.0	30165.0
+CEF	REM_to_Wake	train_nested_oof	0.25	0.0	15.0	sub-14	9	eligible	14715.0	14715.0
+CEF	REM_to_Wake	train_nested_oof	0.25	0.0	15.0	sub-14	9	eligible	20955.0	20955.0
