@@ -1,0 +1,7 @@
+check	observed	expected	passed
+alpha_localization_200hz	14.750469207763672	>0	True
+causal_filter_200hz	0.0	0	True
+alpha_localization_256hz	14.750469207763672	>0	True
+causal_filter_256hz	0.0	0	True
+alpha_localization_500hz	14.750469207763672	>0	True
+causal_filter_500hz	0.0	0	True

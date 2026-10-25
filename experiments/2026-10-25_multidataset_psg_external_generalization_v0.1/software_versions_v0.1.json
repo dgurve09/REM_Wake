@@ -1,0 +1,9 @@
+{
+  "edfio": "0.4.13",
+  "execution_commit": "3880c8d34375b2feb98b66999749fdd80a19b17b",
+  "numpy": "2.2.6",
+  "pandas": "2.3.3",
+  "protocol_commit": "3880c8d",
+  "python": "3.10.20",
+  "scipy": "1.15.3"
+}
