@@ -1,0 +1,7 @@
+label_version	dataset	recordings	participant_groups	decision_rows	scorable_rows	positive_targets	negative_targets	ignored_boundaries	unknown_epochs
+v0.1_argmax	BOAS	128	100	238270	237596	365	181051	5835	336
+v0.1_argmax	gx36m	58	20	122156	122156	124	96936	2505	0
+v0.1_argmax	ISRUC-3	10	10	17628	15566	32	7108	2122	1034
+v0.2_strict_2_of_3	BOAS	128	100	238270	237596	365	181051	5835	336
+v0.2_strict_2_of_3	gx36m	58	20	122156	119198	85	93333	3856	1479
+v0.2_strict_2_of_3	ISRUC-3	10	10	17628	15566	32	7108	2122	1034
