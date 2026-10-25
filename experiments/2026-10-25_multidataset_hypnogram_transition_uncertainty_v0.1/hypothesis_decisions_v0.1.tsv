@@ -1,0 +1,4 @@
+hypothesis	primary_measure_1	observed_1	threshold_1	condition_1_pass	primary_measure_2	observed_2	threshold_2	condition_2_pass	decision
+H-DATASET-HETEROGENEITY	maximum_to_minimum_event_rate_ratio	2.789377679801537	2.0	True	event_positive_night_fraction_range	0.2545523138832998	0.2	True	material_heterogeneity
+H-SCORER-DEPENDENCE	minimum_source_median_exact_event_f1	0.0	0.8	True	minimum_source_median_tolerant_event_f1	0.30952380952380953	0.9	True	material_scorer_dependence
+H-REPEATED-NIGHT	maximum_source_discordant_presence_fraction	0.55	0.25	True	maximum_source_median_within_rate_range	0.20780359969087076	0.1	True	material_repeated_night_dependence
