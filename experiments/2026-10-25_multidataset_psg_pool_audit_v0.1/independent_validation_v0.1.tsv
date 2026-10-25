@@ -1,0 +1,13 @@
+check	observed	expected	passed
+inventory_sources	11	11	True
+recording_rows	196	196	True
+participant_groups	130	130	True
+event_count	521	521	True
+dataset_summary	3	3	True
+common_channel_schema	{'BOAS': 3, 'ISRUC-3': 3, 'gx36m': 3}	{'BOAS': 3, 'gx36m': 3, 'ISRUC-3': 3}	True
+channel_and_sampling_controls	True	True	True
+label_support	True	True	True
+maximum_unscored_tail	166.0	166.0	True
+source_hashes	30	30	True
+primary_audit	13	13	True
+model_outputs_present	0	0	True

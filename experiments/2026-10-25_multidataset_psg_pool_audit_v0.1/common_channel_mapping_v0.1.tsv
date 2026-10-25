@@ -1,0 +1,10 @@
+dataset	canonical_channel	source_channel	reference	sampling_frequency_hz	target_sampling_frequency_hz
+BOAS	F4	PSG_F4	M1	256.0	128.0
+BOAS	C4	PSG_C4	M1	256.0	128.0
+BOAS	O2	PSG_O2	M1	256.0	128.0
+gx36m	F4	F4-A1	A1	500.0	128.0
+gx36m	C4	C4-A1	A1	500.0	128.0
+gx36m	O2	O2-A1	A1	500.0	128.0
+ISRUC-3	F4	F4-A1	A1	200.0	128.0
+ISRUC-3	C4	C4-A1	A1	200.0	128.0
+ISRUC-3	O2	O2-A1	A1	200.0	128.0

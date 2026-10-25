@@ -1,0 +1,5 @@
+dataset	recordings	participant_groups	epochs	rem_to_wake_events	recordings_with_event	mean_scorer_disagreement_fraction	maximum_trailing_unscored_sec	common_channel_pass	sampling_pass	label_support_pass
+BOAS	128	100	120095	365	112		29.0	True	True	True
+ISRUC-3	10	10	8889	32	10	0.11865762043812404	0.0	True	True	True
+gx36m	58	20	61513	124	45	0.2865167682851084	166.0	True	True	True
+TOTAL	196	130	190497	521	167	0.26183159948408136	166.0	True	True	True
