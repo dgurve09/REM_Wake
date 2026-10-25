@@ -4,7 +4,7 @@ This repository investigates event-specific REM-to-Wake boundary detection from 
 
 ## Current Status
 
-As of 2026-10-25, Blocks 3-10 are complete and Block 11 is active. A train-only causal multiscale feature experiment improved its matched peak-first comparator and passed the frozen advancement gate, but recall remained 0.1000. The candidate is retained for new-cohort confirmation, not promoted as a reliable detector.
+As of 2026-10-25, Blocks 3-10 are complete and Block 11 is active. A common-channel external-generalization experiment used all 196 eligible PSG nights across BOAS, gx36m, and ISRUC group 3. The advanced representation passed its frozen point gate, but its participant interval included no improvement and external recall remained 0.2436. It is retained as a PSG mechanism candidate, not promoted as a reliable or wearable detector.
 
 - BOAS snapshot `1.1.1` is frozen at 128 paired recordings and 100 participant-table `pid` groups.
 - The conservative primary set contains 276 REM-to-Wake events across 72 groups; the expanded quality-sensitivity set contains 348 across 88 groups.
@@ -65,9 +65,13 @@ As of 2026-10-25, Blocks 3-10 are complete and Block 11 is active. A train-only 
 - A predeclared train-only causal multiscale experiment added 180 high-resolution spectral, entropy, aperiodic-proxy, Hjorth, coupling, and change values to the 80-value causal baseline, while fixing the model, participant folds, alarm budget, and peak-first alarm rule.
 - `ADV-PEAK` reached F1 0.1125 and 0.1940 false alarms/hour versus `BASE-PEAK` F1 0.0236 and 0.2464/hour. The F1 difference was +0.0889 with participant interval +0.0433 to +0.1393, so the frozen point gate passed.
 - Absolute performance remained weak: 18/180 events were detected and only 15/64 participant groups had a true positive. The result supports the feature mechanism but not reliable wearable deployment. Independent validation passed 13/13 checks twice, 134 external hashes passed, and a full rerun reproduced the result.
-- The adjacent ten-dataset hypnogram corpus is assigned to Block 11 transition-prevalence, scorer-disagreement, and repeated-night analyses. Local gx36m raw PSG may test mechanism portability under a new protocol, but it cannot confirm wearable performance.
+- The adjacent ten-dataset hypnogram corpus is assigned to Block 11 transition-prevalence, scorer-disagreement, and repeated-night analyses. Raw gx36m and ISRUC PSG were used for the separately frozen mechanism-portability study, but they cannot confirm wearable performance.
+- A subsequent common-channel audit identified 196 usable PSG nights from 130 participant groups: 128 BOAS, 58 gx36m, and 10 ISRUC group-3 nights, containing 521 derived REM-to-Wake events. The other local datasets are hypnogram-only and were not counted as raw-signal samples.
+- The frozen leave-one-dataset-out experiment used F4/C4/O2 features and completed 36/36 converged fits. On the pooled gx36m plus ISRUC external evaluation, `ADV3-CHANGE` reached F1 0.2390, recall 0.2436, and 0.2161 false alarms/hour versus F1 0.1938, recall 0.1987, and 0.2318/hour for `PSD3-BASE`.
+- The pooled F1 difference was +0.0452, but its participant-bootstrap interval was -0.0208 to +0.1035. The descriptive BOAS holdout did not improve, and one gx36m scorer-specific comparison reversed direction. The point gate passed, while the strength of evidence remains inconclusive.
+- The PSG experiment passed 12/12 run controls and 13/13 independent checks twice. The validator verified 42 external artifacts and reconstructed thresholds, 1,057 alarms, event and participant metrics, scorer sensitivity, bootstrap intervals, and the final decision.
 
-The Block 7 and Block 8 results do not justify revising the frozen models or thresholds. The temporal experiments show no material nested improvement from small encoder variants, two-second spectral U-Net features, or the tested robust-scaling and tier-balancing mechanism. The enriched elastic-net and causal multiscale experiments identified positive train-cohort feature directions, but absolute precision, recall, and F1 remain low. Block 9 found that Sleep-EDF cannot provide a scientifically matched direct external test of the frozen reduced-PSG model. Block 10 corrected the full-night risk formulation, then found numerical degeneration in the interval-label comparator. Block 11 has now shown that causal high-resolution descriptors improve a matched peak-first baseline, while peak mapping alone does not rescue the old feature set. No post-result feature or alarm tuning is authorized. The current test partition was already used descriptively and remains closed. A new paired wearable cohort is still required before any wearable-method advancement claim.
+The Block 7 and Block 8 results do not justify revising the frozen models or thresholds. The temporal experiments show no material nested improvement from small encoder variants, two-second spectral U-Net features, or the tested robust-scaling and tier-balancing mechanism. The enriched elastic-net and causal multiscale experiments identified positive feature directions, and the multi-dataset PSG result shows that some advanced-feature benefit transfers beyond BOAS. Absolute precision, recall, and F1 nevertheless remain low, and the external difference interval includes zero. Block 9 found that Sleep-EDF cannot provide a scientifically matched direct external test of the frozen reduced-PSG model. Block 10 corrected the full-night risk formulation, then found numerical degeneration in the interval-label comparator. No post-result feature or alarm tuning is authorized. The current BOAS test partition was already used descriptively and remains closed. A new paired wearable evaluation is still required before any wearable-method advancement claim.
 
 ## Start Here
 
@@ -143,6 +147,9 @@ The Block 7 and Block 8 results do not justify revising the frozen models or thr
 - [Causal multiscale feature result](experiments/2026-10-25_causal_multiscale_change_features_v0.1/README.md)
 - [Causal multiscale feature decision](docs/evaluation/causal_multiscale_change_feature_decision_2026-10-25.md)
 - [Multi-dataset use assessment](docs/data/multi_dataset_use_plan_2026-10-25.md)
+- [Multi-dataset PSG protocol](docs/evaluation/multidataset_psg_external_generalization_protocol_v0.1.md)
+- [Multi-dataset PSG result](experiments/2026-10-25_multidataset_psg_external_generalization_v0.1/README.md)
+- [Multi-dataset PSG decision](docs/evaluation/multidataset_psg_external_generalization_decision_2026-10-25.md)
 - [Current weekly record](docs/weekly/2026-10-19_to_2026-10-25.md)
 - [BOAS dataset manifest](docs/data/boas_dataset_manifest.md)
 - [Label/preprocessing gate](docs/feasibility/label_preprocessing_gate_closeout_2026-07-18.md)

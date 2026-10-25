@@ -4,7 +4,7 @@
 **Project window:** 2026-06-01 to 2026-11-29
 **Prepared during:** 2026-06-25 to 2026-06-28
 **Finalized:** 2026-06-28
-**Current status:** Blocks 3-10 are complete; Block 11 is active. A train-only causal multiscale feature experiment passed its advancement gate but remains low-recall. A common-channel audit identified 196 PSG nights across BOAS, gx36m, and ISRUC group 3; a dataset-held-out PSG study is now frozen before further wearable optimization
+**Current status:** Blocks 3-10 are complete; Block 11 is active. A common-channel experiment used all 196 eligible PSG nights from BOAS, gx36m, and ISRUC group 3. The advanced representation passed its external point gate but remains low-recall and participant-inconclusive; paired wearable transfer has not been tested
 
 ## 1. Project Boundary
 
@@ -480,9 +480,21 @@ Multi-dataset PSG scope work completed on 2026-10-25:
 - passed 13/13 eligibility checks and 12/12 independent checks twice, including 30 external source-container hashes; and
 - froze a leave-one-dataset-out PSG protocol before feature extraction or model fitting, while retaining wearable evaluation as the final application boundary.
 
+Multi-dataset PSG external-generalization work completed on 2026-10-25:
+
+- generated causal common-channel features for all 196 eligible nights and 378,054 decision points without resampling or future-sample use;
+- audited 521 positive targets, 285,095 clean negative targets, and five participant-grouped inner folds before fitting;
+- completed 36 converged fixed logistic fits across three leave-one-dataset-out comparisons and two representations;
+- obtained pooled primary-external F1 0.2390 and 0.2161 false alarms/hour for `ADV3-CHANGE`, versus F1 0.1938 and 0.2318/hour for `PSD3-BASE`;
+- passed the frozen point gate with an F1 difference of +0.0452, while its participant-bootstrap interval of -0.0208 to +0.1035 remained inconclusive;
+- found heterogeneous evidence: modest gx36m improvement, a larger but small-sample ISRUC improvement, no descriptive BOAS improvement, and an adverse direction under gx36m expert 2 labels;
+- retained the advanced representation only as a PSG mechanism candidate for separately predeclared paired wearable transfer;
+- passed 12/12 run controls and 13/13 independent checks twice, including 42 external artifact hashes and complete reconstruction of thresholds, alarms, metrics, sensitivity results, bootstrap intervals, and the decision; and
+- corrected one result-validator expected count for excluded ISRUC consensus-unknown epochs without changing any scientific artifact.
+
 ## 7. Next Work
 
-Implement and audit the frozen common-channel PSG feature path before any pooled fit. Then run the three dataset-held-out comparisons without revising channels, features, label consensus, thresholds, or event tolerance. Continue the all-hypnogram transition analysis separately. Defer the wearable streaming prototype while detector reliability remains below its gate, and do not interpret PSG generalization as wearable confirmation.
+Continue the all-hypnogram transition and annotation-uncertainty analysis separately. Before paired wearable transfer, freeze the PSG-to-headband feature mapping, participant grouping, comparator, and evaluation gate without changing the completed v0.1 PSG result. An all-196-night PSG model may be fitted only as an unevaluated transfer source under that new protocol. Defer the wearable streaming prototype while reliability remains inadequate, and do not interpret PSG generalization as wearable confirmation.
 
 ## 8. Rules for the Rest of the Project
 
