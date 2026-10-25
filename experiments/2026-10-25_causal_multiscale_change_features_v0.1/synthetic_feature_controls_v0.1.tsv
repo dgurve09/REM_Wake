@@ -1,0 +1,4 @@
+check	observed	expected	passed
+alpha_band_localization	14.750469207763672	>0	True
+constant_signal_finite	True	True	True
+pink_slope_below_white	-0.9152835011482239	<-0.5	True
