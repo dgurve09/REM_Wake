@@ -1,5 +1,12 @@
 # Multi-Dataset PSG External-Generalization Experiment v0.1
 
+> **Superseded result:** The subsequent multi-dataset hypnogram audit found that
+> the gx36m primary-label implementation resolved three-way scorer ties by label
+> order instead of marking them `UNKNOWN`. This contradicts the written majority
+> rule. Preserve these artifacts as the original result, but do not use the v0.1
+> performance decision as scientific evidence. The fixed-setting v0.2 correction
+> reruns every fit with strict 2-of-3 gx36m consensus.
+
 ## Current stage
 
 The frozen feature, model, threshold-selection, and held-out evaluation path is complete. The point advancement gate passed, but the participant-bootstrap interval for the F1 difference includes zero.
