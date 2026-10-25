@@ -1,0 +1,2 @@
+hypothesis	advanced_f1	baseline_f1	f1_difference	advanced_recall	advanced_false_alarms_per_hour	gx36m_f1_difference	isruc_f1_difference	pooled_f1_at_least_0.15	pooled_f1_gain_at_least_0.03	pooled_recall_at_least_0.15	pooled_far_at_most_0.30	gx36m_difference_not_below_minus_0.03	isruc_difference_not_below_minus_0.03	numerical_gate	point_gate_pass	decision
+H-PSG-XDATA	0.2389937106918239	0.19375	0.045243710691823896	0.24358974358974358	0.21608748057681423	0.0180742961852407	0.14832535885167464	True	True	True	True	True	True	True	True	retain_for_paired_wearable_transfer
