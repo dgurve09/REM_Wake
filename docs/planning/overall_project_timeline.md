@@ -4,7 +4,7 @@
 **Project window:** 2026-06-01 to 2026-11-29
 **Prepared during:** 2026-06-25 to 2026-06-28
 **Finalized:** 2026-06-28
-**Current status:** Blocks 3-10 are complete; Block 11 is active. A train-only causal multiscale feature experiment passed its advancement gate but remains low-recall and requires new-cohort confirmation; multi-dataset transition measures and the streaming go/no-go decision remain open
+**Current status:** Blocks 3-10 are complete; Block 11 is active. A train-only causal multiscale feature experiment passed its advancement gate but remains low-recall. A common-channel audit identified 196 PSG nights across BOAS, gx36m, and ISRUC group 3; a dataset-held-out PSG study is now frozen before further wearable optimization
 
 ## 1. Project Boundary
 
@@ -470,9 +470,19 @@ Block 11 causal feature work completed on 2026-10-25:
 - independently reconstructed the result in 13/13 checks twice, verified 134 external artifacts, and completed an exact end-to-end rerun; and
 - assigned the ten-dataset hypnogram corpus to transition-prevalence and scorer/repeated-night uncertainty analyses, while reserving gx36m raw PSG for separately predeclared mechanism portability rather than wearable confirmation.
 
+Multi-dataset PSG scope work completed on 2026-10-25:
+
+- audited the eleven locally inventoried sources and distinguished raw-signal, partial-raw, and hypnogram-only roles;
+- verified a three-channel F4/C4/O2 PSG intersection across 128 BOAS, 58 gx36m, and 10 ISRUC group-3 nights;
+- identified 196 eligible recordings, 130 participant groups, 190,497 scored epochs, and 521 derived REM-to-Wake events;
+- quantified mean per-record scorer disagreement of 0.2865 in gx36m and 0.1187 in ISRUC group 3;
+- retained an initial label-support audit failure caused by a 166-second unscored gx36m tail, then corrected the rule to exclude unscored support rather than reject valid scored data;
+- passed 13/13 eligibility checks and 12/12 independent checks twice, including 30 external source-container hashes; and
+- froze a leave-one-dataset-out PSG protocol before feature extraction or model fitting, while retaining wearable evaluation as the final application boundary.
+
 ## 7. Next Work
 
-Complete the predeclared multi-dataset transition-measure analysis and the Block 11 streaming go/no-go decision by 2026-11-01. Treat `ADV-PEAK` as a frozen train-cohort mechanism candidate: do not tune its features, timing, refractory interval, threshold rule, or tolerance on the observed outer results. Keep validation and current test closed, distinguish external PSG mechanism portability from wearable confirmation, and do not begin the conditional prototype before Block 12.
+Implement and audit the frozen common-channel PSG feature path before any pooled fit. Then run the three dataset-held-out comparisons without revising channels, features, label consensus, thresholds, or event tolerance. Continue the all-hypnogram transition analysis separately. Defer the wearable streaming prototype while detector reliability remains below its gate, and do not interpret PSG generalization as wearable confirmation.
 
 ## 8. Rules for the Rest of the Project
 

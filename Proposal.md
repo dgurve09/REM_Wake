@@ -2,11 +2,11 @@
 
 ## Wearable EEG REM-to-Wake Transition Detection Under Label and Device Uncertainty
 
-**Version:** 1.23
+**Version:** 1.24
 **Planning date:** 2026-06-21
-**Last revised:** 2026-10-04
+**Last revised:** 2026-10-25
 **Project window:** 2026-06-01 to 2026-11-29
-**Status:** Working research plan; Blocks 3-9 are complete; Block 9 closed on 2026-10-04 with a predeclared Sleep-EDF direct-generalization no-go because annotation support and channel derivations did not preserve the frozen BOAS comparison; the conservative primary tier contains 276 REM-to-Wake events across 72 `pid` groups and the expanded quality-sensitivity tier contains 348 across 88 groups; the wearable detector remains low-precision and no temporal architecture, two-second spectral representation, or quality-balanced normalization extension has passed its nested advancement gate; Block 10 temporal localization under explicit label uncertainty is next
+**Status:** Working research plan; Blocks 3-10 are complete and Block 11 is active; wearable event performance remains low despite a positive causal multiscale feature result, so an intermediate dataset-held-out PSG study will test target and feature generalization before further wearable optimization; the audited common-channel PSG pool contains 196 nights, 130 participant groups, and 521 stage-derived REM-to-Wake events across BOAS, gx36m, and ISRUC group 3
 
 ## 1. Technology Area
 
@@ -15,6 +15,8 @@ Wearable EEG, sleep science, event detection, machine learning, temporal modelin
 ## 2. Executive Summary
 
 This project will investigate whether REM-to-Wake transitions can be detected reliably from reduced-channel wearable EEG. The primary dataset will be the Bitbrain Open Access Sleep (BOAS) dataset, which contains 128 nights of simultaneous clinical PSG and wearable headband recordings. Human consensus sleep stages are available at 30-second resolution. The official README reports 108 individuals, while the verified version 1.1.1 participant table contains 100 unique `pid` values; this discrepancy must be resolved or reported before participant-level evaluation.
+
+An October 25 scope amendment adds an intermediate multi-dataset PSG mechanism study before further wearable optimization. BOAS PSG, gx36m, and ISRUC group 3 provide 196 locally available nights with common F4, C4, and O2 channel meaning. Entire datasets will be held out during external evaluation. This amendment is intended to distinguish target learnability and acquisition-domain generalization from wearable signal limitations; the final application direction remains wearable EEG.
 
 This is a transition-boundary detection project, not a general sleep-stage classification project. Existing sleep stages serve as source annotations from which new REM-to-Wake and exploratory Wake-to-REM event labels will be derived. Conventional sleep staging is included only as a benchmark: a transition-specific method must be compared with the simpler alternative of predicting stages and then deriving transitions.
 
@@ -48,6 +50,7 @@ Can REM-to-Wake events be detected from two-channel forehead wearable EEG with p
 4. Can transition likelihood be localized within the 30-second scoring interval without claiming an unsupported exact physiological onset time?
 5. Are transition-derived technical measures repeatable across nights for participants with repeated recordings?
 6. Can the final justified model run with sufficiently low latency for streaming use on the available hardware?
+7. Does a fixed transition representation generalize across compatible PSG datasets before paired PSG-to-wearable transfer is attempted again?
 
 ## 6. Technological Uncertainties
 
@@ -111,6 +114,8 @@ Negative or inconclusive results will still answer the technological uncertainti
 - Stage-first, simple feature-based, direct transition, and justified temporal baselines.
 - Participant-independent evaluation grouped by BOAS `pid`.
 - Paired PSG-to-wearable transfer experiments.
+- Common-channel dataset-held-out PSG mechanism evaluation across BOAS, gx36m, and ISRUC group 3.
+- Multi-dataset hypnogram analysis for transition prevalence, scorer uncertainty, and repeated-night variability.
 - Event-level metrics, uncertainty intervals, error analysis, and reproducibility checks.
 - Conditional lightweight streaming inference demonstration.
 
@@ -140,6 +145,15 @@ The BOAS dataset contains:
 All participant-level splits will use the versioned `pid` field, not the recording identifier, because some participants contributed multiple nights. The discrepancy between the README participant count and the participant table will be documented before splits are frozen.
 
 The verified metadata inventory, storage estimate, pilot-record selection, pilot quality check, and E0 metadata readiness summary are recorded in `docs/data/boas_dataset_manifest.md`.
+
+### Intermediate external PSG sources
+
+The October 25 availability audit identified two additional local PSG sources with compatible right-sided channels:
+
+- gx36m: 58 nights from 20 healthy participants, with F4-A1, C4-A1, and O2-A1 at 500 Hz and three expert scorings; and
+- ISRUC group 3: 10 nights from 10 healthy participants, with F4-A1, C4-A1, and O2-A1 at 200 Hz and two expert scorings.
+
+These sources are used for PSG mechanism generalization, not wearable validation. BOAS M1 and external A1 references are treated as a residual acquisition difference. The separate label-only collections contribute transition and scoring analyses but cannot be counted as raw EEG training samples.
 
 Current evidence and later status updates are tracked in `docs/planning/overall_project_timeline.md` and the dated weekly technical records.
 
