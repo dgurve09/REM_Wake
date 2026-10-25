@@ -246,6 +246,8 @@ def feature_bounds(values: np.ndarray) -> bool:
 def load_or_create_advanced(subject: str, decisions: np.ndarray) -> tuple[np.ndarray, dict]:
     path = feature_path(subject)
     names = advanced_feature_names()
+    # Record artifact provenance, not whether this invocation read or wrote the cache.
+    status = "created"
     if path.exists():
         with np.load(path, allow_pickle=False) as cached:
             cached_decisions = cached["decision_time_sec"].astype(float)
@@ -253,7 +255,6 @@ def load_or_create_advanced(subject: str, decisions: np.ndarray) -> tuple[np.nda
             cached_names = cached["feature_names"].astype(str).tolist()
         if not np.array_equal(cached_decisions, decisions) or cached_names != names:
             raise ValueError(f"Advanced feature cache changed: {subject}")
-        status = "reused"
     else:
         scaler = prior.frozen_scalers()["H2"]
         raw = prior.read_uv(subject, "headband", prior.HB2)
@@ -275,7 +276,6 @@ def load_or_create_advanced(subject: str, decisions: np.ndarray) -> tuple[np.nda
             features=values,
             feature_names=np.asarray(names),
         )
-        status = "created"
     if values.shape != (len(decisions), ADVANCED_ONLY_FEATURES):
         raise ValueError(f"Advanced feature matrix changed: {subject}, {values.shape}")
     if not np.isfinite(values).all() or not feature_bounds(values):
