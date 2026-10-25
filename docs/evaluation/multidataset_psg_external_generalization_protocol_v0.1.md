@@ -48,15 +48,15 @@ For gx36m and ISRUC, retain scorer-specific transition tables for sensitivity ev
 
 ## 5. Signal preprocessing
 
-For every candidate decision time, read only the preceding 240 seconds from the three native-frequency EEG channels. Within that past-only block:
+Process each recording at its native sampling rate with a forward-only filter. For every candidate decision time, read only the preceding 240 seconds from the filtered three-channel EEG. The fixed steps are:
 
 1. convert the physical signal to microvolts using the EDF calibration;
-2. apply the fixed 0.3-35 Hz fourth-order Butterworth bandpass within the available past block;
-3. resample the block to 128 Hz using fixed polyphase resampling;
+2. apply the fixed 0.3-35 Hz fourth-order Butterworth bandpass with `sosfilt` in chronological order and zero initial state;
+3. retain the native 256 Hz BOAS, 500 Hz gx36m, and 200 Hz ISRUC sampling rates;
 4. reject nonfinite or flat channels; and
-5. extract all features from the resampled block ending at the decision time.
+5. extract all features from windows ending at the decision time.
 
-Block-local filtering and resampling may use samples anywhere inside the past block but may not read samples after the decision. This is causal with respect to information availability at the decision, although it remains an offline buffered implementation rather than a streaming-runtime claim.
+The first supported decision is 240 seconds after recording start, which also removes the causal filter startup region from evaluated contexts. No filter or feature at a decision may read a later sample. This is causal with respect to information availability, although it remains an offline implementation rather than a streaming-runtime claim.
 
 No test-dataset amplitude statistic may be used to normalize training data. Feature standardization is fitted on the training datasets only within each held-out-dataset run.
 
@@ -76,7 +76,7 @@ Retain the 120 baseline values and add four consecutive 15-second subwindows ove
 
 The advanced addition contains `4 x 54 + 2 x 54 = 324` values. The complete representation contains 444 values.
 
-Welch settings are a four-second Hann window with 50% overlap at the 128 Hz target rate. The feature definition, not the observed performance, determines the schema.
+Welch settings are a four-second Hann window with 50% overlap at each native rate. Line length and zero-crossing quantities are expressed per second, and Hjorth mobility is expressed in Hz so sampling-rate differences do not redefine the features. The feature definition, not the observed performance, determines the schema.
 
 ## 7. Fixed model
 
