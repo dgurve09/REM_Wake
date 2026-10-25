@@ -8,6 +8,8 @@ The correction protocol is frozen. No corrected fit or performance result exists
 
 The v0.1 gx36m primary-label function converted three-way scorer ties to `W` through label-order `argmax`. The stated rule requires a strict 2-of-3 majority and therefore requires these epochs to be `UNKNOWN`.
 
+The first pre-fit audit then stopped on an expected-count mismatch before writing outputs. It found 818 raw scorer labels with undocumented code `-1`; an earlier label-only loader had converted these to `REM` through negative indexing. The frozen amendment requires out-of-vocabulary codes to remain `UNKNOWN` in both primary and scorer-specific labels.
+
 ## Fixed scope
 
 - Reuse the exact 196 recordings, 130 participant groups, and verified signal-feature caches.
@@ -17,3 +19,5 @@ The v0.1 gx36m primary-label function converted three-way scorer ties to `W` thr
 - Reapply the original fixed advancement gate and report a direct v0.2-minus-v0.1 comparison.
 
 See the [frozen correction protocol](../../docs/evaluation/multidataset_psg_consensus_correction_protocol_v0.2.md).
+
+See also the [pre-fit amendment](../../docs/evaluation/multidataset_psg_consensus_correction_amendment_2026-10-25.md).

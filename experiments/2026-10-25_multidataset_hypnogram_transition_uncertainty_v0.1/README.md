@@ -1,5 +1,11 @@
 # Multi-Dataset Hypnogram Transition-Uncertainty Analysis v0.1
 
+> **Superseded gx36m parsing:** A later pre-fit audit found 818 raw gx36m
+> scorer labels with code `-1`, outside the source's documented `0..4` stage
+> vocabulary. This analysis mapped `-1` through NumPy negative indexing and
+> therefore treated it as `REM`. Preserve these v0.1 artifacts, but use the
+> corrected v0.2 label analysis for scientific interpretation.
+
 ## Current stage
 
 The frozen transition, scorer, repeated-night, group, and decision analyses are complete.

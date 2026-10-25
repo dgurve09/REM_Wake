@@ -1,5 +1,10 @@
 # Multi-Dataset Hypnogram Transition-Uncertainty Decision
 
+> **Superseded gx36m parsing:** The v0.1 gx36m loader interpreted raw code `-1`
+> as `REM` through negative array indexing. Because `-1` is outside the source's
+> documented `0..4` stage vocabulary, corrected v0.2 results replace the gx36m
+> portions of this decision. The original files remain preserved.
+
 **Decision date:** 2026-10-25  
 **Sources:** Eleven public hypnogram sources  
 **Primary nights:** 1,993  

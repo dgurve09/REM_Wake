@@ -4,6 +4,8 @@
 **Precondition:** Hypnogram uncertainty result commit `368c910`
 **Result status at freeze:** No corrected model has been fitted and no corrected probability, alarm, or performance metric has been calculated
 
+The pre-fit source-code audit subsequently found an additional gx36m raw-code issue before any v0.2 model was fitted. The frozen [pre-fit amendment](multidataset_psg_consensus_correction_amendment_2026-10-25.md) governs that correction without changing the model or evaluation design below.
+
 ## 1. Correction question
 
 Does the v0.1 cross-dataset PSG conclusion remain unchanged when gx36m primary labels implement the written strict 2-of-3 scorer-majority rule?
