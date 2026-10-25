@@ -1,0 +1,29 @@
+category	measure	v0.1	v0.2	v0.2_minus_v0.1	changed
+label	gx_primary_unknown_epochs	1398	1479	81.0	True
+label	gx_primary_events	85	85	0.0	False
+dataset	all_primary_events	4046	4046	0.0	False
+gx_dataset	support_hours	463.3416666666666	463.3416666666666	0.0	False
+gx_dataset	rem_hours	94.35833333333332	93.68333333333334	-0.674999999999983	True
+gx_dataset	rem_to_wake_events	85	85	0.0	False
+gx_dataset	event_positive_night_fraction	0.7068965517241379	0.7068965517241379	0.0	False
+gx_dataset	events_per_support_hour	0.1834499379507563	0.1834499379507563	0.0	False
+gx_dataset	known_rem_exit_opportunities	234	233	-1.0	True
+gx_dataset	rw_fraction_of_known_rem_exits	0.3632478632478632	0.3648068669527897	0.0015590037049265093	True
+gx_scorer	informative_event_pairs	152	149	-3.0	True
+gx_scorer	event_presence_agreement_fraction	0.7701149425287356	0.7816091954022989	0.011494252873563315	True
+gx_scorer	median_stage_disagreement_fraction	0.1758682328465803	0.1683817179982729	-0.007486514848307396	True
+gx_scorer	median_absolute_event_count_difference	1.0	1.0	0.0	False
+gx_scorer	median_exact_event_f1	0.0	0.0	0.0	False
+gx_scorer	median_tolerant_30_sec_event_f1	0.3095238095238095	0.3333333333333333	0.023809523809523836	True
+gx_repeated	discordant_event_presence_fraction	0.55	0.55	0.0	False
+gx_repeated	median_within_participant_event_count_range	2.0	2.0	0.0	False
+gx_repeated	median_within_participant_event_rate_range	0.204014164767883	0.204014164767883	0.0	False
+decision	H-DATASET-HETEROGENEITY:observed_1	2.789377679801537	2.789377679801537	0.0	False
+decision	H-DATASET-HETEROGENEITY:observed_2	0.2545523138832998	0.2545523138832998	0.0	False
+decision	H-DATASET-HETEROGENEITY:decision	material_heterogeneity	material_heterogeneity		False
+decision	H-SCORER-DEPENDENCE:observed_1	0.0	0.0	0.0	False
+decision	H-SCORER-DEPENDENCE:observed_2	0.3095238095238095	0.3333333333333333	0.023809523809523836	True
+decision	H-SCORER-DEPENDENCE:decision	material_scorer_dependence	material_scorer_dependence		False
+decision	H-REPEATED-NIGHT:observed_1	0.55	0.55	0.0	False
+decision	H-REPEATED-NIGHT:observed_2	0.2078035996908707	0.2078035996908707	0.0	False
+decision	H-REPEATED-NIGHT:decision	material_repeated_night_dependence	material_repeated_night_dependence		False

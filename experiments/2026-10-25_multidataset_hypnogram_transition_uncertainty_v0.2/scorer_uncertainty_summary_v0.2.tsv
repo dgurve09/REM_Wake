@@ -1,0 +1,4 @@
+dataset	recording_pairs	informative_event_pairs	event_presence_agreement_fraction	median_stage_disagreement_fraction	median_absolute_event_count_difference	median_exact_event_f1	median_tolerant_30_sec_event_f1
+dod	800	767	0.8725	0.1902336300063573	1.0	0.5	0.5454545454545454
+gx36m	174	149	0.7816091954022989	0.16838171799827295	1.0	0.0	0.3333333333333333
+isruc	126	119	0.9523809523809523	0.17784951639241303	1.0	0.6666666666666666	0.6666666666666666
