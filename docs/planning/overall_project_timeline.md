@@ -4,7 +4,7 @@
 **Project window:** 2026-06-01 to 2026-11-29
 **Prepared during:** 2026-06-25 to 2026-06-28
 **Finalized:** 2026-06-28
-**Current status:** Blocks 3-10 are complete; a supplemental causal endpoint test found measurable state discrimination but no event-F1 gain and exposed multi-hour collapse in the present contiguous-run alarm rule; Block 11 remains scheduled for October 19
+**Current status:** Blocks 3-10 are complete; Block 11 is active. A train-only causal multiscale feature experiment passed its advancement gate but remains low-recall and requires new-cohort confirmation; multi-dataset transition measures and the streaming go/no-go decision remain open
 
 ## 1. Project Boundary
 
@@ -39,7 +39,7 @@ gantt
 
     section Analysis and Measures
     Temporal localization under uncertainty          :done, b10, 2026-10-05, 2026-10-18
-    Transition-derived measures and streaming gate   :b11, 2026-10-19, 2026-11-01
+    Transition-derived measures and streaming gate   :active, b11, 2026-10-19, 2026-11-01
 
     section Prototype and Final Package
     Conditional streaming prototype and QA           :b12, 2026-11-02, 2026-11-15
@@ -458,9 +458,21 @@ Supplemental causal localization work completed on 2026-10-15:
 - preserved the frozen result without selecting a new peak width, refractory rule, threshold, loss, or probability combination; and
 - passed independent validation twice over the core endpoint-factorization result while validation and current test remained closed.
 
+Block 11 causal feature work completed on 2026-10-25:
+
+- predeclared a matched comparison between the existing 80-value causal context and a 260-value representation containing 180 new 15-second spectral, entropy, aperiodic-proxy, Hjorth, coupling, and change values;
+- audited 82 train recordings, 64 participant groups, 150,967 causal decisions, 180 REM-to-Wake positive rows, and zero future-signal use before fitting;
+- retained a stopped pre-fit execution in which a transient cache-access field made the reviewed audit table non-reproducible, then corrected only the provenance field and reproduced all 13 pre-result controls;
+- completed 50 participant-grouped nested fits with a predeclared peak-first alarm rule and no validation or current-test access;
+- improved F1 from 0.0236 for `BASE-PEAK` to 0.1125 for `ADV-PEAK`, while false alarms decreased from 0.2464 to 0.1940/hour;
+- obtained an F1-difference participant interval of +0.0433 to +0.1393, while the false-alarm difference interval crossed the fixed point boundary;
+- retained the candidate for new-cohort confirmation but not as a reliable detector because recall was 0.1000 and only 15/64 participant groups had a true positive;
+- independently reconstructed the result in 13/13 checks twice, verified 134 external artifacts, and completed an exact end-to-end rerun; and
+- assigned the ten-dataset hypnogram corpus to transition-prevalence and scorer/repeated-night uncertainty analyses, while reserving gx36m raw PSG for separately predeclared mechanism portability rather than wearable confirmation.
+
 ## 7. Next Work
 
-Do not start Block 11 before 2026-10-19. At that point, quantify transition-derived measures and apply the streaming go/no-go gate using frozen evidence, including multi-hour alarm-run collapse as a no-go condition for the present alarm representation. Do not retry the Block 10 solver, interval width, endpoint product, threshold grid, or run rule on the observed outer results. Keep validation and current test closed, and require a new confirmation boundary for any future detector-advancement claim.
+Complete the predeclared multi-dataset transition-measure analysis and the Block 11 streaming go/no-go decision by 2026-11-01. Treat `ADV-PEAK` as a frozen train-cohort mechanism candidate: do not tune its features, timing, refractory interval, threshold rule, or tolerance on the observed outer results. Keep validation and current test closed, distinguish external PSG mechanism portability from wearable confirmation, and do not begin the conditional prototype before Block 12.
 
 ## 8. Rules for the Rest of the Project
 

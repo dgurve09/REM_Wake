@@ -1,0 +1,2 @@
+hypothesis	comparison	f1_difference	required_f1_difference	false_alarms_per_hour_difference	maximum_false_alarm_difference	numerical_gate_pass	alarm_monotonicity_pass	point_gate_pass	decision
+H-ADV-CHANGE	ADV-PEAK_minus_BASE-PEAK	0.08890117994100295	0.03	-0.05246179628660566	0.05	True	True	True	retain_for_new_confirmation

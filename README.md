@@ -4,7 +4,7 @@ This repository investigates event-specific REM-to-Wake boundary detection from 
 
 ## Current Status
 
-As of 2026-10-15, Blocks 3-10 are complete. A supplemental train-only causal endpoint experiment found measurable REM/Wake state information but no event-F1 improvement, and exposed multi-hour alarm-run collapse at the selected thresholds. Both the factorized model and the present alarm representation stop at v0.1. Block 11 remains scheduled for October 19.
+As of 2026-10-25, Blocks 3-10 are complete and Block 11 is active. A train-only causal multiscale feature experiment improved its matched peak-first comparator and passed the frozen advancement gate, but recall remained 0.1000. The candidate is retained for new-cohort confirmation, not promoted as a reliable detector.
 
 - BOAS snapshot `1.1.1` is frozen at 128 paired recordings and 100 participant-table `pid` groups.
 - The conservative primary set contains 276 REM-to-Wake events across 72 groups; the expanded quality-sensitivity set contains 348 across 88 groups.
@@ -62,8 +62,12 @@ As of 2026-10-15, Blocks 3-10 are complete. A supplemental train-only causal end
 - Although all 50 SGD fits stopped before the iteration limit, a post-run numerical audit found exact endpoint probabilities for 99.87% of outer scores and intercepts between approximately -1005 and -749. The frozen result is retained, but it identifies an unstable comparator rather than resolving the biological value of interval labels. The independent validator passed 12/12 checks and rehashed 182 external artifacts.
 - A separately frozen causal endpoint-factorization test replaced rare-event fitting with 24,772 REM-before and 21,076 Wake-after state positives across the 150,967-point train grid. The heads reached ROC AUC 0.7692 and 0.8835, but their product reached event F1 0.0375 versus 0.0517 for CAUSAL-RW, failing the +0.03 advancement gate.
 - All five endpoint-factorization folds selected the minimum threshold, placing 99.9583% of candidates above threshold. Contiguous collapse produced 142 runs with median duration 16,290 seconds; 97 lasted at least two hours. This identifies the score-to-alarm representation, not another architecture, as the next specific methodological issue. The independent validator passed 13/13 checks twice and verified 51 external artifacts.
+- A predeclared train-only causal multiscale experiment added 180 high-resolution spectral, entropy, aperiodic-proxy, Hjorth, coupling, and change values to the 80-value causal baseline, while fixing the model, participant folds, alarm budget, and peak-first alarm rule.
+- `ADV-PEAK` reached F1 0.1125 and 0.1940 false alarms/hour versus `BASE-PEAK` F1 0.0236 and 0.2464/hour. The F1 difference was +0.0889 with participant interval +0.0433 to +0.1393, so the frozen point gate passed.
+- Absolute performance remained weak: 18/180 events were detected and only 15/64 participant groups had a true positive. The result supports the feature mechanism but not reliable wearable deployment. Independent validation passed 13/13 checks twice, 134 external hashes passed, and a full rerun reproduced the result.
+- The adjacent ten-dataset hypnogram corpus is assigned to Block 11 transition-prevalence, scorer-disagreement, and repeated-night analyses. Local gx36m raw PSG may test mechanism portability under a new protocol, but it cannot confirm wearable performance.
 
-The Block 7 and Block 8 results do not justify revising the frozen models or thresholds. The temporal experiments show no material nested improvement from small encoder variants, two-second spectral U-Net features, or the tested robust-scaling and tier-balancing mechanism. The enriched elastic-net experiment identified a positive train-cohort direction, especially for wearable EEG, but absolute precision and F1 remain low and material bootstrap support was not met. Block 9 found that Sleep-EDF cannot provide a scientifically matched direct external test of the frozen reduced-PSG model. Block 10 corrected the full-night risk formulation, then found numerical degeneration in the interval-label comparator. The causal follow-up showed that state occupancy is more learnable than exact boundary timing and that the current contiguous-run alarm rule can collapse multi-hour regions. No post-result threshold or peak rule is being selected. The current test partition was already used descriptively and remains closed. A new locked or external wearable cohort is still required before any wearable-method advancement claim.
+The Block 7 and Block 8 results do not justify revising the frozen models or thresholds. The temporal experiments show no material nested improvement from small encoder variants, two-second spectral U-Net features, or the tested robust-scaling and tier-balancing mechanism. The enriched elastic-net and causal multiscale experiments identified positive train-cohort feature directions, but absolute precision, recall, and F1 remain low. Block 9 found that Sleep-EDF cannot provide a scientifically matched direct external test of the frozen reduced-PSG model. Block 10 corrected the full-night risk formulation, then found numerical degeneration in the interval-label comparator. Block 11 has now shown that causal high-resolution descriptors improve a matched peak-first baseline, while peak mapping alone does not rescue the old feature set. No post-result feature or alarm tuning is authorized. The current test partition was already used descriptively and remains closed. A new paired wearable cohort is still required before any wearable-method advancement claim.
 
 ## Start Here
 
@@ -135,7 +139,11 @@ The Block 7 and Block 8 results do not justify revising the frozen models or thr
 - [Causal endpoint-factorization protocol](docs/evaluation/causal_endpoint_factorization_protocol_v0.1.md)
 - [Causal endpoint-factorization result](experiments/2026-10-15_causal_endpoint_factorization_v0.1/README.md)
 - [Causal endpoint-factorization decision](docs/evaluation/causal_endpoint_factorization_decision_2026-10-15.md)
-- [Current weekly record](docs/weekly/2026-10-12_to_2026-10-18.md)
+- [Causal multiscale feature protocol](docs/evaluation/causal_multiscale_change_feature_protocol_v0.1.md)
+- [Causal multiscale feature result](experiments/2026-10-25_causal_multiscale_change_features_v0.1/README.md)
+- [Causal multiscale feature decision](docs/evaluation/causal_multiscale_change_feature_decision_2026-10-25.md)
+- [Multi-dataset use assessment](docs/data/multi_dataset_use_plan_2026-10-25.md)
+- [Current weekly record](docs/weekly/2026-10-19_to_2026-10-25.md)
 - [BOAS dataset manifest](docs/data/boas_dataset_manifest.md)
 - [Label/preprocessing gate](docs/feasibility/label_preprocessing_gate_closeout_2026-07-18.md)
 - [Block 6 baseline decision](docs/evaluation/block6_baseline_gate_decision_2026-08-22.md)
