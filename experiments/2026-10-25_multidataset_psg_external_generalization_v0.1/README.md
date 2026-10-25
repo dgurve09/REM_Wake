@@ -2,7 +2,7 @@
 
 ## Current stage
 
-Feature generation and the pre-model audit are complete. No model has been fitted and no held-out performance result exists yet.
+Feature generation and the model-input audit are complete. No model has been fitted and no held-out performance result exists yet.
 
 ## Reviewed input
 
@@ -28,11 +28,15 @@ The feature path uses forward chronological filtering at each native sampling ra
 - Nonfinite values: none.
 - Feature-bound violations: none.
 - Future signal used at a decision: 0 seconds.
+- Model-input audit: 11/11 passed.
+- Supervised event targets: 521 total (365 BOAS, 124 gx36m, and 32 ISRUC).
+- Clean negative targets after ambiguity exclusion: 285,095.
+- Every participant-grouped inner fold contains both contributing training datasets and both target classes.
 
 The first independent validation attempt stopped because its broad `*model*` file check matched the legitimate `pre_model_feature_audit_v0.1.tsv` filename. The corrected predicate checks only fit artifacts and an external model directory; it does not change features or audit results.
 
 ## Next execution boundary
 
-The frozen protocol requires three leave-one-dataset-out comparisons with participant-grouped threshold selection. gx36m and ISRUC are the primary external tests; the BOAS holdout is descriptive because BOAS informed earlier feature development. No feature, label, model, threshold, refractory interval, or event tolerance may be changed after held-out results are available.
+The frozen protocol requires three leave-one-dataset-out comparisons with participant-grouped threshold selection. gx36m and ISRUC are the primary external tests; the BOAS holdout is descriptive because BOAS informed earlier feature development. The audited implementation is now the pre-result checkpoint. No feature, label, model, threshold, refractory interval, or event tolerance may be changed after held-out results are available.
 
 See the [frozen protocol](../../docs/evaluation/multidataset_psg_external_generalization_protocol_v0.1.md) and [pre-result amendment](../../docs/evaluation/multidataset_psg_protocol_amendment_2026-10-25.md).

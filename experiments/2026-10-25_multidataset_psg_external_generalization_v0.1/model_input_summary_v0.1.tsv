@@ -1,0 +1,4 @@
+dataset	recordings	participant_groups	decision_rows	scorable_rows	positive_targets	negative_targets	ignored_boundaries
+BOAS	128	100	238270	237596	365	181051	5835
+gx36m	58	20	122156	122156	124	96936	2505
+ISRUC-3	10	10	17628	15566	32	7108	2122
