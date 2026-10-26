@@ -4,7 +4,7 @@
 **Project window:** 2026-06-01 to 2026-11-29
 **Prepared during:** 2026-06-25 to 2026-06-28
 **Finalized:** 2026-06-28
-**Current status:** Blocks 3-10 are complete; Block 11 is active. A common-channel experiment used all 196 eligible PSG nights from BOAS, gx36m, and ISRUC group 3. The advanced representation passed its external point gate but remains low-recall and participant-inconclusive; paired wearable transfer has not been tested
+**Current status:** Blocks 3-10 are complete; Block 11 is active. The all-hypnogram uncertainty analysis and corrected common-channel PSG experiment are complete. The advanced PSG representation passed its external point gate but remains low-recall and participant-inconclusive; paired wearable transfer has not been tested
 
 ## 1. Project Boundary
 
@@ -474,13 +474,13 @@ Multi-dataset PSG scope work completed on 2026-10-25:
 
 - audited the eleven locally inventoried sources and distinguished raw-signal, partial-raw, and hypnogram-only roles;
 - verified a three-channel F4/C4/O2 PSG intersection across 128 BOAS, 58 gx36m, and 10 ISRUC group-3 nights;
-- identified 196 eligible recordings, 130 participant groups, 190,497 scored epochs, and 521 derived REM-to-Wake events;
+- identified 196 eligible recordings and 130 participant groups; the initial audit counted 521 derived events before the later strict-consensus correction reduced the valid model pool to 482;
 - quantified mean per-record scorer disagreement of 0.2865 in gx36m and 0.1187 in ISRUC group 3;
 - retained an initial label-support audit failure caused by a 166-second unscored gx36m tail, then corrected the rule to exclude unscored support rather than reject valid scored data;
 - passed 13/13 eligibility checks and 12/12 independent checks twice, including 30 external source-container hashes; and
 - froze a leave-one-dataset-out PSG protocol before feature extraction or model fitting, while retaining wearable evaluation as the final application boundary.
 
-Multi-dataset PSG external-generalization work completed on 2026-10-25:
+Initial multi-dataset PSG external-generalization work completed on 2026-10-25 and was later superseded:
 
 - generated causal common-channel features for all 196 eligible nights and 378,054 decision points without resampling or future-sample use;
 - audited 521 positive targets, 285,095 clean negative targets, and five participant-grouped inner folds before fitting;
@@ -492,9 +492,21 @@ Multi-dataset PSG external-generalization work completed on 2026-10-25:
 - passed 12/12 run controls and 13/13 independent checks twice, including 42 external artifact hashes and complete reconstruction of thresholds, alarms, metrics, sensitivity results, bootstrap intervals, and the decision; and
 - corrected one result-validator expected count for excluded ISRUC consensus-unknown epochs without changing any scientific artifact.
 
+Multi-dataset label and PSG correction work completed on 2026-10-25:
+
+- analyzed 1,993 nights from eleven hypnogram sources and identified 4,046 strict adjacent REM-to-Wake events;
+- found material cross-source frequency, scorer, and repeated-night dependence under three frozen decision rules;
+- discovered that the PSG v0.1 gx36m consensus used unrestricted `argmax`, while the label-only loader converted 818 undocumented `-1` codes to `REM` through negative indexing;
+- froze two correction protocols before rerunning results, preserved every v0.1 artifact, and represented out-of-vocabulary values as `UNKNOWN` without assigning physiological meaning;
+- verified 1,479 strict-consensus gx36m unknown epochs, 85 gx36m primary events, 482 total PSG targets, all 196 feature-cache hashes, and all 260 original participant fold assignments before fitting;
+- repeated all 36 fixed PSG fits and obtained pooled external F1 0.2290, recall 0.2564, and 0.2048 false alarms/hour for `ADV3-CHANGE`, versus F1 0.1579, recall 0.1795, and 0.2280/hour for `PSD3-BASE`;
+- passed the unchanged point gate with an F1 difference of +0.0711, while its participant interval of -0.0177 to +0.1396 remained inconclusive;
+- retained `ADV3-CHANGE` only as a PSG mechanism candidate because 87/117 external events were missed and PSG cannot establish wearable performance; and
+- passed all corrected input, result-reconstruction, artifact-hash, and v0.1-to-v0.2 comparison checks.
+
 ## 7. Next Work
 
-Continue the all-hypnogram transition and annotation-uncertainty analysis separately. Before paired wearable transfer, freeze the PSG-to-headband feature mapping, participant grouping, comparator, and evaluation gate without changing the completed v0.1 PSG result. An all-196-night PSG model may be fitted only as an unevaluated transfer source under that new protocol. Defer the wearable streaming prototype while reliability remains inadequate, and do not interpret PSG generalization as wearable confirmation.
+Before paired wearable transfer, freeze the PSG-to-headband feature mapping, participant grouping, comparator, and evaluation gate without changing the corrected v0.2 PSG result. An all-196-night PSG model may be fitted only as an unevaluated transfer source under that new protocol. Defer the wearable streaming prototype while reliability remains inadequate, and do not interpret PSG generalization as wearable confirmation.
 
 ## 8. Rules for the Rest of the Project
 

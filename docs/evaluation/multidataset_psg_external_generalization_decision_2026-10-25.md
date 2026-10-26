@@ -1,5 +1,10 @@
 # Multi-Dataset PSG External-Generalization Decision
 
+> **Superseded:** The gx36m primary consensus did not implement the written
+> strict-majority rule, and scorer-specific parsing converted undocumented
+> `-1` codes to `REM`. Preserve this v0.1 decision as the failed implementation
+> record; use the corrected v0.2 decision for scientific interpretation.
+
 **Decision date:** 2026-10-25  
 **Frozen protocol:** `multidataset_psg_external_generalization_protocol_v0.1.md`  
 **Primary external datasets:** gx36m and ISRUC group 3  

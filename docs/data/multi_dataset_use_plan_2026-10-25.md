@@ -31,7 +31,9 @@ The BOAS dataset version used here is the public OpenNeuro snapshot `1.1.1` ([da
 - Quantify same-night transition disagreement in DOD, ISRUC, and gx36m rather than treating one scorer as exact physiological time.
 - Quantify repeated-night variability where participant linkage is available.
 - Use pathology labels only for descriptive transition stratification when sample definitions support it; do not infer diagnosis or clinical utility.
-- The separately predeclared gx36m/ISRUC raw-EEG mechanism experiment used participant-level grouping across nights and preserved its PSG-only interpretation. Its point gate passed, but the improvement interval included zero.
+- The eleven-source label analysis covered 1,993 nights and 4,046 strict adjacent events. Cross-source, scorer, and repeated-night uncertainty were material under the frozen rules.
+- Safe gx36m parsing treated 818 out-of-vocabulary `-1` scorer labels as unknown. It preserved 85 primary gx36m events but changed scorer summaries; the corrected v0.2 label result replaces v0.1.
+- The corrected gx36m/ISRUC raw-EEG mechanism experiment used 482 targets, preserved the original participant folds, and retained its PSG-only interpretation. Its point gate passed, but the participant improvement interval included zero.
 
 ## Confirmation boundary
 

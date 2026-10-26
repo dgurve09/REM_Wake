@@ -6,7 +6,7 @@
 **Planning date:** 2026-06-21
 **Last revised:** 2026-10-25
 **Project window:** 2026-06-01 to 2026-11-29
-**Status:** Working research plan; Blocks 3-10 are complete and Block 11 is active; an intermediate dataset-held-out PSG study used 196 nights, 130 participant groups, and 521 stage-derived REM-to-Wake events across BOAS, gx36m, and ISRUC group 3; the advanced representation passed its external point gate but remained low-recall and participant-inconclusive, so paired wearable transfer remains a separate unresolved question
+**Status:** Working research plan; Blocks 3-10 are complete and Block 11 is active; a corrected intermediate dataset-held-out PSG study used 196 nights, 130 participant groups, and 482 stage-derived REM-to-Wake events across BOAS, gx36m, and ISRUC group 3; the advanced representation passed its external point gate but remained low-recall and participant-inconclusive, so paired wearable transfer remains a separate unresolved question
 
 ## 1. Technology Area
 
@@ -16,7 +16,7 @@ Wearable EEG, sleep science, event detection, machine learning, temporal modelin
 
 This project will investigate whether REM-to-Wake transitions can be detected reliably from reduced-channel wearable EEG. The primary dataset will be the Bitbrain Open Access Sleep (BOAS) dataset, which contains 128 nights of simultaneous clinical PSG and wearable headband recordings. Human consensus sleep stages are available at 30-second resolution. The official README reports 108 individuals, while the verified version 1.1.1 participant table contains 100 unique `pid` values; this discrepancy must be resolved or reported before participant-level evaluation.
 
-An October 25 scope amendment added an intermediate multi-dataset PSG mechanism study before further wearable optimization. BOAS PSG, gx36m, and ISRUC group 3 provided 196 locally available nights with common F4, C4, and O2 channel meaning. Entire datasets were held out during external evaluation. The pooled external advanced result reached F1 0.2390 versus 0.1938 for the baseline, but its participant interval included zero and recall remained 0.2436. The study distinguishes PSG target learnability and acquisition-domain generalization from wearable signal limitations; the final application direction remains wearable EEG.
+An October 25 scope amendment added an intermediate multi-dataset PSG mechanism study before further wearable optimization. BOAS PSG, gx36m, and ISRUC group 3 provided 196 locally available nights with common F4, C4, and O2 channel meaning. A label audit invalidated the first gx36m consensus implementation, so all 36 fits were repeated under strict known-stage consensus with the original participant folds frozen. The corrected pooled external advanced result reached F1 0.2290 versus 0.1579 for the baseline, but its participant interval included zero and recall remained 0.2564. The study distinguishes PSG target learnability and acquisition-domain generalization from wearable signal limitations; the final application direction remains wearable EEG.
 
 This is a transition-boundary detection project, not a general sleep-stage classification project. Existing sleep stages serve as source annotations from which new REM-to-Wake and exploratory Wake-to-REM event labels will be derived. Conventional sleep staging is included only as a benchmark: a transition-specific method must be compared with the simpler alternative of predicting stages and then deriving transitions.
 
