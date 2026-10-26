@@ -4,7 +4,7 @@
 **Project window:** 2026-06-01 to 2026-11-29
 **Prepared during:** 2026-06-25 to 2026-06-28
 **Finalized:** 2026-06-28
-**Current status:** Blocks 3-10 are complete; Block 11 is active. The all-hypnogram uncertainty analysis and corrected common-channel PSG experiment are complete. The advanced PSG representation passed its external point gate but remains low-recall and participant-inconclusive; paired wearable transfer has not been tested
+**Current status:** Blocks 3-11 are complete. The all-hypnogram uncertainty analysis and corrected common-channel PSG experiment are complete. The wearable streaming gate is `no_go`; Block 12 will document that no-go and the reproducibility state rather than build a prototype
 
 ## 1. Project Boundary
 
@@ -39,7 +39,7 @@ gantt
 
     section Analysis and Measures
     Temporal localization under uncertainty          :done, b10, 2026-10-05, 2026-10-18
-    Transition-derived measures and streaming gate   :active, b11, 2026-10-19, 2026-11-01
+    Transition-derived measures and streaming gate   :done, b11, 2026-10-19, 2026-11-01
 
     section Prototype and Final Package
     Conditional streaming prototype and QA           :b12, 2026-11-02, 2026-11-15
@@ -81,8 +81,8 @@ flowchart TD
 | 8 | Sep 7-Sep 20 | Is the approach robust to signal/channel variability? | Missing-channel tests, degradation tests, ablations, justified adaptation if needed | Robustness and ablation report | Complete Sep 18; wearable robustness failed, no deployable wearable method advanced, and boundary uncertainty was prioritized; the 25-claim extension separated eight uncertainty-supported gates from eight point-gate-only findings |
 | 9 | Sep 21-Oct 4 | Is external PSG comparison scientifically valid? | Audit one external PSG dataset and test reduced-channel generalization if appropriate | External generalization report or no-go | Complete Oct 4; Sleep-EDF direct evaluation stopped because annotation support and channel semantics failed the frozen gate |
 | 10 | Oct 5-Oct 18 | How should 30-second label uncertainty be handled? | Correct the full-night risk-set formulation, compare interval labels, and isolate causal localization failures | Label-uncertainty and localization report | Complete Oct 15; uniform interval labels failed under a saturated comparator, bidirectional causal fitting failed, and endpoint factorization learned state occupancy without improving event F1; the alarm-morphology audit found multi-hour run collapse |
-| 11 | Oct 19-Nov 1 | Are transition-derived measures stable enough to report? | Event burden, REM stability, repeated-night reliability, streaming decision | Technical measures and streaming go/no-go | Not started |
-| 12 | Nov 2-Nov 15 | Is a streaming demonstration justified and reproducible? | Conditional command-line prototype, latency/memory check, clean rerun, QA | Prototype or no-go plus reproducibility report | Not started |
+| 11 | Oct 19-Nov 1 | Are transition-derived measures stable enough to report? | Event burden, REM stability, repeated-night reliability, streaming decision | Technical measures and streaming go/no-go | Complete: streaming no-go |
+| 12 | Nov 2-Nov 15 | Is a streaming demonstration justified and reproducible? | Conditional command-line prototype, latency/memory check, clean rerun, QA | Prototype or no-go plus reproducibility report | Scheduled: document no-go; no prototype |
 | 13 | Nov 16-Nov 29 | What is the final defensible package? | Freeze reviewed results, final report, artifact index, manuscript outline | Final technical report and reproducible project package | Not started |
 
 ## 5. Gate Logic
@@ -504,9 +504,18 @@ Multi-dataset label and PSG correction work completed on 2026-10-25:
 - retained `ADV3-CHANGE` only as a PSG mechanism candidate because 87/117 external events were missed and PSG cannot establish wearable performance; and
 - passed all corrected input, result-reconstruction, artifact-hash, and v0.1-to-v0.2 comparison checks.
 
+Block 11 streaming decision completed on 2026-10-25:
+
+- hashed thirteen accepted source artifacts and synthesized direct-wearable validation and test, robustness, train-only candidate, corrected PSG, and label-uncertainty evidence;
+- found that no wearable candidate had independently advanced, direct-wearable F1 remained 0.1123 on validation and 0.1493 on the descriptive test, and the prior robustness gate failed;
+- confirmed that the causal peak candidate remained train-development only with recall 0.1000, while corrected external PSG evidence could not substitute for wearable validation;
+- passed only the condition allowing boundary output to be described as a coarse scored interval with explicit uncertainty;
+- recorded a streaming `no_go` after four of five entry conditions failed; and
+- passed 8/8 in-run and 13/13 independent checks without fitting a model or running a prototype.
+
 ## 7. Next Work
 
-Before paired wearable transfer, freeze the PSG-to-headband feature mapping, participant grouping, comparator, and evaluation gate without changing the corrected v0.2 PSG result. An all-196-night PSG model may be fitted only as an unevaluated transfer source under that new protocol. Defer the wearable streaming prototype while reliability remains inadequate, and do not interpret PSG generalization as wearable confirmation.
+During Block 12, document the streaming no-go and reproducibility state; do not build or benchmark a prototype. Before any later paired wearable transfer, freeze the PSG-to-headband feature mapping, participant grouping, comparator, and evaluation gate without changing the corrected v0.2 PSG result. An all-196-night PSG model may be fitted only as an unevaluated transfer source under that new protocol, and PSG generalization must not be interpreted as wearable confirmation.
 
 ## 8. Rules for the Rest of the Project
 

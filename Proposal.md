@@ -6,7 +6,7 @@
 **Planning date:** 2026-06-21
 **Last revised:** 2026-10-25
 **Project window:** 2026-06-01 to 2026-11-29
-**Status:** Working research plan; Blocks 3-10 are complete and Block 11 is active; a corrected intermediate dataset-held-out PSG study used 196 nights, 130 participant groups, and 482 stage-derived REM-to-Wake events across BOAS, gx36m, and ISRUC group 3; the advanced representation passed its external point gate but remained low-recall and participant-inconclusive, so paired wearable transfer remains a separate unresolved question
+**Status:** Working research plan; Blocks 3-11 are complete; a corrected intermediate dataset-held-out PSG study used 196 nights, 130 participant groups, and 482 stage-derived REM-to-Wake events across BOAS, gx36m, and ISRUC group 3; the advanced representation passed its external point gate but remained low-recall and participant-inconclusive; the wearable streaming gate is `no_go`, so Block 12 will document the no-go rather than build a prototype
 
 ## 1. Technology Area
 

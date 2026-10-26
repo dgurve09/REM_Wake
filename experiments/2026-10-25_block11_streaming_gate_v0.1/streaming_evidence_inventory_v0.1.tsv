@@ -1,0 +1,10 @@
+evidence_id	modality	validation_status	precision	recall	f1	false_alarms_per_hour	decision	limitation	source_role
+direct_wearable_validation	wearable	independent_validation	0.064516129032258	0.4324324324324324	0.1122807017543859	1.455838519060817	not_advanced	low precision and high false-alarm burden	wearable_validation
+direct_wearable_descriptive_test	wearable	descriptive_used_test	0.0905797101449275	0.423728813559322	0.1492537313432835	1.2620993086109369	not_advanced	descriptive test already used; no new confirmation	wearable_test
+wearable_robustness	wearable	validation_synthesis					fail	material channel dependence and severe/channel-specific noise failures remain	robustness_closeout
+deployable_wearable_closeout	wearable	validation_synthesis					do_not_advance	augmentation failed clean advancement and advancing fusion requires PSG	robustness_closeout
+lstm_crf_candidate	wearable	train_oof_only	0.1435897435897435	0.3111111111111111	0.1964912280701754	0.5305868491772462	eligible_for_new_confirmation	requires new confirmation	lstm_metrics
+enriched_pruned_candidate	wearable	train_nested_oof_only	0.1183745583038869	0.3722222222222222	0.1796246648793565	0.7927031070043289	freeze_for_new_confirmation	material participant support not reached	enriched_metrics
+causal_peak_candidate	wearable	train_nested_oof_only	0.1285714285714285	0.1	0.1125	0.1939496711201785	retain_for_new_confirmation	causal method remains unconfirmed and low recall	causal_metrics
+corrected_external_psg_candidate	psg	dataset_heldout_psg	0.2068965517241379	0.2564102564102564	0.2290076335877862	0.2048024695022409	retain_for_paired_wearable_transfer	not wearable; F1-difference interval -0.0177 to 0.1396	psg_metrics
+label_uncertainty	hypnogram	eleven_source_label_analysis					material_heterogeneity;material_scorer_dependence;material_repeated_night_dependence	source, scorer, and repeated-night dependence remain material	label_decisions

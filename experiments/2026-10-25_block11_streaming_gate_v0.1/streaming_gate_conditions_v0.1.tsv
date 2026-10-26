@@ -1,0 +1,6 @@
+condition	passed	basis	overall_decision
+wearable_candidate_independently_advanced	False	augmentation failed clean advancement and advancing fusion requires PSG	no_go
+wearable_event_performance_interpretable_as_ready	False	validation F1 0.1123, precision 0.0645; descriptive test F1 0.1493	no_go
+wearable_robustness_supported	False	material channel dependence and severe/channel-specific noise failures remain	no_go
+causal_wearable_method_independently_confirmed	False	causal peak candidate is train-development only with recall 0.1000	no_go
+boundary_can_be_reported_without_exact_timing_claim	True	report scored-boundary intervals and material annotation uncertainty; do not claim exact physiological onset	no_go
