@@ -50,7 +50,7 @@ Apply the model at every supported 15-second decision and compare two predeclare
 1. `STAGE-HARD`: emit an alarm when two consecutive supported predictions change from `REM` to `W`.
 2. `STAGE-CONFIRM2`: emit an alarm at the second consecutive `W` prediction after at least two consecutive `REM` predictions. All four predictions must be 15 seconds apart.
 
-`STAGE-CONFIRM2` is primary because it requires 30 seconds of evidence on each side and reports at most 15 seconds after the nominal scored-event midpoint. It is causal and uses no future decision. `STAGE-HARD` is a diagnostic for stage-prediction chatter.
+`STAGE-CONFIRM2` is primary because it requires two 15-second-spaced decisions for each state and reports 15 seconds after the nominal scored-event midpoint when the predictions follow the scored boundary exactly. The rule is causal and uses no future decision. Because adjacent feature windows overlap, these decisions must not be described as independent 30-second evidence intervals. `STAGE-HARD` is a diagnostic for stage-prediction chatter.
 
 Use the same primary references, ignored-boundary handling, participant aggregation, supported-hour denominator, and match interval as corrected PSG v0.2. Do not tune an event threshold, refractory interval, tolerance, or minimum run length.
 
