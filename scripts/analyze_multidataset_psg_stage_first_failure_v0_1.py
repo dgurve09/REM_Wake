@@ -191,9 +191,9 @@ def alarm_offsets(
                     "reference_events": len(references),
                     "references_with_alarm_within_120_sec": covered,
                     "coverage_fraction": covered / len(references),
-                    "nearest_offset_median_sec": float(np.median(offsets)) if offsets else np.nan,
-                    "nearest_offset_q25_sec": float(np.quantile(offsets, 0.25)) if offsets else np.nan,
-                    "nearest_offset_q75_sec": float(np.quantile(offsets, 0.75)) if offsets else np.nan,
+                    "nearest_offset_median_sec": float(np.median(offsets)) if offsets else "not_applicable",
+                    "nearest_offset_q25_sec": float(np.quantile(offsets, 0.25)) if offsets else "not_applicable",
+                    "nearest_offset_q75_sec": float(np.quantile(offsets, 0.75)) if offsets else "not_applicable",
                 }
             )
     return pd.DataFrame(rows)

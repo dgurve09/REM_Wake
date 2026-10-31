@@ -120,7 +120,9 @@ def main() -> None:
             offsets.references_with_alarm_within_120_sec / offsets.reference_events,
         ),
     )
-    finite_offsets = offsets[["nearest_offset_median_sec", "nearest_offset_q25_sec", "nearest_offset_q75_sec"]].to_numpy(float)
+    finite_offsets = offsets[
+        ["nearest_offset_median_sec", "nearest_offset_q25_sec", "nearest_offset_q75_sec"]
+    ].apply(pd.to_numeric, errors="coerce").to_numpy(float)
     offset_bounds = np.isnan(finite_offsets) | (np.abs(finite_offsets) <= 120.0 + 1e-12)
     add("reported_offsets_within_window", offset_bounds.all(), True, offset_bounds.all())
     add(
