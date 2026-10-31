@@ -1,0 +1,4 @@
+heldout_dataset	training_rows	input_features	iterations	converged	all_probabilities_finite	probability_row_sums_max_error	model_relative_path	model_bytes	model_sha256
+BOAS	134763	444	1000	False	True	8.881784197001252e-16	derived/multidataset_psg_stage_first_v0.1/models/holdout_boas.json.gz	30033	b9b7d13c5a3983464eb66f9c526b5578875265824921903259462f7370f6556e
+gx36m	253163	444	1000	False	True	7.771561172376096e-16	derived/multidataset_psg_stage_first_v0.1/models/holdout_gx36m.json.gz	30041	d528b45aeebbe670cb2fd4bfeae9baec5fd9a4189ee45abb357a73e4b3f016c2
+ISRUC-3	356796	444	1000	False	True	6.661338147750939e-16	derived/multidataset_psg_stage_first_v0.1/models/holdout_isruc_3.json.gz	30062	f5f28ab973160ed9a4de8e1587e159fb9faab8da3249c107a0eb4dfc03880d53
