@@ -4,7 +4,7 @@
 **Project window:** 2026-06-01 to 2026-11-29
 **Prepared during:** 2026-06-25 to 2026-06-28
 **Finalized:** 2026-06-28
-**Current status:** Blocks 3-11 are complete. The all-hypnogram uncertainty analysis and corrected common-channel PSG experiment are complete. The wearable streaming gate is `no_go`; Block 12 will document that no-go and the reproducibility state rather than build a prototype
+**Current status:** Blocks 3-11 are complete. The all-hypnogram uncertainty analysis, corrected common-channel direct PSG experiment, and fixed multi-dataset PSG stage-first comparison are complete. Stage-first event performance was worse than direct detection and showed sequence fragmentation. The wearable streaming gate is `no_go`; Block 12 will document that no-go and the reproducibility state rather than build a prototype
 
 ## 1. Project Boundary
 
@@ -69,7 +69,7 @@ flowchart TD
 
 ## 4. Phase Table
 
-| Block | Dates | Main Question | Main Work | Deliverable | Status as of 2026-10-15 |
+| Block | Dates | Main Question | Main Work | Deliverable | Status as of 2026-10-31 |
 |---:|---|---|---|---|---|
 | 1 | Jun 1-Jun 14 | What is known and what is uncertain? | Literature review, initial planning, public-dataset search | Initial proposal, literature evidence, dataset candidate list | Complete |
 | 2 | Jun 15-Jun 28 | Can the project be set up cleanly with a defensible dataset and target? | Scope refinement, BOAS selection, repository setup, environment audit, pilot checks, E0 readiness | Revised proposal, manifest, setup records, pilot reports, E0 readiness package | Complete |
@@ -512,6 +512,17 @@ Block 11 streaming decision completed on 2026-10-25:
 - passed only the condition allowing boundary output to be described as a coarse scored interval with explicit uncertainty;
 - recorded a streaming `no_go` after four of five entry conditions failed; and
 - passed 8/8 in-run and 13/13 independent checks without fitting a model or running a prototype.
+
+Supplemental multi-dataset PSG stage-first comparison completed on 2026-10-31:
+
+- froze the comparison protocol on October 25 before fitting and completed the result package on October 31;
+- fitted one fixed five-stage model per held-out dataset using the same corrected 196-night feature cohort and no held-out tuning;
+- obtained pooled external `STAGE-CONFIRM2` F1 0.1263 and 0.4523 false alarms/hour versus corrected direct F1 0.2290 and 0.2048/hour;
+- obtained a stage-first-minus-direct F1 bootstrap interval of -0.1859 to -0.0125 and an adverse false-alarm interval of +0.1203 to +0.3551/hour;
+- retained all three fixed iteration-limit failures as a numerical limitation rather than changing the solver after results;
+- identified 1.790-2.928-fold excess stage-transition rates, 4.607-7.520-fold excess REM-bout counts, and median predicted REM bouts of only 30-45 seconds;
+- stopped the stage-first candidate without smoothing, lag, threshold, tolerance, or confirmation-length tuning; and
+- passed 14/14 experiment controls, 18/18 independent result checks, 7/7 diagnostic controls, and 13/13 independent diagnostic checks.
 
 ## 7. Next Work
 

@@ -1,0 +1,4 @@
+dataset	reference_events	supported_references	exact_confirm2_references	hard_change_at_reference	exact_confirm2_fraction	hard_change_at_reference_fraction
+BOAS	365	365	41	67	0.11232876712328767	0.18356164383561643
+ISRUC-3	32	32	0	0	0.0	0.0
+gx36m	85	85	20	23	0.23529411764705882	0.27058823529411763

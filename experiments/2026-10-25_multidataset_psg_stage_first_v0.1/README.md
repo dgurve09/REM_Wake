@@ -1,5 +1,9 @@
 # Multi-Dataset PSG Stage-First Transition Experiment v0.1
 
+**Protocol frozen:** 2026-10-25
+
+**Result and diagnostic closeout completed:** 2026-10-31
+
 ## Current stage
 
 The frozen experiment is complete. The primary `STAGE-CONFIRM2` candidate failed the exploratory point gate and is stopped at v0.1. The result is descriptive mechanism evidence on reused datasets, not independent confirmation.
@@ -53,11 +57,27 @@ The corrected direct `ADV3-CHANGE` detector had pooled external F1 0.2290, recal
 
 Do not tune another run length, lag, threshold, or smoothing rule on these held-out results. A separately frozen post-result diagnostic will quantify sequence fragmentation and timing displacement without creating another candidate.
 
+## Failure diagnostic
+
+The frozen post-result diagnostic found a consistent sequence-fragmentation mechanism:
+
+| Dataset | Predicted/human all-stage transition ratio | Predicted/human REM-bout ratio | Human median REM bout | Predicted median REM bout |
+|---|---:|---:|---:|---:|
+| BOAS | 2.928 | 4.607 | 600 s | 30 s |
+| gx36m | 2.290 | 7.520 | 1,050 s | 45 s |
+| ISRUC-3 | 1.790 | 4.974 | 120 s | 30 s |
+
+Only 41/365 BOAS, 20/85 gx36m, and 0/32 ISRUC references had the exact predicted sequence `REM, REM, W, W` at the four aligned causal decisions. For ISRUC, `STAGE-CONFIRM2` had no alarm within the descriptive +/-120-second window around any corrected reference. This is not merely a 15-second matching-window failure.
+
+The diagnostic does not authorize temporal smoothing, a different confirmation length, or a lag correction. It shows that independent stage decisions fragment REM structure and fail to preserve boundary timing under dataset shift. A future sequence-level stage formulation would need a new protocol and fresh evaluation data.
+
 ## Validation
 
 - In-run controls: 14/14 passed.
 - Independent result validation: 18/18 passed.
+- Failure-diagnostic controls: 7/7 passed.
+- Independent failure-diagnostic validation: 13/13 passed.
 - External artifacts: three model files and three score files retained outside Git with size and SHA-256 records.
 - Model and score artifacts at the pre-fit checkpoint: none; all six were created only after protocol and input-audit commits.
 
-See the [frozen protocol](../../docs/evaluation/multidataset_psg_stage_first_protocol_v0.1.md).
+See the [frozen protocol](../../docs/evaluation/multidataset_psg_stage_first_protocol_v0.1.md), [failure-diagnostic plan](../../docs/evaluation/multidataset_psg_stage_first_failure_diagnostic_plan_v0.1.md), and [decision record](../../docs/evaluation/multidataset_psg_stage_first_decision_2026-10-31.md).

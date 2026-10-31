@@ -1,0 +1,14 @@
+check	observed	expected	passed
+run_checks_pass	True	True	True
+three_fragmentation_rows	3	3	True
+six_alarm_rows	6	6	True
+references_match_input_audit	True	True	True
+pattern_counts_match_references	True	True	True
+exact_pattern_counts_recompute	True	True	True
+hard_pattern_counts_recompute	True	True	True
+reference_fractions_recompute	True	True	True
+transition_rates_recompute	True	True	True
+rem_bout_rates_recompute	True	True	True
+offset_coverage_recompute	True	True	True
+reported_offsets_within_window	True	True	True
+no_new_candidate	['STAGE-CONFIRM2', 'STAGE-HARD']	['STAGE-CONFIRM2', 'STAGE-HARD']	True

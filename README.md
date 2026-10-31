@@ -4,11 +4,12 @@ This repository investigates event-specific REM-to-Wake boundary detection from 
 
 ## Current Status
 
-As of 2026-10-25, Blocks 3-11 are complete. A corrected common-channel external-generalization experiment used all 196 eligible PSG nights across BOAS, gx36m, and ISRUC group 3. The advanced representation passed its frozen point gate, but its participant interval included no improvement and external recall remained 0.2564. It is retained as a PSG mechanism candidate, not promoted as a reliable or wearable detector. The Block 11 wearable streaming gate is `no_go`, so Block 12 will document the no-go and reproducibility state rather than build a prototype.
+As of 2026-10-31, Blocks 3-11 are complete. A corrected common-channel external-generalization experiment used all 196 eligible PSG nights across BOAS, gx36m, and ISRUC group 3. The direct advanced representation reached pooled external F1 0.2290. A later fixed stage-first comparison reached F1 0.1263 and increased false alarms, with its bootstrap F1-difference interval entirely below zero. Neither result is reliable or wearable validation. The Block 11 wearable streaming gate remains `no_go`, so Block 12 will document the no-go and reproducibility state rather than build a prototype.
 
 - BOAS snapshot `1.1.1` is frozen at 128 paired recordings and 100 participant-table `pid` groups.
 - The conservative primary set contains 276 REM-to-Wake events across 72 groups; the expanded quality-sensitivity set contains 348 across 88 groups.
 - The transparent stage-first SF-C baseline obtained test event F1 0.0766 and 1.9692 false alarms/hour.
+- The corrected multi-dataset PSG stage-first candidate reached pooled external F1 0.1263 and 0.4523 false alarms/hour versus direct PSG F1 0.2290 and 0.2048/hour. Its predicted REM sequences were fragmented, with 4.607 to 7.520 times as many REM bouts as the human stages.
 - The direct DE-B baseline obtained test event F1 0.1497 and 1.2571 false alarms/hour, but precision remained 0.0909.
 - Validation-only factorized DE-D improved validation F1 from 0.1127 to 0.1604 and reduced false alarms from 1.4496 to 0.9915/hour. It has not been evaluated on a new locked cohort.
 - All 256 local EDF files match the official snapshot SHA-256 annex keys.
@@ -152,7 +153,10 @@ The Block 7 and Block 8 results do not justify revising the frozen models or thr
 - [Multi-dataset PSG protocol](docs/evaluation/multidataset_psg_external_generalization_protocol_v0.1.md)
 - [Multi-dataset PSG result](experiments/2026-10-25_multidataset_psg_external_generalization_v0.1/README.md)
 - [Multi-dataset PSG decision](docs/evaluation/multidataset_psg_external_generalization_decision_2026-10-25.md)
-- [Current weekly record](docs/weekly/2026-10-19_to_2026-10-25.md)
+- [Multi-dataset stage-first protocol](docs/evaluation/multidataset_psg_stage_first_protocol_v0.1.md)
+- [Multi-dataset stage-first result](experiments/2026-10-25_multidataset_psg_stage_first_v0.1/README.md)
+- [Multi-dataset stage-first decision](docs/evaluation/multidataset_psg_stage_first_decision_2026-10-31.md)
+- [Current weekly record](docs/weekly/2026-10-26_to_2026-11-01.md)
 - [BOAS dataset manifest](docs/data/boas_dataset_manifest.md)
 - [Label/preprocessing gate](docs/feasibility/label_preprocessing_gate_closeout_2026-07-18.md)
 - [Block 6 baseline decision](docs/evaluation/block6_baseline_gate_decision_2026-08-22.md)

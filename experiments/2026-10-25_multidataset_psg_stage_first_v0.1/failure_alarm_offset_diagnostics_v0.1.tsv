@@ -1,0 +1,7 @@
+dataset	candidate	reference_events	references_with_alarm_within_120_sec	coverage_fraction	nearest_offset_median_sec	nearest_offset_q25_sec	nearest_offset_q75_sec
+BOAS	STAGE-HARD	365	143	0.3917808219178082	0.0	-15.0	0.0
+BOAS	STAGE-CONFIRM2	365	88	0.2410958904109589	15.0	0.0	15.0
+gx36m	STAGE-HARD	85	57	0.6705882352941176	0.0	0.0	15.0
+gx36m	STAGE-CONFIRM2	85	43	0.5058823529411764	15.0	15.0	30.0
+ISRUC-3	STAGE-HARD	32	1	0.03125	120.0	120.0	120.0
+ISRUC-3	STAGE-CONFIRM2	32	0	0.0			
